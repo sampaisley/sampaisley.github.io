@@ -58,6 +58,14 @@ $fooey : #213142;
 p{
   color: $fooey;
 }
+img.no-image{      //class for img when no url supplyed
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  margin-left:-2000em;
+}
+
+
 
 
 

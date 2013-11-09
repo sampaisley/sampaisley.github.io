@@ -7222,3 +7222,11 @@ a.th {
 p {
   color: #213142;
 }
+
+/* line 61, ../sass/app.scss */
+img.no-image {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  margin-left: -2000em;
+}

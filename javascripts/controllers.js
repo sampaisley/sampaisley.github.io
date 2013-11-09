@@ -17,20 +17,6 @@ angular.module('myApp.controllers', []).
 
         });
 
-        // get img from flickr
-        $scope.set =  "72157635342624133";  // sea as default set
-        function getAndShow(){
-
- var url="http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&photoset_id=72157635342624133&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833@N08&format=json&callback=foo";
-
-            $http.jsonp(url);
-
-            jsonFlickrApi = function (result) {
-                $scope.pset = result.photoset.photo[0];
-
-            }
-        }
-        getAndShow()
 
 
   });

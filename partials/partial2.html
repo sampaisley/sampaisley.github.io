@@ -1,16 +1,15 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
-        <hr>
-<span ng-repeat="f in d " >
+<hr>
+<span ng-repeat="f in d ">
     <h1>{{d[$index].gsx$title.$t}}</h1>
     <p>{{d[$index].gsx$content.$t}}</p>
-     <img src="{{d[$index].gsx$img.$t}}" alt=""/>
-
+     <img ng-class="{'no-image': d[$index].gsx$img.$t ==''}" src="{{d[$index].gsx$img.$t}}" alt=""/>
+          <hr><hr>
 </span>
-        
-        <p>Add More content <a target="new" href="https://docs.google.com/forms/d/1SMV9f9EOYfeJym3Lsix7G0Zz44bmsSZREXRX-TM4kTA/viewform">HERE</a></p>
 
-        <p>pset= {{pset}}</p>
+<p>Add More content <a target="new"
+                       href="https://docs.google.com/forms/d/1SMV9f9EOYfeJym3Lsix7G0Zz44bmsSZREXRX-TM4kTA/viewform">HERE</a>
+</p>
+
+<p>pset= {{pset}}</p>
+
+
