@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ca1b811-9d89-402e-bde4-f67da9d3a993" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/0ec5a8b7247196c2a1f50a42c72e3033a3cf8385/app.scssc" afterPath="$PROJECT_DIR$/.sass-cache/0ec5a8b7247196c2a1f50a42c72e3033a3cf8385/app.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/app.css" afterPath="$PROJECT_DIR$/stylesheets/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/app.scss" afterPath="$PROJECT_DIR$/sass/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/controllers.js" afterPath="$PROJECT_DIR$/javascripts/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/partial2.html" afterPath="$PROJECT_DIR$/partials/partial2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="sampaisley.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1383997055917" ignored="false" />
     <file path="/app.scss" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384001330180" ignored="false" />
-    <file path="/index.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1382717235356" ignored="false" />
+    <file path="/index.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384001812562" ignored="false" />
     <file path="/dummy.xml" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1382716573803" ignored="false" />
     <file path="/controllers.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1383907442307" ignored="false" />
     <file path="/partial2.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384001578580" ignored="false" />
@@ -45,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="53" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+            <state line="39" column="8" selection-start="936" selection-end="936" vertical-scroll-proportion="0.25510204">
               <folding />
             </state>
           </provider>
@@ -63,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partial2.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="partial2.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/partial2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="18" selection-start="231" selection-end="231" vertical-scroll-proportion="0.08503401">
+            <state line="5" column="18" selection-start="231" selection-end="231" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -90,10 +86,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascripts/controllers.js" />
         <option value="$PROJECT_DIR$/sass/app.scss" />
         <option value="$PROJECT_DIR$/partials/partial2.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -431,13 +427,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="53" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="38" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
@@ -454,7 +443,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/partial2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="231" selection-end="231" vertical-scroll-proportion="0.08503401">
+        <state line="5" column="18" selection-start="231" selection-end="231" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="8" selection-start="936" selection-end="936" vertical-scroll-proportion="0.25510204">
           <folding />
         </state>
       </provider>
