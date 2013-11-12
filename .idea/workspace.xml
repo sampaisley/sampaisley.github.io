@@ -2,17 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ca1b811-9d89-402e-bde4-f67da9d3a993" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/0ec5a8b7247196c2a1f50a42c72e3033a3cf8385/app.scssc" afterPath="$PROJECT_DIR$/.sass-cache/0ec5a8b7247196c2a1f50a42c72e3033a3cf8385/app.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/app.css" afterPath="$PROJECT_DIR$/stylesheets/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/app.scss" afterPath="$PROJECT_DIR$/sass/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/controllers.js" afterPath="$PROJECT_DIR$/javascripts/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/partial1.html" afterPath="$PROJECT_DIR$/partials/partial1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/partial2.html" afterPath="$PROJECT_DIR$/partials/partial2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sampaisley.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1383997055917" ignored="false" />
-    <file path="/app.scss" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384001330180" ignored="false" />
+    <file path="/Dummy.txt" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384275922250" ignored="false" />
+    <file path="/app.scss" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384276147720" ignored="false" />
     <file path="/index.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384001812562" ignored="false" />
     <file path="/dummy.xml" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1382716573803" ignored="false" />
-    <file path="/controllers.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1383907442307" ignored="false" />
-    <file path="/partial2.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384001578580" ignored="false" />
+    <file path="/controllers.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384276434181" ignored="false" />
+    <file path="/partial2.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384277530068" ignored="false" />
     <file path="/Applications/MAMP/htdocs/retard/javascripts/controllers.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1383905228853" ignored="false" />
+    <file path="/partial1.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384276644253" ignored="false" />
+    <file path="/Applications/MAMP/htdocs/retard/partials/partial2.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384277541218" ignored="false" />
+    <file path="/Applications/MAMP/htdocs/retard/javascripts/app.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384277611656" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +45,7 @@
       <file leaf-file-name="app.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="55" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0">
+            <state line="46" column="49" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,7 +54,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="8" selection-start="936" selection-end="936" vertical-scroll-proportion="0.25510204">
+            <state line="167" column="71" selection-start="5650" selection-end="5650" vertical-scroll-proportion="0.62025315">
               <folding />
             </state>
           </provider>
@@ -53,7 +63,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="38" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+            <state line="18" column="7" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,7 +72,18 @@
       <file leaf-file-name="partial2.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/partial2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="18" selection-start="231" selection-end="231" vertical-scroll-proportion="-3.125">
+            <state line="7" column="60" selection-start="159" selection-end="159" vertical-scroll-proportion="-4.375">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="partial1.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/partial1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="76" selection-start="148" selection-end="148" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -86,17 +107,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/javascripts/controllers.js" />
-        <option value="$PROJECT_DIR$/sass/app.scss" />
-        <option value="$PROJECT_DIR$/partials/partial2.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/sass/app.scss" />
+        <option value="$PROJECT_DIR$/javascripts/controllers.js" />
+        <option value="$PROJECT_DIR$/partials/partial2.html" />
+        <option value="$PROJECT_DIR$/partials/partial1.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
-    <option name="y" value="22" />
-    <option name="width" value="1881" />
+    <option name="x" value="8" />
+    <option name="y" value="28" />
+    <option name="width" value="1114" />
     <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -125,6 +147,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,7 +210,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,8 +218,8 @@
     <property name="options.lastSelected" value="settings" />
     <property name="last_opened_file_path" value="/Applications/MAMP/htdocs/retard" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -262,14 +284,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="22" width="1881" height="1054" extended-state="0" />
+    <frame x="8" y="28" width="1114" height="1054" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12697548" sideWeight="0.6713062" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22378278" sideWeight="0.6713062" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -345,13 +367,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="53" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="98" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
@@ -362,7 +377,9 @@
     <entry file="file://$PROJECT_DIR$/partials/partial2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="23" selection-start="448" selection-end="452" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -390,7 +407,9 @@
     <entry file="file://$PROJECT_DIR$/partials/partial2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="135" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -427,30 +446,39 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
+    <entry file="file://$PROJECT_DIR$/sass/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+        <state line="46" column="49" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/app.scss">
+    <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="55" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0">
+        <state line="18" column="7" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/partial2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="231" selection-end="231" vertical-scroll-proportion="-3.125">
+        <state line="7" column="60" selection-start="159" selection-end="159" vertical-scroll-proportion="-4.375">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/partial1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="76" selection-start="148" selection-end="148" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="936" selection-end="936" vertical-scroll-proportion="0.25510204">
+        <state line="167" column="71" selection-start="5650" selection-end="5650" vertical-scroll-proportion="0.62025315">
           <folding />
         </state>
       </provider>

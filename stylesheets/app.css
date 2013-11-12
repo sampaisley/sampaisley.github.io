@@ -7230,3 +7230,8 @@ img.no-image {
   width: 0px;
   margin-left: -2000em;
 }
+
+/* line 67, ../sass/app.scss */
+.hohoho {
+  background-color: rgba(186, 146, 125, 0.38);
+}
