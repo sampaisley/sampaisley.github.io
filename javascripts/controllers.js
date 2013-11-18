@@ -3,7 +3,16 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-    controller('MyCtrl1', function ($scope, $sce) {
+    controller('RootCtrl', function ($scope) {
+
+
+        $scope.timeNow = Date.now();
+
+
+
+
+    })
+    .controller('MyCtrl1', function ($scope, $sce) {
 
         $scope.html = '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>';
         $scope.trustedHtml = $sce.trustAsHtml($scope.html);

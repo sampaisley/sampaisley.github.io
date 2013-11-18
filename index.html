@@ -17,11 +17,11 @@
     <script src="javascripts/vendor/custom.modernizr.js"></script>
 
 </head>
-<body>
+<body ng-controller="RootCtrl">
 
 <div class="row">
     <div class="large-12 columns">
-        <p class="time">time</p>
+        <p class="time">{{timeNow | date:'HH:mm:ss'}}</p>
         <h2>Probando probando uno dos tres</h2>
 
 
@@ -129,7 +129,7 @@
         <!--</ul>-->
     <!--</div>-->
 </div>
-
+ </div>
 <script>
     document.write('<script src=' +
             ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
@@ -177,8 +177,7 @@
 <script src="javascripts/directives.js"></script>
 <script>
     $(document).foundation();
-    var t1 = Date.now();
-    $(".time").text('time =  ' + t1);
+
 </script>
 </body>
 </html>
