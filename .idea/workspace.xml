@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/filters.js" afterPath="$PROJECT_DIR$/javascripts/filters.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/partial1.html" afterPath="$PROJECT_DIR$/partials/partial1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/partial2.html" afterPath="$PROJECT_DIR$/partials/partial2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sampaisley.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,10 +13,10 @@
     <file path="/app.scss" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384630007614" ignored="false" />
     <file path="/index.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384772698738" ignored="false" />
     <file path="/dummy.xml" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384631751758" ignored="false" />
-    <file path="/controllers.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384774652483" ignored="false" />
-    <file path="/partial2.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384770971110" ignored="false" />
+    <file path="/controllers.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384777457688" ignored="false" />
+    <file path="/partial2.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384778777732" ignored="false" />
     <file path="/Applications/MAMP/htdocs/retard/javascripts/controllers.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1383905228853" ignored="false" />
-    <file path="/partial1.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384774853979" ignored="false" />
+    <file path="/partial1.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384776437509" ignored="false" />
     <file path="/Applications/MAMP/htdocs/retard/partials/partial2.html" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384629275298" ignored="false" />
     <file path="/Applications/MAMP/htdocs/retard/javascripts/app.js" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384277611656" ignored="false" />
     <file path="/Applications/MAMP/htdocs/retard/sass/app.scss" changelist="2ca1b811-9d89-402e-bde4-f67da9d3a993" time="1384629946265" ignored="false" />
@@ -53,16 +52,16 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="59" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+            <state line="7" column="123" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partial2.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="partial2.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/partial2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="52" selection-start="303" selection-end="303" vertical-scroll-proportion="-6.25">
+            <state line="12" column="91" selection-start="451" selection-end="451" vertical-scroll-proportion="0.20408164">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -70,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partial1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="partial1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/partial1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="40" selection-start="371" selection-end="371" vertical-scroll-proportion="0.27210885">
+            <state line="11" column="49" selection-start="196" selection-end="196" vertical-scroll-proportion="-6.875">
               <folding />
             </state>
           </provider>
@@ -82,7 +81,7 @@
       <file leaf-file-name="filters.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+            <state line="9" column="166" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,10 +107,10 @@
       <list>
         <option value="$PROJECT_DIR$/sass/app.scss" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/partials/partial2.html" />
+        <option value="$PROJECT_DIR$/partials/partial1.html" />
         <option value="$PROJECT_DIR$/javascripts/filters.js" />
         <option value="$PROJECT_DIR$/javascripts/controllers.js" />
-        <option value="$PROJECT_DIR$/partials/partial1.html" />
+        <option value="$PROJECT_DIR$/partials/partial2.html" />
       </list>
     </option>
   </component>
@@ -177,6 +176,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampaisley.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampaisley.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,15 +415,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/partial2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="52" selection-start="303" selection-end="303" vertical-scroll-proportion="-6.25">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="49" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.30463576">
@@ -434,22 +438,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/filters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="59" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+        <state line="9" column="166" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/partial1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="371" selection-end="371" vertical-scroll-proportion="0.27210885">
+        <state line="11" column="49" selection-start="196" selection-end="196" vertical-scroll-proportion="-6.875">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="123" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/partial2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="91" selection-start="451" selection-end="451" vertical-scroll-proportion="0.20408164">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

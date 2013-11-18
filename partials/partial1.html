@@ -7,14 +7,9 @@
 
     <div class="large-10 columns">
 
-          <hr><hr>   <ul>
-        <li ng-repeat=" opt in opts"  >
-            <span ng-bind-html="opt.text">{{opt.text | unsafe}}</span>
-            <span>{{opt.value}}</span>
-        </li>
-    </ul>
+          <hr><hr>
 
-        <div ng-bind-html-unsafe="html"></div>
+        <div ng-bind-html="trustedHtml"></div>
 
     </div>
 </div>
