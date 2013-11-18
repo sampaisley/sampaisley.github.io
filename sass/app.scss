@@ -1,6 +1,6 @@
 // Global Foundation Settings
 @import "settings";
-
+@import "settings_overide";
 // Comment out this import if you don't want to use normalize
 @import "normalize";
 
@@ -82,7 +82,15 @@ nav{
   }
   li.time_now{
     color: indianred !important;
+
   }
+  h1 a{
+    color:#F5AA0A !important;
+    display: inline;
+
+  }
+
+
 }
 
 

@@ -14,3 +14,10 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
+
+/// modification of topbar.js to hide expanded menu on selection of item (page
+$("body").on('click', '.top-bar .top-bar-section li', function (e) {
+    if ($("nav").hasClass('expanded')) {
+        $("nav").toggleClass('expanded')   ;
+    }
+}  );
