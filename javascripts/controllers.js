@@ -3,9 +3,15 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+    controller('MyCtrl1', function ($scope, $sce) {
+        $scope.opts = [
+            {value: 111, text: '<b>1st</b>' },
+            {value: 222, text: '<i>2nd</i>' }
+        ];
+        $scope.html = '<ul><li>render me please</li></ul>';
+        $scope.trustedHtml = $sce.trustAsHtml($scope.html);
 
-  }])
+  })
 
         .controller('MyCtrl2', function ($scope, $http) {     ///--- PAGE 2 CONTROL ---
         // get the google sread sheet

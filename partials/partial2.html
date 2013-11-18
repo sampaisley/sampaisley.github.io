@@ -8,7 +8,7 @@
     <div style="background-color: rgba(238,211,227,0.11);" class="large-10 columns">
 <span ng-repeat="f in d ">
     <h1>{{d[$index].gsx$title.$t}}</h1>
-    <p>{{d[$index].gsx$content.$t}}</p>
+    <p ng-bind-html-unsafe="d[$index].gsx$content.$t">{{d[$index].gsx$content.$t}}</p>
      <img ng-class="{'no-image': d[$index].gsx$img.$t ==''}" src="{{d[$index].gsx$img.$t}}" alt=""/>
           <hr><hr>
 </span>

@@ -7,4 +7,8 @@ angular.module('myApp.filters', []).
     return function(text) {
       return String(text).replace(/\%VERSION\%/mg, version);
     }
-  }]);
+  }]).filter('unsafe', function($sce) {
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        };
+    });
