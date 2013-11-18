@@ -68,6 +68,24 @@ img.no-image{      //class for img when no url supplyed
   background-color: rgba(186, 146, 125, 0.38);
 }
 
+nav{
+  li{
+    display: inline;
+    list-style-type: none;
+    margin-right: 2em;
+
+  }
+  li a.active{
+    color: #ffffff !important;
+    font-size: 2em;
+    text-transform:uppercase;
+  }
+  li.time_now{
+    color: indianred !important;
+  }
+}
+
+
 
 
 

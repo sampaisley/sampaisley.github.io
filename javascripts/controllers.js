@@ -3,10 +3,22 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-    controller('RootCtrl', function ($scope) {
+    controller('RootCtrl', function ($scope, $location) {
 
 
         $scope.timeNow = Date.now();
+        $scope.$on(
+            "$routeChangeSuccess",
+            function ($currentRoute, $previousRoute) {
+                $scope.pag = $location.path().substr(1);
+                $scope.thisPage = "/#"+$location.path();
+            }
+        );
+
+        $scope.pages = [
+            {title: 'view1', url: '/#/view1'} ,
+            {title: 'view2', url: '/#/view2'}
+        ]
 
 
 

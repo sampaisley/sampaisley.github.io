@@ -7235,3 +7235,20 @@ img.no-image {
 .hohoho {
   background-color: rgba(186, 146, 125, 0.38);
 }
+
+/* line 72, ../sass/app.scss */
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 2em;
+}
+/* line 78, ../sass/app.scss */
+nav li a.active {
+  color: #ffffff !important;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+/* line 83, ../sass/app.scss */
+nav li.time_now {
+  color: indianred !important;
+}

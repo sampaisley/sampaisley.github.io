@@ -21,7 +21,7 @@
 
 <div class="row">
     <div class="large-12 columns">
-        <p class="time">{{timeNow | date:'HH:mm:ss'}}</p>
+
         <h2>Probando probando uno dos tres</h2>
 
 
@@ -31,12 +31,18 @@
            <!--angular stuff here _____________________________________________________________-->
 <div class="row">
     <div class="large-12 columns">
-        <ul class="menu ">
-            <li><a href="#/view1">view1</a></li>
-            <li><a href="#/view2">view2</a></li>
-        </ul>
+        <div class="contain-to-grid">
+        <nav  class="top-bar large-12">
+            <ul class=" title-area">
+                <li ng-repeat="page in pages">
 
+                    <a href={{page.url}} ng-class="{'active': page.url == thisPage }"> {{page.title}}</a></li>
 
+                <li class="time_now">{{timeNow | date:'HH:mm:ss'}}</li>
+            </ul>
+        </nav>
+        </div>
+             <hr>
         <div ng-view></div>
 
     </div>
@@ -164,9 +170,9 @@
 
 <script src="javascripts/foundation/foundation.section.js"></script>
 
-<script src="javascripts/foundation/foundation.tooltips.js"></script>
+<script src="javascripts/foundation/foundation.tooltips.js"></script>-->
 
-<script src="javascripts/foundation/foundation.topbar.js"></script>-->
+<script src="javascripts/foundation/foundation.topbar.js"></script>
 
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular/angular-route.js"></script>
