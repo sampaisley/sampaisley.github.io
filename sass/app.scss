@@ -64,9 +64,17 @@ img.no-image{      //class for img when no url supplyed
   width: 0px;
   margin-left:-2000em;
 }
-.hohoho{
-  background-color: rgba(186, 146, 125, 0.38);
+.sidebar-large{
+  background-color: rgba(56, 89, 135, 0.27);
+
+  > h1{
+    font-size: 6em;
+    word-break: break-all;
+    text-align: center;
+  }
+
 }
+
 
 nav{
   li{
@@ -95,6 +103,18 @@ nav{
 
 
 }
+
+.main_event_one{
+background-color: #d7d2b2;
+
+}
+.main_event_two{
+  background-color: rgba(255, 218, 243, 0);
+  border-right: 1px solid #dddddd;
+
+}
+
+
 
 
 
