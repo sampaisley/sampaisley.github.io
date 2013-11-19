@@ -71,6 +71,7 @@ img.no-image{      //class for img when no url supplyed
     font-size: 6em;
     word-break: break-all;
     text-align: center;
+    color: rgba(33, 53, 82, 0.88);
   }
 
 }
@@ -80,8 +81,6 @@ nav{
   li{
     display: inline;
     list-style-type: none;
-    margin-right: 2em;
-
   }
   li a.active{
     color: #ffffff !important;
@@ -111,6 +110,12 @@ background-color: #d7d2b2;
 .main_event_two{
   background-color: rgba(255, 218, 243, 0);
   border-right: 1px solid #dddddd;
+
+  img{
+    border: 11px solid darkgray;
+    padding: 3px;
+    background-color: #d8d8d8;
+  }
 
 }
 

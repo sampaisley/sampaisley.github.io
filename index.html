@@ -19,12 +19,7 @@
 </head>
 <body ng-controller="RootCtrl">
 
-<div class="row">
-    <div class="large-12 columns">
 
-
-    </div>
-</div>
            <!--angular stuff here _____________________________________________________________-->
 <div class="row">
     <div class="large-12 columns">
@@ -33,11 +28,12 @@
             <ul class="title-area">
                 <!-- Title Area -->
                 <li class="name">
-                    <h1>
+                    <h1 class="hide-for-small">
                         <a href="{{ pages[0].url }}">
                             S.P  <span class="timenow">{{timeNow | date:'HH:mm:ss'}}</span>
                         </a>
                     </h1>
+                    <h1 class="show-for-small"><a href="{{ pages[0].url }}">s.p</a></h1>
                 </li>
                 <li class="toggle-topbar menu-icon"><a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
             </ul>
@@ -55,10 +51,15 @@
         </nav>
 
              <hr>
-        <div ng-view></div>
+
 
     </div>
 </div>
+           <div class="row">
+               <div class="large-12 columns">
+               <div ng-view></div>
+                   </div>
+           </div>
      <!--end ofangular stuff here _____________________________________________________________-->
 
 
