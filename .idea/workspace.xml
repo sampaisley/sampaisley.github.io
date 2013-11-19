@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ca1b811-9d89-402e-bde4-f67da9d3a993" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/0ec5a8b7247196c2a1f50a42c72e3033a3cf8385/app.scssc" afterPath="$PROJECT_DIR$/.sass-cache/0ec5a8b7247196c2a1f50a42c72e3033a3cf8385/app.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/app.css" afterPath="$PROJECT_DIR$/stylesheets/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/app.scss" afterPath="$PROJECT_DIR$/sass/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/partial1.html" afterPath="$PROJECT_DIR$/partials/partial1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sampaisley.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="78" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.39342403">
+            <state line="35" column="78" selection-start="1136" selection-end="1136" vertical-scroll-proportion="-14.458333">
               <folding />
             </state>
           </provider>
@@ -96,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partial1.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="partial1.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/partial1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="87" selection-start="236" selection-end="236" vertical-scroll-proportion="-3.75">
+            <state line="6" column="84" selection-start="233" selection-end="233" vertical-scroll-proportion="0.10204082">
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -140,8 +135,8 @@
         <option value="$PROJECT_DIR$/partials/partial2.html" />
         <option value="$PROJECT_DIR$/javascripts/controllers.js" />
         <option value="$PROJECT_DIR$/sass/app.scss" />
-        <option value="$PROJECT_DIR$/partials/partial1.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/partials/partial1.html" />
       </list>
     </option>
   </component>
@@ -493,19 +488,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/partial1.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="87" selection-start="236" selection-end="236" vertical-scroll-proportion="-3.75">
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state line="35" column="78" selection-start="1136" selection-end="1136" vertical-scroll-proportion="-14.458333">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/partials/partial1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="78" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.39342403">
-          <folding />
+        <state line="6" column="84" selection-start="233" selection-end="233" vertical-scroll-proportion="0.10204082">
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
