@@ -35,7 +35,7 @@ angular.module('myApp.controllers', []).
         // get the google sread sheet
 
 
-        $http.get('https://spreadsheets.google.com/feeds/list/0AhZ7a-ySJXJTdE1mNDJPSTEwY2c0TlhqWkg2ZFFYd3c/od6/public/values?alt=json', { cache: true }).success(function(data) {
+        $http.get('https://spreadsheets.google.com/feeds/list/0AhZ7a-ySJXJTdDFRZGFwdk83QU5Jc0lrNjNpbmNHTFE/od6/public/values?alt=json', { cache: true }).success(function(data) {
                // console.log(data.feed.entry);
             $scope.d= data.feed.entry;
 
