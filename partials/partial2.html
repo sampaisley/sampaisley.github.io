@@ -3,7 +3,7 @@
 </div>
 <div class="large-10 pull-2 columns main_event_two">
 <span ng-repeat="f in d ">
-    <h1>{{d[$index].gsx$title.$t}}</h1>
+    <h1 class="custom-panel">{{d[$index].gsx$title.$t}}</h1>
     <!--<p>{{d[$index].gsx$content.$t}}</p>-->
      <p ng-bind-html="d[$index].gsx$content.$t | unsafe"></p>
      <img ng-class="{'no-image': d[$index].gsx$img.$t ==''}" ng-src="{{d[$index].gsx$img.$t}}" alt=""/>
