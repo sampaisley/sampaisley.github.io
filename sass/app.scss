@@ -112,7 +112,8 @@ background-color: #d7d2b2;
   border-right: 1px solid #dddddd;
 
   img{
-    border: 11px solid darkgray;
+    border: 14px solid #ababab;
+    border-bottom: 20px solid #bababa;
     padding: 3px;
     background-color: #d8d8d8;
   }
@@ -122,16 +123,21 @@ background-color: #d7d2b2;
 
 
 .custom-panel {
-  color: #111439;
+  color: rgba(17, 20, 57, 0.79);
   @include panel(
   // Sets the panel background color. Default: $panel-pg
-    $bg: #f2d9cc,
+    $bg: rgba(242, 242, 242, 0.37),
     // Sets the panel padding amount. Default: $panel-padding
     $padding:5px 10px,
     // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
     $adjust:true
   );
 }
+      #pageNumInput{
+        display: inline;
+        width: 20%;
+      }
+
 
 
 
