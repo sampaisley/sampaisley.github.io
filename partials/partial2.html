@@ -2,18 +2,27 @@
     <h1>DOS</h1>
 </div>
 <div class="large-10 pull-2 columns main_event_two">
-<span ng-repeat="f in d ">
-    <h1 class="custom-panel">{{d[$index].gsx$title.$t}}</h1>
+<span  ng-repeat="f in d | startFrom:currentPage*pageSize | limitTo:pageSize"  ng-init="updatePageNums()">
+    <h1 class="custom-panel">{{f.gsx$title.$t}}</h1>
     <!--<p>{{d[$index].gsx$content.$t}}</p>-->
-     <p ng-bind-html="d[$index].gsx$content.$t | unsafe"></p>
-     <img ng-class="{'no-image': d[$index].gsx$img.$t ==''}" ng-src="{{d[$index].gsx$img.$t}}" alt=""/>
+     <p ng-bind-html="f.gsx$content.$t | unsafe"></p>
+     <img ng-class="{'no-image': f.gsx$img.$t ==''}" ng-src="{{f.gsx$img.$t}}" alt=""/>
           <hr><hr>
 </span>
 
-    <p>Add More content <a target="new"
-                           href="https://docs.google.com/forms/d/1m2_r2rX0xlKvIeaIXtavcGFI_Z3R6AVFJtVwxZrs63M/viewform">HERE..</a>
-    </p>
 
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numPages }}
+    <button ng-disabled="currentPage >= f.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+    <hr>
+        <p>Add More Content <a target="new"
+                               href="https://docs.google.com/forms/d/1m2_r2rX0xlKvIeaIXtavcGFI_Z3R6AVFJtVwxZrs63M/viewform">Here</a>:
+          &nbsp;  Posts Per Page =  <input id="pageNumInput" type="number" ng-model="pageSize">
+        </p>
 </div>
 
 
