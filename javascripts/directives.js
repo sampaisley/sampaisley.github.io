@@ -8,4 +8,15 @@ angular.module('myApp.directives', []).
     return function(scope, elm, attrs) {
       elm.text(version);
     };
-  }]);
+  }])
+    .directive('scrollOnClick', function() {
+        return {
+            restrict: 'A',
+            link: function(scope, $elm) {
+                $elm.on('click', function() {
+                    //$("body").animate({scrollTop: $elm.offset().top}, "slow");
+                    $("body").animate({ scrollTop: -800 }, 'slow');
+                });
+            }
+        }
+    });;

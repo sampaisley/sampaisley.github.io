@@ -34,6 +34,7 @@ var app = angular.module('myApp.controllers', []).
         $scope.pageSize = 4;
         $scope.updatePageNums = function () {
             $scope.numPages = $window.Math.ceil( ($scope.d.length / $scope.pageSize));
+            console.log('updatePageNums');
         };
 
         $http.get('https://spreadsheets.google.com/feeds/list/0AhZ7a-ySJXJTdDFRZGFwdk83QU5Jc0lrNjNpbmNHTFE/od6/public/values?alt=json', { cache: true }).success(function (data) {
@@ -43,21 +44,18 @@ var app = angular.module('myApp.controllers', []).
 
         });
 
-        $scope.gotoTop = function (direction){
+       // $scope.scrollTop = function (direction){
+               $('button').click(function(){
+                  // $('html, body').animate({ scrollTop: 0 }, 'slow');
+                   console.log("button clicked")
+               })
 
-            $location.hash('top');
-            if(direction=='next')  {
-            $scope.currentPage=$scope.currentPage+1 ;
-            }
-            if(direction=='prev'){
-                $scope.currentPage=$scope.currentPage-1;
-            }
-            // call $anchorScroll()
-            $anchorScroll();
-        }
+
+       // }
 
 
     })
+
 
     .controller('MyCtrl3', function ($scope, $http, $window) {     ///--- PAGE 3 CONTROL ---
         // get the google sread sheet
@@ -66,7 +64,8 @@ var app = angular.module('myApp.controllers', []).
         $scope.items = [];
 
        $scope.updatePageNums = function () {
-            $scope.numPages = $window.Math.ceil( ($scope.items.length / $scope.pageSize));
+//            $scope.numPages = $window.Math.ceil( ($scope.items.length / $scope.pageSize));
+//           alert("ffffffff" +$scope.currentPage);
       };
 
 
