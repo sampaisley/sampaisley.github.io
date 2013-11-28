@@ -15,7 +15,7 @@ angular.module('myApp.directives', []).
             link: function(scope, $elm) {
                 $elm.on('click', function() {
                     //$("body").animate({scrollTop: $elm.offset().top}, "slow");
-                    $("body").animate({ scrollTop: -800 }, 'slow');
+                    $("body").animate({ scrollTop: 0 }, 1000);
                 });
             }
         }
