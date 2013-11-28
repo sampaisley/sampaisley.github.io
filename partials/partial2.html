@@ -11,11 +11,11 @@
 </span>
 
 
-    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+    <button ng-disabled="currentPage == 0" ng-click="gotoTop('prev')">
         Previous
     </button>
     {{currentPage+1}}/{{numPages }}
-    <button ng-disabled="currentPage >= f.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+    <button ng-disabled="currentPage >= d.length/pageSize - 1" ng-click="gotoTop('next')">
         Next
     </button>
     <hr>
