@@ -38,7 +38,7 @@ var app = angular.module('myApp.controllers', []).
 
         };
         $scope.calcCurrentPage = function(){
-            return Math.ceil(parseInt($scope.currentPage+1) / parseInt($scope.numPages));
+            $scope.currentPage = Math.ceil(parseInt($scope.currentPage+1) / parseInt($scope.numPages));
         }
         // get the google sread sheet
         $http.get('https://spreadsheets.google.com/feeds/list/0AhZ7a-ySJXJTdDFRZGFwdk83QU5Jc0lrNjNpbmNHTFE/od6/public/values?alt=json', { cache: true }).success(function (data) {
