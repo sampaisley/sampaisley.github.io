@@ -64,7 +64,7 @@ var app = angular.module('myApp.controllers', []).
         $scope.items = [];
 
        $scope.updatePageNums = function () {
-//            $scope.numPages = $window.Math.ceil( ($scope.items.length / $scope.pageSize));
+          $scope.numPages = $window.Math.ceil( ($scope.items.length / $scope.pageSize));
 //           alert("ffffffff" +$scope.currentPage);
       };
 
