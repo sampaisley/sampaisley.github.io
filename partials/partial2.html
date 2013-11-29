@@ -14,7 +14,7 @@
     <button scroll-on-click ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1; changeTarget(currentPage)">
         Previous
     </button>
-    {{calcCurrentPage()}}/{{numPages }}
+    {{currentPage +1}}/{{numPages }}
     <button scroll-on-click ng-disabled="currentPage >= d.length/pageSize -1" ng-click="currentPage=currentPage+1; changeTarget(currentPage)">
         Next
     </button>
