@@ -1,4 +1,4 @@
-<div class="large-2 push-10 sidebar-large columns" ng-init="setPage()">
+    <div class="large-2 push-10 sidebar-large columns" ng-init="setPage()">
     <h1>DOS</h1>
 </div>
 <div class="large-10 pull-2 columns main_event_two">
@@ -14,8 +14,8 @@
     <button scroll-on-click ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1; changeTarget(currentPage)">
         Previous
     </button>
-    {{currentPage }}/{{numPages }}
-    <button scroll-on-click ng-disabled="currentPage >= d.length/pageSize - 1" ng-click="currentPage=currentPage+ +1; changeTarget(currentPage)">
+    {{currentPage +1}}/{{numPages }}
+    <button scroll-on-click ng-disabled="currentPage >= d.length/pageSize -1" ng-click="currentPage=currentPage+1; changeTarget(currentPage)">
         Next
     </button>
     <hr>
