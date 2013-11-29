@@ -29,14 +29,15 @@ var app = angular.module('myApp.controllers', []).
     })
 
     .controller('MyCtrl2', function ($scope, $http, $sce, $window, $location) {     ///--- PAGE 2 CONTROL ---
-        // get the google sread sheet
+
         $scope.currentPage = 0;
         $scope.pageSize = 4;
         $scope.updatePageNums = function () {
             $scope.numPages = $window.Math.ceil( ($scope.d.length / $scope.pageSize));
-            console.log('updatePageNums');
-        };
 
+
+        };
+        // get the google sread sheet
         $http.get('https://spreadsheets.google.com/feeds/list/0AhZ7a-ySJXJTdDFRZGFwdk83QU5Jc0lrNjNpbmNHTFE/od6/public/values?alt=json', { cache: true }).success(function (data) {
             // console.log(data.feed.entry);
             $scope.d = data.feed.entry;
@@ -50,8 +51,8 @@ var app = angular.module('myApp.controllers', []).
         }
         $scope.loc =  $location.search();
         $scope.setPage     = function(){
-            $scope.currentPage = $scope.loc.p;
-            console.log($scope.loc.p);
+            $scope.currentPage = $scope.loc.p || 0;
+
         }
 
 
