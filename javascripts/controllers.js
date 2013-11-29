@@ -28,7 +28,7 @@ var app = angular.module('myApp.controllers', []).
 
     })
 
-    .controller('MyCtrl2', function ($scope, $http, $sce, $window, $location, $anchorScroll) {     ///--- PAGE 2 CONTROL ---
+    .controller('MyCtrl2', function ($scope, $http, $sce, $window, $location) {     ///--- PAGE 2 CONTROL ---
         // get the google sread sheet
         $scope.currentPage = 0;
         $scope.pageSize = 4;
@@ -44,14 +44,15 @@ var app = angular.module('myApp.controllers', []).
 
         });
 
-       // $scope.scrollTop = function (direction){
-               $('button').click(function(){
-                  // $('html, body').animate({ scrollTop: 0 }, 'slow');
-                   console.log("button clicked")
-               })
-
-
-       // }
+        $scope.changeTarget = function(name) {
+            $location.search('p', name);
+            $scope.currentPage = name ;
+        }
+        $scope.loc =  $location.search();
+        $scope.setPage     = function(){
+            $scope.currentPage = $scope.loc.p;
+            console.log($scope.loc.p);
+        }
 
 
     })
