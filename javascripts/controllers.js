@@ -30,7 +30,7 @@ var app = angular.module('myApp.controllers', []).
 
     .controller('MyCtrl2', function ($scope, $http, $sce, $window, $location) {     ///--- PAGE 2 CONTROL ---
 
-        $scope.currentPage = 0;
+       $scope.currentPage = 0;
         $scope.pageSize = 4;
         $scope.updatePageNums = function () {
             $scope.numPages = $window.Math.ceil( ($scope.d.length / $scope.pageSize));
@@ -39,6 +39,7 @@ var app = angular.module('myApp.controllers', []).
         };
         $scope.calcCurrentPage = function(){
             $scope.currentPage = Math.ceil(parseInt($scope.currentPage+1) / parseInt($scope.numPages));
+            return $scope.currentPage;
         }
         // get the google sread sheet
         $http.get('https://spreadsheets.google.com/feeds/list/0AhZ7a-ySJXJTdDFRZGFwdk83QU5Jc0lrNjNpbmNHTFE/od6/public/values?alt=json', { cache: true }).success(function (data) {
@@ -54,7 +55,7 @@ var app = angular.module('myApp.controllers', []).
         }
         $scope.loc =  $location.search();
         $scope.setPage     = function(){
-            $scope.currentPage = $scope.loc.p || 0;
+            $scope.currentPage = parseInt($scope.loc.p || 0);
 
         }
 
