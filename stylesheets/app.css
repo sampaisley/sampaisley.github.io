@@ -7240,65 +7240,67 @@ img.no-image {
 /* line 72, ../sass/app.scss */
 .sidebar-large {
   background-color: rgba(56, 89, 135, 0.27);
+  padding: 0;
 }
-/* line 75, ../sass/app.scss */
+/* line 77, ../sass/app.scss */
 .sidebar-large > h1 {
-  font-size: 12em;
+  font-size: 11.5em;
+  padding: 1px !important;
   word-break: break-all;
   font-weight: 900;
   text-align: center;
   color: rgba(33, 53, 82, 0.88);
 }
 @media (max-width: 47.9375em) {
-  /* line 75, ../sass/app.scss */
+  /* line 77, ../sass/app.scss */
   .sidebar-large > h1 {
     font-size: 4em;
   }
 }
 
-/* line 93, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 nav li {
   display: inline;
   list-style-type: none;
 }
-/* line 97, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 nav li a.active {
   color: #ffffff !important;
   font-size: 2em;
   text-transform: uppercase;
 }
-/* line 102, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 nav li.time_now {
   color: indianred !important;
 }
-/* line 106, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 nav h1 a {
   color: #F5AA0A !important;
   display: inline;
 }
-/* line 110, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 nav .timenow {
   color: rgba(33, 53, 82, 0.84) !important;
 }
 
-/* line 118, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .main_event_one {
   background-color: #d7d2b2;
   word-wrap: break-word;
   font-weight: 900;
 }
-/* line 123, ../sass/app.scss */
+/* line 126, ../sass/app.scss */
 .main_event_one h1 {
   color: #cd441d !important;
   font-size: 12em;
 }
 
-/* line 129, ../sass/app.scss */
+/* line 132, ../sass/app.scss */
 .main_event_two {
   background-color: rgba(255, 218, 243, 0);
   border-right: 1px solid #dddddd;
 }
-/* line 133, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 .main_event_two img {
   border: 14px solid #ababab;
   border-bottom: 20px solid #bababa;
@@ -7308,7 +7310,7 @@ nav .timenow {
   margin: .5em;
 }
 
-/* line 147, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 .custom-panel {
   color: rgba(17, 20, 57, 0.79);
   border-style: solid;
@@ -7340,7 +7342,7 @@ nav .timenow {
   line-height: 1.4;
 }
 
-/* line 158, ../sass/app.scss */
+/* line 161, ../sass/app.scss */
 .custom-panel-p4 {
   color: rgba(205, 68, 29, 0.78);
   border-style: solid;
@@ -7372,7 +7374,7 @@ nav .timenow {
   line-height: 1.4;
 }
 
-/* line 171, ../sass/app.scss */
+/* line 174, ../sass/app.scss */
 #pageNumInput {
   display: inline;
   width: 20%;

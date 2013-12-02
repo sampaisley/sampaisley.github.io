@@ -71,21 +71,24 @@ img.no-image{      //class for img when no url supplyed
 }
 .sidebar-large{
   background-color: rgba(56, 89, 135, 0.27);
+  padding: 0;
+
 
   > h1{
     @media (max-width: $mainBreakPoint) {
       font-size: 4em;
     }
-    font-size: 12em;
-    //
+    font-size: 11.5em;
+   padding: 1px !important;
+
     word-break: break-all;
     font-weight: 900;
     text-align: center;
     color: rgba(33, 53, 82, 0.88);
-
   }
-
 }
+
+
 
 
 
