@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -7218,12 +7219,17 @@ a.th {
   max-width: 800px;
 }
 
-/* line 58, ../sass/app.scss */
+/* line 59, ../sass/app.scss */
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 63, ../sass/app.scss */
 p {
   color: #213142;
 }
 
-/* line 61, ../sass/app.scss */
+/* line 66, ../sass/app.scss */
 img.no-image {
   visibility: hidden;
   height: 0px;
@@ -7231,54 +7237,68 @@ img.no-image {
   margin-left: -2000em;
 }
 
-/* line 67, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .sidebar-large {
   background-color: rgba(56, 89, 135, 0.27);
 }
-/* line 70, ../sass/app.scss */
+/* line 75, ../sass/app.scss */
 .sidebar-large > h1 {
-  font-size: 6em;
+  font-size: 12em;
   word-break: break-all;
+  font-weight: 900;
   text-align: center;
   color: rgba(33, 53, 82, 0.88);
 }
+@media (max-width: 47.9375em) {
+  /* line 75, ../sass/app.scss */
+  .sidebar-large > h1 {
+    font-size: 4em;
+  }
+}
 
-/* line 81, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 nav li {
   display: inline;
   list-style-type: none;
 }
-/* line 85, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 nav li a.active {
   color: #ffffff !important;
   font-size: 2em;
   text-transform: uppercase;
 }
-/* line 90, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 nav li.time_now {
   color: indianred !important;
 }
-/* line 94, ../sass/app.scss */
+/* line 106, ../sass/app.scss */
 nav h1 a {
   color: #F5AA0A !important;
   display: inline;
 }
-/* line 98, ../sass/app.scss */
+/* line 110, ../sass/app.scss */
 nav .timenow {
   color: rgba(33, 53, 82, 0.84) !important;
 }
 
-/* line 106, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 .main_event_one {
   background-color: #d7d2b2;
+  word-wrap: break-word;
+  font-weight: 900;
+}
+/* line 123, ../sass/app.scss */
+.main_event_one h1 {
+  color: #cd441d !important;
+  font-size: 12em;
 }
 
-/* line 110, ../sass/app.scss */
+/* line 129, ../sass/app.scss */
 .main_event_two {
   background-color: rgba(255, 218, 243, 0);
   border-right: 1px solid #dddddd;
 }
-/* line 114, ../sass/app.scss */
+/* line 133, ../sass/app.scss */
 .main_event_two img {
   border: 14px solid #ababab;
   border-bottom: 20px solid #bababa;
@@ -7288,7 +7308,7 @@ nav .timenow {
   margin: .5em;
 }
 
-/* line 128, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 .custom-panel {
   color: rgba(17, 20, 57, 0.79);
   border-style: solid;
@@ -7320,7 +7340,7 @@ nav .timenow {
   line-height: 1.4;
 }
 
-/* line 139, ../sass/app.scss */
+/* line 158, ../sass/app.scss */
 .custom-panel-p4 {
   color: rgba(205, 68, 29, 0.78);
   border-style: solid;
@@ -7352,7 +7372,7 @@ nav .timenow {
   line-height: 1.4;
 }
 
-/* line 152, ../sass/app.scss */
+/* line 171, ../sass/app.scss */
 #pageNumInput {
   display: inline;
   width: 20%;

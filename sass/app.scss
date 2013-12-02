@@ -7,6 +7,9 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+$mainBreakPoint:emCalc(767);
+
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
 
@@ -53,7 +56,9 @@
 // @import "foundation/components/thumbs";
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
-
+h1,h2,h3,h4,h5,h6,p{
+  font-family: 'Lato', sans-serif;
+}
 $fooey : #213142;
 p{
   color: $fooey;
@@ -68,13 +73,20 @@ img.no-image{      //class for img when no url supplyed
   background-color: rgba(56, 89, 135, 0.27);
 
   > h1{
-    font-size: 6em;
+    @media (max-width: $mainBreakPoint) {
+      font-size: 4em;
+    }
+    font-size: 12em;
+    //
     word-break: break-all;
+    font-weight: 900;
     text-align: center;
     color: rgba(33, 53, 82, 0.88);
+
   }
 
 }
+
 
 
 nav{
@@ -103,10 +115,17 @@ nav{
 
 }
 
-.main_event_one{
-background-color: #d7d2b2;
+.main_event_one {
+  background-color: #d7d2b2;
 
+  word-wrap: break-word ;
+  font-weight:900;
+  h1{color: #cd441d !important;
+    font-size: 12em;}
 }
+
+
+
 .main_event_two{
   background-color: rgba(255, 218, 243, 0);
   border-right: 1px solid #dddddd;
