@@ -116,7 +116,10 @@ background-color: #d7d2b2;
     border-bottom: 20px solid #bababa;
     padding: 3px;
     background-color: #d8d8d8;
+    float: left;
+    margin: .5em;
   }
+
 
 }
 
@@ -133,10 +136,26 @@ background-color: #d7d2b2;
     $adjust:true
   );
 }
+.custom-panel-p4 {
+  color: rgba(205, 68, 29, 0.78);
+
+  @include panel(
+  // Sets the panel background color. Default: $panel-pg
+    $bg: rgba(66, 192, 242, 0.36),
+    // Sets the panel padding amount. Default: $panel-padding
+    $padding:3px 9px,
+    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
+    $adjust:true
+  );
+}
+
       #pageNumInput{
         display: inline;
         width: 20%;
       }
+
+
+
 
 
 

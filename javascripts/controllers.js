@@ -1,6 +1,6 @@
 /* Controllers */
 
-var app = angular.module('myApp.controllers', []).
+var app = angular.module('myApp.controllers', ['firebase']).
     controller('RootCtrl', function ($scope, $location) {
 
 
@@ -16,7 +16,8 @@ var app = angular.module('myApp.controllers', []).
         $scope.pages = [
             {title: 'view1', url: '/#/view1'} ,
             {title: 'view2', url: '/#/view2'} ,
-            {title: 'view3', url: '/#/view3'}
+            {title: 'view3', url: '/#/view3'} ,
+            {title: 'view4', url: '/#/view4'}
         ]
 
 
@@ -45,6 +46,8 @@ var app = angular.module('myApp.controllers', []).
         $http.get('https://spreadsheets.google.com/feeds/list/0AhZ7a-ySJXJTdDFRZGFwdk83QU5Jc0lrNjNpbmNHTFE/od6/public/values?alt=json', { cache: true }).success(function (data) {
             // console.log(data.feed.entry);
             $scope.d = data.feed.entry;
+            console.info( $scope.d);
+            console.log( $scope.d);
 
 
         });
@@ -88,6 +91,13 @@ var app = angular.module('myApp.controllers', []).
         });
 
 
+    })
+    .controller('MyCtrl4', function ($scope,angularFire) {     ///--- PAGE 4 CONTROL ---;
+
+
+        $scope.items = [];
+        var ref = new Firebase("https://paisley1.firebaseio.com");
+        angularFire(ref, $scope, "items");
     });
 
 

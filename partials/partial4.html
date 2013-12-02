@@ -1,0 +1,21 @@
+<div class="large-2 push-10 sidebar-large columns">
+            <h1>CUATRO</h1>
+</div>
+<div class="large-10 pull-2 columns main_event_two">
+
+    <span ng-repeat="item in items ">
+        <h2 class="custom-panel-p4">{{item.title}}</h2>
+        <img ng-src="{{item.img}}" />
+        <p ng-bind-html="item.content | unsafe"></p>
+        <hr>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
