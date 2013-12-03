@@ -19,4 +19,11 @@ angular.module('myApp.filters', []).
             start = +start; //parse to int
             return input.slice(start);
         }
+    })
+    .filter('dog', function() {
+        return function(input,f) {
+
+            if(input==f)
+            return input;
+        }
     });
