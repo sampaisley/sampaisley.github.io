@@ -120,6 +120,11 @@ var app = angular.module('myApp.controllers', ['firebase']).
             $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
             $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
         };
+
+        $scope.clear = function(){
+            myDataRef.remove();
+            $('#messagesDiv').empty();
+        }
     });
 
 
