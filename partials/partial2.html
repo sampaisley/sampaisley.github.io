@@ -2,7 +2,8 @@
     <h1>DOS</h1>
 </div>
 <div class="large-10 pull-2 columns main_event_two">
-<span  ng-repeat="f in d | startFrom:currentPage*pageSize | limitTo:pageSize"  ng-init="updatePageNums()">
+
+<span  ng-repeat="f in d | startFrom:currentPage*pageSize | limitTo:pageSize "  ng-init="updatePageNums()">
     <h1 class="custom-panel">{{f.gsx$title.$t}}</h1>
     <!--<p>{{d[$index].gsx$content.$t}}</p>-->
      <p ng-bind-html="f.gsx$content.$t | unsafe"></p>
