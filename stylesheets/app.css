@@ -7379,3 +7379,25 @@ nav .timenow {
   display: inline;
   width: 20%;
 }
+
+/* line 183, ../sass/app.scss */
+#messagesDiv {
+  background-color: white;
+  overflow: auto;
+  height: 230px;
+  width: 100%;
+  padding: 10px;
+  border: 8px solid #424547;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* line 194, ../sass/app.scss */
+#nameInput {
+  width: 26%;
+}
+
+/* line 198, ../sass/app.scss */
+#messageInput {
+  width: 68%;
+}
