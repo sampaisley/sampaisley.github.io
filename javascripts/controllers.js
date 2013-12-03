@@ -116,7 +116,9 @@ var app = angular.module('myApp.controllers', ['firebase']).
             var message = snapshot.val();
             displayChatMessage(message.name, message.text);
         });
-
+        myDataRef.on('child_removed', function() {
+            $('#messagesDiv').empty();
+        });
 
         function displayChatMessage(name, text) {
             $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
@@ -125,7 +127,7 @@ var app = angular.module('myApp.controllers', ['firebase']).
 
         $scope.clear = function(){
             myDataRef.remove();
-            $('#messagesDiv').empty();
+
         }
     });
 
