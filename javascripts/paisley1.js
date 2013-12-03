@@ -22,5 +22,11 @@
         "content": "When we have realized the obstacles in the way of a straightforward and confident answer, we shall be well launched on the study of philosophy—for philosophy is merely the attempt to answer such ultimate questions, not carelessly and dogmatically, as we do in ordinary life and even in the sciences, but critically, after exploring all that makes such questions puzzling, and after realizing all the vagueness and confusion that underlie our ordinary ideas.",
         "img": "https://dl.dropboxusercontent.com/u/15762817/git-img/screen2.jpg" ,
         "dog":{"l":"chino"}
+    } ,
+    {
+        "title": "ho HO oh!",
+        "content": "Then Pa, who had seen the occurrence, And didn't know what to do next, Said 'Mother! Yon Lion's 'et Albert', And Mother said 'Eee, I am vexed!'",
+        "img": "http://www.emigre.com/ImagesHome/080A.GIF" ,
+        "dog":{"l":"spanish"}
     }
 ]
