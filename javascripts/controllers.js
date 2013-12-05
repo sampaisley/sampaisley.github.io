@@ -99,7 +99,7 @@ var app = angular.module('myApp.controllers', ['firebase']).
         $scope.items = [];
         var ref = new Firebase("https://paisley1.firebaseio.com");
         angularFire(ref, $scope, "items");
-        $scope.color = 'title';
+        //$scope.color = 'content';
     })
     .controller('MyCtrl5', function ($scope,angularFire) {     ///--- PAGE 5 CONTROL ---;
 
