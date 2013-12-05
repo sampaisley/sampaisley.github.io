@@ -2,9 +2,12 @@
     <h1>CUATRO</h1>
 </div>
 
-<div class="large-10 pull-2 columns main_event_two">   <p>
-    <input type="text" ng-model="search"  autofocus="autofocus"  placeholder="Search by Title"></p>
-    <span ng-repeat="item in items | filter:{title:search} ">
+<div class="large-10 pull-2 columns main_event_two">
+    <br class="hide-for-large">
+    <p> <input type="text" ng-model="search" autofocus="autofocus" placeholder="Search by {{color}}">
+    <input type="radio" ng-model="color" value="title">  Title
+    <input type="radio" ng-model="color" value="content"> Content</p>
+    <span ng-repeat="item in items | filter:search:color ">
         <p>{{item.dog.l }}</p>
         <h2 class="custom-panel-p4">{{item.title}}</h2>
         <img ng-src="{{item.img}}"/>

@@ -7283,24 +7283,32 @@ nav .timenow {
   color: rgba(33, 53, 82, 0.84) !important;
 }
 
-/* line 121, ../sass/app.scss */
+/* line 122, ../sass/app.scss */
+#footDivs div p {
+  text-align: center;
+  color: indianred !important;
+  font-size: 1.5em;
+  letter-spacing: 2em;
+}
+
+/* line 134, ../sass/app.scss */
 .main_event_one {
   background-color: #d7d2b2;
   word-wrap: break-word;
   font-weight: 900;
 }
-/* line 126, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 .main_event_one h1 {
   color: #cd441d !important;
   font-size: 12em;
 }
 
-/* line 132, ../sass/app.scss */
+/* line 145, ../sass/app.scss */
 .main_event_two {
   background-color: rgba(255, 218, 243, 0);
   border-right: 1px solid #dddddd;
 }
-/* line 136, ../sass/app.scss */
+/* line 149, ../sass/app.scss */
 .main_event_two img {
   border: 14px solid #ababab;
   border-bottom: 20px solid #bababa;
@@ -7310,7 +7318,7 @@ nav .timenow {
   margin: .5em;
 }
 
-/* line 150, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 .custom-panel {
   color: rgba(17, 20, 57, 0.79);
   border-style: solid;
@@ -7342,7 +7350,7 @@ nav .timenow {
   line-height: 1.4;
 }
 
-/* line 161, ../sass/app.scss */
+/* line 174, ../sass/app.scss */
 .custom-panel-p4 {
   color: rgba(205, 68, 29, 0.78);
   border-style: solid;
@@ -7374,13 +7382,13 @@ nav .timenow {
   line-height: 1.4;
 }
 
-/* line 174, ../sass/app.scss */
+/* line 187, ../sass/app.scss */
 #pageNumInput {
   display: inline;
   width: 20%;
 }
 
-/* line 183, ../sass/app.scss */
+/* line 196, ../sass/app.scss */
 #messagesDiv {
   background-color: white;
   overflow: auto;
@@ -7392,12 +7400,12 @@ nav .timenow {
   text-align: left;
 }
 
-/* line 194, ../sass/app.scss */
+/* line 207, ../sass/app.scss */
 #nameInput {
   width: 26%;
 }
 
-/* line 198, ../sass/app.scss */
+/* line 211, ../sass/app.scss */
 #messageInput {
   width: 68%;
 }

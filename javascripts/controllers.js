@@ -17,7 +17,8 @@ var app = angular.module('myApp.controllers', ['firebase']).
             {title: 'view1', url: '/#/view1'} ,
             {title: 'view2', url: '/#/view2'} ,
             {title: 'view3', url: '/#/view3'} ,
-            {title: 'view4', url: '/#/view4'}
+            {title: 'view4', url: '/#/view4'}  ,
+            {title: 'view5', url: '/#/view5'}
         ]
 
 
@@ -98,11 +99,10 @@ var app = angular.module('myApp.controllers', ['firebase']).
         $scope.items = [];
         var ref = new Firebase("https://paisley1.firebaseio.com");
         angularFire(ref, $scope, "items");
+        $scope.color = 'title';
     })
     .controller('MyCtrl5', function ($scope,angularFire) {     ///--- PAGE 5 CONTROL ---;
 
-
-        $scope.items = [];
         var myDataRef = new Firebase("https://paisley1-1.firebaseio.com");
         $('#messageInput').keypress(function (e) {
             if (e.keyCode == 13) {
@@ -112,10 +112,12 @@ var app = angular.module('myApp.controllers', ['firebase']).
                 $('#messageInput').val('');
             }
         });
-        myDataRef.on('child_added', function(snapshot) {
+        myDataRef.on('child_added', onValueChange)  ;
+        function onValueChange(snapshot) {
             var message = snapshot.val();
             displayChatMessage(message.name, message.text);
-        });
+
+        };
         myDataRef.on('child_removed', function() {
             $('#messagesDiv').empty();
         });
@@ -123,6 +125,7 @@ var app = angular.module('myApp.controllers', ['firebase']).
         function displayChatMessage(name, text) {
             $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
             $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+           // myDataRef.off('child_added', onValueChange);
         };
 
         $scope.clear = function(){
