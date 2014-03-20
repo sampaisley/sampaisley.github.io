@@ -10,224 +10,85 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 $mainBreakPoint:emCalc(767);
 
-// Import specific parts of Foundation by commenting the import "foundation"
-// and uncommenting what you want below. You must uncomment the following if customizing
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+body {
+  font-family: courier;
+  margin:  0 20%;
+  @media screen and (max-width: 1000px) {
+    margin:  0 10%;
+  }
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
 
-// @import "foundation/components/global"; // *always required
-// @import "foundation/components/grid";
-
-//
-// Use this grid if you want to start using the new Foundation 5 grid early.
-// It will change breakpoints to min-width: 640px and 1024px.
-//
-// @import "foundation/components/grid-5";
-//
-
-// @import "foundation/components/visibility";
-// @import "foundation/components/block-grid";
-// @import "foundation/components/type";
-// @import "foundation/components/buttons";
-// @import "foundation/components/forms"; // *requires components/buttons
-// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
-// @import "foundation/components/button-groups"; // *requires components/buttons
-// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
-// @import "foundation/components/split-buttons"; // *requires components/buttons
-// @import "foundation/components/flex-video";
-// @import "foundation/components/section";
-// @import "foundation/components/top-bar";  // *requires components/grid
-// @import "foundation/components/orbit";
-// @import "foundation/components/reveal";
-// @import "foundation/components/joyride";
-// @import "foundation/components/clearing";
-// @import "foundation/components/alert-boxes";
-// @import "foundation/components/breadcrumbs";
-// @import "foundation/components/keystrokes";
-// @import "foundation/components/labels";
-// @import "foundation/components/inline-lists";
-// @import "foundation/components/pagination";
-// @import "foundation/components/panels";
-// @import "foundation/components/pricing-tables";
-// @import "foundation/components/progress-bars";
-// @import "foundation/components/side-nav";
-// @import "foundation/components/sub-nav";
-// @import "foundation/components/switch";
-// @import "foundation/components/magellan";
-// @import "foundation/components/tables";
-// @import "foundation/components/thumbs";
-// @import "foundation/components/tooltips";
-// @import "foundation/components/dropdown";
-h1,h2,h3,h4,h5,h6,p{
-  font-family: 'Lato', sans-serif;
+  border: 35px solid rgba(#aaa,.1);
 }
-$fooey : #213142;
-p{
-  color: $fooey;
+h1{
+  font-family:'Gill Sans' ,'Open Sans',Helvetica, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 4em;
+  padding: 40px 10px;
 }
-img.no-image{      //class for img when no url supplyed
-  visibility: hidden;
-  height: 0px;
-  width: 0px;
-  margin-left:-2000em;
-}
-.sidebar-large{
-  background-color: rgba(56, 89, 135, 0.27);
-  padding: 0;
 
-
-  > h1{
-    @media (max-width: $mainBreakPoint) {
-      font-size: 4em;
-    }
-    font-size: 11.5em;
-   padding: 1px !important;
-
-    word-break: break-all;
-    font-weight: 900;
-    text-align: center;
-    color: rgba(33, 53, 82, 0.88);
+#one {
+  min-height: 330px;
+  width:100%;
+  background-image:url('http://farm6.staticflickr.com/5324/9656307798_0fd21e725b_h.jpg');
+  background-attachment:fixed;
+  background-size: cover;
+  P {
+    background-color: rgba(black, .4);
+    padding:5px 30% ;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.25;
+  }
+  h1{
+    color:#bcc749;
+    text-shadow: 1px 1px 1px #fc7b0c;
   }
 }
-
-
-
-
-
-nav{
-  li{
-    display: inline;
-    list-style-type: none;
+#two {
+  min-height: 330px;
+  width:100%;
+  background-image:url('http://farm8.staticflickr.com/7303/10273032315_bb6debd1bc_o.jpg');
+  background-attachment:fixed;
+  background-size: cover;
+  P {
+    background-color: rgba(pink, .4);
+    padding: 10px 20%;
+    line-height: 50px;
   }
-  li a.active{
-    color: #ffffff !important;
-    font-size: 2em;
-    text-transform:uppercase;
-  }
-  li.time_now{
-    color: indianred !important;
-
-  }
-  h1 a{
-    color:#F5AA0A !important;
-    display: inline;
-  }
-  .timenow{
-    color: rgba(33, 53, 82, 0.84) !important;
-
-  }
-
-
-}
-
-#footDivs{
-  div p{
-    text-align: center;
-    color: indianred !important;
-    font-size: 1.5em;
-    letter-spacing: 2.8em;
+  h1{
+    color: #49a447;
+    text-shadow: 1px 1px 1px #df5853;
   }
 }
-
-
-
-
-
-.main_event_one {
-  background-color: #d7d2b2;
-
-  word-wrap: break-word ;
-  font-weight:900;
-  h1{color: #cd441d !important;
-    font-size: 12em;}
-}
-
-
-
-.main_event_two{
-  background-color: rgba(255, 218, 243, 0);
-  border-right: 1px solid #dddddd;
-
-  img{
-    border: 14px solid #ababab;
-    border-bottom: 20px solid #bababa;
-    padding: 3px;
-    background-color: #d8d8d8;
-    float: left;
-    margin: .5em;
+#three {
+  min-height: 330px;
+  width:100%;
+  background-image:url('http://farm8.staticflickr.com/7284/9653068581_bca0dbffec_h.jpg');
+  background-attachment:fixed;
+  background-size:cover;
+  P {
+    background-color: rgba(#8e6c45, .35);
+    padding: 15px 15%;
+    line-height: 30px;
+    font-size: 1.3em;
+    color:red
   }
+  h1{
+    color: #d8c5b8;
+    text-shadow: 1px 1px 1px #030207;
 
-
+  }
 }
-
-
-
-.custom-panel {
-  color: rgba(17, 20, 57, 0.79);
-  @include panel(
-  // Sets the panel background color. Default: $panel-pg
-    $bg: rgba(242, 242, 242, 0.37),
-    // Sets the panel padding amount. Default: $panel-padding
-    $padding:5px 10px,
-    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
-    $adjust:true
-  );
+#fill {
+  min-height: 200px;
+  padding:20px;
+  font-size:2em;
+  background-color: #bcc749;
 }
-.custom-panel-p4 {
-  color: rgba(205, 68, 29, 0.78);
-
-  @include panel(
-  // Sets the panel background color. Default: $panel-pg
-    $bg: rgba(66, 192, 242, 0.36),
-    // Sets the panel padding amount. Default: $panel-padding
-    $padding:3px 9px,
-    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
-    $adjust:true
-  );
+footer{
+  min-height:400px;
+  background-color: #000;
 }
-
-      #pageNumInput{
-        display: inline;
-        width: 20%;
-      }
-
-
-
-  ////////// PAGE 5
-
-#messagesDiv {
-  background-color: white;
-  overflow: auto;
-  height: 230px;
-  width: 100%;
-  padding: 10px;
-  border: 8px solid #424547;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-#nameInput {
-  width: 26%;
-}
-
-#messageInput {
-  width: 68%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
