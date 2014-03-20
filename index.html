@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--[if IE 8]>
-<html class="no-js lt-ie9" lang="en" ng-app="myApp"> <![endif]-->
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" ng-app="myApp"> <!--<![endif]-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
@@ -17,99 +17,116 @@
     <script src="javascripts/vendor/custom.modernizr.js"></script>
 
 </head>
-<body ng-controller="RootCtrl">
+<body>
 
 
-           <!--angular stuff here _____________________________________________________________-->
-<div class="row" id="top">
-    <div class="large-12 columns">
+<!-- Main Grid Section -->
 
-        <nav class="top-bar">
-            <ul class="title-area">
-                <!-- Title Area -->
-                <li class="name">
-                    <h1 class="hide-for-small">
-                        <a href="{{ pages[0].url }}">
-                            S.P  <span class="timenow">{{timeNow | date:'HH:mm:ss'}}</span>
-                        </a>
-                    </h1>
-                    <h1 class="show-for-small"><a href="{{ pages[0].url }}">s.p</a></h1>
-                </li>
-                <li class="toggle-topbar menu-icon"><a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
-            </ul>
+<div class="row">
 
-            <section class="top-bar-section">
-                <!-- Right Nav Section -->
-                <ul class="right top-right">
-                    <li ng-repeat="page in pages ">
-
-                        <a href={{page.url}} ng-class="{'active': page.url == thisPage }"> {{page.title}}</a></li>
-
-
-                </ul>
-            </section>
-        </nav>
-
-             <hr>
-
-
+    <div class="large-3 columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a three columns grid panel with an arbitrary height.</p>
+        </div>
     </div>
+    <div class="large-6 columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a six columns grid panel with an arbitrary height. Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.</p>
+        </div>
+    </div>
+    <div class="large-3  columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a three columns grid panel with an arbitrary height.</p>
+        </div>
+    </div>
+
 </div>
-           <div class="row">
-               <div class="large-12 columns">
-               <div ng-view></div>
-                   </div>
-           </div>
-     <!--end ofangular stuff here _____________________________________________________________-->
+
 
 
 <div class="row">
-    <div id="footDivs" class="large-12 columns">
-                  <hr>
 
-        <!-- Grid Example -->
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="panel">
-                    <p>* * * *</p>
-                </div>
-            </div>
+    <div class="large-6 columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a six columns grid panel with an arbitrary height. Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.</p>
         </div>
-        <div class="row">
-            <div class="large-6 columns">
-                <div class="panel">
-                    <p>* *</p>
-                </div>
-            </div>
-            <div class="large-6 columns">
-                <div class="panel">
-                    <p>* *</p>
-                </div>
-            </div>
+    </div>
+    <div class="large-2 columns">
+        <div class="panel">
+            <p>
+                <img src="http://placehold.it/200x200" />
+            </p>
         </div>
-        <div class="row">
-            <div class="large-4 columns">
-                <div class="panel">
-                    <p>*</p>
-                </div>
-            </div>
-            <div class="large-4 columns">
-                <div class="panel">
-                    <p>*</p>
-                </div>
-            </div>
-            <div class="large-4 columns">
-                <div class="panel">
-                    <p>*</p>
-                </div>
-            </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a four columns grid panel with an arbitrary height. Bacon ipsum dolor sit amet salami.</p>
         </div>
-
-
-
+    </div>
 
 </div>
- </div>
+
+
+<div class="row">
+
+    <div class="large-4 columns">
+        <div class="panel">
+            <p>
+                <img src="http://placehold.it/400x300" />
+            </p>
+        </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel">
+            <p>
+                <img src="http://placehold.it/400x300" />
+            </p>
+        </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel">
+            <p>
+                <img src="http://placehold.it/400x300" />
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="large-6 columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a six columns grid panel with an arbitrary height. Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.</p>
+        </div>
+    </div>
+    <div class="large-3 columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a three columns grid panel with an arbitrary height.</p>
+        </div>
+    </div>
+    <div class="large-3 columns">
+        <div class="panel">
+            <h5>Panel Title</h5>
+            <p>This is a three columns grid panel with an arbitrary height.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- End Grid Section -->
+
+
+
+
 <!--<script>-->
     <!--document.write('<script src=' +-->
             <!--('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +-->
@@ -144,19 +161,9 @@
 
 <script src="javascripts/foundation/foundation.section.js"></script>
 
-<script src="javascripts/foundation/foundation.tooltips.js"></script>
 
-<script src="javascripts/foundation/foundation.topbar.js"></script>
 
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular/angular-route.js"></script>
-<script src="javascripts/app.js"></script>
-<script src="javascripts/services.js"></script>
-<script src="javascripts/controllers.js"></script>
-<script src="javascripts/filters.js"></script>
-<script src="javascripts/directives.js"></script>
-           <script src="https://cdn.firebase.com/v0/firebase.js"></script>
-           <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+
 <script>
     $(document).foundation();
 
