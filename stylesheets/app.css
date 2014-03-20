@@ -7320,3 +7320,8 @@ footer {
   min-height: 400px;
   background-color: #000000;
 }
+
+/* line 95, ../sass/app.scss */
+#bollox {
+  background-color: #fff;
+}
