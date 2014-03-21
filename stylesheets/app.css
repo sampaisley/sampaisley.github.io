@@ -7234,3 +7234,9 @@ p.info {
   position: absolute;
   margin-left: -9000em;
 }
+
+/* line 28, ../sass/app.scss */
+fieldset {
+  border: none;
+  margin: o;
+}
