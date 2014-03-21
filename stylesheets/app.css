@@ -7223,3 +7223,14 @@ a.th {
 * {
   font-family: 'Lato' !important;
 }
+
+/* line 19, ../sass/app.scss */
+body {
+  margin-top: 20px;
+}
+
+/* line 24, ../sass/app.scss */
+p.info {
+  position: absolute;
+  margin-left: -9000em;
+}
