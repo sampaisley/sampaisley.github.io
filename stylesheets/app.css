@@ -7245,3 +7245,8 @@ fieldset {
 #go_back {
   cursor: pointer;
 }
+
+/* line 37, ../sass/app.scss */
+.green_border {
+  border: 1px solid greenyellow;
+}
