@@ -7253,3 +7253,8 @@ fieldset {
   width: 140px;
   height: 140px;
 }
+
+/* line 43, ../sass/app.scss */
+.avaiable {
+  font-weight: 900;
+}
