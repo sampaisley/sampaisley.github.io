@@ -18,9 +18,13 @@ $mainBreakPoint:emCalc(767);
 
 body{
   margin-top: 20px;
-  word-break: break-all ;
-
 }
+
+#headTitle{
+  word-break: break-all;
+}
+
+
 
 //contact
 p.info {
@@ -32,10 +36,7 @@ fieldset{
   margin: 0;
 
 }
-#go_back{
-  cursor: pointer;
 
-}
 .circle{
   border:1px solid #EBDBBE;
   border-radius: 50%;
