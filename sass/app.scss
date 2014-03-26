@@ -35,7 +35,7 @@ fieldset{
 
 }
 .circle{
-  border:1px solid #eeeeee;
+  border:1px solid #EBDBBE;
   border-radius: 50%;
   width: 140px;
   height: 140px;
@@ -43,5 +43,58 @@ fieldset{
 .avaiable{
   font-weight:900 ;
 }
+
+iframe{
+  border: none;
+  width: 100%; height: 470px  ;
+  overflow: hidden;
+}
+#pop{
+  position: absolute;
+  top: 10px;
+  left: -1110px;
+  opacity: 0;
+  z-index: 0;
+}
+#pop.show{
+  transition: opacity .9s ease-out;
+  opacity: 1;
+  left: 10px;
+}
+
+
+.close_pop{
+  float: right;
+  z-index: 200;
+  font-size: 2em;
+  background-color: darkseagreen;
+  border: 1px solid darkseagreen;
+  border-radius: 50%;
+  font-weight: 900;color: darkred;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+
+}
+.body_fade{
+  transition: opacity .9s ease-out;
+  opacity: 0;
+}
+.greenBg{
+  background-color: #E6F2D0 !important;
+}
+.redBg{
+  background-color: #E8C8CE !important;
+}
+.blueBg{
+  background-color: #C8DDE8;
+}
+
+
+
+
+
+
+
 
 
