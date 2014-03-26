@@ -1,14 +1,10 @@
-
 <!DOCTYPE html>
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
 
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>mail</title>
+    <title>mail..</title>
     <link rel="icon" href="img/favicon2.ico"/>
     <link rel="stylesheet" href="stylesheets/app.css">
 </head>
@@ -55,7 +51,7 @@
 <script type="text/javascript">
     var s = document.querySelector('#go_back')
     s.onclick = function () {
-        window.close();
+        window.opener=null; window.close(); return false   ;
 
     }
 </script>
