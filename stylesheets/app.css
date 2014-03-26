@@ -7227,26 +7227,27 @@ a.th {
 /* line 19, ../sass/app.scss */
 body {
   margin-top: 20px;
+  word-break: break-all;
 }
 
-/* line 24, ../sass/app.scss */
+/* line 25, ../sass/app.scss */
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
 
-/* line 28, ../sass/app.scss */
+/* line 29, ../sass/app.scss */
 fieldset {
   border: none;
   margin: 0;
 }
 
-/* line 33, ../sass/app.scss */
+/* line 34, ../sass/app.scss */
 #go_back {
   cursor: pointer;
 }
 
-/* line 37, ../sass/app.scss */
+/* line 38, ../sass/app.scss */
 .circle {
   border: 1px solid #EBDBBE;
   border-radius: 50%;
@@ -7254,12 +7255,12 @@ fieldset {
   height: 140px;
 }
 
-/* line 43, ../sass/app.scss */
+/* line 44, ../sass/app.scss */
 .avaiable {
   font-weight: 900;
 }
 
-/* line 47, ../sass/app.scss */
+/* line 48, ../sass/app.scss */
 iframe {
   border: none;
   width: 100%;
@@ -7267,7 +7268,7 @@ iframe {
   overflow: hidden;
 }
 
-/* line 52, ../sass/app.scss */
+/* line 53, ../sass/app.scss */
 #pop {
   position: absolute;
   top: 10px;
@@ -7276,14 +7277,14 @@ iframe {
   z-index: 0;
 }
 
-/* line 59, ../sass/app.scss */
+/* line 60, ../sass/app.scss */
 #pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
   left: 10px;
 }
 
-/* line 66, ../sass/app.scss */
+/* line 67, ../sass/app.scss */
 .close_pop {
   float: right;
   z-index: 200;
@@ -7297,24 +7298,29 @@ iframe {
   height: 60px;
   cursor: pointer;
 }
+/* line 78, ../sass/app.scss */
+.close_pop:hover {
+  transition: all .4s ease-out;
+  background-color: #afcfaf;
+}
 
-/* line 79, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 .body_fade {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 83, ../sass/app.scss */
+/* line 94, ../sass/app.scss */
 .greenBg {
   background-color: #E6F2D0 !important;
 }
 
-/* line 86, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 .redBg {
   background-color: #E8C8CE !important;
 }
 
-/* line 89, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 .blueBg {
   background-color: #C8DDE8;
 }

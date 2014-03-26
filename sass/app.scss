@@ -18,8 +18,10 @@ $mainBreakPoint:emCalc(767);
 
 body{
   margin-top: 20px;
+  word-break: break-all ;
 
 }
+
 //contact
 p.info {
   position: absolute;
@@ -74,6 +76,16 @@ iframe{
   width: 60px;
   height: 60px;
   cursor: pointer;
+  &:hover{
+    transition: all .4s ease-out;
+    background-color:lighten(darkseagreen,10%);
+  }
+
+
+
+
+
+
 
 }
 .body_fade{
