@@ -7,6 +7,17 @@
     <title>mail..</title>
     <link rel="icon" href="img/favicon2.ico"/>
     <link rel="stylesheet" href="stylesheets/app.css">
+    <style type="text/css">
+
+        .no-js:hover{
+               color:orange;
+
+        }
+        .no-js:hover:after{
+            content:" requiers javascript";
+
+        }
+    </style>
 </head>
 <body>
 <div class="row">
@@ -25,7 +36,7 @@
     <div class="large-8 large-offset-3 columns">
         <div class="panel">
 
-            <iframe src="http://retard.orgfree.com/mail_for_git/contact.html" frameborder="0" style="width: 100%; height: 600px"></iframe>
+            <!--<iframe src="http://retard.orgfree.com/mail_for_git/contact.html" frameborder="0" style="width: 100%; height: 600px"></iframe>-->
         </div>
     </div>
 </div>
@@ -42,8 +53,7 @@
 </div>
 
 
-
-
+<a id="mail" class="no-js">conwwtact</a>
 
 
 
@@ -54,6 +64,9 @@
         window.opener=null; window.close(); return false   ;
 
     }
+
+    var m = document.querySelector('#mail')  ;
+    m.classList.remove('no-js');
 </script>
 
 

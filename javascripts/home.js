@@ -16,3 +16,6 @@ cp[0].onclick = cp[1].onclick = function () {
     }
 
 }
+
+var m = document.querySelector('#mail')  ;
+m.classList.remove('no-js');
