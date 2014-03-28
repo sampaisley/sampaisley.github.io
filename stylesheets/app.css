@@ -7288,51 +7288,51 @@ iframe {
   float: right;
   z-index: 200;
   font-size: 2em;
-  background-color: darkseagreen;
-  border: 1px solid darkseagreen;
+  background-color: #b6d96a;
+  border: 1px solid #87b02d;
   border-radius: 50%;
   font-weight: 900;
-  color: darkred;
+  color: #df5a49;
   width: 60px;
   height: 60px;
   cursor: pointer;
 }
-/* line 80, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .close_pop:hover {
   transition: all .2s ease-out;
-  background-color: #afcfaf;
+  background-color: #cae393;
 }
 
-/* line 92, ../sass/app.scss */
+/* line 88, ../sass/app.scss */
 .body_fade {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 96, ../sass/app.scss */
+/* line 92, ../sass/app.scss */
 .greenBg {
   background-color: #b6d96a !important;
   border: 1px solid #87b02d;
 }
 
-/* line 101, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 .redBg {
   background-color: #df5a49 !important;
   border: 1px solid #4e150e;
 }
 
-/* line 105, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .blueBg {
   background-color: #6ca6d9;
   border: 1px solid #193f60;
 }
 
-/* line 109, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 112, ../sass/app.scss */
+/* line 108, ../sass/app.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -7340,7 +7340,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 119, ../sass/app.scss */
+/* line 115, ../sass/app.scss */
 #mail {
   color: #df5a49;
 }
