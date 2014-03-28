@@ -7234,21 +7234,21 @@ body {
   word-break: break-all;
 }
 
-/* line 30, ../sass/app.scss */
+/* line 28, ../sass/app.scss */
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
 
-/* line 34, ../sass/app.scss */
+/* line 32, ../sass/app.scss */
 fieldset {
   border: none;
   margin: 0;
 }
 
-/* line 40, ../sass/app.scss */
+/* line 38, ../sass/app.scss */
 .circle {
-  border: 1px solid #EBDBBE;
+  border: 1px solid #ffbb03;
   border-radius: 50%;
   width: 140px;
   height: 140px;
@@ -7299,7 +7299,7 @@ iframe {
 }
 /* line 80, ../sass/app.scss */
 .close_pop:hover {
-  transition: all .4s ease-out;
+  transition: all .2s ease-out;
   background-color: #afcfaf;
 }
 
@@ -7311,15 +7311,36 @@ iframe {
 
 /* line 96, ../sass/app.scss */
 .greenBg {
-  background-color: #E6F2D0 !important;
+  background-color: #b6d96a !important;
+  border: 1px solid #87b02d;
 }
 
-/* line 99, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .redBg {
-  background-color: #E8C8CE !important;
+  background-color: #df5a49 !important;
+  border: 1px solid #4e150e;
 }
 
-/* line 102, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 .blueBg {
-  background-color: #C8DDE8;
+  background-color: #6ca6d9;
+  border: 1px solid #193f60;
+}
+
+/* line 109, ../sass/app.scss */
+p.smallBlurb {
+  font-size: 14px;
+}
+
+/* line 112, ../sass/app.scss */
+.no-js:hover:after {
+  content: " requiers javascript";
+  color: orange;
+  background-color: #fff;
+  font-weight: 900;
+}
+
+/* line 119, ../sass/app.scss */
+#mail {
+  color: #df5a49;
 }

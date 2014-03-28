@@ -24,8 +24,6 @@ body{
   word-break: break-all;
 }
 
-
-
 //contact
 p.info {
   position: absolute;
@@ -38,11 +36,13 @@ fieldset{
 }
 
 .circle{
-  border:1px solid #EBDBBE;
+  border:1px solid #ffbb03;
   border-radius: 50%;
   width: 140px;
   height: 140px;
 }
+
+
 .avaiable{
   font-weight:900 ;
 }
@@ -77,9 +77,9 @@ iframe{
   width: 60px;
   height: 60px;
   cursor: pointer;
-  &:hover{
-    transition: all .4s ease-out;
-    background-color:lighten(darkseagreen,10%);
+  &:hover {
+    transition: all .2s ease-out;
+    background-color: lighten(darkseagreen, 10%);
   }
 
 
@@ -94,14 +94,35 @@ iframe{
   opacity: 0;
 }
 .greenBg{
-  background-color: #E6F2D0 !important;
+  background-color: #b6d96a !important;
+  border: 1px solid darken(#b6d96a, 20%);
+
 }
 .redBg{
-  background-color: #E8C8CE !important;
+  background-color: #df5a49 !important;
+  border: 1px solid darken(#df5a49, 40%);
 }
-.blueBg{
-  background-color: #C8DDE8;
+.blueBg {
+  background-color: #6ca6d9;
+  border: 1px solid darken(#6ca6d9, 40%);
 }
+p.smallBlurb{
+  font-size: 14px;
+}
+.no-js:hover:after{
+  content:" requiers javascript";
+  color: orange;
+  background-color: #fff;
+  font-weight: 900;
+
+}
+#mail {
+  color: #df5a49;
+
+
+}
+
+
 
 
 
