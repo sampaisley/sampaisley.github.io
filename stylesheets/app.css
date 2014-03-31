@@ -7303,36 +7303,36 @@ iframe {
   background-color: #cae393;
 }
 
-/* line 88, ../sass/app.scss */
+/* line 89, ../sass/app.scss */
 .body_fade {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 92, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 .greenBg {
   background-color: #b6d96a !important;
   border: 1px solid #87b02d;
 }
 
-/* line 97, ../sass/app.scss */
+/* line 98, ../sass/app.scss */
 .redBg {
   background-color: #df5a49 !important;
   border: 1px solid #4e150e;
 }
 
-/* line 101, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 .blueBg {
   background-color: #6ca6d9;
   border: 1px solid #193f60;
 }
 
-/* line 105, ../sass/app.scss */
+/* line 106, ../sass/app.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 108, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -7340,7 +7340,14 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 115, ../sass/app.scss */
+/* line 116, ../sass/app.scss */
 #mail {
   color: #df5a49;
+}
+
+/* line 119, ../sass/app.scss */
+.circleFill {
+  border: 3px solid #ffbb03 !important;
+  transition: all .9s ease-out;
+  margin-left: 5px;
 }

@@ -115,9 +115,13 @@ p.smallBlurb{
 }
 #mail {
   color: #df5a49;
-
-
 }
+.circleFill {
+  border: 3px solid #ffbb03 !important;
+  transition: all .9s ease-out;
+  margin-left: 5px;
+}
+
 
 
 
