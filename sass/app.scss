@@ -15,10 +15,24 @@ $mainBreakPoint:emCalc(767);
     font-family: 'Lato' !important;
   }
 
-
-body{
-  margin-top: 20px;
+html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+body {
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+
+
+
+
+
 
 #headTitle{
   word-break: break-all;
@@ -91,18 +105,21 @@ iframe{
   opacity: 0;
 }
 .greenBg{
-  background-color: #b6d96a !important;
+  background-color: rgba(#b6d96a,0.9) !important;
   border: 1px solid darken(#b6d96a, 20%);
 
 }
 .redBg{
-  background-color: #df5a49 !important;
+  background-color: rgba(#df5a49,0.9) !important;
   border: 1px solid darken(#df5a49, 40%);
 }
 .blueBg {
-  background-color: #6ca6d9;
+  background-color: rgba(#6ca6d9, 0.9);
   border: 1px solid darken(#6ca6d9, 40%);
 }
+
+
+
 p.smallBlurb{
   font-size: 14px;
 }
