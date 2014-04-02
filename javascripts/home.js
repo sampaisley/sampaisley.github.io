@@ -6,9 +6,11 @@ var circ = document.querySelector('.circle');
 
 s.onclick = function () {
     for (var i = 0; i < b.length; i++) {
-        b[i].classList.add('body_fade');
+        b[i].classList.add('_fade_out');
+        b[i].classList.remove('_fade_in');
     }
     p.classList.add('show');
+    //p.classList.remove("hide") ;
     circ.classList.add('circleBorder');
 
 }
@@ -23,9 +25,11 @@ s.onmouseout = function(){
 }
 cp[0].onclick = cp[1].onclick = function () {
     p.classList.remove('show');
+   //p.classList.add('hide');
     circ.classList.remove('circleBorder');
     for (var i = 0; i < b.length; i++) {
-        b[i].classList.remove('body_fade');
+        b[i].classList.remove('_fade_out');
+        b[i].classList.add('_fade_in');
     }
 
 }

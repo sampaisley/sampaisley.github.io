@@ -61,7 +61,14 @@ fieldset{
   transition: all .9s ease-out;
   margin-left: 5px;
 }
-
+.fat{
+  border:6px solid rgba(191, 154, 62, .65);
+  transition: border .5s ease-out;
+}
+.finn{
+  border:1px solid #ffbb03;
+  transition: border .5s ease-out;
+}
 
 
 
@@ -80,7 +87,7 @@ iframe{
 
   position: absolute;
   top: 10px;
-  left: -1110px;
+  //left: -1110px;
 
   opacity: 0;
   z-index: 0;
@@ -89,7 +96,7 @@ iframe{
 
 
 #pop.show {
-  transition: opacity .9s ease-out;
+  transition: all .9s ease-out;
   opacity: 1;
   left: -10px !important;
 
@@ -98,11 +105,11 @@ iframe{
 
   }
 }
+#pop.hide{
+  transition: all .9s ease-out;
+  opacity: 0;
 
-
-
-
-
+}
 
 
 
@@ -127,10 +134,16 @@ iframe{
 
 
 
+
+
 }
-.body_fade{
+._fade_out{
   transition: opacity .9s ease-out;
   opacity: 0;
+}
+._fade_in{
+  transition: opacity .9s ease-out;
+  opacity: 1;
 }
 .greenBg{
   background-color: rgba(#b6d96a,0.9) !important;

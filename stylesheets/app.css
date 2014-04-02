@@ -7272,12 +7272,24 @@ fieldset {
   margin-left: 5px;
 }
 
+/* line 64, ../sass/app.scss */
+.fat {
+  border: 6px solid rgba(191, 154, 62, 0.65);
+  transition: border .5s ease-out;
+}
+
 /* line 68, ../sass/app.scss */
+.finn {
+  border: 1px solid #ffbb03;
+  transition: border .5s ease-out;
+}
+
+/* line 75, ../sass/app.scss */
 .avaiable {
   font-weight: 900;
 }
 
-/* line 72, ../sass/app.scss */
+/* line 79, ../sass/app.scss */
 iframe {
   border: none;
   width: 100%;
@@ -7286,29 +7298,34 @@ iframe {
   background-color: transparent;
 }
 
-/* line 78, ../sass/app.scss */
+/* line 85, ../sass/app.scss */
 #pop {
   position: absolute;
   top: 10px;
-  left: -1110px;
   opacity: 0;
   z-index: 0;
 }
 
-/* line 91, ../sass/app.scss */
+/* line 98, ../sass/app.scss */
 #pop.show {
-  transition: opacity .9s ease-out;
+  transition: all .9s ease-out;
   opacity: 1;
   left: -10px !important;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 91, ../sass/app.scss */
+  /* line 98, ../sass/app.scss */
   #pop.show {
     left: 10px !important;
   }
 }
 
-/* line 111, ../sass/app.scss */
+/* line 108, ../sass/app.scss */
+#pop.hide {
+  transition: all .9s ease-out;
+  opacity: 0;
+}
+
+/* line 118, ../sass/app.scss */
 .close_pop {
   float: right;
   z-index: 200;
@@ -7322,42 +7339,48 @@ iframe {
   height: 60px;
   cursor: pointer;
 }
-/* line 123, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .close_pop:hover {
   transition: all .2s ease-out;
   background-color: #cae393;
 }
 
-/* line 131, ../sass/app.scss */
-.body_fade {
+/* line 140, ../sass/app.scss */
+._fade_out {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 135, ../sass/app.scss */
+/* line 144, ../sass/app.scss */
+._fade_in {
+  transition: opacity .9s ease-out;
+  opacity: 1;
+}
+
+/* line 148, ../sass/app.scss */
 .greenBg {
   background-color: rgba(182, 217, 106, 0.9) !important;
   border: 1px solid #87b02d;
 }
 
-/* line 140, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 .redBg {
   background-color: rgba(223, 90, 73, 0.9) !important;
   border: 1px solid #4e150e;
 }
 
-/* line 144, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .blueBg {
   background-color: rgba(108, 166, 217, 0.9);
   border: 1px solid #193f60;
 }
 
-/* line 151, ../sass/app.scss */
+/* line 164, ../sass/app.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 154, ../sass/app.scss */
+/* line 167, ../sass/app.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -7365,7 +7388,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 161, ../sass/app.scss */
+/* line 174, ../sass/app.scss */
 #mail {
   color: #df5a49;
 }
