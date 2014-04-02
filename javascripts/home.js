@@ -25,7 +25,7 @@ s.onmouseout = function(){
 }
 cp[0].onclick = cp[1].onclick = function () {
     p.classList.remove('show');
-   //p.classList.add('hide');
+    //p.classList.add('hide');
     circ.classList.remove('circleBorder');
     for (var i = 0; i < b.length; i++) {
         b[i].classList.remove('_fade_out');
