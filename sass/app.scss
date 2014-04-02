@@ -87,8 +87,7 @@ iframe{
 
   position: absolute;
   top: 10px;
-  //left: -1110px;
-
+  left: -1110px;
   opacity: 0;
   z-index: 0;
 }
@@ -96,7 +95,7 @@ iframe{
 
 
 #pop.show {
-  transition: all .9s ease-out;
+  transition: opacity .9s ease-out;
   opacity: 1;
   left: -10px !important;
 
@@ -105,11 +104,14 @@ iframe{
 
   }
 }
-#pop.hide{
-  transition: all .9s ease-out;
+#pop.hide {
+  transition: opacity .9s ease-out;
   opacity: 0;
-
 }
+
+
+
+
 
 
 
