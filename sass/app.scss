@@ -49,14 +49,20 @@ fieldset{
 
 }
 
-.circle{
-  border:1px solid #ffbb03;
+.circle {
+  border: 1px solid #ffbb03;
   border-radius: 50%;
   width: 140px;
   height: 140px;
   margin-top: 100px;
-
 }
+.circleBorder {
+  border: 3px solid #ffbb03 !important;
+  transition: all .9s ease-out;
+  margin-left: 5px;
+}
+
+
 
 
 .avaiable{
@@ -69,18 +75,37 @@ iframe{
   overflow: hidden;
   background-color: transparent;
 }
-#pop{
+#pop {
+
+
   position: absolute;
   top: 10px;
   left: -1110px;
+
   opacity: 0;
   z-index: 0;
 }
-#pop.show{
+
+
+
+#pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
-  left: 10px;
+  left: -10px !important;
+
+  @media only screen and (min-width: 40.063em) {
+    left: 10px !important;
+
+  }
 }
+
+
+
+
+
+
+
+
 
 
 .close_pop{
@@ -136,11 +161,8 @@ p.smallBlurb{
 #mail {
   color: #df5a49;
 }
-.circleFill {
-  border: 3px solid #ffbb03 !important;
-  transition: all .9s ease-out;
-  margin-left: 5px;
-}
+
+
 
 
 

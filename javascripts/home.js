@@ -9,12 +9,21 @@ s.onclick = function () {
         b[i].classList.add('body_fade');
     }
     p.classList.add('show');
-    circ.classList.add('circleFill');
+    circ.classList.add('circleBorder');
+
+}
+s.onmouseover = function(){
+    circ.classList.add('fat');
+    circ.classList.remove('finn');
+}
+s.onmouseout = function(){
+    circ.classList.add('finn');
+    circ.classList.remove('fat');
 
 }
 cp[0].onclick = cp[1].onclick = function () {
     p.classList.remove('show');
-    circ.classList.remove('circleFill');
+    circ.classList.remove('circleBorder');
     for (var i = 0; i < b.length; i++) {
         b[i].classList.remove('body_fade');
     }
