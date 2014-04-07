@@ -7219,12 +7219,12 @@ a.th {
   max-width: 800px;
 }
 
-/* line 14, ../sass/app.scss */
+/* line 17, ../sass/app.scss */
 * {
   font-family: 'Lato' !important;
 }
 
-/* line 18, ../sass/app.scss */
+/* line 21, ../sass/app.scss */
 html {
   background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -7233,30 +7233,30 @@ html {
   background-size: cover;
 }
 
-/* line 26, ../sass/app.scss */
+/* line 29, ../sass/app.scss */
 body {
   margin-top: 20px;
   background-color: transparent;
 }
 
-/* line 37, ../sass/app.scss */
+/* line 40, ../sass/app.scss */
 #headTitle {
   word-break: break-all;
 }
 
-/* line 42, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
 
-/* line 46, ../sass/app.scss */
+/* line 49, ../sass/app.scss */
 fieldset {
   border: none;
   margin: 0;
 }
 
-/* line 52, ../sass/app.scss */
+/* line 55, ../sass/app.scss */
 .circle {
   border: 1px solid #ffbb03;
   border-radius: 50%;
@@ -7265,31 +7265,32 @@ fieldset {
   margin-top: 100px;
 }
 
-/* line 59, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .circleBorder {
+  transition: all .5s ease-out;
   border: 3px solid #ffbb03 !important;
   transition: all .9s ease-out;
-  margin-left: 5px;
+  margin-left: 25px;
 }
 
-/* line 64, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 .fat {
   border: 6px solid rgba(191, 154, 62, 0.65);
   transition: border .5s ease-out;
 }
 
-/* line 68, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .finn {
   border: 1px solid #ffbb03;
   transition: border .5s ease-out;
 }
 
-/* line 75, ../sass/app.scss */
+/* line 79, ../sass/app.scss */
 .avaiable {
   font-weight: 900;
 }
 
-/* line 79, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 iframe {
   border: none;
   width: 100%;
@@ -7298,7 +7299,7 @@ iframe {
   background-color: transparent;
 }
 
-/* line 87, ../sass/app.scss */
+/* line 91, ../sass/app.scss */
 #pop {
   position: absolute;
   top: 10px;
@@ -7307,26 +7308,26 @@ iframe {
   z-index: 0;
 }
 
-/* line 99, ../sass/app.scss */
+/* line 103, ../sass/app.scss */
 #pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
   left: -10px !important;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 99, ../sass/app.scss */
+  /* line 103, ../sass/app.scss */
   #pop.show {
     left: 10px !important;
   }
 }
 
-/* line 109, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 #pop.hide {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 123, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .close_pop {
   float: right;
   z-index: 200;
@@ -7340,48 +7341,49 @@ iframe {
   height: 60px;
   cursor: pointer;
 }
-/* line 135, ../sass/app.scss */
+/* line 133, ../sass/app.scss */
 .close_pop:hover {
   transition: all .2s ease-out;
   background-color: #cae393;
 }
 
-/* line 145, ../sass/app.scss */
+/* line 143, ../sass/app.scss */
 ._fade_out {
   transition: opacity .9s ease-out;
+  border-radius: 50%;
   opacity: 0;
 }
 
-/* line 149, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 ._fade_in {
   transition: opacity .9s ease-out;
   opacity: 1;
 }
 
-/* line 153, ../sass/app.scss */
+/* line 152, ../sass/app.scss */
 .greenBg {
   background-color: rgba(182, 217, 106, 0.9) !important;
-  border: 1px solid #87b02d;
+  border: none;
 }
 
 /* line 158, ../sass/app.scss */
 .redBg {
   background-color: rgba(223, 90, 73, 0.9) !important;
-  border: 1px solid #4e150e;
+  border: none;
 }
 
-/* line 162, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 .blueBg {
   background-color: rgba(108, 166, 217, 0.9);
-  border: 1px solid #193f60;
+  border: none;
 }
 
-/* line 169, ../sass/app.scss */
+/* line 172, ../sass/app.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 172, ../sass/app.scss */
+/* line 175, ../sass/app.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -7389,7 +7391,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 179, ../sass/app.scss */
+/* line 182, ../sass/app.scss */
 #mail {
   color: #df5a49;
 }
