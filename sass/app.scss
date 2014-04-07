@@ -16,6 +16,7 @@ $mainBreakPoint:emCalc(767);
 
 *{
   font-family: 'Lato' !important;
+
 }
 
 html {
@@ -29,7 +30,9 @@ html {
 body {
   margin-top: 20px;
   background-color: transparent;
+
 }
+
 
 
 
@@ -149,19 +152,23 @@ iframe{
   transition: opacity .9s ease-out;
   opacity: 1;
 }
+$bg_opacity : 0.65;
+
 .greenBg{
-  background-color: rgba(#b6d96a,0.9) !important;
+  background-color: rgba(#b6d96a,$bg_opacity) !important;
   //border: 1px solid darken(#b6d96a, 20%);
   border:none;
 
 }
 .redBg{
-  background-color: rgba(#df5a49,0.9) !important;
+  background-color: rgba(#df5a49,$bg_opacity) !important;
   //border: 1px solid darken(#df5a49, 40%);
+
   border:none;
 }
+
 .blueBg {
-  background-color: rgba(#6ca6d9, 0.9);
+  background-color: rgba(#6ca6d9, $bg_opacity);
   //border: 1px solid darken(#6ca6d9, 40%);
   border:none;
 }
