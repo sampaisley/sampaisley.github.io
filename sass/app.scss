@@ -170,6 +170,13 @@ $bg_opacity : 0.65;
 .blueBg {
   background-color: rgba(#6ca6d9, $bg_opacity);
   //border: 1px solid darken(#6ca6d9, 40%);
+  @media only screen and (min-width: 48.375em) {
+    min-height: 500px !important;
+  }
+
+
+
+
   border:none;
 }
 

@@ -7377,13 +7377,19 @@ iframe {
   background-color: rgba(108, 166, 217, 0.65);
   border: none;
 }
+@media only screen and (min-width: 48.375em) {
+  /* line 170, ../sass/app.scss */
+  .blueBg {
+    min-height: 500px !important;
+  }
+}
 
-/* line 179, ../sass/app.scss */
+/* line 186, ../sass/app.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 182, ../sass/app.scss */
+/* line 189, ../sass/app.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -7391,7 +7397,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 189, ../sass/app.scss */
+/* line 196, ../sass/app.scss */
 #mail {
   color: #df5a49;
 }
