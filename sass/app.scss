@@ -86,11 +86,15 @@ fieldset{
 iframe{
   border: none;
   width: 100%;
-  height: 384px  ;
   overflow: hidden;
   background-color: transparent;
+  padding: 0;
+  height:457px;
 }
-
+.no-pad{
+  padding: 0 !important;
+  overflow: hidden;
+}
 #pop {
 
 
@@ -133,6 +137,7 @@ iframe{
   width: 60px;
   height: 60px;
   cursor: pointer;
+  opacity: 0.65;
   &:hover {
     transition: all .2s ease-out;
     background-color: lighten(#b6d96a, 10%);
@@ -174,9 +179,10 @@ $bg_opacity : 0.65;
     min-height: 500px !important;
   }
 
-
-
   border:none;
+}
+.blueBg, .redBg ,.greenBg{
+  border-radius: 4px;
 }
 
 
