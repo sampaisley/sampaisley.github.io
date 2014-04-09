@@ -225,6 +225,14 @@ p.smallBlurb{
 
 }
 #mail {
+  transition: background-color .9s ease-out;
+  padding: 0 5px;
+  display: block;
   color: #df5a49;
-}
+  background-color: rgba(#b6d96a, .2);
 
+  &:hover {
+
+    background-color: rgba(#b6d96a, .5);
+  }
+}

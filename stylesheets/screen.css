@@ -223,5 +223,13 @@ p.smallBlurb {
 
 /* line 227, ../sass/screen.scss */
 #mail {
+  transition: background-color .9s ease-out;
+  padding: 0 5px;
+  display: block;
   color: #df5a49;
+  background-color: rgba(182, 217, 106, 0.2);
+}
+/* line 234, ../sass/screen.scss */
+#mail:hover {
+  background-color: rgba(182, 217, 106, 0.5);
 }
