@@ -146,6 +146,7 @@ iframe {
 
 /* line 145, ../sass/screen.scss */
 .close_pop {
+  float: right;
   z-index: 200;
   font-size: 2em;
   background-color: #b6d96a;
