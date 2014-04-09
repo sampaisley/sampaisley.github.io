@@ -3,17 +3,12 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+//@import "compass/reset";
 @import "../css/normalize.min.css" ;
 @import "../css/foundation.min.css" ;
+@import "settings";
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-$mainBreakPoint:emCalc(222);
-
-
-
-
-
-
+$mainBreakPoint:emCalc(767);
 
 
 
@@ -21,6 +16,8 @@ $mainBreakPoint:emCalc(222);
   font-family: 'Lato' !important;
 
 }
+
+
 
 html {
   background: url(../img/bg.jpg) no-repeat center center fixed;
@@ -31,10 +28,17 @@ html {
 }
 
 body {
-  margin-top: 20px;
-  background-color: transparent;
 
+  background-color: transparent;
+  @media #{$medium-only} {
+    background-color: indianred;
+
+  }
 }
+
+
+
+
 
 
 h5{
@@ -181,6 +185,9 @@ $bg_opacity : 0.65;
 .redBg{
   background-color: rgba(#df5a49,$bg_opacity) !important;
   //border: 1px solid darken(#df5a49, 40%);
+  margin-top: 20px;
+
+
 
   border:none;
 }
@@ -214,3 +221,4 @@ p.smallBlurb{
 #mail {
   color: #df5a49;
 }
+
