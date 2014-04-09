@@ -196,24 +196,24 @@ iframe {
   background-color: rgba(108, 166, 217, 0.65);
   border: none;
 }
-@media only screen and (min-width: 766px) and (min-height: 750px) {
+@media only screen and (min-width: 641px) and (min-height: 750px) {
   /* line 195, ../sass/screen.scss */
   .blueBg {
-    min-height: 500px !important;
+    min-height: 440px !important;
   }
 }
 
-/* line 204, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .blueBg, .redBg, .greenBg {
   border-radius: 4px;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -221,7 +221,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 221, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 #mail {
   color: #df5a49;
 }
