@@ -23,7 +23,7 @@
 </head>
 <body>
 <div id='messagesDiv'></div>
-<form method="post" action="#">
+<form>
     <input type='text' id='nameInput' placeholder='Name' required/>
     <input type='text' id='messageInput' placeholder='Message'/>
     <input type="email" id="emailInput" placeholder="Email" required/>
@@ -40,6 +40,7 @@
             console.log(error);
         } else if (user) {
             // user authenticated with Firebase
+
             console.log('User ID: ' + user.uid + ', Provider: ' + user.provider + ', NAME: ' + user.name);
         } else {
             // user is logged out
@@ -49,6 +50,7 @@
 
     $('#login').click(function(){
         auth.login('github');
+
     })
     $('#btn').click(function (e) {
 
