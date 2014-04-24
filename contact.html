@@ -31,10 +31,12 @@
 </form>
 <button id="login"> in</button>
 <button id="logout">out</button>
+<button id="delete">delete</button>
 <h3 id="alert"></h3>
 <script>
-
-    var myDataRef = new Firebase('https://paisley2.firebaseio.com/');
+    var inp = 'pongo';
+    var url = 'https://paisley2.firebaseio.com/';
+    var myDataRef = new Firebase(url);
     var auth = new FirebaseSimpleLogin(myDataRef, function (error, user) {
         if (error) {
             // an error occurred while attempting login
@@ -52,18 +54,26 @@
 
     $('#login').click(function () {
         auth.login('password', {
-            email: 'ppetalski@yahoo.com',
-            password: 'fuckoff33',
-            name:'fred',
-            rememberMe: true
+            email: 'foo@foo.foo',
+            password: 'pass123'
             /////
 
         });
           console.log(auth);
     });
     $('#logout').click(function () {
-         auth.logout();
+        auth.logout();
         //console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
+    } );
+    var onComplete = function(error) {
+        if (error)
+            alert('Synchronization failed.');
+        else
+            alert('Synchronization succeeded.');
+    };
+    $('#delete').click(function () {
+        myDataRef.remove(onComplete);
+        console.log('ddddd');
     } );
     $('#btn').click(function (e) {
 
