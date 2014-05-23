@@ -24,38 +24,38 @@ body {
   background-color: transparent;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 h5 {
   font-size: 1.125em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 h3 {
   font-size: 1.6875em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 #headTitle {
   word-break: break-all;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 fieldset {
   border: none;
   margin: 0;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .circle {
   border: 2px solid rgba(255, 187, 3, 0.5);
   border-radius: 50%;
@@ -64,7 +64,7 @@ fieldset {
   margin-top: 100px;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .circleBorder {
   transition: all .5s ease-out;
   border: 3px solid #ffbb03 !important;
@@ -72,24 +72,24 @@ fieldset {
   margin-left: 25px;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .fat {
   border: 6px solid rgba(191, 154, 62, 0.65);
   transition: border .5s ease-out;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .finn {
   border: 2px solid rgba(255, 187, 3, 0.5);
   transition: border .5s ease-out;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .avaiable {
   font-weight: 900;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 iframe {
   border: none;
   width: 100%;
@@ -99,13 +99,13 @@ iframe {
   height: 457px;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .no-pad {
   padding: 0 !important;
   overflow: hidden;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #pop {
   position: absolute;
   top: 10px;
@@ -114,26 +114,26 @@ iframe {
   z-index: 0;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 #pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
   left: -10px !important;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 125, ../sass/screen.scss */
+  /* line 122, ../sass/screen.scss */
   #pop.show {
     left: 10px !important;
   }
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #pop.hide {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 143, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .close_pop {
   float: right;
   z-index: 200;
@@ -148,55 +148,55 @@ iframe {
   cursor: pointer;
   opacity: 0.65;
 }
-/* line 156, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .close_pop:hover {
   transition: all .2s ease-out;
   background-color: #cae393;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 ._fade_out {
   transition: opacity .9s ease-out;
   border-radius: 50%;
   opacity: 0;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 ._fade_in {
   transition: opacity .9s ease-out;
   opacity: 1;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .greenBg {
   background-color: rgba(182, 217, 106, 0.65) !important;
   border: none;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .redBg {
   background-color: rgba(223, 90, 73, 0.65) !important;
   margin-top: 20px;
   border: none;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .blueBg {
   background-color: rgba(108, 166, 217, 0.65);
   border: none;
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .blueBg, .redBg, .greenBg {
   border-radius: 4px;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 218, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -204,7 +204,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 #mail {
   transition: background-color .9s ease-out;
   padding: 0 5px;
@@ -212,7 +212,7 @@ p.smallBlurb {
   color: #df5a49;
   background-color: rgba(182, 217, 106, 0.2);
 }
-/* line 232, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 #mail:hover {
   background-color: rgba(182, 217, 106, 0.5);
 }
