@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html id=flickBody>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
-    <style>
-        iframe{
-            margin: 10% auto;
-            display: block;
-            width: 500px;
-            height: 400px;
-        }
-        body{
-            background-color: #100e25;
-        }
-    </style>
+
+
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+
+
+    <title>flickr viewer</title>
+
 </head>
 <body>
-     <iframe src="http://jsfiddle.net/paisleysam/La8F5/22/show/" frameborder="0"></iframe>
+<div id="strips">
+    <div id="draggable">1</div>
+     <h1>&nbsp;</h1>
+
+</div>
+<div id="img_div">
+    <img id="theImage" src="https://c2.staticflickr.com/6/5550/9656531986_4b62bb171f_m.jpg" alt="........" />
+</div>
+<p id="tagName"></p>
+<button id="field">fields</button>
+<button id="france">france</button>
+<button id="sea">sea</button>
+<p id="title">tttttt</p>
+
+<script src="https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json"></script>
+<script src="http://draggabilly.desandro.com/draggabilly.pkgd.min.js"></script>
+<script src="js/flickr.js"></script>
 </body>
 </html>

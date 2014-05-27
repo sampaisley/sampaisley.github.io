@@ -231,3 +231,48 @@ p.smallBlurb{
     background-color: rgba(#b6d96a, .5);
   }
 }
+///////////////////////// flickr \\\\\\\\\\\
+#flickBody{
+  background:none;
+}
+$bg_color1: #eee;
+$grid_size : 60px;
+$squaresAccross : 4;
+$squaresDown : 4;
+$borderSize : 10px;
+#strips{
+    float: left;
+    border:$borderSize solid $bg_color1 ;
+    min-height: $grid_size * $squaresDown + $borderSize*2;
+    width:$grid_size * $squaresAccross + $borderSize*2;
+   background-color: white;
+background-image: linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1),
+    linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1);
+background-size:$grid_size*2 $grid_size*2;
+background-position: 0 0, $grid_size $grid_size;
+}
+
+#draggable{
+    position: relative;
+    /* top: $grid_size;
+    left: $grid_size; */
+    width: $grid_size;
+    height: $grid_size;
+    background-color: darken($bg_color1,10%);
+    border-radius:50% ;
+    cursor: move;
+    font-family: courier;
+    text-align: center;
+    color:cornflowerblue;
+    font-size: 2.1em;
+    line-height: 1.8;
+}
+#img_div{
+    float: left;
+     border:10px solid $bg_color1 ;
+    margin-left: 20px;
+    background-color: $bg_color1;
+}
+#tagNamdisple{
+    display: block;
+}

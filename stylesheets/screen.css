@@ -216,3 +216,50 @@ p.smallBlurb {
 #mail:hover {
   background-color: rgba(182, 217, 106, 0.5);
 }
+
+/* line 235, ../sass/screen.scss */
+#flickBody {
+  background: none;
+}
+
+/* line 243, ../sass/screen.scss */
+#strips {
+  float: left;
+  border: 10px solid #eeeeee;
+  min-height: 260px;
+  width: 260px;
+  background-color: white;
+  background-image: linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee), linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee);
+  background-size: 120px 120px;
+  background-position: 0 0, 60px 60px;
+}
+
+/* line 255, ../sass/screen.scss */
+#draggable {
+  position: relative;
+  /* top: $grid_size;
+  left: $grid_size; */
+  width: 60px;
+  height: 60px;
+  background-color: #d4d4d4;
+  border-radius: 50%;
+  cursor: move;
+  font-family: courier;
+  text-align: center;
+  color: cornflowerblue;
+  font-size: 2.1em;
+  line-height: 1.8;
+}
+
+/* line 270, ../sass/screen.scss */
+#img_div {
+  float: left;
+  border: 10px solid #eeeeee;
+  margin-left: 20px;
+  background-color: #eeeeee;
+}
+
+/* line 276, ../sass/screen.scss */
+#tagNamdisple {
+  display: block;
+}
