@@ -1,7 +1,7 @@
      var elem = document.querySelector('#draggable');
      var theImage = document.querySelector('#theImage');
      var title = document.querySelector('#title');
-var tit;
+     var tit;
      var grid_size = elem.clientWidth;
      var wide = document.querySelector('#strips').clientWidth;
     // var high = document.querySelector('#strips').clientHeight;
@@ -91,3 +91,6 @@ var tit;
      sea.onclick = function(){
        changeSet(this.getAttribute('id'));
      };
+     elem.ondblclick=function(){
+       alert("Don't click it dumbo, drag it");
+     }
