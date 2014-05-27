@@ -25,7 +25,12 @@ var tit;
          return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
      function setImage(){
-        _Y + _X - 1 < images.length ? theImage.src =  images[_Y + _X - 1][0]  : theImage.src ="http://vapordirect.ie/template/eshop/images/no_product_photo.jpg";
+        if(_Y + _X - 1 < images.length) { theImage.src =  images[_Y + _X - 1][0] ;}
+        else{ theImage.src ="http://vapordirect.ie/template/eshop/images/no_product_photo.jpg";
+      }
+     }
+     function setTitle() {
+       title.innerHTML = "Title: " + images[_Y + _X - 1][2];
      }
      function makeArray(t) {
          images = [];
@@ -42,6 +47,7 @@ var tit;
          jso = result;
          makeArray(tag);
          setImage();
+         setTitle();
      }
 
 
@@ -62,7 +68,7 @@ var tit;
 
      function onDragEnd() {
          setImage();
-         title.innerHTML = images[_Y + _X - 1][2];
+         setTitle();
      }
      // bind event listeners
      draggie.on('dragMove', onDragMove);
@@ -73,10 +79,12 @@ var tit;
      var field = document.querySelector('#field');
      var sea = document.querySelector('#sea');
      var tagName = document.querySelector('#tagName');
+     tagName.innerHTML = "Tag: " +tag;
      function changeSet(set) {
          makeArray(tag = set);
-         tagName.innerHTML = set;
+         tagName.innerHTML = "Tag: " +set;
          setImage();
+         setTitle();
      }
      france.onclick =
      field.onclick=

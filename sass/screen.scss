@@ -237,7 +237,7 @@ p.smallBlurb{
 }
 $bg_color1: #eee;
 $grid_size : 60px;
-$squaresAccross : 4;
+$squaresAccross : 3;
 $squaresDown : 4;
 $borderSize : 10px;
 #strips{
@@ -275,4 +275,18 @@ background-position: 0 0, $grid_size $grid_size;
 }
 #tagNamdisple{
     display: block;
+}
+#controls{
+  border:$borderSize solid $bg_color1 ;
+  float: left;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+#wrap{
+
+  width: 715px;
+  margin: 50px auto;
 }

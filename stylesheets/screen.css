@@ -227,7 +227,7 @@ p.smallBlurb {
   float: left;
   border: 10px solid #eeeeee;
   min-height: 260px;
-  width: 260px;
+  width: 200px;
   background-color: white;
   background-image: linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee), linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee);
   background-size: 120px 120px;
@@ -262,4 +262,21 @@ p.smallBlurb {
 /* line 276, ../sass/screen.scss */
 #tagNamdisple {
   display: block;
+}
+
+/* line 279, ../sass/screen.scss */
+#controls {
+  border: 10px solid #eeeeee;
+  float: left;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+/* line 288, ../sass/screen.scss */
+#wrap {
+  width: 715px;
+  margin: 50px auto;
 }
