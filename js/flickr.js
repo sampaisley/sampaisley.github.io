@@ -37,7 +37,7 @@
          theImage.src = images[im][0];
        } else {
          theImage.src =
-           "http://vapordirect.ie/template/eshop/images/no_product_photo.jpg";
+           "../img/noImage.jpg";
        }
      }
 
