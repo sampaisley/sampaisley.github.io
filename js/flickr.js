@@ -13,6 +13,7 @@
      var images = [];
      var jso = {};
      var tag = 'france';
+     var hasDraged = false;
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
      var oldHeight;
@@ -49,7 +50,7 @@
      }
 
      function reSetDragger(h) {
-       if (h < oldHeight) {
+       if (h < oldHeight && hasDraged) {
          var down = Math.ceil(h / squaresAccross -1);
         elem.style.top=down * grid_size+"px";
 
@@ -58,7 +59,7 @@
          //elem.innerHTML =(t+l) || 1;
          _X = l;
          _Y = t;
-         elem.innerHTML = t*squaresAccross +  l +1;
+         elem.innerHTML = t*squaresAccross +  l +1 || 1;
          setImage(t*squaresAccross +  l );
          setTitle();console.log(_Y+ _X-1);
        }
@@ -125,6 +126,7 @@
        _X = instance.position.x / grid_size + 1;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
        elem.innerHTML = _Y + _X;
+       hasDraged = true;
      }
 
      function onDragEnd() {
@@ -156,4 +158,4 @@
      };
      elem.ondblclick = function() {
        alert("Don't click it dumbo, drag it");
-     };
+};
