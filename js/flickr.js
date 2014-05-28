@@ -1,13 +1,13 @@
      var elem = document.querySelector('#draggable');
      var strips = document.querySelector('#strips');
      var borderWidth = 10;
-     strips.style.borderWidth= borderWidth + "px";
+     strips.style.borderWidth = borderWidth + "px";
      var theImage = document.querySelector('#theImage');
      var title = document.querySelector('#title');
      var tit;
      var grid_size = elem.clientWidth;
      var wide = document.querySelector('#strips').clientWidth;
-      // var high = document.querySelector('#strips').clientHeight;
+     //var high = document.querySelector('#strips').clientHeight;
      var squaresAccross = wide / grid_size;
       //var totalSquares = (squaresAccross) * (high / grid_size);
      var images = [];
@@ -15,6 +15,7 @@
      var tag = 'france';
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
+     var oldHeight;
      document.flickrURL =
        "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
 
@@ -30,9 +31,9 @@
        return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
 
-     function setImage() {
-       if (_Y + _X - 1 < images.length) {
-         theImage.src = images[_Y + _X - 1][0];
+     function setImage(im) {
+       if (im < images.length) {
+         theImage.src = images[im][0];
        } else {
          theImage.src =
            "http://vapordirect.ie/template/eshop/images/no_product_photo.jpg";
@@ -46,18 +47,50 @@
          title.innerHTML = "No More From " + tag;
        }
      }
+
+     function reSetDragger(h) {
+       if (h < oldHeight) {
+         var down = Math.ceil(h / squaresAccross -1);
+        elem.style.top=down * grid_size+"px";
+
+         var t = parseInt(elem.style.top)/grid_size;
+         var l = parseInt(elem.style.left)/grid_size;
+         //elem.innerHTML =(t+l) || 1;
+         _X = l;
+         _Y = t;
+         elem.innerHTML = t*squaresAccross +  l +1;
+         setImage(t*squaresAccross +  l );
+         setTitle();console.log(_Y+ _X-1);
+       }
+        oldHeight=h;
+
+     }
+
      function setDivHeight(l) {
-       var w;
-       //if (l%2 !== 0){w=Math.round(l/3)}else{w=Math.round(l/4)}
-       w = Math.round(l/2);
-       
-       strips.style.height = w*grid_size + (2*borderWidth) + 'px';
-       strips.style.width = 2*grid_size + (2*borderWidth) + 'px';
+       var w = 3,
+         h;
+       if (l % 2 !== 0 && l <= 10) {
+         h = Math.round(l / 3);
+
+       } else if (l % 2 !== 0 && l > 10) {
+         h = Math.ceil(l / 3);
+
+       } else if (l % 2 === 0 && l <= 10) {
+         h = l / 3;
+
+       } else if (l % 2 === 0 && l > 10) {
+         h = Math.round(l / 2);
+
+       }
+
+       strips.style.height = h * grid_size + (2 * borderWidth) + 'px';
+       strips.style.width = w * grid_size + (2 * borderWidth) + 'px';
        // update the vars
        wide = document.querySelector('#strips').clientWidth;
        squaresAccross = wide / grid_size;
-
+       reSetDragger(l);
      }
+
      function makeArray(t) {
        images = [];
        for (var i = 0; i < jso.photos.photo.length; ++i) {
@@ -75,7 +108,7 @@
      function jsonFlickrApi(result) {
        jso = result;
        makeArray(tag);
-       setImage();
+       setImage(_Y + _X - 1);
        setTitle();
        setDivHeight(images.length);
      }
@@ -95,7 +128,7 @@
      }
 
      function onDragEnd() {
-       setImage();
+       setImage(_Y + _X - 1);
        setTitle();
      }
       // bind event listeners
@@ -112,7 +145,7 @@
      function changeSet(set) {
        makeArray(tag = set);
        tagName.innerHTML = "Tag: " + set;
-       setImage();
+       setImage(_Y + _X - 1);
        setTitle();
        setDivHeight(images.length);
      }

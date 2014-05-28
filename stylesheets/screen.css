@@ -226,7 +226,7 @@ p.smallBlurb {
 #strips {
   float: left;
   border: 10px solid #eeeeee;
-  min-height: 260px;
+  height: 260px;
   width: 80px;
   background-color: white;
   background-image: linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee), linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee);
