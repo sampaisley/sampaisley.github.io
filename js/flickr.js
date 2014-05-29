@@ -7,7 +7,7 @@
      var tit;
      var grid_size = elem.clientWidth;
      var wide = document.querySelector('#strips').clientWidth;
-     //var high = document.querySelector('#strips').clientHeight;
+     var high = document.querySelector('#strips').clientHeight;
      var squaresAccross = wide / grid_size;
       //var totalSquares = (squaresAccross) * (high / grid_size);
      var images = [];
@@ -33,6 +33,7 @@
      }
 
      function setImage(im) {
+       im = im || _Y + _X - 1;
        if (im < images.length) {
          theImage.src = images[im][0];
        } else {
@@ -50,8 +51,9 @@
      }
 
      function reSetDragger(h) {
-       if (h < oldHeight && hasDraged) {
+       if (h < oldHeight && hasDraged && parseInt(elem.style.top )+1.5*grid_size >high) {
          var down = Math.ceil(h / squaresAccross -1);
+
         elem.style.top=down * grid_size+"px";
 
          var t = parseInt(elem.style.top)/grid_size;
@@ -61,7 +63,7 @@
          _Y = t;
          elem.innerHTML = t*squaresAccross +  l +1 || 1;
          setImage(t*squaresAccross +  l );
-         setTitle();console.log(_Y+ _X-1);
+         setTitle();
        }
         oldHeight=h;
 
@@ -88,6 +90,7 @@
        strips.style.width = w * grid_size + (2 * borderWidth) + 'px';
        // update the vars
        wide = document.querySelector('#strips').clientWidth;
+       high = document.querySelector('#strips').clientHeight;
        squaresAccross = wide / grid_size;
        reSetDragger(l);
      }
@@ -109,7 +112,7 @@
      function jsonFlickrApi(result) {
        jso = result;
        makeArray(tag);
-       setImage(_Y + _X - 1);
+       setImage();
        setTitle();
        setDivHeight(images.length);
      }
@@ -130,7 +133,7 @@
      }
 
      function onDragEnd() {
-       setImage(_Y + _X - 1);
+       setImage();
        setTitle();
      }
       // bind event listeners
@@ -147,7 +150,7 @@
      function changeSet(set) {
        makeArray(tag = set);
        tagName.innerHTML = "Tag: " + set;
-       setImage(_Y + _X - 1);
+       setImage();
        setTitle();
        setDivHeight(images.length);
      }
