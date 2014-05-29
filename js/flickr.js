@@ -56,11 +56,11 @@
 
         elem.style.top=down * grid_size+"px";
 
-         var t = parseInt(elem.style.top)/grid_size;console.log("t = " + t);
-         var l = parseInt(elem.style.left)/grid_size;
+         var t = parseInt(elem.style.top)/grid_size;console.log("t = " + elem.style.left);
+         var l = parseInt(elem.style.left)/grid_size -1;
          //elem.innerHTML =(t+l) || 1;
-         _X = l+1;
-         _Y = t*squaresAccross;
+         _X = l;
+         _Y = t*squaresAccross ;
          elem.innerHTML = t*squaresAccross +  l +1 || 1;
          setImage(t*squaresAccross +  l +1);
          setTitle();
@@ -73,16 +73,16 @@
        var w = 3,
          h;
        if (l % 2 !== 0 && l <= 10) {
-         h = Math.round(l / 3);console.log("first if" + h);
+         h = Math.round(l / 3);
 
        } else if (l % 2 !== 0 && l > 10) {
-         h = Math.ceil(l / 3);console.log("second if" + h);
+         h = Math.ceil(l / 3);
 
        } else if (l % 2 === 0 && l <= 10) {
-         h = l / 3;console.log("third if" + h);
+         h = l / 3;
 
        } else if (l % 2 === 0 && l > 10) {
-         h = Math.round(l / 2);console.log("fourth if" + h);
+         h = Math.round(l / 2);
 
        }
 
@@ -91,7 +91,7 @@
        // update the vars
        wide = document.querySelector('#strips').clientWidth;
        high = document.querySelector('#strips').clientHeight;
-       squaresAccross = wide / grid_size;
+       squaresAccross = wide / grid_size;console.log(_X +" <-x y-> " + _Y);
        reSetDragger(l);
      }
 
@@ -129,7 +129,7 @@
        _X = instance.position.x / grid_size + 1;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
        elem.innerHTML = _Y + _X;
-       hasDraged = true;
+       hasDraged = true;console.log(instance.position.x);
      }
 
      function onDragEnd() {
