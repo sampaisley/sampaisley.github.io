@@ -10,14 +10,14 @@
      var high = document.querySelector('#strips').clientHeight;
      var squaresAccross = wide / grid_size;
       //var totalSquares = (squaresAccross) * (high / grid_size);
-     var images = [];var Draggabilly;// declare Draggabilly to keep jsHint quiet;
+     var images = [];
+     var Draggabilly; // declare Draggabilly to keep jsHint quiet;
      var jso = {};
      var tag = 'france';
-     var hasDraged = false;
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
      var oldHeight;
-    /* document.flickrURL =
+     /* document.flickrURL =
        "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
 
       //add the flickr javascript to the page so it gets executed
@@ -32,10 +32,9 @@
        return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
 
-     function setImage(im) {
-       im = im || _Y + _X - 1;
-       if (im < images.length) {
-         theImage.src = images[im][0];
+     function setImage() {
+       if (_Y + _X - 1 < images.length) {
+         theImage.src = images[_Y + _X - 1][0];
        } else {
          theImage.src =
            "../img/noImage.jpg";
@@ -51,21 +50,21 @@
      }
 
      function reSetDragger(h) {
-       if (h < oldHeight && hasDraged && parseInt(elem.style.top )+1.5*grid_size >high) {
-         var down = Math.ceil(h / squaresAccross -1);
+       if (h < oldHeight && parseInt(elem.style.top) + 1.5 * grid_size > high) {
+         var down = Math.ceil(h / squaresAccross - 1);
 
-        elem.style.top=down * grid_size+"px";
+         elem.style.top = down * grid_size + "px";
 
-         var t = parseInt(elem.style.top)/grid_size;
-         var l = parseInt(elem.style.left)/grid_size -1;
+         var t = parseInt(elem.style.top) / grid_size;
+         var l = parseInt(elem.style.left) / grid_size - 1;
          //elem.innerHTML =(t+l) || 1;
-         _X = l;
-         _Y = t*squaresAccross ;
-         elem.innerHTML = t*squaresAccross +  l +2 || 1;
-         setImage(t*squaresAccross +  l +1);
+          _X = l+2;
+          _Y = t*squaresAccross ;
+         elem.innerHTML = t * squaresAccross + l + 2;
+         setImage();
          setTitle();
        }
-        oldHeight=h;
+       oldHeight = h;
 
      }
 
@@ -129,7 +128,6 @@
        _X = instance.position.x / grid_size + 1;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
        elem.innerHTML = _Y + _X;
-       hasDraged = true;
      }
 
      function onDragEnd() {
@@ -161,4 +159,4 @@
      };
      elem.ondblclick = function() {
        alert("Don't click it dumbo, drag it");
-};
+     };
