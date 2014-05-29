@@ -17,7 +17,7 @@
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
      var oldHeight;
-     document.flickrURL =
+    /* document.flickrURL =
        "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
 
       //add the flickr javascript to the page so it gets executed
@@ -27,7 +27,7 @@
      script.setAttribute('type', 'text/javascript');
      script.setAttribute('src', document.flickrURL);
      document.head.appendChild(script);
-
+*/
      function wordInString(s, word) {
        return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
@@ -56,13 +56,13 @@
 
         elem.style.top=down * grid_size+"px";
 
-         var t = parseInt(elem.style.top)/grid_size;
+         var t = parseInt(elem.style.top)/grid_size;console.log("t = " + t);
          var l = parseInt(elem.style.left)/grid_size;
          //elem.innerHTML =(t+l) || 1;
-         _X = l;
-         _Y = t;
+         _X = l+1;
+         _Y = t*squaresAccross;
          elem.innerHTML = t*squaresAccross +  l +1 || 1;
-         setImage(t*squaresAccross +  l );
+         setImage(t*squaresAccross +  l +1);
          setTitle();
        }
         oldHeight=h;
@@ -73,16 +73,16 @@
        var w = 3,
          h;
        if (l % 2 !== 0 && l <= 10) {
-         h = Math.round(l / 3);
+         h = Math.round(l / 3);console.log("first if" + h);
 
        } else if (l % 2 !== 0 && l > 10) {
-         h = Math.ceil(l / 3);
+         h = Math.ceil(l / 3);console.log("second if" + h);
 
        } else if (l % 2 === 0 && l <= 10) {
-         h = l / 3;
+         h = l / 3;console.log("third if" + h);
 
        } else if (l % 2 === 0 && l > 10) {
-         h = Math.round(l / 2);
+         h = Math.round(l / 2);console.log("fourth if" + h);
 
        }
 
