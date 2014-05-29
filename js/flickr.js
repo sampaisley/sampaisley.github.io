@@ -10,7 +10,7 @@
      var high = document.querySelector('#strips').clientHeight;
      var squaresAccross = wide / grid_size;
       //var totalSquares = (squaresAccross) * (high / grid_size);
-     var images = [];
+     var images = [];var Draggabilly;// declare Draggabilly to keep jsHint quiet;
      var jso = {};
      var tag = 'france';
      var hasDraged = false;
@@ -56,12 +56,12 @@
 
         elem.style.top=down * grid_size+"px";
 
-         var t = parseInt(elem.style.top)/grid_size;console.log("t = " + elem.style.left);
+         var t = parseInt(elem.style.top)/grid_size;
          var l = parseInt(elem.style.left)/grid_size -1;
          //elem.innerHTML =(t+l) || 1;
          _X = l;
          _Y = t*squaresAccross ;
-         elem.innerHTML = t*squaresAccross +  l +1 || 1;
+         elem.innerHTML = t*squaresAccross +  l +2 || 1;
          setImage(t*squaresAccross +  l +1);
          setTitle();
        }
@@ -91,7 +91,7 @@
        // update the vars
        wide = document.querySelector('#strips').clientWidth;
        high = document.querySelector('#strips').clientHeight;
-       squaresAccross = wide / grid_size;console.log(_X +" <-x y-> " + _Y);
+       squaresAccross = wide / grid_size;
        reSetDragger(l);
      }
 
@@ -129,7 +129,7 @@
        _X = instance.position.x / grid_size + 1;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
        elem.innerHTML = _Y + _X;
-       hasDraged = true;console.log(instance.position.x);
+       hasDraged = true;
      }
 
      function onDragEnd() {
