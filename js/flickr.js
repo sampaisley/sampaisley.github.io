@@ -43,7 +43,7 @@
 
      function setTitle() {
        if (_Y + _X - 1 < images.length) {
-         title.innerHTML = "Title: " + images[_Y + _X - 1][2];
+         title.innerHTML = "Title:<br>" + images[_Y + _X - 1][2];
        } else {
          title.innerHTML = "No More From " + tag;
        }
