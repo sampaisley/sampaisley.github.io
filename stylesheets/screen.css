@@ -282,12 +282,18 @@ p.smallBlurb {
 }
 
 /* line 292, ../sass/screen.scss */
-#tagName, #title {
+#tagName, #title, #tit {
   font-family: courier !important;
   color: #aaa;
 }
 
 /* line 296, ../sass/screen.scss */
+#title.moving {
+  color: #bc0b87 !important;
+  background-color: #caec0d;
+}
+
+/* line 300, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -301,11 +307,11 @@ a.butto {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 305, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 308, ../sass/screen.scss */
+/* line 312, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }

@@ -289,9 +289,13 @@ background-position: 0 0, $grid_size $grid_size;
   width: 790px;
   margin: 50px auto;
 }
-#tagName, #title{
+#tagName, #title, #tit{
   font-family: courier !important;
   color:#aaa;
+}
+#title.moving{
+  color:#bc0b87 !important;
+  background-color: #caec0d;
 }
 a.butto{
   width: 115px;

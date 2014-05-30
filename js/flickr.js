@@ -43,7 +43,7 @@
 
      function setTitle() {
        if (_Y + _X - 1 < images.length) {
-         title.innerHTML = "Title:<br>" + images[_Y + _X - 1][2];
+         title.innerHTML =  images[_Y + _X - 1][2];
        } else {
          title.innerHTML = "No More From " + tag;
        }
@@ -124,16 +124,21 @@
        containment: true
      });
 
-
+    //  function updateTitle() {
+    //
+    //  }
      function onDragMove(instance) {
        _X = instance.position.x / grid_size + 1;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
        dragger.innerHTML = _Y + _X;
+       setTitle();
+       title.classList.add("moving");
      }
 
      function onDragEnd() {
        setImage();
        setTitle();
+       title.classList.remove("moving");
      }
       // bind event listeners
      draggie.on('dragMove', onDragMove);
