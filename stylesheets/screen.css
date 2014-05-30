@@ -280,3 +280,9 @@ p.smallBlurb {
   width: 715px;
   margin: 50px auto;
 }
+
+/* line 293, ../sass/screen.scss */
+#tagName, #title {
+  font-family: courier !important;
+  color: #aaa;
+}
