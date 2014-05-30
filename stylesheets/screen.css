@@ -277,17 +277,17 @@ p.smallBlurb {
 
 /* line 288, ../sass/screen.scss */
 #wrap {
-  width: 715px;
+  width: 790px;
   margin: 50px auto;
 }
 
-/* line 293, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 #tagName, #title {
   font-family: courier !important;
   color: #aaa;
 }
 
-/* line 297, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -301,11 +301,11 @@ a.butto {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 306, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 309, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }

@@ -101,7 +101,7 @@
          if (wordInString(jso.photos.photo[i].tags, t)) {
            var src = 'http://farm' + jso.photos.photo[i].farm +
              '.staticflickr.com/' + jso.photos.photo[i].server + '/' + jso.photos
-             .photo[i].id + '_' + jso.photos.photo[i].secret + '_m.jpg';
+             .photo[i].id + '_' + jso.photos.photo[i].secret + '_n.jpg';
            tag = jso.photos.photo[i].tags.split(' ')[0];
            tit = jso.photos.photo[i].title;
            images.push([src, tag, tit]);
@@ -173,3 +173,5 @@
      dragger.ondblclick = function() {
        alert("Don't click it dumbo, drag it");
      };
+console.log("ho ho ho
+");
