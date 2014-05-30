@@ -286,3 +286,26 @@ p.smallBlurb {
   font-family: courier !important;
   color: #aaa;
 }
+
+/* line 297, ../sass/screen.scss */
+a.butto {
+  width: 115px;
+  font-size: 1.15em;
+  background-color: #51b5e9;
+  color: #fff;
+  padding: 5px 8px;
+  display: inline-block;
+  margin-bottom: 3px;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+/* line 306, ../sass/screen.scss */
+a.butto:hover {
+  background-color: #1687b6;
+}
+/* line 309, ../sass/screen.scss */
+a.butto.active {
+  background-color: #1687b6;
+}

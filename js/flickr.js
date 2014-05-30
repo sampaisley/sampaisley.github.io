@@ -142,9 +142,16 @@
      var france = document.querySelector('#france');
      var field = document.querySelector('#field');
      var sea = document.querySelector('#sea');
+     var numbers = document.querySelector('#numbers');
      var tagName = document.querySelector('#tagName');
      tagName.innerHTML = "Tag: " + tag;
-
+     function setActiveClass(e) {
+       var a = document.querySelectorAll('.butto');
+       for (var i = 0; i < a.length; i++) {
+         a[i].classList.remove('active');
+       }
+       e.classList.add('active');
+     }
      function changeSet(set) {
        makeArray(tag = set);
        tagName.innerHTML = "Tag: " + set;
@@ -153,9 +160,12 @@
        setDivHeight(images.length);
      }
      france.onclick =
+     numbers.onclick =
        field.onclick =
        sea.onclick = function() {
          changeSet(this.getAttribute('id'));
+
+         setActiveClass(this);
      };
      dragger.ondblclick = function() {
        alert("Don't click it dumbo, drag it");

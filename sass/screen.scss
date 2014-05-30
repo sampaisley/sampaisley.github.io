@@ -6,7 +6,7 @@
 //@import "compass/reset";
 @import "../css/normalize.min.css" ;
 @import "../css/foundation.min.css" ;
-
+@import "compass/css3/transition";
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
 
@@ -293,4 +293,20 @@ background-position: 0 0, $grid_size $grid_size;
 #tagName, #title{
   font-family: courier !important;
   color:#aaa;
+}
+a.butto{
+  width: 115px;
+  font-size: 1.15em;
+  background-color: #51b5e9;
+  color:#fff;
+  padding:5px 8px;
+  display: inline-block;
+  margin-bottom: 3px;
+  @include transition(background-color 0.3s ease-in-out);
+  &:hover{
+    background-color: #1687b6;
+  }
+  &.active{
+    background-color: #1687b6;
+  }
 }
