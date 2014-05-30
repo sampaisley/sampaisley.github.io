@@ -291,9 +291,10 @@ p.smallBlurb {
 #title.moving {
   color: #bc0b87 !important;
   background-color: #caec0d;
+  padding: 3px 10px;
 }
 
-/* line 300, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -307,11 +308,11 @@ a.butto {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 309, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 312, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
