@@ -50,7 +50,8 @@
      }
 
      function reSetDragger(h) {
-       if (h < oldHeight && parseInt(dragger.style.top) + 1.5 * grid_size > high) {
+       if (h < oldHeight && parseInt(dragger.style.top) + 1.5 * grid_size >
+         high) {
          var down = Math.ceil(h / squaresAccross - 1);
 
          dragger.style.top = down * grid_size + "px";
@@ -58,8 +59,8 @@
          var t = parseInt(dragger.style.top) / grid_size;
          var l = parseInt(dragger.style.left) / grid_size - 1;
          //dragger.innerHTML =(t+l) || 1;
-          _X = l+2;
-          _Y = t*squaresAccross ;
+         _X = l + 2;
+         _Y = t * squaresAccross;
          dragger.innerHTML = t * squaresAccross + l + 2;
          setImage();
          setTitle();
@@ -71,19 +72,19 @@
      function setDivHeight(l) {
        var w = 3,
          h = Math.ceil(l / 3);
-      //  if (l % 2 !== 0 && l <= 10) {
-      //    h = Math.ceil(l / 3);
+       //  if (l % 2 !== 0 && l <= 10) {
+       //    h = Math.ceil(l / 3);
        //
-      //  } else if (l % 2 !== 0 && l > 10) {
-      //    h = Math.ceil(l / 3);
+       //  } else if (l % 2 !== 0 && l > 10) {
+       //    h = Math.ceil(l / 3);
        //
-      //  } else if (l % 2 === 0 && l <= 10) {
-      //    h = l / 3;
+       //  } else if (l % 2 === 0 && l <= 10) {
+       //    h = l / 3;
        //
-      //  } else if (l % 2 === 0 && l > 10) {
-      //    h = Math.ceil(l / 3);console.log('obj');
+       //  } else if (l % 2 === 0 && l > 10) {
+       //    h = Math.ceil(l / 3);console.log('obj');
        //
-      //  }
+       //  }
 
        strips.style.height = h * grid_size + (2 * borderWidth) + 'px';
        strips.style.width = w * grid_size + (2 * borderWidth) + 'px';
@@ -145,13 +146,15 @@
      var numbers = document.querySelector('#numbers');
      var tagName = document.querySelector('#tagName');
      tagName.innerHTML = "Tag: " + tag;
-     function setActiveClass(e) {
+
+     function setActiveClass(e, c) {
        var a = document.querySelectorAll('.butto');
        for (var i = 0; i < a.length; i++) {
-         a[i].classList.remove('active');
+         a[i].classList.remove(c);
        }
-       e.classList.add('active');
+       e.classList.add(c);
      }
+
      function changeSet(set) {
        makeArray(tag = set);
        tagName.innerHTML = "Tag: " + set;
@@ -160,12 +163,12 @@
        setDivHeight(images.length);
      }
      france.onclick =
-     numbers.onclick =
+       numbers.onclick =
        field.onclick =
        sea.onclick = function() {
          changeSet(this.getAttribute('id'));
 
-         setActiveClass(this);
+         setActiveClass(this, "active");
      };
      dragger.ondblclick = function() {
        alert("Don't click it dumbo, drag it");
