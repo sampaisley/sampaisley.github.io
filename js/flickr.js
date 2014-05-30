@@ -144,8 +144,8 @@
      var field = document.querySelector('#field');
      var sea = document.querySelector('#sea');
      var numbers = document.querySelector('#numbers');
-     var tagName = document.querySelector('#tagName');
-     tagName.innerHTML = "Tag: " + tag;
+    // var tagName = document.querySelector('#tagName');
+    // tagName.innerHTML = "Tag: " + tag;
 
      function setActiveClass(e, c) {
        var a = document.querySelectorAll('.butto');
@@ -157,7 +157,7 @@
 
      function changeSet(set) {
        makeArray(tag = set);
-       tagName.innerHTML = "Tag: " + set;
+      // tagName.innerHTML = "Tag: " + set;
        setImage();
        setTitle();
        setDivHeight(images.length);
