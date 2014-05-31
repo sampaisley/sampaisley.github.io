@@ -36,3 +36,7 @@ cp[0].onclick = cp[1].onclick = function () {
 
 
 s.classList.remove('no-js');
+
+document.querySelector('.circle').ondblclick=function () {
+  window.location="img.html";
+}

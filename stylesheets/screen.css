@@ -222,7 +222,7 @@ p.smallBlurb {
   background: none;
 }
 
-/* line 244, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 #strips {
   float: left;
   border: 10px solid #eeeeee;
@@ -234,7 +234,7 @@ p.smallBlurb {
   background-position: 0 0, 60px 60px;
 }
 
-/* line 256, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 #draggable {
   position: relative;
   /* top: $grid_size;
@@ -251,7 +251,7 @@ p.smallBlurb {
   line-height: 1.8;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 #img_div {
   float: left;
   border: 10px solid #eeeeee;
@@ -259,12 +259,12 @@ p.smallBlurb {
   background-color: #eeeeee;
 }
 
-/* line 277, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 #tagNamdisple {
   display: block;
 }
 
-/* line 280, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 #controls {
   border: 10px solid #eeeeee;
   float: left;
@@ -272,29 +272,41 @@ p.smallBlurb {
   margin-left: 20px;
   padding: 10px;
   text-align: center;
-  width: 200px;
+  width: 210px;
 }
 
-/* line 289, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 #wrap {
+  position: relative;
+  top: 70px;
   width: 790px;
-  margin: 50px auto;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 790px) {
+  /* line 290, ../sass/screen.scss */
+  #wrap {
+    top: 0;
+    width: 400px;
+  }
 }
 
-/* line 293, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 #tagName, #title, #tit {
-  font-family: courier !important;
   color: #aaa;
+  padding: 5px 4px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-/* line 297, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 #title.moving {
-  color: #bc0b87 !important;
-  background-color: #caec0d;
-  padding: 3px 10px;
+  color: #f7ef0a !important;
+  background-color: rgba(0, 0, 0, 0.71);
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -308,11 +320,11 @@ a.butto {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 311, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 314, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }

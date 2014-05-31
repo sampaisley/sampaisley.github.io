@@ -235,6 +235,7 @@ p.smallBlurb{
 ///////////////////////// flickr \\\\\\\\\\\
 #flickBody{
   background:none;
+
 }
 $bg_color1: #eee;
 $grid_size : 60px;
@@ -284,20 +285,32 @@ background-position: 0 0, $grid_size $grid_size;
   margin-left: 20px;
   padding: 10px;
   text-align: center;
-  width: 200px;
+  width: 210px;
 }
 #wrap{
+  position: relative;
+  top: 70px;
   width: 790px;
-  margin: 50px auto;
+  margin: 0 auto;
+   @media only screen and (max-width : 790px) {
+     top: 0;
+     width: 400px;
+   }
 }
+
 #tagName, #title, #tit{
-  font-family: courier !important;
+  //font-family: courier !important;
   color:#aaa;
+padding:5px 4px ;
+//letter-spacing: 0px;
+@include transition(all 0.2s ease-in-out);
+
 }
 #title.moving{
-  color:#bc0b87 !important;
-  background-color: #caec0d;
-  padding:3px 10px ;
+  color:#f7ef0a !important;
+  background-color: rgba(0, 0, 0, 0.71);
+
+
 }
 a.butto{
   width: 115px;
