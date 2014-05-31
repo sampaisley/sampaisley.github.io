@@ -14,6 +14,7 @@
      var Draggabilly; // declare Draggabilly to keep jsHint quiet;
      var jso = {};
      var tag = 'france';
+     var dragStartPoint=0;
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
      var oldHeight;
@@ -45,7 +46,7 @@
        if (_Y + _X - 1 < images.length) {
          title.innerHTML =  images[_Y + _X - 1][2];
        } else {
-         title.innerHTML = "No More From " + tag;
+         title.innerHTML = "No Image";
        }
      }
 
@@ -97,14 +98,14 @@
 
      function makeArray(t) {
        images = [];
-       for (var i = 0; i < jso.photos.photo.length; ++i) {
+       for (var i = jso.photos.photo.length; --i;) {
          if (wordInString(jso.photos.photo[i].tags, t)) {
            var src = 'http://farm' + jso.photos.photo[i].farm +
              '.staticflickr.com/' + jso.photos.photo[i].server + '/' + jso.photos
              .photo[i].id + '_' + jso.photos.photo[i].secret + '_n.jpg';
            tag = jso.photos.photo[i].tags.split(' ')[0];
            tit = jso.photos.photo[i].title;
-           images.push([src, tag, tit]);
+           images.unshift([src, tag, tit]);
          }
        }
      }
@@ -127,12 +128,18 @@
     //  function updateTitle() {
     //
     //  }
+
+    draggie.on( 'dragStart', function() { //...
+      dragStartPoint = _X + _Y;
+    });
      function onDragMove(instance) {
        _X = instance.position.x / grid_size + 1;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
        dragger.innerHTML = _Y + _X;
        setTitle();
+       if(_X + _Y !==dragStartPoint ){
        title.classList.add("moving");
+     }
      }
 
      function onDragEnd() {
@@ -154,7 +161,7 @@
 
      function setActiveClass(e, c) {
        var a = document.querySelectorAll('.butto');
-       for (var i = 0; i < a.length; i++) {
+       for (var i = a.length; i--;) {
          a[i].classList.remove(c);
        }
        e.classList.add(c);
@@ -178,5 +185,3 @@
      dragger.ondblclick = function() {
        alert("Don't click it dumbo, drag it");
      };
-console.log("ho ho ho
-");

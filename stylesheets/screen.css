@@ -5,12 +5,12 @@
 @import url(../css/normalize.min.css);
 @import url(../css/foundation.min.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-/* line 15, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 * {
   font-family: 'Lato' !important;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 html {
   background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -19,43 +19,43 @@ html {
   background-size: cover;
 }
 
-/* line 30, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 body {
   background-color: transparent;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 h5 {
   font-size: 1.125em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 h3 {
   font-size: 1.6875em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 #headTitle {
   word-break: break-all;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 fieldset {
   border: none;
   margin: 0;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .circle {
   border: 2px solid rgba(255, 187, 3, 0.5);
   border-radius: 50%;
@@ -64,7 +64,7 @@ fieldset {
   margin-top: 100px;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .circleBorder {
   transition: all .5s ease-out;
   border: 3px solid #ffbb03 !important;
@@ -72,24 +72,24 @@ fieldset {
   margin-left: 25px;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .fat {
   border: 6px solid rgba(191, 154, 62, 0.65);
   transition: border .5s ease-out;
 }
 
-/* line 86, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .finn {
   border: 2px solid rgba(255, 187, 3, 0.5);
   transition: border .5s ease-out;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .avaiable {
   font-weight: 900;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 iframe {
   border: none;
   width: 100%;
@@ -99,13 +99,13 @@ iframe {
   height: 457px;
 }
 
-/* line 106, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .no-pad {
   padding: 0 !important;
   overflow: hidden;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 #pop {
   position: absolute;
   top: 10px;
@@ -114,26 +114,26 @@ iframe {
   z-index: 0;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 #pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
   left: -10px !important;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 122, ../sass/screen.scss */
+  /* line 123, ../sass/screen.scss */
   #pop.show {
     left: 10px !important;
   }
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 #pop.hide {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .close_pop {
   float: right;
   z-index: 200;
@@ -148,55 +148,55 @@ iframe {
   cursor: pointer;
   opacity: 0.65;
 }
-/* line 153, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .close_pop:hover {
   transition: all .2s ease-out;
   background-color: #cae393;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 ._fade_out {
   transition: opacity .9s ease-out;
   border-radius: 50%;
   opacity: 0;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 ._fade_in {
   transition: opacity .9s ease-out;
   opacity: 1;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .greenBg {
   background-color: rgba(182, 217, 106, 0.65) !important;
   border: none;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .redBg {
   background-color: rgba(223, 90, 73, 0.65) !important;
   margin-top: 20px;
   border: none;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .blueBg {
   background-color: rgba(108, 166, 217, 0.65);
   border: none;
 }
 
-/* line 205, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .blueBg, .redBg, .greenBg {
   border-radius: 4px;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -204,7 +204,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 222, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 #mail {
   transition: background-color .9s ease-out;
   padding: 0 5px;
@@ -212,17 +212,17 @@ p.smallBlurb {
   color: #df5a49;
   background-color: rgba(182, 217, 106, 0.2);
 }
-/* line 229, ../sass/screen.scss */
+/* line 230, ../sass/screen.scss */
 #mail:hover {
   background-color: rgba(182, 217, 106, 0.5);
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 #flickBody {
   background: none;
 }
 
-/* line 243, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 #strips {
   float: left;
   border: 10px solid #eeeeee;
@@ -234,7 +234,7 @@ p.smallBlurb {
   background-position: 0 0, 60px 60px;
 }
 
-/* line 255, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 #draggable {
   position: relative;
   /* top: $grid_size;
@@ -251,7 +251,7 @@ p.smallBlurb {
   line-height: 1.8;
 }
 
-/* line 270, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 #img_div {
   float: left;
   border: 10px solid #eeeeee;
@@ -259,12 +259,12 @@ p.smallBlurb {
   background-color: #eeeeee;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 #tagNamdisple {
   display: block;
 }
 
-/* line 279, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 #controls {
   border: 10px solid #eeeeee;
   float: left;
@@ -275,26 +275,26 @@ p.smallBlurb {
   width: 200px;
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 #wrap {
   width: 790px;
   margin: 50px auto;
 }
 
-/* line 292, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 #tagName, #title, #tit {
   font-family: courier !important;
   color: #aaa;
 }
 
-/* line 296, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 #title.moving {
   color: #bc0b87 !important;
   background-color: #caec0d;
   padding: 3px 10px;
 }
 
-/* line 301, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -308,11 +308,11 @@ a.butto {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 310, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 313, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
