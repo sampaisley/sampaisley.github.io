@@ -185,3 +185,4 @@
      dragger.ondblclick = function() {
        alert("Don't click it dumbo, drag it");
      };
+var foo = "bar"
