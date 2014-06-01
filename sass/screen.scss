@@ -10,7 +10,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
-
+@mixin up-to-width($breakpoint) {
+    @media only screen and (max-width: $breakpoint + px) { @content; }
+}
 
 
 *{
@@ -235,7 +237,9 @@ p.smallBlurb{
 ///////////////////////// flickr \\\\\\\\\\\
 #flickBody{
   background:none;
-
+@include up-to-width(700) {
+      background-color: #EEE;
+  }
 }
 $bg_color1: #eee;
 $grid_size : 60px;
@@ -274,6 +278,12 @@ background-position: 0 0, $grid_size $grid_size;
      border:10px solid $bg_color1 ;
     margin-left: 20px;
     background-color: $bg_color1;
+    @media only screen and (max-width : 790px) {
+      margin: 10px auto;
+
+      background-color: transparent;
+    float: both;
+    }
 }
 #tagNamdisple{
     display: block;
@@ -286,6 +296,10 @@ background-position: 0 0, $grid_size $grid_size;
   padding: 10px;
   text-align: center;
   width: 210px;
+  @media only screen and (max-width : 790px) {
+    margin: 10px auto;
+    float:right;
+  }
 }
 #wrap{
   position: relative;
@@ -320,6 +334,16 @@ a.butto{
   padding:5px 8px;
   display: inline-block;
   margin-bottom: 3px;
+  @include up-to-width(800) {
+        color: blue;
+    }
+    @include up-to-width(750) {
+          color: green;
+      }
+      @include up-to-width(700) {
+            color: red;
+        }
+
   @include transition(background-color 0.3s ease-in-out);
   &:hover{
     background-color: #2b9bbd;

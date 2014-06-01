@@ -98,7 +98,7 @@
 
      function makeArray(t) {
        images = [];
-       for (var i = jso.photos.photo.length; --i;) {
+       for (var i = jso.photos.photo.length; i--;) {
          if (wordInString(jso.photos.photo[i].tags, t)) {
            var src = 'http://farm' + jso.photos.photo[i].farm +
              '.staticflickr.com/' + jso.photos.photo[i].server + '/' + jso.photos
@@ -185,4 +185,3 @@
      dragger.ondblclick = function() {
        alert("Don't click it dumbo, drag it");
      };
-var foo = "bar"
