@@ -46,9 +46,10 @@
        }
      }
 
-     function setTitle() {
-       if (_Y + _X - 1 < images.length) {
-         title.innerHTML = images[_Y + _X - 1][2];
+     function setTitle(n) {
+       n=n || _Y + _X - 1;
+       if (n < images.length) {
+         title.innerHTML = images[n][2];
        } else {
          title.innerHTML = "No Image";
        }
@@ -140,6 +141,7 @@
 
          var n = e.target.getAttribute('class');
          setImage(n);
+         setTitle(n);
          dragger.innerHTML=parseInt(n)+1 ;
          draggerShadowThumbs(e.target.offsetLeft- borderWidth, e.target.offsetTop - borderWidth);
        }
