@@ -355,7 +355,8 @@ a.butto{
 #thumbs{
 
   img{
-    width: $grid_size;
+    width: 60px;
+    border: 2px solid $bg_color1;
   }
 }
 .hidden{

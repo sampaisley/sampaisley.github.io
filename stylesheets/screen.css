@@ -371,9 +371,10 @@ a.butto.active {
 /* line 357, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
+  border: 2px solid #eeeeee;
 }
 
-/* line 361, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .hidden {
   display: none;
 }
