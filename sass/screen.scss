@@ -312,7 +312,7 @@ background-position: 0 0, $grid_size $grid_size;
    }
 }
 
-#tagName, #title, #tit{
+#tagName, #title, #tit, .check{
   //font-family: courier !important;
   color:#aaa;
 padding:5px 4px ;
@@ -351,4 +351,13 @@ a.butto{
   &.active{
     background-color: #1687b6;
   }
+}
+#thumbs{
+
+  img{
+    width: $grid_size;
+  }
+}
+.hidden{
+  display: none;
 }

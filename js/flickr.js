@@ -1,5 +1,7 @@
      var dragger = document.querySelector('#draggable');
      var strips = document.querySelector('#strips');
+     var thumbDiv = document.querySelector('#thumbs');
+     var numOfThumbs = 0;
      var borderWidth = 10;
      strips.style.borderWidth = borderWidth + "px";
      var theImage = document.querySelector('#theImage');
@@ -9,12 +11,13 @@
      var wide = document.querySelector('#strips').clientWidth;
      var high = document.querySelector('#strips').clientHeight;
      var squaresAccross = wide / grid_size;
+     var thumbsMode=false;
       //var totalSquares = (squaresAccross) * (high / grid_size);
      var images = [];
      var Draggabilly; // declare Draggabilly to keep jsHint quiet;
      var jso = {};
      var tag = 'france';
-     var dragStartPoint=0;
+     var dragStartPoint = 0;
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
      var oldHeight;
@@ -33,9 +36,10 @@
        return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
 
-     function setImage() {
-       if (_Y + _X - 1 < images.length) {
-         theImage.src = images[_Y + _X - 1][0];
+     function setImage(i) {
+       i = i || _Y + _X - 1;
+       if (i < images.length) {
+         theImage.src = images[i][0];
        } else {
          theImage.src =
            "../img/noImage.jpg";
@@ -44,7 +48,7 @@
 
      function setTitle() {
        if (_Y + _X - 1 < images.length) {
-         title.innerHTML =  images[_Y + _X - 1][2];
+         title.innerHTML = images[_Y + _X - 1][2];
        } else {
          title.innerHTML = "No Image";
        }
@@ -69,7 +73,10 @@
        oldHeight = h;
 
      }
-
+     function draggerShadowThumbs(x,y) {
+       dragger.style.left = x+"px";
+       dragger.style.top = y+"px";
+     }
      function setDivHeight(l) {
        var w = 3,
          h = Math.ceil(l / 3);
@@ -100,16 +107,51 @@
        images = [];
        for (var i = jso.photos.photo.length; i--;) {
          if (wordInString(jso.photos.photo[i].tags, t)) {
-           var src = 'http://farm' + jso.photos.photo[i].farm +
-             '.staticflickr.com/' + jso.photos.photo[i].server + '/' + jso.photos
-             .photo[i].id + '_' + jso.photos.photo[i].secret + '_n.jpg';
-           tag = jso.photos.photo[i].tags.split(' ')[0];
+           numOfThumbs++;
+           //  var src = 'http://farm' + jso.photos.photo[i].farm +
+           //    '.staticflickr.com/' + jso.photos.photo[i].server + '/' + jso.photos
+           //    .photo[i].id + '_' + jso.photos.photo[i].secret + '_n.jpg';
+           var src = jso.photos.photo[i].url_n;
+           var src_sq = jso.photos.photo[i].url_sq;
+           tag = jso.photos.photo[i].tags; //console.log(tag);
            tit = jso.photos.photo[i].title;
-           images.unshift([src, tag, tit]);
+           images.unshift([src, tag, tit, src_sq]);
          }
        }
      }
 
+      ///////////////  THUMBS  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+     function thumbs() {
+       thumbDiv.innerHTML = "";
+       var thum;
+       for (var i = 0; i < numOfThumbs; ++i) {
+         thum = document.createElement("img");
+         thum.src = images[i][3];
+         thum.setAttribute('class', i);
+         if (i % 3 === 0 && i !== 0) {
+           thumbDiv.innerHTML += "<br>";
+         }
+         thumbDiv.appendChild(thum);
+       }
+
+       thumbDiv.addEventListener('click', function(e) {
+         if (e.target.nodeName ==="IMG") {// make sure it's an image;
+
+
+         var n = e.target.getAttribute('class');
+         setImage(n);
+         dragger.innerHTML=parseInt(n)+1 ;
+         draggerShadowThumbs(e.target.offsetLeft- borderWidth, e.target.offsetTop - borderWidth);
+       }
+       }, false);
+     }
+
+document.querySelector("#check").onclick=function () {
+  dragger.classList.toggle("hidden");
+  thumbDiv.classList.toggle("hidden");
+  thumbsMode = !thumbsMode;
+  thumbs();
+};
      function jsonFlickrApi(result) {
        jso = result;
        makeArray(tag);
@@ -125,21 +167,22 @@
        containment: true
      });
 
-    //  function updateTitle() {
-    //
-    //  }
+      //  function updateTitle() {
+      //
+      //  }
 
-    draggie.on( 'dragStart', function() { //...
-      dragStartPoint = _X + _Y;
-    });
+     draggie.on('dragStart', function() { //...
+       dragStartPoint = _X + _Y;
+     });
+
      function onDragMove(instance) {
        _X = instance.position.x / grid_size + 1;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
        dragger.innerHTML = _Y + _X;
        setTitle();
-       if(_X + _Y !==dragStartPoint ){
-       title.classList.add("moving");
-     }
+       if (_X + _Y !== dragStartPoint) {
+         title.classList.add("moving");
+       }
      }
 
      function onDragEnd() {
@@ -156,8 +199,8 @@
      var field = document.querySelector('#field');
      var sea = document.querySelector('#sea');
      var numbers = document.querySelector('#numbers');
-    // var tagName = document.querySelector('#tagName');
-    // tagName.innerHTML = "Tag: " + tag;
+      // var tagName = document.querySelector('#tagName');
+      // tagName.innerHTML = "Tag: " + tag;
 
      function setActiveClass(e, c) {
        var a = document.querySelectorAll('.butto');
@@ -168,11 +211,16 @@
      }
 
      function changeSet(set) {
+       numOfThumbs = 0;
        makeArray(tag = set);
-      // tagName.innerHTML = "Tag: " + set;
+       // tagName.innerHTML = "Tag: " + set;
        setImage();
        setTitle();
        setDivHeight(images.length);
+       if (thumbsMode) {
+         thumbs();
+       }
+
      }
      france.onclick =
        numbers.onclick =
@@ -183,5 +231,6 @@
          setActiveClass(this, "active");
      };
      dragger.ondblclick = function() {
-       alert("Don't click it dumbo, drag it");
+       //alert("Don't click it dumbo, drag it");
+       thumbs();
      };

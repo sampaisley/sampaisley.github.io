@@ -312,7 +312,7 @@ p.smallBlurb {
 }
 
 /* line 315, ../sass/screen.scss */
-#tagName, #title, #tit {
+#tagName, #title, #tit, .check {
   color: #aaa;
   padding: 5px 4px;
   -moz-transition: all 0.2s ease-in-out;
@@ -366,4 +366,14 @@ a.butto:hover {
 /* line 351, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
+}
+
+/* line 357, ../sass/screen.scss */
+#thumbs img {
+  width: 60px;
+}
+
+/* line 361, ../sass/screen.scss */
+.hidden {
+  display: none;
 }

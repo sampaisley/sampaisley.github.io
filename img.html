@@ -10,15 +10,16 @@
     <title><Flickr Viewer /></title>
 </head>
 <body>
+
   <div id="wrap">
 <div id="strips">
     <div id="draggable">1</div>
-
+<div id="thumbs" class="hidden"></div>
 
 </div>
 
-<div id="controls">
-
+<div id="controls"><span class='check'>
+<input type="checkbox" name=""  id="check"> Thumbs </span>
 
 <a href="#" id="france" class="butto active">France</a><br>
 <a href="#" id="field" class="butto ">Fields</a><br>
@@ -35,8 +36,8 @@
 </div>
 
 <script src="js/min/desandroDrag-ck.js"></script>
-<script src="js/min/flickr-ck.js"></script>
-<script src="https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&amp;api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&amp;user_id=100786833%40N08&amp;extras=tags&amp;format=json" type="text/javascript"></script>
+<script src="js/flickr.js"></script>
+<script src="https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&amp;api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&amp;user_id=100786833%40N08&amp;extras=tags%2Curl_n%2Curl_sq&amp;format=json" type="text/javascript"></script>
 
 </body>
 </html>
