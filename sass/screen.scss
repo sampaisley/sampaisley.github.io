@@ -237,9 +237,7 @@ p.smallBlurb{
 ///////////////////////// flickr \\\\\\\\\\\
 #flickBody{
   background:none;
-@include up-to-width(700) {
-      background-color: #EEE;
-  }
+
 }
 $bg_color1: #eee;
 $grid_size : 60px;
@@ -281,7 +279,7 @@ background-position: 0 0, $grid_size $grid_size;
     @media only screen and (max-width : 790px) {
       margin: 10px auto;
 
-      background-color: transparent;
+    //  background-color: transparent;
     float: both;
     }
 }

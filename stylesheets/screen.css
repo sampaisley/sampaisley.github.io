@@ -221,14 +221,8 @@ p.smallBlurb {
 #flickBody {
   background: none;
 }
-@media only screen and (max-width: 700px) {
-  /* line 238, ../sass/screen.scss */
-  #flickBody {
-    background-color: #EEE;
-  }
-}
 
-/* line 249, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 #strips {
   float: left;
   border: 10px solid #eeeeee;
@@ -240,7 +234,7 @@ p.smallBlurb {
   background-position: 0 0, 60px 60px;
 }
 
-/* line 261, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 #draggable {
   position: relative;
   /* top: $grid_size;
@@ -257,7 +251,7 @@ p.smallBlurb {
   line-height: 1.8;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 #img_div {
   float: left;
   border: 10px solid #eeeeee;
@@ -265,20 +259,19 @@ p.smallBlurb {
   background-color: #eeeeee;
 }
 @media only screen and (max-width: 790px) {
-  /* line 276, ../sass/screen.scss */
+  /* line 274, ../sass/screen.scss */
   #img_div {
     margin: 10px auto;
-    background-color: transparent;
     float: both;
   }
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 #tagNamdisple {
   display: block;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 #controls {
   border: 10px solid #eeeeee;
   float: left;
@@ -289,14 +282,14 @@ p.smallBlurb {
   width: 210px;
 }
 @media only screen and (max-width: 790px) {
-  /* line 291, ../sass/screen.scss */
+  /* line 289, ../sass/screen.scss */
   #controls {
     margin: 10px auto;
     float: right;
   }
 }
 
-/* line 304, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 70px;
@@ -304,14 +297,14 @@ p.smallBlurb {
   margin: 0 auto;
 }
 @media only screen and (max-width: 790px) {
-  /* line 304, ../sass/screen.scss */
+  /* line 302, ../sass/screen.scss */
   #wrap {
     top: 0;
     width: 400px;
   }
 }
 
-/* line 315, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 #tagName, #title, #tit, .check {
   color: #aaa;
   padding: 5px 4px;
@@ -321,13 +314,13 @@ p.smallBlurb {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 323, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 #title.moving {
   color: #f7ef0a !important;
   background-color: rgba(0, 0, 0, 0.71);
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -342,39 +335,39 @@ a.butto {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (max-width: 800px) {
-  /* line 329, ../sass/screen.scss */
+  /* line 327, ../sass/screen.scss */
   a.butto {
     color: blue;
   }
 }
 @media only screen and (max-width: 750px) {
-  /* line 329, ../sass/screen.scss */
+  /* line 327, ../sass/screen.scss */
   a.butto {
     color: green;
   }
 }
 @media only screen and (max-width: 700px) {
-  /* line 329, ../sass/screen.scss */
+  /* line 327, ../sass/screen.scss */
   a.butto {
     color: red;
   }
 }
-/* line 348, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 351, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 357, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
   border: 2px solid #eeeeee;
 }
 
-/* line 362, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .hidden {
   display: none;
 }
