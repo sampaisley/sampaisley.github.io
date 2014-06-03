@@ -220,14 +220,15 @@ document.querySelector("#check").onclick=function () {
      function changeSet(set) {
        numOfThumbs = 0;
        makeArray(tag = set);
-       // tagName.innerHTML = "Tag: " + set;
+
        setImage();
        setTitle();
        setDivHeight(images.length);
-       if (thumbsMode) {
-         thumbs();
-       }
 
+if (thumbsMode) {
+  thumbs();console.log(_Y + _X - 1);
+  setActiveClass('.thumb', "active",document.getElementById(_Y + _X - 1));
+}
      }
      france.onclick =
        numbers.onclick =
