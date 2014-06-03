@@ -17,6 +17,7 @@
      var Draggabilly; // declare Draggabilly to keep jsHint quiet;
      var jso = {};
      var tag = 'france';
+     var currentThumb = 0;
      var dragStartPoint = 0;
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
@@ -68,6 +69,7 @@
          _X = l + 2;
          _Y = t * squaresAccross;
          dragger.innerHTML = t * squaresAccross + l + 2;
+         currentThumb =  t * squaresAccross + l + 1;
          setImage();
          setTitle();
        }
@@ -140,10 +142,10 @@
          if (e.target.nodeName ==="IMG") {// make sure it's an image;
 
 
-         var n = e.target.getAttribute('id');
-         setImage(n);
-         setTitle(n);
-         dragger.innerHTML=parseInt(n)+1 ;
+         currentThumb = e.target.getAttribute('id');
+         setImage(currentThumb);
+         setTitle(currentThumb);
+         dragger.innerHTML=parseInt(currentThumb)+1 ;
          draggerShadowThumbs(e.target.offsetLeft- borderWidth, e.target.offsetTop - borderWidth);
          setActiveClass('.thumb', "active",e.target);
        }
@@ -227,7 +229,7 @@ document.querySelector("#check").onclick=function () {
 
 if (thumbsMode) {
   thumbs();console.log(_Y + _X - 1);
-  setActiveClass('.thumb', "active",document.getElementById(_Y + _X - 1));
+  setActiveClass('.thumb', "active",document.getElementById(currentThumb));
 }
      }
      france.onclick =
