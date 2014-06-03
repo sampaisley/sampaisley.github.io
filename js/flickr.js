@@ -156,6 +156,7 @@ document.querySelector("#check").onclick=function () {
   thumbDiv.classList.toggle("hidden");
   thumbsMode = !thumbsMode;
   thumbs();
+  this.innerHTML==="Thumbs" ? this.innerHTML="Dragger" : this.innerHTML="Thumbs";
   if(thumbsMode && _Y + _X - 1 < images.length){
   setActiveClass('.thumb', "active",document.getElementById(_Y + _X - 1));
 }

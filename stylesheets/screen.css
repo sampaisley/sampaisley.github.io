@@ -375,3 +375,26 @@ a.butto.active {
 .hidden {
   display: none;
 }
+
+/* line 366, ../sass/screen.scss */
+#check {
+  height: 24px;
+  width: 100px;
+  background-color: rgba(12, 128, 14, 0.68);
+  padding: 10px 4px;
+  padding-bottom: 9px;
+  text-align: center;
+  color: #fff;
+  margin: 9px auto;
+  display: block;
+  line-height: 0;
+  cursor: pointer;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+/* line 379, ../sass/screen.scss */
+#check:hover {
+  background-color: rgba(12, 128, 14, 0.58);
+}
