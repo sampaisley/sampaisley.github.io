@@ -128,10 +128,11 @@
        for (var i = 0; i < numOfThumbs; ++i) {
          thum = document.createElement("img");
          thum.src = images[i][3];
-         thum.setAttribute('class', i);
-         if (i % 3 === 0 && i !== 0) {
-           thumbDiv.innerHTML += "<br>";
-         }
+         thum.setAttribute('class', " thumb");
+         thum.setAttribute('id', i);
+         //if (i % 3 === 0 && i !== 0) {
+           //thumbDiv.innerHTML += "<br>";
+         //}
          thumbDiv.appendChild(thum);
        }
 
@@ -139,11 +140,12 @@
          if (e.target.nodeName ==="IMG") {// make sure it's an image;
 
 
-         var n = e.target.getAttribute('class');
+         var n = e.target.getAttribute('id');
          setImage(n);
          setTitle(n);
          dragger.innerHTML=parseInt(n)+1 ;
          draggerShadowThumbs(e.target.offsetLeft- borderWidth, e.target.offsetTop - borderWidth);
+         setActiveClass('.thumb', "active",e.target);
        }
        }, false);
      }
@@ -153,6 +155,9 @@ document.querySelector("#check").onclick=function () {
   thumbDiv.classList.toggle("hidden");
   thumbsMode = !thumbsMode;
   thumbs();
+  if(thumbsMode && _Y + _X - 1 < images.length){
+  setActiveClass('.thumb', "active",document.getElementById(_Y + _X - 1));
+}
 };
      function jsonFlickrApi(result) {
        jso = result;
@@ -204,12 +209,12 @@ document.querySelector("#check").onclick=function () {
       // var tagName = document.querySelector('#tagName');
       // tagName.innerHTML = "Tag: " + tag;
 
-     function setActiveClass(e, c) {
-       var a = document.querySelectorAll('.butto');
+     function setActiveClass(e, c,t) {
+       var a = document.querySelectorAll(e);
        for (var i = a.length; i--;) {
          a[i].classList.remove(c);
        }
-       e.classList.add(c);
+       t.classList.add(c);
      }
 
      function changeSet(set) {
@@ -230,9 +235,9 @@ document.querySelector("#check").onclick=function () {
        sea.onclick = function() {
          changeSet(this.getAttribute('id'));
 
-         setActiveClass(this, "active");
+         setActiveClass('.butto', "active",this);
      };
      dragger.ondblclick = function() {
-       //alert("Don't click it dumbo, drag it");
-       thumbs();
+       alert("Don't click it dumbo, drag it");
+
      };

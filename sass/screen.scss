@@ -355,6 +355,9 @@ a.butto{
   img{
     width: 60px;
     border: 2px solid $bg_color1;
+    &.active{
+      border: 5px solid #504c57;
+    }
   }
 }
 .hidden{
