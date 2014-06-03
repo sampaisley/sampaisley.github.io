@@ -21,7 +21,7 @@
      var dragStartPoint = 0;
      var _X = 0,
        _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
-     var oldHeight;
+     var oldNumOfPhotos;
      /* document.flickrURL =
        "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
 
@@ -56,24 +56,23 @@
        }
      }
 
-     function reSetDragger(h) {
-       if (h < oldHeight && parseInt(dragger.style.top) + 1.5 * grid_size >
-         high) {
-         var down = Math.ceil(h / squaresAccross - 1);
+     function reSetDragger(numOfPhotos) {
+       if (numOfPhotos < oldNumOfPhotos && parseInt(dragger.style.top) + 1.5 * grid_size > high) {
+         var newDraggerTop = Math.ceil(numOfPhotos / squaresAccross - 1)* grid_size + "px";
 
-         dragger.style.top = down * grid_size + "px";
+         dragger.style.top = newDraggerTop ;
 
          var t = parseInt(dragger.style.top) / grid_size;
-         var l = parseInt(dragger.style.left) / grid_size - 1;
+         var l = parseInt(dragger.style.left) / grid_size ;
          //dragger.innerHTML =(t+l) || 1;
-         _X = l + 2;
+         _X = l + 1;
          _Y = t * squaresAccross;
-         dragger.innerHTML = t * squaresAccross + l + 2;
-         currentThumb =  t * squaresAccross + l + 1;
+         dragger.innerHTML = t * squaresAccross + l + 1;
+         currentThumb =  t * squaresAccross + l ;
          setImage();
          setTitle();
        }
-       oldHeight = h;
+       oldNumOfPhotos = numOfPhotos;
 
      }
      function draggerShadowThumbs(x,y) {
@@ -93,7 +92,7 @@
        //    h = l / 3;
        //
        //  } else if (l % 2 === 0 && l > 10) {
-       //    h = Math.ceil(l / 3);console.log('obj');
+       //    h = Math.ceil(l / 3);
        //
        //  }
 
@@ -116,7 +115,7 @@
            //    .photo[i].id + '_' + jso.photos.photo[i].secret + '_n.jpg';
            var src = jso.photos.photo[i].url_n;
            var src_sq = jso.photos.photo[i].url_sq;
-           tag = jso.photos.photo[i].tags; //console.log(tag);
+           tag = jso.photos.photo[i].tags;
            tit = jso.photos.photo[i].title;
            images.unshift([src, tag, tit, src_sq]);
          }
@@ -223,12 +222,12 @@ document.querySelector("#check").onclick=function () {
        numOfThumbs = 0;
        makeArray(tag = set);
 
-       setImage();
+       setImage(currentThumb);
        setTitle();
        setDivHeight(images.length);
 
 if (thumbsMode) {
-  thumbs();console.log(_Y + _X - 1);
+  thumbs();
   setActiveClass('.thumb', "active",document.getElementById(currentThumb));
 }
      }
