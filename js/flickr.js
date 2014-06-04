@@ -19,7 +19,6 @@
      var tag = 'france';
      var currentThumb = 0;
      var dragStartPoint = 0;
-     var unsorted=true;
      var _X = 0,
        _Y = 0;
      var oldNumOfPhotos;
@@ -37,14 +36,27 @@
      function wordInString(s, word) {
        return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
+function reJig(draggerLeft) {
 
+  var newDragLeft = parseInt(draggerLeft)-grid_size;
+  dragger.style.left=newDragLeft+'px';
+  dragger.innerHTML=currentThumb;
+  currentThumb--;
+
+  setImage();
+setTitle();
+  //  setActiveClass('.thumb', "active", document.getElementById(currentThumb));
+
+
+}
      function setImage(i) {
        i = i || currentThumb;
        if (i < images.length) {
          theImage.src = images[i][0];
        } else {
-         theImage.src =
-           "../img/noImage.jpg";
+        //  theImage.src =
+        //    "../img/noImage.jpg";
+           reJig(dragger.style.left);
        }
      }
 
@@ -54,6 +66,7 @@
          title.innerHTML = images[n][2];
        } else {
          title.innerHTML = "No Image";
+
        }
      }
 
@@ -118,8 +131,20 @@
        reSetDragger(l);
      }
 
+
+function sortbydate(a, b) {
+if (a.datetaken > b.datetaken){
+return 1;}
+if (a.datetaken < b.datetaken){
+return -1;
+}
+// a must be equal to b
+return 0;
+}
+
+
      function makeArray(t) {
-      if(1===1){jso.sort(sortbydate);}
+      jso.sort(sortbydate);
        images = [];
        for (var i = jso.length; i--;) {
          if (wordInString(jso[i].tags, t)) {
@@ -190,14 +215,14 @@
 
      document.querySelector("#check").onclick = function() {
        dragger.classList.toggle("hidden");
-       strips.classList.toggle('checks')
+       strips.classList.toggle('checks');
        thumbDiv.classList.toggle("hidden");
        thumbsMode = !thumbsMode;
        thumbs();
        this.innerHTML === "Thumbs" ? this.innerHTML = "Dragger" : this.innerHTML ="Thumbs";
        if (thumbsMode && currentThumb < images.length) {
-         setActiveClass('.thumb', "active", document.getElementById(
-           currentThumb));
+         setActiveClass('.thumb', "active", document.getElementById(currentThumb));
+
        }
      };
 
@@ -209,14 +234,7 @@
        setDivHeight(images.length);
      }
 
-function sortbydate(a, b) {
-if (a.datetaken > b.datetaken)
-return 1;
-if (a.datetaken < b.datetaken)
-return -1;
-// a must be equal to b
-return 0;
-}
+
 
      var draggie = new Draggabilly(dragger, {
        grid: [grid_size, grid_size],
@@ -265,14 +283,13 @@ return 0;
        numOfThumbs = 0;
        makeArray(tag = set);
 
-       setImage(currentThumb);
+
        setTitle();
        setDivHeight(images.length);
-
+       setImage();
        if (thumbsMode) {
          thumbs();
-         setActiveClass('.thumb', "active", document.getElementById(
-           currentThumb));
+         setActiveClass('.thumb', "active", document.getElementById(currentThumb));
        }
      }
      france.onclick =
