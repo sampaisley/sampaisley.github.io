@@ -7,7 +7,7 @@
      var theImage = document.querySelector('#theImage');
      var title = document.querySelector('#title');
      var tit;
-     var grid_size = dragger.clientWidth;
+     var grid_size = dragger.offsetWidth;
      var wide = document.querySelector('#strips').clientWidth;
      var high = document.querySelector('#strips').clientHeight;
      var squaresAccross = wide / grid_size;
