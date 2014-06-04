@@ -157,7 +157,7 @@ document.querySelector("#check").onclick=function () {
   thumbsMode = !thumbsMode;
   thumbs();
   this.innerHTML==="Thumbs" ? this.innerHTML="Dragger" : this.innerHTML="Thumbs";
-  if(thumbsMode && _Y + _X - 1 < images.length){
+  if(thumbsMode && currentThumb < images.length){
   setActiveClass('.thumb', "active",document.getElementById(currentThumb));
 }
 };
