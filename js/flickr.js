@@ -190,6 +190,7 @@
 
      document.querySelector("#check").onclick = function() {
        dragger.classList.toggle("hidden");
+       strips.classList.toggle('checks')
        thumbDiv.classList.toggle("hidden");
        thumbsMode = !thumbsMode;
        thumbs();

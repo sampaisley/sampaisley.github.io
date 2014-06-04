@@ -228,13 +228,17 @@ p.smallBlurb {
   border: 10px solid #eeeeee;
   height: 260px;
   width: 80px;
+  background-color: #eeeeee;
+}
+/* line 253, ../sass/screen.scss */
+#strips.checks {
   background-color: white;
   background-image: linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee), linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee);
   background-size: 120px 120px;
   background-position: 0 0, 60px 60px;
 }
 
-/* line 259, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 #draggable {
   position: relative;
   /* top: $grid_size;
@@ -255,12 +259,12 @@ p.smallBlurb {
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
-/* line 275, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 #draggable:hover {
   border: 6px solid #c6c6c6;
 }
 
-/* line 279, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 #img_div {
   float: left;
   border: 10px solid #eeeeee;
@@ -268,19 +272,19 @@ p.smallBlurb {
   background-color: #eeeeee;
 }
 @media only screen and (max-width: 790px) {
-  /* line 279, ../sass/screen.scss */
+  /* line 282, ../sass/screen.scss */
   #img_div {
     margin: 10px auto;
     float: both;
   }
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 #tagNamdisple {
   display: block;
 }
 
-/* line 294, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 #controls {
   border: 10px solid #eeeeee;
   float: left;
@@ -291,14 +295,14 @@ p.smallBlurb {
   width: 210px;
 }
 @media only screen and (max-width: 790px) {
-  /* line 294, ../sass/screen.scss */
+  /* line 297, ../sass/screen.scss */
   #controls {
     margin: 10px auto;
     float: right;
   }
 }
 
-/* line 307, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 70px;
@@ -306,14 +310,14 @@ p.smallBlurb {
   margin: 0 auto;
 }
 @media only screen and (max-width: 790px) {
-  /* line 307, ../sass/screen.scss */
+  /* line 310, ../sass/screen.scss */
   #wrap {
     top: 0;
     width: 400px;
   }
 }
 
-/* line 318, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 #tagName, #title, #tit, .check {
   color: #aaa;
   padding: 2px 4px;
@@ -323,13 +327,13 @@ p.smallBlurb {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 326, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 #title.moving {
   color: #f7ef0a !important;
   background-color: rgba(0, 0, 0, 0.71);
 }
 
-/* line 332, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -344,48 +348,48 @@ a.butto {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (max-width: 800px) {
-  /* line 332, ../sass/screen.scss */
+  /* line 335, ../sass/screen.scss */
   a.butto {
     color: blue;
   }
 }
 @media only screen and (max-width: 750px) {
-  /* line 332, ../sass/screen.scss */
+  /* line 335, ../sass/screen.scss */
   a.butto {
     color: green;
   }
 }
 @media only screen and (max-width: 700px) {
-  /* line 332, ../sass/screen.scss */
+  /* line 335, ../sass/screen.scss */
   a.butto {
     color: red;
   }
 }
-/* line 351, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 354, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 360, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
   border: 2px solid #eeeeee;
 }
-/* line 363, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 #thumbs img.active {
   border: 5px solid #504c57;
 }
 
-/* line 368, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 371, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 #check {
   height: 24px;
   width: 100px;
@@ -403,7 +407,7 @@ a.butto.active {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 384, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 #check:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }

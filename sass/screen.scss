@@ -249,11 +249,14 @@ $borderSize : 10px;
     border:$borderSize solid $bg_color1 ;
     height: $grid_size * $squaresDown + $borderSize*2;
     width:$grid_size * $squaresAccross + $borderSize*2;
+    background-color: $bg_color1;
+    &.checks{
    background-color: white;
 background-image: linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1),
     linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1);
 background-size:$grid_size*2 $grid_size*2;
 background-position: 0 0, $grid_size $grid_size;
+}
 }
 
 #draggable{
