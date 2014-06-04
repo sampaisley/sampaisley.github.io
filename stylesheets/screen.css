@@ -316,7 +316,7 @@ p.smallBlurb {
 /* line 318, ../sass/screen.scss */
 #tagName, #title, #tit, .check {
   color: #aaa;
-  padding: 5px 4px;
+  padding: 2px 4px;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;

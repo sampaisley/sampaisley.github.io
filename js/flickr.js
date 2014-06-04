@@ -19,6 +19,7 @@
      var tag = 'france';
      var currentThumb = 0;
      var dragStartPoint = 0;
+     var unsorted=true;
      var _X = 0,
        _Y = 0;
      var oldNumOfPhotos;
@@ -118,18 +119,20 @@
      }
 
      function makeArray(t) {
+      if(1===1){jso.sort(sortbydate);}
        images = [];
-       for (var i = jso.photos.photo.length; i--;) {
-         if (wordInString(jso.photos.photo[i].tags, t)) {
+       for (var i = jso.length; i--;) {
+         if (wordInString(jso[i].tags, t)) {
            numOfThumbs++;
-           //  var src = 'http://farm' + jso.photos.photo[i].farm +
-           //    '.staticflickr.com/' + jso.photos.photo[i].server + '/' + jso.photos
-           //    .photo[i].id + '_' + jso.photos.photo[i].secret + '_n.jpg';
-           var src = jso.photos.photo[i].url_n;
-           var src_sq = jso.photos.photo[i].url_sq;
-           tag = jso.photos.photo[i].tags;
-           tit = jso.photos.photo[i].title;
-           images.unshift([src, tag, tit, src_sq]);
+           //  var src = 'http://farm' + jso[i].farm +
+           //    '.staticflickr.com/' + jso[i].server + '/' + jso.photos
+           //    .photo[i].id + '_' + jso[i].secret + '_n.jpg';
+           var src = jso[i].url_n;
+           var src_sq = jso[i].url_sq;
+           tag = jso[i].tags;
+           tit = jso[i].title;
+           var dat = jso[i].datetaken;
+           images.unshift([src, tag, tit, src_sq, dat]);
          }
        }
      }
@@ -172,6 +175,8 @@
          setTitle(imgUnderMouse);
          if (currentThumb !== imgUnderMouse) {
            title.classList.add("moving");
+         }else{
+           title.classList.remove("moving");
          }
        }
      }, false);
@@ -196,14 +201,21 @@
      };
 
      function jsonFlickrApi(result) {
-       jso = result;
+       jso = result.photos.photo;
        makeArray(tag);
        setImage();
        setTitle();
        setDivHeight(images.length);
      }
 
-
+function sortbydate(a, b) {
+if (a.datetaken > b.datetaken)
+return 1;
+if (a.datetaken < b.datetaken)
+return -1;
+// a must be equal to b
+return 0;
+}
 
      var draggie = new Draggabilly(dragger, {
        grid: [grid_size, grid_size],
