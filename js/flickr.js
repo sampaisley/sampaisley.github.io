@@ -20,7 +20,7 @@
      var currentThumb = 0;
      var dragStartPoint = 0;
      var _X = 0,
-       _Y = 1; //ensure initial setting of _Y + _X - 1  is 0
+       _Y = 0;
      var oldNumOfPhotos;
      /* document.flickrURL =
        "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
@@ -38,7 +38,7 @@
      }
 
      function setImage(i) {
-       i = i || _Y + _X - 1;
+       i = i || currentThumb ;
        if (i < images.length) {
          theImage.src = images[i][0];
        } else {
@@ -48,7 +48,7 @@
      }
 
      function setTitle(n) {
-       n=n || _Y + _X - 1;
+       n=n || currentThumb;
        if (n < images.length) {
          title.innerHTML = images[n][2];
        } else {
@@ -65,7 +65,7 @@
          var t = parseInt(dragger.style.top) / grid_size;
          var l = parseInt(dragger.style.left) / grid_size ;
          //dragger.innerHTML =(t+l) || 1;
-         _X = l + 1;
+         _X = l ;
          _Y = t * squaresAccross;
          dragger.innerHTML = t * squaresAccross + l + 1;
          currentThumb =  t * squaresAccross + l ;
@@ -142,8 +142,8 @@
 
 
          currentThumb = e.target.getAttribute('id');
-         setImage(currentThumb);
-         setTitle(currentThumb);
+         setImage();
+         setTitle();
          dragger.innerHTML=parseInt(currentThumb)+1 ;
          draggerShadowThumbs(e.target.offsetLeft- borderWidth, e.target.offsetTop - borderWidth);
          setActiveClass('.thumb', "active",e.target);
@@ -158,7 +158,7 @@ document.querySelector("#check").onclick=function () {
   thumbs();
   this.innerHTML==="Thumbs" ? this.innerHTML="Dragger" : this.innerHTML="Thumbs";
   if(thumbsMode && _Y + _X - 1 < images.length){
-  setActiveClass('.thumb', "active",document.getElementById(_Y + _X - 1));
+  setActiveClass('.thumb', "active",document.getElementById(currentThumb));
 }
 };
      function jsonFlickrApi(result) {
@@ -185,11 +185,12 @@ document.querySelector("#check").onclick=function () {
      });
 
      function onDragMove(instance) {
-       _X = instance.position.x / grid_size + 1;
+       _X = instance.position.x / grid_size ;
        _Y = Math.floor(instance.position.y / grid_size * squaresAccross);
-       dragger.innerHTML = _Y + _X;
+       currentThumb = _Y + _X;
+       dragger.innerHTML = currentThumb+1;
        setTitle();
-       if (_X + _Y !== dragStartPoint) {
+       if (currentThumb !== dragStartPoint) {
          title.classList.add("moving");
        }
      }

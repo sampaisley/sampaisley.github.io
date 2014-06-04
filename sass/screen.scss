@@ -264,12 +264,17 @@ background-position: 0 0, $grid_size $grid_size;
     height: $grid_size;
     background-color: darken($bg_color1,10%);
     border-radius:50% ;
+    border:6px solid darken($bg_color1,12.5%);
     cursor: move;
     font-family: courier;
     text-align: center;
     color:cornflowerblue;
     font-size: 2.1em;
-    line-height: 1.8;
+    line-height: 1.4;
+    @include transition(border 0.2s ease-in-out);
+    &:hover{
+      border:6px solid darken($bg_color1,15.5%);
+    }
 }
 #img_div{
     float: left;
