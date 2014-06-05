@@ -302,7 +302,7 @@ p.smallBlurb {
   }
 }
 
-/* line 310, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 70px;
@@ -310,14 +310,14 @@ p.smallBlurb {
   margin: 0 auto;
 }
 @media only screen and (max-width: 790px) {
-  /* line 310, ../sass/screen.scss */
+  /* line 311, ../sass/screen.scss */
   #wrap {
     top: 0;
     width: 400px;
   }
 }
 
-/* line 321, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 #tagName, #title, #tit {
   color: #aaa;
   padding: 5px 8px;
@@ -329,19 +329,19 @@ p.smallBlurb {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 330, ../sass/screen.scss */
+/* line 331, ../sass/screen.scss */
 #title.moving {
   color: #fff;
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 335, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 #title.noImage {
   color: #f7ef0a !important;
   background-color: rgba(219, 30, 30, 0.71);
 }
 
-/* line 340, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -356,48 +356,48 @@ a.butto {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (max-width: 800px) {
-  /* line 340, ../sass/screen.scss */
+  /* line 341, ../sass/screen.scss */
   a.butto {
     color: blue;
   }
 }
 @media only screen and (max-width: 750px) {
-  /* line 340, ../sass/screen.scss */
+  /* line 341, ../sass/screen.scss */
   a.butto {
     color: green;
   }
 }
 @media only screen and (max-width: 700px) {
-  /* line 340, ../sass/screen.scss */
+  /* line 341, ../sass/screen.scss */
   a.butto {
     color: red;
   }
 }
-/* line 359, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 362, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 368, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
   border: 2px solid #eeeeee;
 }
-/* line 371, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 #thumbs img.active {
   border: 5px solid #504c57;
 }
 
-/* line 376, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 379, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 #check {
   height: 24px;
   width: 100px;
@@ -415,7 +415,7 @@ a.butto.active {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 392, ../sass/screen.scss */
+/* line 393, ../sass/screen.scss */
 #check:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }
