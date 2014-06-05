@@ -244,18 +244,23 @@ $grid_size : 60px;
 $squaresAccross : 1;
 $squaresDown : 4;
 $borderSize : 10px;
-#strips{
+#checkers{
     float: left;
     border:$borderSize solid $bg_color1 ;
     height: $grid_size * $squaresDown + $borderSize*2;
     width:$grid_size * $squaresAccross + $borderSize*2;
     background-color: $bg_color1;
+    margin-left: 20px;
     &.checks{
    background-color: white;
 background-image: linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1),
     linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1);
 background-size:$grid_size*2 $grid_size*2;
 background-position: 0 0, $grid_size $grid_size;
+}
+@include up-to-width(790) {
+  margin-left: 0px;
+
 }
 }
 
@@ -298,14 +303,13 @@ background-position: 0 0, $grid_size $grid_size;
   border:$borderSize solid $bg_color1 ;
   float: left;
   display: inline-block;
-  margin-left: 20px;
   padding: 10px;
   text-align: center;
   width: 210px;
-  
-  @media only screen and (max-width : 790px) {
+
+  @include up-to-width(790) {
     margin: 10px auto;
-    float:right;
+
   }
 }
 #wrap{
@@ -313,8 +317,8 @@ background-position: 0 0, $grid_size $grid_size;
   top: 70px;
   width: 790px;
   margin: 0 auto;
-   @media only screen and (max-width : 790px) {
-     top: 0;
+   @include up-to-width(790) {
+    top: 0;
      width: 400px;
    }
 }
