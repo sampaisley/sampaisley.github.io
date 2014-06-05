@@ -318,18 +318,23 @@ background-position: 0 0, $grid_size $grid_size;
    }
 }
 
-#tagName, #title, #tit, .check{
+#tagName, #title, #tit, {
   //font-family: courier !important;
   color:#aaa;
-padding:2px 4px ;
-//letter-spacing: 0px;
+padding:  5px 8px;
+display: inline-block;
+width: 115px;
 @include transition(all 0.2s ease-in-out);
 
 }
 #title.moving{
-  color:#f7ef0a !important;
-  background-color: rgba(0, 0, 0, 0.71);
+  color: #fff;
+  background-color: rgba(12, 128, 14, 0.58);
 
+}
+#title.noImage{
+  color:#f7ef0a !important;
+  background-color: rgba(219, 30, 30, 0.71);
 
 }
 a.butto{

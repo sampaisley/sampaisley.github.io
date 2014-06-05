@@ -318,22 +318,30 @@ p.smallBlurb {
 }
 
 /* line 321, ../sass/screen.scss */
-#tagName, #title, #tit, .check {
+#tagName, #title, #tit {
   color: #aaa;
-  padding: 2px 4px;
+  padding: 5px 8px;
+  display: inline-block;
+  width: 115px;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 #title.moving {
-  color: #f7ef0a !important;
-  background-color: rgba(0, 0, 0, 0.71);
+  color: #fff;
+  background-color: rgba(12, 128, 14, 0.58);
 }
 
 /* line 335, ../sass/screen.scss */
+#title.noImage {
+  color: #f7ef0a !important;
+  background-color: rgba(219, 30, 30, 0.71);
+}
+
+/* line 340, ../sass/screen.scss */
 a.butto {
   width: 115px;
   font-size: 1.15em;
@@ -348,48 +356,48 @@ a.butto {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (max-width: 800px) {
-  /* line 335, ../sass/screen.scss */
+  /* line 340, ../sass/screen.scss */
   a.butto {
     color: blue;
   }
 }
 @media only screen and (max-width: 750px) {
-  /* line 335, ../sass/screen.scss */
+  /* line 340, ../sass/screen.scss */
   a.butto {
     color: green;
   }
 }
 @media only screen and (max-width: 700px) {
-  /* line 335, ../sass/screen.scss */
+  /* line 340, ../sass/screen.scss */
   a.butto {
     color: red;
   }
 }
-/* line 354, ../sass/screen.scss */
+/* line 359, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 357, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 363, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
   border: 2px solid #eeeeee;
 }
-/* line 366, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 #thumbs img.active {
   border: 5px solid #504c57;
 }
 
-/* line 371, ../sass/screen.scss */
+/* line 376, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 374, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 #check {
   height: 24px;
   width: 100px;
@@ -407,7 +415,7 @@ a.butto.active {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 387, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 #check:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }

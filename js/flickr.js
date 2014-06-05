@@ -22,6 +22,7 @@
      var _X = 0,
        _Y = 0;
      var oldNumOfPhotos;
+     var timeoutID;
      /* document.flickrURL =
        "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
 
@@ -41,10 +42,12 @@ function reJig(draggerLeft) {
   var newDragLeft = parseInt(draggerLeft)-grid_size;
   dragger.style.left=newDragLeft+'px';
   dragger.innerHTML=currentThumb;
+  window.clearTimeout(timeoutID);
   currentThumb--;
 
   setImage();
-setTitle();
+  setTitle();
+title.classList.remove("noImage");
   //  setActiveClass('.thumb', "active", document.getElementById(currentThumb));
 
 
@@ -54,9 +57,10 @@ setTitle();
        if (i < images.length) {
          theImage.src = images[i][0];
        } else {
-        //  theImage.src =
-        //    "../img/noImage.jpg";
-           reJig(dragger.style.left);
+         theImage.src =
+           "../img/noImage.jpg";
+           timeoutID = window.setTimeout(function(){reJig(dragger.style.left);}, 300);
+
        }
      }
 
@@ -257,6 +261,11 @@ return 0;
        setTitle();
        if (currentThumb !== dragStartPoint) {
          title.classList.add("moving");
+       }
+       if (currentThumb > images.length-1) {
+         title.classList.add("noImage");
+       }else{
+         title.classList.remove("noImage");
        }
      }
 
