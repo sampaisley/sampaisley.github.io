@@ -13,6 +13,9 @@
 @mixin up-to-width($breakpoint) {
     @media only screen and (max-width: $breakpoint + px) { @content; }
 }
+@mixin larger-than-width($breakpoint) {
+    @media only screen and (min-width: $breakpoint + px) { @content; }
+}
 
 
 *{
@@ -245,21 +248,22 @@ $squaresAccross : 1;
 $squaresDown : 4;
 $borderSize : 10px;
 #checkers{
-    float: left;
-    border:$borderSize solid $bg_color1 ;
-    height: $grid_size * $squaresDown + $borderSize*2;
-    width:$grid_size * $squaresAccross + $borderSize*2;
-    background-color: $bg_color1;
-    margin-left: 20px;
-    &.checks{
-   background-color: white;
-background-image: linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1),
+  border:$borderSize solid $bg_color1 ;
+  height: $grid_size * $squaresDown + $borderSize*2;
+  width:$grid_size * $squaresAccross + $borderSize*2;
+  background-color: $bg_color1;
+  float: left;
+  margin-left: 20px;
+
+  &.checks{
+    background-color: white;
+    background-image: linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1),
     linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1);
-background-size:$grid_size*2 $grid_size*2;
-background-position: 0 0, $grid_size $grid_size;
-}
-@include up-to-width(790) {
-  margin-left: 0px;
+    background-size:$grid_size*2 $grid_size*2;
+    background-position: 0 0, $grid_size $grid_size;
+  }
+  @include larger-than-width(790) {
+
 
 }
 }
@@ -285,51 +289,71 @@ background-position: 0 0, $grid_size $grid_size;
     }
 }
 #img_div{
-    float: left;
-     border:10px solid $bg_color1 ;
-    margin-left: 20px;
-    background-color: $bg_color1;
-    @media only screen and (max-width : 790px) {
-      margin: 10px auto;
 
-    //  background-color: transparent;
-    float: both;
+  margin: 0 auto;
+  position: relative;
+  clear: both;
+  text-align: center;
+  @include larger-than-width(790) {
+    float: left;
+    margin-left: 20px;
+    clear: none;
+
+  }
+  img{
+    border:10px solid $bg_color1;
+    margin-top: 20px;
+    @include larger-than-width(790) {
+      margin-top: 0;  
     }
+  }
 }
+
 #tagNamdisple{
     display: block;
 }
 #controls{
   border:$borderSize solid $bg_color1 ;
-  float: left;
   display: inline-block;
   padding: 10px;
   text-align: center;
-  width: 210px;
+  width: 200px;
+float: left;
+  @include larger-than-width(790) {
 
-  @include up-to-width(790) {
-    margin: 10px auto;
 
+    width: 210px;
   }
 }
-#wrap{
+/* #wrap{
   position: relative;
   top: 70px;
   width: 790px;
   margin: 0 auto;
-   @include up-to-width(790) {
-    top: 0;
-     width: 400px;
-   }
+
+
+} */
+#wrap{
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  width: 450px;
+  @include larger-than-width(790) {
+
+    top: 70px;
+    width: 790px;
+
+  }
 }
 
+
 #tagName, #title, #tit, {
-  //font-family: courier !important;
+
   color:#aaa;
-padding:  5px 8px;
-display: inline-block;
-width: 115px;
-@include transition(all 0.2s ease-in-out);
+  padding:  5px 8px;
+  display: inline-block;
+  width: 115px;
+  @include transition(all 0.2s ease-in-out);
 
 }
 #title.moving{
@@ -350,15 +374,6 @@ a.butto{
   padding:5px 8px;
   display: inline-block;
   margin-bottom: 3px;
-  @include up-to-width(800) {
-        color: blue;
-    }
-    @include up-to-width(750) {
-          color: green;
-      }
-      @include up-to-width(700) {
-            color: red;
-        }
 
   @include transition(background-color 0.3s ease-in-out);
   &:hover{

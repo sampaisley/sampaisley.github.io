@@ -1,3 +1,4 @@
+     
      var dragger = document.querySelector('#draggable');
      var checkers = document.querySelector('#checkers');
      var thumbDiv = document.querySelector('#thumbs');
@@ -23,7 +24,7 @@
        _Y = 0;
      var oldNumOfPhotos;
      var timeoutID;
-     var windowWidth = window.innerWidth;
+     //var windowWidth = window.innerWidth;
      /* document.flickrURL =
        "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
 
@@ -112,12 +113,12 @@ title.classList.remove("noImage");
 
      function setDivHeight(l) {
 
-       var w = 6,
+       var w = 3,
          h = Math.ceil(l / w);
-         if (windowWidth > 790) {
-           w=3;
-           h = Math.ceil(l / w);
-         }
+        //  if (windowWidth > 790) {
+        //    w=3;
+        //    h = Math.ceil(l / w);
+        //  }
        //  if (l % 2 !== 0 && l <= 10) {
        //    h = Math.ceil(l / 3);
        //
@@ -321,13 +322,13 @@ return 0;
      };
 
      /////////// RESIZE \\\\\\\\\\\\\\\
-     window.onresize= resizeFrame;
-     function resizeFrame(){
-       windowWidth = window.innerWidth;
-if (windowWidth > 790) {
-setDivHeight(images.length);
-}
-if (windowWidth < 790) {
-setDivHeight(images.length);
-}
-     }
+    //  window.onresize= resizeFrame;
+    //  function resizeFrame(){
+//        windowWidth = window.innerWidth;
+// if (windowWidth > 790) {
+// setDivHeight(images.length);
+// }
+// if (windowWidth < 790) {
+// setDivHeight(images.length);
+// }
+    //  }
