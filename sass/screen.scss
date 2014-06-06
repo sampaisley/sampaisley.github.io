@@ -254,7 +254,7 @@ $borderSize : 10px;
   background-color: $bg_color1;
   float: left;
   margin-left: 20px;
-
+position: relative;
   &.checks{
     background-color: white;
     background-image: linear-gradient(45deg, $bg_color1 25%, transparent 25%, transparent 75%, $bg_color1 75%, $bg_color1),
@@ -304,7 +304,7 @@ $borderSize : 10px;
     border:10px solid $bg_color1;
     margin-top: 20px;
     @include larger-than-width(790) {
-      margin-top: 0;  
+      margin-top: 0;
     }
   }
 }

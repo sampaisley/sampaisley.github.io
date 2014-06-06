@@ -1,4 +1,4 @@
-     
+
      var dragger = document.querySelector('#draggable');
      var checkers = document.querySelector('#checkers');
      var thumbDiv = document.querySelector('#thumbs');
@@ -198,8 +198,8 @@ return 0;
          setImage();
          setTitle();
          dragger.innerHTML = parseInt(currentThumb) + 1;
-         draggerShadowThumbs(e.target.offsetLeft - borderWidth, e.target.offsetTop -
-           borderWidth);
+         draggerShadowThumbs(e.target.offsetLeft , e.target.offsetTop );
+
          setActiveClass('.thumb', "active", e.target);
          title.classList.remove("moving");
        }
