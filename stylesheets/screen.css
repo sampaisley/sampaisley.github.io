@@ -450,16 +450,12 @@ a.butto.active {
   z-index: 200;
   width: 100%;
   height: 100%;
-  -moz-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-  background-color: rgba(109, 107, 113, 0.89);
+  background-color: rgba(9, 4, 20, 0.9);
 }
 /* line 439, ../sass/screen.scss */
 #popsDiv img {
   border: 15px solid #eeeeee;
-  border-bottom: 25px solid #eeeeee;
+  border-bottom: 45px solid #eeeeee;
   border-radius: 3px;
   padding: 2px;
   background-color: #c8c2c2;
