@@ -25,17 +25,16 @@
      var oldNumOfPhotos;
      var timeoutID;
      //var windowWidth = window.innerWidth;
-     /* document.flickrURL =
-       "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags&format=json";
+     var flickrURL ="https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags%2Curl_n%2Curl_c%2Curl_sq%2Cdate_taken&format=json";
 
       //add the flickr javascript to the page so it gets executed
       //flickr automatically calls jsonflickrAPI(rsp)
 
-     var script = document.createdraggerent('script');
-     script.setAttribute('type', 'text/javascript');
-     script.setAttribute('src', document.flickrURL);
+     var script = document.createElement('script');
+     script.type='text/javascript';
+     script.src=flickrURL;console.log(flickrURL);
      document.head.appendChild(script);
-*/
+
      function wordInString(s, word) {
        return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
@@ -48,7 +47,7 @@ function reJig(draggerLeft) {
   currentThumb--;
 
   setImage();
-  setTitle();
+  url_n();
 title.classList.remove("noImage");
   //  setActiveClass('.thumb', "active", document.getElementById(currentThumb));
 
@@ -168,7 +167,8 @@ function sortbydate(a, b) {
            tag = jso[i].tags;
            tit = jso[i].title;
            var dat = jso[i].datetaken;
-           images.unshift([src, tag, tit, src_sq, dat]);
+           var large = jso[i].url_c;
+           images.unshift([src, tag, tit, src_sq, dat, large]);
          }
        }
      }
@@ -322,15 +322,16 @@ function sortbydate(a, b) {
        alert("Don't click it dumbo, drag it");
 
      };
-
-     /////////// RESIZE \\\\\\\\\\\\\\\
-    //  window.onresize= resizeFrame;
-    //  function resizeFrame(){
-//        windowWidth = window.innerWidth;
-// if (windowWidth > 790) {
-// setDivHeight(images.length);
-// }
-// if (windowWidth < 790) {
-// setDivHeight(images.length);
-// }
-    //  }
+     /////////// POPS \\\\\\\\\\\\\
+     var pops = document.querySelector('.pops');
+     var popsDiv = document.querySelector('#popsDiv');
+     var popsTitle = document.querySelector('.popsTitle');
+     theImage.onclick=function () {
+       pops.src= images[currentThumb][5];
+       popsDiv.classList.toggle('hidden');
+       popsTitle.innerHTML=images[currentThumb][2];''
+       popsDiv.onclick=function () {
+         pops.src='';
+         popsDiv.classList.toggle('hidden');
+       }
+     };
