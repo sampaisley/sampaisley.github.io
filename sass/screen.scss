@@ -317,11 +317,12 @@ position: relative;
   display: inline-block;
   padding: 10px;
   text-align: center;
-  width: 200px;
+  width: 190px;
 float: left;
+font-size: 0.75em;
   @include larger-than-width(790) {
 
-
+font-size: 1em;
     width: 210px;
   }
 }
@@ -350,9 +351,10 @@ float: left;
 #tagName, #title, #tit, {
 
   color:#aaa;
-  padding:  5px 8px;
+/*   padding:  5px 8px; */
+padding: 0;
   display: inline-block;
-  width: 115px;
+  width: 95px;
   @include transition(all 0.2s ease-in-out);
 
 }
@@ -367,13 +369,16 @@ float: left;
 
 }
 a.butto{
-  width: 115px;
+  width: 90px;
   font-size: 1.15em;
   background-color: #51b5e9;
   color:#fff;
   padding:5px 8px;
   display: inline-block;
   margin-bottom: 3px;
+  @include larger-than-width(790) {
+    width: 115px;
+  }
 
   @include transition(background-color 0.3s ease-in-out);
   &:hover{
@@ -397,10 +402,11 @@ a.butto{
   display: none;
 }
 #check{
+  font-size: 1em;
   height: 24px;
-  width: 100px;
+  width: 90px;
   background-color:rgba(12, 128, 14, 0.68);
-  padding:  10px 4px;
+  padding:  10px 0px;
   padding-bottom: 9px;
   text-align: center;
   color: #fff;
@@ -408,6 +414,11 @@ a.butto{
   display: block;
   line-height: 0;
   cursor: pointer;
+  @include larger-than-width(790) {
+    width: 115px;
+    font-size: 1em;
+    padding:  10px 4px;
+  }
   @include transition(background-color 0.3s ease-in-out);
   &:hover{
     background-color: rgba(12, 128, 14, 0.58);

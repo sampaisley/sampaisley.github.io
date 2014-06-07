@@ -304,12 +304,14 @@ p.smallBlurb {
   display: inline-block;
   padding: 10px;
   text-align: center;
-  width: 200px;
+  width: 190px;
   float: left;
+  font-size: 0.75em;
 }
 @media only screen and (min-width: 790px) {
   /* line 315, ../sass/screen.scss */
   #controls {
+    font-size: 1em;
     width: 210px;
   }
 }
@@ -322,7 +324,7 @@ p.smallBlurb {
 
 
 } */
-/* line 336, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 20px;
@@ -330,40 +332,41 @@ p.smallBlurb {
   width: 450px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 336, ../sass/screen.scss */
+  /* line 337, ../sass/screen.scss */
   #wrap {
     top: 70px;
     width: 790px;
   }
 }
 
-/* line 350, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 #tagName, #title, #tit {
   color: #aaa;
-  padding: 5px 8px;
+  /*   padding:  5px 8px; */
+  padding: 0;
   display: inline-block;
-  width: 115px;
+  width: 95px;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-/* line 359, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 #title.moving {
   color: #fff;
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 364, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 #title.noImage {
   color: #f7ef0a !important;
   background-color: rgba(219, 30, 30, 0.71);
 }
 
-/* line 369, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 a.butto {
-  width: 115px;
+  width: 90px;
   font-size: 1.15em;
   background-color: #51b5e9;
   color: #fff;
@@ -375,36 +378,43 @@ a.butto {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 379, ../sass/screen.scss */
+@media only screen and (min-width: 790px) {
+  /* line 371, ../sass/screen.scss */
+  a.butto {
+    width: 115px;
+  }
+}
+/* line 384, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 382, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 388, ../sass/screen.scss */
+/* line 393, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
   border: 2px solid #eeeeee;
 }
-/* line 391, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 #thumbs img.active {
   border: 5px solid #504c57;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 401, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 399, ../sass/screen.scss */
+/* line 404, ../sass/screen.scss */
 #check {
+  font-size: 1em;
   height: 24px;
-  width: 100px;
+  width: 90px;
   background-color: rgba(12, 128, 14, 0.68);
-  padding: 10px 4px;
+  padding: 10px 0px;
   padding-bottom: 9px;
   text-align: center;
   color: #fff;
@@ -417,7 +427,15 @@ a.butto.active {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 412, ../sass/screen.scss */
+@media only screen and (min-width: 790px) {
+  /* line 404, ../sass/screen.scss */
+  #check {
+    width: 115px;
+    font-size: 1em;
+    padding: 10px 4px;
+  }
+}
+/* line 423, ../sass/screen.scss */
 #check:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }

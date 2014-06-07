@@ -144,14 +144,14 @@ title.classList.remove("noImage");
 
 
 function sortbydate(a, b) {
-if (a.datetaken > b.datetaken){
-return 1;}
-if (a.datetaken < b.datetaken){
-return -1;
-}
-// a must be equal to b
-return 0;
-}
+  if (a.datetaken > b.datetaken){
+    return 1;}
+    if (a.datetaken < b.datetaken){
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  }
 
 
      function makeArray(t) {
@@ -180,8 +180,10 @@ return 0;
        for (var i = 0; i < numOfThumbs; ++i) {
          thum = document.createElement("img");
          thum.src = images[i][3];
-         thum.setAttribute('class', " thumb");
-         thum.setAttribute('id', i);
+        // thum.setAttribute('class', " thumb");
+        thum.className = 'thumb';
+        thum.id = i;
+         //thum.setAttribute('id', i);
          //if (i % 3 === 0 && i !== 0) {
          //thumbDiv.innerHTML += "<br>";
          //}
