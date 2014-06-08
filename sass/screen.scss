@@ -438,10 +438,11 @@ a.butto{
   background-color:rgba(9, 4, 20, 0.9);
   img{
     border:15px solid $bg_color1;
-    border-bottom: 45px solid $bg_color1;
-    border-radius: 3px;
+    border-bottom: 25px solid $bg_color1;
+    border-radius: 2px;
     padding: 2px;
     background-color: #c8c2c2;
+    max-height:95%;
   }
 h5.popsTitle{
 color:#fbf8f8;
