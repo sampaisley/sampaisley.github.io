@@ -32,27 +32,13 @@
 
      var script = document.createElement('script');
      script.type='text/javascript';
-     script.src=flickrURL;console.log(flickrURL);
+     script.src=flickrURL;
      document.head.appendChild(script);
 
      function wordInString(s, word) {
        return new RegExp('\\b' + word + '\\b', 'gi').test(s);
      }
-function reJig(draggerLeft) {
 
-  var newDragLeft = parseInt(draggerLeft)-grid_size;
-  dragger.style.left=newDragLeft+'px';
-  dragger.innerHTML=currentThumb;
-  window.clearTimeout(timeoutID);
-  currentThumb--;
-
-  setImage();
-  url_n();
-title.classList.remove("noImage");
-  //  setActiveClass('.thumb', "active", document.getElementById(currentThumb));
-
-
-}
      function setImage(i) {
        i = i || currentThumb;
        if (i < images.length) {
@@ -63,6 +49,20 @@ title.classList.remove("noImage");
            timeoutID = window.setTimeout(function(){reJig(dragger.style.left);}, 300);
 
        }
+     }
+
+
+     function reJig(draggerLeft) {
+
+       var newDragLeft = parseInt(draggerLeft) - grid_size;
+       dragger.style.left = newDragLeft + 'px';
+       dragger.innerHTML = currentThumb;
+       window.clearTimeout(timeoutID);
+       currentThumb--;
+
+       setImage();
+       setTitle();
+       title.classList.remove("noImage");
      }
 
      function setTitle(n) {
@@ -112,7 +112,7 @@ title.classList.remove("noImage");
 
      function setDivHeight(l) {
 
-       var w = 3,
+       var w = 3  ,
          h = Math.ceil(l / w);
         //  if (windowWidth > 790) {
         //    w=3;
@@ -329,9 +329,9 @@ function sortbydate(a, b) {
      theImage.onclick=function () {
        pops.src= images[currentThumb][5];
        popsDiv.classList.toggle('hidden');
-       popsTitle.innerHTML=images[currentThumb][2];''
+       popsTitle.innerHTML=images[currentThumb][2];
        popsDiv.onclick=function () {
          pops.src='';
          popsDiv.classList.toggle('hidden');
-       }
+       };
      };
