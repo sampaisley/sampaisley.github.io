@@ -309,9 +309,7 @@ position: relative;
   }
 }
 
-#tagNamdisple{
-    display: block;
-}
+
 #controls{
   border:$borderSize solid $bg_color1 ;
   display: inline-block;
@@ -348,15 +346,17 @@ font-size: 1em;
 }
 
 
-#tagName, #title, #tit, {
+ #title, #tit, {
 
   color:#aaa;
 /*   padding:  5px 8px; */
-padding: 0;
+  padding: 0;
   display: inline-block;
-  width: 95px;
+  width: 90px;
   @include transition(all 0.2s ease-in-out);
-
+  @include larger-than-width(790) {
+    width: 115px;
+  }
 }
 #title.moving{
   color: #fff;
@@ -401,7 +401,7 @@ a.butto{
 .hidden{
   display: none;
 }
-#check{
+#toggleMode{
   font-size: 1em;
   height: 24px;
   width: 90px;

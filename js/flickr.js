@@ -2,6 +2,7 @@
      var dragger = document.querySelector('#draggable');
      var checkers = document.querySelector('#checkers');
      var thumbDiv = document.querySelector('#thumbs');
+     var toggleMode = document.querySelector("#toggleMode");
      var numOfThumbs = 0;
      var borderWidth = 10;
      checkers.style.borderWidth = borderWidth + "px";
@@ -12,7 +13,7 @@
      var wide = document.querySelector('#checkers').clientWidth;
      var high = document.querySelector('#checkers').clientHeight;
      var squaresAccross = wide / grid_size;
-     var thumbsMode = false;
+     var thumbsMode = true;
       //var totalSquares = (squaresAccross) * (high / grid_size);
      var images = [];
      var Draggabilly; // declare Draggabilly to keep jsHint quiet;
@@ -226,27 +227,32 @@ function sortbydate(a, b) {
 
 
 
-     document.querySelector("#check").onclick = function() {
+
+     function swapMode(){
        dragger.classList.toggle("hidden");
        checkers.classList.toggle('checks');
        thumbDiv.classList.toggle("hidden");
-       thumbsMode = !thumbsMode;
        thumbs();
-       this.innerHTML === "Thumbs" ? this.innerHTML = "Dragger" : this.innerHTML ="Thumbs";
+       thumbsMode ? toggleMode.innerHTML = "Dragger" : toggleMode.innerHTML ="Thumbs";
        if (thumbsMode && currentThumb < images.length) {
          setActiveClass('.thumb', "active", document.getElementById(currentThumb));
-
        }
-     };
-
-     function jsonFlickrApi(result) {
-       jso = result.photos.photo;
-       makeArray(tag);
-       setImage();
-       setTitle();
-       setDivHeight(images.length);
+       thumbsMode = !thumbsMode;
      }
+     toggleMode.onclick = swapMode;
 
+
+
+function jsonFlickrApi(result) {
+  jso = result.photos.photo;
+  makeArray(tag);
+  setImage();
+  setTitle();
+  setDivHeight(images.length);
+  if (thumbsMode) {
+    swapMode();
+  }
+}
 
 
      var draggie = new Draggabilly(dragger, {

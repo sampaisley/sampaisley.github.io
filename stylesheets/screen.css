@@ -293,12 +293,7 @@ p.smallBlurb {
   }
 }
 
-/* line 312, ../sass/screen.scss */
-#tagNamdisple {
-  display: block;
-}
-
-/* line 315, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 #controls {
   border: 10px solid #eeeeee;
   display: inline-block;
@@ -309,7 +304,7 @@ p.smallBlurb {
   font-size: 0.75em;
 }
 @media only screen and (min-width: 790px) {
-  /* line 315, ../sass/screen.scss */
+  /* line 313, ../sass/screen.scss */
   #controls {
     font-size: 1em;
     width: 210px;
@@ -324,7 +319,7 @@ p.smallBlurb {
 
 
 } */
-/* line 337, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 20px;
@@ -332,24 +327,30 @@ p.smallBlurb {
   width: 450px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 337, ../sass/screen.scss */
+  /* line 335, ../sass/screen.scss */
   #wrap {
     top: 70px;
     width: 790px;
   }
 }
 
-/* line 351, ../sass/screen.scss */
-#tagName, #title, #tit {
+/* line 349, ../sass/screen.scss */
+#title, #tit {
   color: #aaa;
   /*   padding:  5px 8px; */
   padding: 0;
   display: inline-block;
-  width: 95px;
+  width: 90px;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+@media only screen and (min-width: 790px) {
+  /* line 349, ../sass/screen.scss */
+  #title, #tit {
+    width: 115px;
+  }
 }
 
 /* line 361, ../sass/screen.scss */
@@ -409,7 +410,7 @@ a.butto.active {
 }
 
 /* line 404, ../sass/screen.scss */
-#check {
+#toggleMode {
   font-size: 1em;
   height: 24px;
   width: 90px;
@@ -429,14 +430,14 @@ a.butto.active {
 }
 @media only screen and (min-width: 790px) {
   /* line 404, ../sass/screen.scss */
-  #check {
+  #toggleMode {
     width: 115px;
     font-size: 1em;
     padding: 10px 4px;
   }
 }
 /* line 423, ../sass/screen.scss */
-#check:hover {
+#toggleMode:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }
 
