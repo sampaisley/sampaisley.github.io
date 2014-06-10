@@ -5,12 +5,16 @@
 @import url(../css/normalize.min.css);
 @import url(../css/foundation.min.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 * {
   font-family: 'Lato' !important;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 html {
   background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -19,43 +23,43 @@ html {
   background-size: cover;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 body {
   background-color: transparent;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 h5 {
   font-size: 1.125em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 h3 {
   font-size: 1.6875em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 #headTitle {
   word-break: break-all;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 fieldset {
   border: none;
   margin: 0;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .circle {
   border: 2px solid rgba(255, 187, 3, 0.5);
   border-radius: 50%;
@@ -64,7 +68,7 @@ fieldset {
   margin-top: 100px;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .circleBorder {
   transition: all .5s ease-out;
   border: 3px solid #ffbb03 !important;
@@ -72,24 +76,24 @@ fieldset {
   margin-left: 25px;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .fat {
   border: 6px solid rgba(191, 154, 62, 0.65);
   transition: border .5s ease-out;
 }
 
-/* line 92, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .finn {
   border: 2px solid rgba(255, 187, 3, 0.5);
   transition: border .5s ease-out;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .avaiable {
   font-weight: 900;
 }
 
-/* line 104, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 iframe {
   border: none;
   width: 100%;
@@ -99,13 +103,13 @@ iframe {
   height: 457px;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .no-pad {
   padding: 0 !important;
   overflow: hidden;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 #pop {
   position: absolute;
   top: 10px;
@@ -114,26 +118,26 @@ iframe {
   z-index: 0;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 #pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
   left: -10px !important;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 128, ../sass/screen.scss */
+  /* line 129, ../sass/screen.scss */
   #pop.show {
     left: 10px !important;
   }
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 #pop.hide {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .close_pop {
   float: right;
   z-index: 200;
@@ -148,55 +152,55 @@ iframe {
   cursor: pointer;
   opacity: 0.65;
 }
-/* line 159, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .close_pop:hover {
   transition: all .2s ease-out;
   background-color: #cae393;
 }
 
-/* line 169, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 ._fade_out {
   transition: opacity .9s ease-out;
   border-radius: 50%;
   opacity: 0;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 ._fade_in {
   transition: opacity .9s ease-out;
   opacity: 1;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .greenBg {
   background-color: rgba(182, 217, 106, 0.65) !important;
   border: none;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .redBg {
   background-color: rgba(223, 90, 73, 0.65) !important;
   margin-top: 20px;
   border: none;
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .blueBg {
   background-color: rgba(108, 166, 217, 0.65);
   border: none;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .blueBg, .redBg, .greenBg {
   border-radius: 4px;
 }
 
-/* line 218, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 221, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -204,7 +208,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 228, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 #mail {
   transition: background-color .9s ease-out;
   padding: 0 5px;
@@ -212,44 +216,44 @@ p.smallBlurb {
   color: #df5a49;
   background-color: rgba(182, 217, 106, 0.2);
 }
-/* line 235, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 #mail:hover {
   background-color: rgba(182, 217, 106, 0.5);
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 #flickBody {
   background: none;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 #checkers {
-  border: 10px solid #eeeeee;
+  border: 10px solid #ebe8e8;
   height: 260px;
   width: 80px;
-  background-color: #eeeeee;
+  background-color: #ebe8e8;
   float: left;
   margin-left: 20px;
   position: relative;
 }
-/* line 258, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 #checkers.checks {
   background-color: white;
-  background-image: linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee), linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee);
+  background-image: linear-gradient(45deg, #ebe8e8 25%, transparent 25%, transparent 75%, #ebe8e8 75%, #ebe8e8), linear-gradient(45deg, #ebe8e8 25%, transparent 25%, transparent 75%, #ebe8e8 75%, #ebe8e8);
   background-size: 120px 120px;
   background-position: 0 0, 60px 60px;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 #draggable {
   position: relative;
   /* top: $grid_size;
   left: $grid_size; */
   width: 60px;
   height: 60px;
-  background-color: #d4d4d4;
+  background-color: #d3cdcd;
   border-radius: 50%;
-  border: 6px solid #cecece;
+  border: 6px solid #cdc6c6;
   cursor: move;
   font-family: courier;
   text-align: center;
@@ -261,12 +265,12 @@ p.smallBlurb {
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
-/* line 287, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 #draggable:hover {
-  border: 6px solid #c6c6c6;
+  border: 6px solid #c6bebe;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 #img_div {
   margin: 0 auto;
   position: relative;
@@ -274,28 +278,28 @@ p.smallBlurb {
   text-align: center;
 }
 @media only screen and (min-width: 790px) {
-  /* line 291, ../sass/screen.scss */
+  /* line 293, ../sass/screen.scss */
   #img_div {
     float: left;
     margin-left: 20px;
     clear: none;
   }
 }
-/* line 303, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 #img_div img {
-  border: 10px solid #eeeeee;
+  border: 10px solid #ebe8e8;
   margin-top: 20px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 303, ../sass/screen.scss */
+  /* line 305, ../sass/screen.scss */
   #img_div img {
     margin-top: 0;
   }
 }
 
-/* line 313, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 #controls {
-  border: 10px solid #eeeeee;
+  border: 10px solid #ebe8e8;
   display: inline-block;
   padding: 10px;
   text-align: center;
@@ -304,7 +308,7 @@ p.smallBlurb {
   font-size: 0.75em;
 }
 @media only screen and (min-width: 790px) {
-  /* line 313, ../sass/screen.scss */
+  /* line 315, ../sass/screen.scss */
   #controls {
     font-size: 1em;
     width: 210px;
@@ -319,7 +323,7 @@ p.smallBlurb {
 
 
 } */
-/* line 335, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 20px;
@@ -327,45 +331,47 @@ p.smallBlurb {
   width: 450px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 335, ../sass/screen.scss */
+  /* line 337, ../sass/screen.scss */
   #wrap {
     top: 70px;
     width: 790px;
   }
 }
 
-/* line 349, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 #title, #tit {
-  color: #aaa;
+  color: #fff;
   /*   padding:  5px 8px; */
   padding: 0;
   display: inline-block;
   width: 90px;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  margin-top: 5px;
+  background-color: #9f9e9e;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 349, ../sass/screen.scss */
+  /* line 351, ../sass/screen.scss */
   #title, #tit {
     width: 115px;
   }
 }
 
-/* line 361, ../sass/screen.scss */
+/* line 365, ../sass/screen.scss */
 #title.moving {
   color: #fff;
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 366, ../sass/screen.scss */
+/* line 370, ../sass/screen.scss */
 #title.noImage {
   color: #f7ef0a !important;
   background-color: rgba(219, 30, 30, 0.71);
 }
 
-/* line 371, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 a.butto {
   width: 90px;
   font-size: 1.15em;
@@ -380,36 +386,36 @@ a.butto {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 371, ../sass/screen.scss */
+  /* line 375, ../sass/screen.scss */
   a.butto {
     width: 115px;
   }
 }
-/* line 384, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 387, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 393, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
-  border: 2px solid #eeeeee;
+  border: 2px solid #ebe8e8;
 }
-/* line 396, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 #thumbs img.active {
   border: 5px solid #504c57;
 }
 
-/* line 401, ../sass/screen.scss */
+/* line 405, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 404, ../sass/screen.scss */
+/* line 408, ../sass/screen.scss */
 #toggleMode {
   font-size: 1em;
   height: 24px;
@@ -429,19 +435,19 @@ a.butto.active {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 404, ../sass/screen.scss */
+  /* line 408, ../sass/screen.scss */
   #toggleMode {
     width: 115px;
     font-size: 1em;
     padding: 10px 4px;
   }
 }
-/* line 423, ../sass/screen.scss */
+/* line 427, ../sass/screen.scss */
 #toggleMode:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 429, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 #popsDiv {
   position: absolute;
   top: 0;
@@ -453,16 +459,16 @@ a.butto.active {
   height: 100%;
   background-color: rgba(9, 4, 20, 0.9);
 }
-/* line 439, ../sass/screen.scss */
+/* line 443, ../sass/screen.scss */
 #popsDiv img {
-  border: 15px solid #eeeeee;
-  border-bottom: 25px solid #eeeeee;
+  border: 15px solid #ebe8e8;
+  border-bottom: 25px solid #ebe8e8;
   border-radius: 2px;
   padding: 2px;
   background-color: #c8c2c2;
   max-height: 91%;
 }
-/* line 447, ../sass/screen.scss */
+/* line 451, ../sass/screen.scss */
 #popsDiv h5.popsTitle {
   color: #fbf8f8;
   padding: 10px;

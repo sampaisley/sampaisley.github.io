@@ -225,6 +225,12 @@ function sortbydate(a, b) {
        setTitle();
      }, false);
 
+     thumbDiv.addEventListener('dblclick', function(e) {
+       if (e.target.nodeName === "IMG") {
+       popLargeImage();
+     }
+     }, false);
+
 
 
 
@@ -325,19 +331,21 @@ function jsonFlickrApi(result) {
          setActiveClass('.butto', "active", this);
      };
      dragger.ondblclick = function() {
-       alert("Don't click it dumbo, drag it");
+      popLargeImage();
 
      };
      /////////// POPS \\\\\\\\\\\\\
      var pops = document.querySelector('.pops');
      var popsDiv = document.querySelector('#popsDiv');
      var popsTitle = document.querySelector('.popsTitle');
-     theImage.onclick=function () {
+     theImage.onclick=popLargeImage;
+     function popLargeImage(){
        pops.src= images[currentThumb][5];
        popsDiv.classList.toggle('hidden');
        popsTitle.innerHTML=images[currentThumb][2];
-       popsDiv.onclick=function () {
-         pops.src='';
-         popsDiv.classList.toggle('hidden');
-       };
+
+     }
+     popsDiv.onclick=function () {
+       pops.src='';
+       popsDiv.classList.toggle('hidden');
      };

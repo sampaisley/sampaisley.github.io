@@ -7,6 +7,7 @@
 @import "../css/normalize.min.css" ;
 @import "../css/foundation.min.css" ;
 @import "compass/css3/transition";
+@import "compass/css3/user-interface";
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
@@ -20,7 +21,7 @@
 
 *{
   font-family: 'Lato' !important;
-
+  @include user-select(none);
 }
 
 
@@ -242,7 +243,7 @@ p.smallBlurb{
   background:none;
 
 }
-$bg_color1: #eee;
+$bg_color1: #ebe8e8;
 $grid_size : 60px;
 $squaresAccross : 1;
 $squaresDown : 4;
@@ -284,6 +285,7 @@ position: relative;
     font-size: 2.1em;
     line-height: 1.4;
     @include transition(border 0.2s ease-in-out);
+
     &:hover{
       border:6px solid darken($bg_color1,15.5%);
     }
@@ -348,12 +350,14 @@ font-size: 1em;
 
  #title, #tit, {
 
-  color:#aaa;
+  color:#fff;
 /*   padding:  5px 8px; */
   padding: 0;
   display: inline-block;
   width: 90px;
-  @include transition(all 0.2s ease-in-out);
+  margin-top: 5px;
+  background-color: #9f9e9e;
+  @include transition(all 0.4s ease-in-out);
   @include larger-than-width(790) {
     width: 115px;
   }
