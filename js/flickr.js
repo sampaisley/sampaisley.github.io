@@ -248,8 +248,9 @@ function sortbydate(a, b) {
 
      }
      toggleMode.onclick = function(){
-       swapMode();
        thumbsMode = !thumbsMode;
+       swapMode();
+
      };
 
 
