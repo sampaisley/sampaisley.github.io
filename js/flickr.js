@@ -203,7 +203,11 @@ function sortbydate(a, b) {
          setImage();
          setTitle();
          dragger.innerHTML = parseInt(currentThumb) + 1;
+         if(e.target.offsetLeft%grid_size ===0){// if border size taken into account or not :::: firefox and chrome differ, gawd knows about IE
          draggerShadowThumbs(e.target.offsetLeft , e.target.offsetTop );
+       }else {
+         draggerShadowThumbs(e.target.offsetLeft-borderWidth , e.target.offsetTop-borderWidth );
+       }
 
          setActiveClass('.thumb', "active", e.target);
          title.classList.remove("moving");
