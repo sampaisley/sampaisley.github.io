@@ -243,11 +243,25 @@ p.smallBlurb{
   background:none;
 
 }
+
 $bg_color1: #ebe8e8;
 $grid_size : 60px;
 $squaresAccross : 1;
 $squaresDown : 4;
 $borderSize : 10px;
+
+h3.pageTitle{
+  text-align: center;
+  color:$bg_color1;
+  a{
+    color: darken($bg_color1,8%);
+    &:hover{
+      color: darken($bg_color1,11%);
+    }
+  }
+}
+
+
 #checkers{
   border:$borderSize solid $bg_color1 ;
   height: $grid_size * $squaresDown + $borderSize*2;
