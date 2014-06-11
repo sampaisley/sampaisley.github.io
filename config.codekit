@@ -854,7 +854,7 @@
 			"flagValue": -1
 			},
 		"onevar": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"phantom": {

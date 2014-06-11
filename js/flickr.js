@@ -77,15 +77,16 @@
      }
 
      function reSetDragger(numOfPhotos) {
+       var newDraggerTop, t, l;
        if (numOfPhotos < oldNumOfPhotos && parseInt(dragger.style.top) + 1.5 *
          grid_size > high) {
-         var newDraggerTop = Math.ceil(numOfPhotos / squaresAccross - 1) *
+         newDraggerTop = Math.ceil(numOfPhotos / squaresAccross - 1) *
            grid_size + "px";
 
          dragger.style.top = newDraggerTop;
 
-         var t = parseInt(dragger.style.top) / grid_size;
-         var l = parseInt(dragger.style.left) / grid_size;
+         t = parseInt(dragger.style.top) / grid_size;
+         l = parseInt(dragger.style.left) / grid_size;
          //dragger.innerHTML =(t+l) || 1;
          _X = l;
          _Y = t * squaresAccross;
@@ -104,8 +105,8 @@
      }
 
      function setActiveClass(e, c, t) {
-       var a = document.querySelectorAll(e);
-       for (var i = a.length; i--;) {
+       var a = document.querySelectorAll(e), i;
+       for ( i = a.length; i--;) {
          a[i].classList.remove(c);
        }
        t.classList.add(c);
@@ -155,30 +156,31 @@ function sortbydate(a, b) {
 
 
      function makeArray(t) {
+       var i, src, src_sq, dat, large;
       jso.sort(sortbydate);
        images = [];
-       for (var i = jso.length; i--;) {
+       for ( i = jso.length; i--;) {
          if (wordInString(jso[i].tags, t)) {
            numOfThumbs++;
            //  var src = 'http://farm' + jso[i].farm +
            //    '.staticflickr.com/' + jso[i].server + '/' + jso.photos
            //    .photo[i].id + '_' + jso[i].secret + '_n.jpg';
-           var src = jso[i].url_n;
-           var src_sq = jso[i].url_sq;
+            src = jso[i].url_n;
+           src_sq = jso[i].url_sq;
            tag = jso[i].tags;
            tit = jso[i].title;
-           var dat = jso[i].datetaken;
-           var large = jso[i].url_c;
+           dat = jso[i].datetaken;
+           large = jso[i].url_c;
            images.unshift([src, tag, tit, src_sq, dat, large]);
          }
        }
      }
 
       ///////////////  THUMBS  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-     function thumbs() {
+     function thumbs(thum,i) {//http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html  -----> see asoff's comment
        thumbDiv.innerHTML = "";
-       var thum;
-       for (var i = 0; i < numOfThumbs; ++i) {
+       //var thum, i;
+       for ( i = 0; i < numOfThumbs; ++i) {
          thum = document.createElement("img");
          thum.src = images[i][3];
         // thum.setAttribute('class', " thumb");
@@ -243,9 +245,12 @@ function sortbydate(a, b) {
        if (thumbsMode && currentThumb < images.length) {
          setActiveClass('.thumb', "active", document.getElementById(currentThumb));
        }
-       thumbsMode = !thumbsMode;
+
      }
-     toggleMode.onclick = swapMode;
+     toggleMode.onclick = function(){
+       swapMode();
+       thumbsMode = !thumbsMode;
+     };
 
 
 
@@ -327,7 +332,6 @@ function jsonFlickrApi(result) {
        field.onclick =
        sea.onclick = function() {
          changeSet(this.getAttribute('id'));
-
          setActiveClass('.butto', "active", this);
      };
      dragger.ondblclick = function() {
