@@ -1,0 +1,1 @@
+function initDrag(e){var r=document.querySelector(e),n=new Draggabilly(r,{})}var i=1,plan=document.querySelector("#plan");initDrag(".youAreHere0"),document.querySelector("#add").onclick=function(){var e=document.createElement("div"),r="youAreHere"+i++;e.setAttribute("class",r),plan.appendChild(e),initDrag("."+r)};
