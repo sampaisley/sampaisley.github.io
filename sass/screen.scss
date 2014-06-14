@@ -481,7 +481,7 @@ padding: 10px;
   width: 1509px;
   height: 1067px;
    background: url(../img/thirdFloor_2.jpg) no-repeat;
-   position: fixed;
+   position: relative;
 
 
 }
@@ -579,7 +579,7 @@ p.inner{
 
 @for $i from 0 through 30 {
   p.hydrent#{$i}{
-
+margin: 0;
     &:after,
     &:before {
       border-left: 20px solid transparent;

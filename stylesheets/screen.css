@@ -498,7 +498,7 @@ a.butto.active {
   width: 1509px;
   height: 1067px;
   background: url(../img/thirdFloor_2.jpg) no-repeat;
-  position: fixed;
+  position: relative;
 }
 
 /* line 490, ../sass/screen.scss */
@@ -2561,6 +2561,7 @@ p.inner {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent0 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2588,6 +2589,7 @@ p.hydrent0:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent1 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2615,6 +2617,7 @@ p.hydrent1:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent2 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2642,6 +2645,7 @@ p.hydrent2:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent3 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2669,6 +2673,7 @@ p.hydrent3:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent4 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2696,6 +2701,7 @@ p.hydrent4:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent5 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2723,6 +2729,7 @@ p.hydrent5:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent6 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2750,6 +2757,7 @@ p.hydrent6:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent7 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2777,6 +2785,7 @@ p.hydrent7:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent8 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2804,6 +2813,7 @@ p.hydrent8:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent9 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2831,6 +2841,7 @@ p.hydrent9:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent10 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2858,6 +2869,7 @@ p.hydrent10:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent11 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2885,6 +2897,7 @@ p.hydrent11:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent12 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2912,6 +2925,7 @@ p.hydrent12:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent13 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2939,6 +2953,7 @@ p.hydrent13:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent14 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2966,6 +2981,7 @@ p.hydrent14:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent15 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -2993,6 +3009,7 @@ p.hydrent15:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent16 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3020,6 +3037,7 @@ p.hydrent16:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent17 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3047,6 +3065,7 @@ p.hydrent17:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent18 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3074,6 +3093,7 @@ p.hydrent18:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent19 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3101,6 +3121,7 @@ p.hydrent19:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent20 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3128,6 +3149,7 @@ p.hydrent20:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent21 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3155,6 +3177,7 @@ p.hydrent21:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent22 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3182,6 +3205,7 @@ p.hydrent22:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent23 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3209,6 +3233,7 @@ p.hydrent23:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent24 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3236,6 +3261,7 @@ p.hydrent24:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent25 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3263,6 +3289,7 @@ p.hydrent25:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent26 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3290,6 +3317,7 @@ p.hydrent26:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent27 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3317,6 +3345,7 @@ p.hydrent27:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent28 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3344,6 +3373,7 @@ p.hydrent28:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent29 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
@@ -3371,6 +3401,7 @@ p.hydrent29:before {
 
 /* line 581, ../sass/screen.scss */
 p.hydrent30 {
+  margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
