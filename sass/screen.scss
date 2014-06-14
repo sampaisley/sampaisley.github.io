@@ -495,6 +495,7 @@ padding: 10px;
     position: absolute;
     top: #{40+$i*10}px;
     left: #{20+$i*10}px;
+    cursor: move;
 
   }
 }
@@ -513,6 +514,7 @@ padding: 10px;
     left: #{20+$i*10}px;
     font-size: 1.5em;
     text-align: center;
+    cursor: move;
   }
 }
 
@@ -530,7 +532,7 @@ padding: 10px;
     left: #{20+$i*10}px;
     font-size: 1.5em;
     text-align: center;
-
+    cursor: move;
       &:after{
         content:"E";
       }
@@ -548,8 +550,8 @@ padding: 10px;
     position: absolute;
     top: #{40+$i*10}px;
     left: #{20+$i*10}px;
-    border:1px solid black
-
+    border:1px solid black;
+    cursor: move;
   }
 }
 
@@ -565,12 +567,12 @@ padding: 10px;
     position: absolute;
     top: #{40+$i*10}px;
     left: #{20+$i*10}px;
-
+    cursor: move;
   }
 }
 .beGone{
 
-  cursor: cell;
+  cursor: no-drop;
 }
 .newIcon{
 margin: 20px;

@@ -510,6 +510,7 @@ a.butto.active {
   position: absolute;
   top: 40px;
   left: 20px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -522,6 +523,7 @@ a.butto.active {
   position: absolute;
   top: 50px;
   left: 30px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -534,6 +536,7 @@ a.butto.active {
   position: absolute;
   top: 60px;
   left: 40px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -546,6 +549,7 @@ a.butto.active {
   position: absolute;
   top: 70px;
   left: 50px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -558,6 +562,7 @@ a.butto.active {
   position: absolute;
   top: 80px;
   left: 60px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -570,6 +575,7 @@ a.butto.active {
   position: absolute;
   top: 90px;
   left: 70px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -582,6 +588,7 @@ a.butto.active {
   position: absolute;
   top: 100px;
   left: 80px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -594,6 +601,7 @@ a.butto.active {
   position: absolute;
   top: 110px;
   left: 90px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -606,6 +614,7 @@ a.butto.active {
   position: absolute;
   top: 120px;
   left: 100px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -618,6 +627,7 @@ a.butto.active {
   position: absolute;
   top: 130px;
   left: 110px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -630,6 +640,7 @@ a.butto.active {
   position: absolute;
   top: 140px;
   left: 120px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -642,6 +653,7 @@ a.butto.active {
   position: absolute;
   top: 150px;
   left: 130px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -654,6 +666,7 @@ a.butto.active {
   position: absolute;
   top: 160px;
   left: 140px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -666,6 +679,7 @@ a.butto.active {
   position: absolute;
   top: 170px;
   left: 150px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -678,6 +692,7 @@ a.butto.active {
   position: absolute;
   top: 180px;
   left: 160px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -690,6 +705,7 @@ a.butto.active {
   position: absolute;
   top: 190px;
   left: 170px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -702,6 +718,7 @@ a.butto.active {
   position: absolute;
   top: 200px;
   left: 180px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -714,6 +731,7 @@ a.butto.active {
   position: absolute;
   top: 210px;
   left: 190px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -726,6 +744,7 @@ a.butto.active {
   position: absolute;
   top: 220px;
   left: 200px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -738,6 +757,7 @@ a.butto.active {
   position: absolute;
   top: 230px;
   left: 210px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -750,6 +770,7 @@ a.butto.active {
   position: absolute;
   top: 240px;
   left: 220px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -762,6 +783,7 @@ a.butto.active {
   position: absolute;
   top: 250px;
   left: 230px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -774,6 +796,7 @@ a.butto.active {
   position: absolute;
   top: 260px;
   left: 240px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -786,6 +809,7 @@ a.butto.active {
   position: absolute;
   top: 270px;
   left: 250px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -798,6 +822,7 @@ a.butto.active {
   position: absolute;
   top: 280px;
   left: 260px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -810,6 +835,7 @@ a.butto.active {
   position: absolute;
   top: 290px;
   left: 270px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -822,6 +848,7 @@ a.butto.active {
   position: absolute;
   top: 300px;
   left: 280px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -834,6 +861,7 @@ a.butto.active {
   position: absolute;
   top: 310px;
   left: 290px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -846,6 +874,7 @@ a.butto.active {
   position: absolute;
   top: 320px;
   left: 300px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -858,6 +887,7 @@ a.butto.active {
   position: absolute;
   top: 330px;
   left: 310px;
+  cursor: move;
 }
 
 /* line 488, ../sass/screen.scss */
@@ -870,9 +900,10 @@ a.butto.active {
   position: absolute;
   top: 340px;
   left: 320px;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke0 {
   width: 40px;
   height: 40px;
@@ -884,9 +915,10 @@ a.butto.active {
   left: 20px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke1 {
   width: 40px;
   height: 40px;
@@ -898,9 +930,10 @@ a.butto.active {
   left: 30px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke2 {
   width: 40px;
   height: 40px;
@@ -912,9 +945,10 @@ a.butto.active {
   left: 40px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke3 {
   width: 40px;
   height: 40px;
@@ -926,9 +960,10 @@ a.butto.active {
   left: 50px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke4 {
   width: 40px;
   height: 40px;
@@ -940,9 +975,10 @@ a.butto.active {
   left: 60px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke5 {
   width: 40px;
   height: 40px;
@@ -954,9 +990,10 @@ a.butto.active {
   left: 70px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke6 {
   width: 40px;
   height: 40px;
@@ -968,9 +1005,10 @@ a.butto.active {
   left: 80px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke7 {
   width: 40px;
   height: 40px;
@@ -982,9 +1020,10 @@ a.butto.active {
   left: 90px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke8 {
   width: 40px;
   height: 40px;
@@ -996,9 +1035,10 @@ a.butto.active {
   left: 100px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke9 {
   width: 40px;
   height: 40px;
@@ -1010,9 +1050,10 @@ a.butto.active {
   left: 110px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke10 {
   width: 40px;
   height: 40px;
@@ -1024,9 +1065,10 @@ a.butto.active {
   left: 120px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke11 {
   width: 40px;
   height: 40px;
@@ -1038,9 +1080,10 @@ a.butto.active {
   left: 130px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke12 {
   width: 40px;
   height: 40px;
@@ -1052,9 +1095,10 @@ a.butto.active {
   left: 140px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke13 {
   width: 40px;
   height: 40px;
@@ -1066,9 +1110,10 @@ a.butto.active {
   left: 150px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke14 {
   width: 40px;
   height: 40px;
@@ -1080,9 +1125,10 @@ a.butto.active {
   left: 160px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke15 {
   width: 40px;
   height: 40px;
@@ -1094,9 +1140,10 @@ a.butto.active {
   left: 170px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke16 {
   width: 40px;
   height: 40px;
@@ -1108,9 +1155,10 @@ a.butto.active {
   left: 180px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke17 {
   width: 40px;
   height: 40px;
@@ -1122,9 +1170,10 @@ a.butto.active {
   left: 190px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke18 {
   width: 40px;
   height: 40px;
@@ -1136,9 +1185,10 @@ a.butto.active {
   left: 200px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke19 {
   width: 40px;
   height: 40px;
@@ -1150,9 +1200,10 @@ a.butto.active {
   left: 210px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke20 {
   width: 40px;
   height: 40px;
@@ -1164,9 +1215,10 @@ a.butto.active {
   left: 220px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke21 {
   width: 40px;
   height: 40px;
@@ -1178,9 +1230,10 @@ a.butto.active {
   left: 230px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke22 {
   width: 40px;
   height: 40px;
@@ -1192,9 +1245,10 @@ a.butto.active {
   left: 240px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke23 {
   width: 40px;
   height: 40px;
@@ -1206,9 +1260,10 @@ a.butto.active {
   left: 250px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke24 {
   width: 40px;
   height: 40px;
@@ -1220,9 +1275,10 @@ a.butto.active {
   left: 260px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke25 {
   width: 40px;
   height: 40px;
@@ -1234,9 +1290,10 @@ a.butto.active {
   left: 270px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke26 {
   width: 40px;
   height: 40px;
@@ -1248,9 +1305,10 @@ a.butto.active {
   left: 280px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke27 {
   width: 40px;
   height: 40px;
@@ -1262,9 +1320,10 @@ a.butto.active {
   left: 290px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke28 {
   width: 40px;
   height: 40px;
@@ -1276,9 +1335,10 @@ a.butto.active {
   left: 300px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke29 {
   width: 40px;
   height: 40px;
@@ -1290,9 +1350,10 @@ a.butto.active {
   left: 310px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 504, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .smoke30 {
   width: 40px;
   height: 40px;
@@ -1304,9 +1365,10 @@ a.butto.active {
   left: 320px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e0 {
   width: 40px;
   height: 40px;
@@ -1318,13 +1380,14 @@ a.butto.active {
   left: 20px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e0:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e1 {
   width: 40px;
   height: 40px;
@@ -1336,13 +1399,14 @@ a.butto.active {
   left: 30px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e1:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e2 {
   width: 40px;
   height: 40px;
@@ -1354,13 +1418,14 @@ a.butto.active {
   left: 40px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e2:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e3 {
   width: 40px;
   height: 40px;
@@ -1372,13 +1437,14 @@ a.butto.active {
   left: 50px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e3:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e4 {
   width: 40px;
   height: 40px;
@@ -1390,13 +1456,14 @@ a.butto.active {
   left: 60px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e4:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e5 {
   width: 40px;
   height: 40px;
@@ -1408,13 +1475,14 @@ a.butto.active {
   left: 70px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e5:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e6 {
   width: 40px;
   height: 40px;
@@ -1426,13 +1494,14 @@ a.butto.active {
   left: 80px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e6:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e7 {
   width: 40px;
   height: 40px;
@@ -1444,13 +1513,14 @@ a.butto.active {
   left: 90px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e7:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e8 {
   width: 40px;
   height: 40px;
@@ -1462,13 +1532,14 @@ a.butto.active {
   left: 100px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e8:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e9 {
   width: 40px;
   height: 40px;
@@ -1480,13 +1551,14 @@ a.butto.active {
   left: 110px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e9:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e10 {
   width: 40px;
   height: 40px;
@@ -1498,13 +1570,14 @@ a.butto.active {
   left: 120px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e10:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e11 {
   width: 40px;
   height: 40px;
@@ -1516,13 +1589,14 @@ a.butto.active {
   left: 130px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e11:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e12 {
   width: 40px;
   height: 40px;
@@ -1534,13 +1608,14 @@ a.butto.active {
   left: 140px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e12:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e13 {
   width: 40px;
   height: 40px;
@@ -1552,13 +1627,14 @@ a.butto.active {
   left: 150px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e13:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e14 {
   width: 40px;
   height: 40px;
@@ -1570,13 +1646,14 @@ a.butto.active {
   left: 160px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e14:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e15 {
   width: 40px;
   height: 40px;
@@ -1588,13 +1665,14 @@ a.butto.active {
   left: 170px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e15:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e16 {
   width: 40px;
   height: 40px;
@@ -1606,13 +1684,14 @@ a.butto.active {
   left: 180px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e16:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e17 {
   width: 40px;
   height: 40px;
@@ -1624,13 +1703,14 @@ a.butto.active {
   left: 190px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e17:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e18 {
   width: 40px;
   height: 40px;
@@ -1642,13 +1722,14 @@ a.butto.active {
   left: 200px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e18:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e19 {
   width: 40px;
   height: 40px;
@@ -1660,13 +1741,14 @@ a.butto.active {
   left: 210px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e19:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e20 {
   width: 40px;
   height: 40px;
@@ -1678,13 +1760,14 @@ a.butto.active {
   left: 220px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e20:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e21 {
   width: 40px;
   height: 40px;
@@ -1696,13 +1779,14 @@ a.butto.active {
   left: 230px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e21:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e22 {
   width: 40px;
   height: 40px;
@@ -1714,13 +1798,14 @@ a.butto.active {
   left: 240px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e22:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e23 {
   width: 40px;
   height: 40px;
@@ -1732,13 +1817,14 @@ a.butto.active {
   left: 250px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e23:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e24 {
   width: 40px;
   height: 40px;
@@ -1750,13 +1836,14 @@ a.butto.active {
   left: 260px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e24:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e25 {
   width: 40px;
   height: 40px;
@@ -1768,13 +1855,14 @@ a.butto.active {
   left: 270px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e25:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e26 {
   width: 40px;
   height: 40px;
@@ -1786,13 +1874,14 @@ a.butto.active {
   left: 280px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e26:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e27 {
   width: 40px;
   height: 40px;
@@ -1804,13 +1893,14 @@ a.butto.active {
   left: 290px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e27:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e28 {
   width: 40px;
   height: 40px;
@@ -1822,13 +1912,14 @@ a.butto.active {
   left: 300px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e28:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e29 {
   width: 40px;
   height: 40px;
@@ -1840,13 +1931,14 @@ a.butto.active {
   left: 310px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e29:after {
   content: "E";
 }
 
-/* line 521, ../sass/screen.scss */
+/* line 523, ../sass/screen.scss */
 .smoke_e30 {
   width: 40px;
   height: 40px;
@@ -1858,13 +1950,14 @@ a.butto.active {
   left: 320px;
   font-size: 1.5em;
   text-align: center;
+  cursor: move;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .smoke_e30:after {
   content: "E";
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint0 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1877,9 +1970,10 @@ a.butto.active {
   top: 40px;
   left: 20px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint1 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1892,9 +1986,10 @@ a.butto.active {
   top: 50px;
   left: 30px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint2 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1907,9 +2002,10 @@ a.butto.active {
   top: 60px;
   left: 40px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint3 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1922,9 +2018,10 @@ a.butto.active {
   top: 70px;
   left: 50px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint4 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1937,9 +2034,10 @@ a.butto.active {
   top: 80px;
   left: 60px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint5 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1952,9 +2050,10 @@ a.butto.active {
   top: 90px;
   left: 70px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint6 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1967,9 +2066,10 @@ a.butto.active {
   top: 100px;
   left: 80px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint7 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1982,9 +2082,10 @@ a.butto.active {
   top: 110px;
   left: 90px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint8 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1997,9 +2098,10 @@ a.butto.active {
   top: 120px;
   left: 100px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint9 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2012,9 +2114,10 @@ a.butto.active {
   top: 130px;
   left: 110px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint10 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2027,9 +2130,10 @@ a.butto.active {
   top: 140px;
   left: 120px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint11 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2042,9 +2146,10 @@ a.butto.active {
   top: 150px;
   left: 130px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint12 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2057,9 +2162,10 @@ a.butto.active {
   top: 160px;
   left: 140px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint13 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2072,9 +2178,10 @@ a.butto.active {
   top: 170px;
   left: 150px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint14 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2087,9 +2194,10 @@ a.butto.active {
   top: 180px;
   left: 160px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint15 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2102,9 +2210,10 @@ a.butto.active {
   top: 190px;
   left: 170px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint16 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2117,9 +2226,10 @@ a.butto.active {
   top: 200px;
   left: 180px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint17 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2132,9 +2242,10 @@ a.butto.active {
   top: 210px;
   left: 190px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint18 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2147,9 +2258,10 @@ a.butto.active {
   top: 220px;
   left: 200px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint19 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2162,9 +2274,10 @@ a.butto.active {
   top: 230px;
   left: 210px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint20 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2177,9 +2290,10 @@ a.butto.active {
   top: 240px;
   left: 220px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint21 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2192,9 +2306,10 @@ a.butto.active {
   top: 250px;
   left: 230px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint22 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2207,9 +2322,10 @@ a.butto.active {
   top: 260px;
   left: 240px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint23 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2222,9 +2338,10 @@ a.butto.active {
   top: 270px;
   left: 250px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint24 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2237,9 +2354,10 @@ a.butto.active {
   top: 280px;
   left: 260px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint25 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2252,9 +2370,10 @@ a.butto.active {
   top: 290px;
   left: 270px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint26 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2267,9 +2386,10 @@ a.butto.active {
   top: 300px;
   left: 280px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint27 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2282,9 +2402,10 @@ a.butto.active {
   top: 310px;
   left: 290px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint28 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2297,9 +2418,10 @@ a.butto.active {
   top: 320px;
   left: 300px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint29 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2312,9 +2434,10 @@ a.butto.active {
   top: 330px;
   left: 310px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 543, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .firePoint30 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2327,9 +2450,10 @@ a.butto.active {
   top: 340px;
   left: 320px;
   border: 1px solid black;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent0 {
   width: 0;
   height: 0;
@@ -2339,9 +2463,10 @@ a.butto.active {
   position: absolute;
   top: 40px;
   left: 20px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent1 {
   width: 0;
   height: 0;
@@ -2351,9 +2476,10 @@ a.butto.active {
   position: absolute;
   top: 50px;
   left: 30px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent2 {
   width: 0;
   height: 0;
@@ -2363,9 +2489,10 @@ a.butto.active {
   position: absolute;
   top: 60px;
   left: 40px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent3 {
   width: 0;
   height: 0;
@@ -2375,9 +2502,10 @@ a.butto.active {
   position: absolute;
   top: 70px;
   left: 50px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent4 {
   width: 0;
   height: 0;
@@ -2387,9 +2515,10 @@ a.butto.active {
   position: absolute;
   top: 80px;
   left: 60px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent5 {
   width: 0;
   height: 0;
@@ -2399,9 +2528,10 @@ a.butto.active {
   position: absolute;
   top: 90px;
   left: 70px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent6 {
   width: 0;
   height: 0;
@@ -2411,9 +2541,10 @@ a.butto.active {
   position: absolute;
   top: 100px;
   left: 80px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent7 {
   width: 0;
   height: 0;
@@ -2423,9 +2554,10 @@ a.butto.active {
   position: absolute;
   top: 110px;
   left: 90px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent8 {
   width: 0;
   height: 0;
@@ -2435,9 +2567,10 @@ a.butto.active {
   position: absolute;
   top: 120px;
   left: 100px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent9 {
   width: 0;
   height: 0;
@@ -2447,9 +2580,10 @@ a.butto.active {
   position: absolute;
   top: 130px;
   left: 110px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent10 {
   width: 0;
   height: 0;
@@ -2459,9 +2593,10 @@ a.butto.active {
   position: absolute;
   top: 140px;
   left: 120px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent11 {
   width: 0;
   height: 0;
@@ -2471,9 +2606,10 @@ a.butto.active {
   position: absolute;
   top: 150px;
   left: 130px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent12 {
   width: 0;
   height: 0;
@@ -2483,9 +2619,10 @@ a.butto.active {
   position: absolute;
   top: 160px;
   left: 140px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent13 {
   width: 0;
   height: 0;
@@ -2495,9 +2632,10 @@ a.butto.active {
   position: absolute;
   top: 170px;
   left: 150px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent14 {
   width: 0;
   height: 0;
@@ -2507,9 +2645,10 @@ a.butto.active {
   position: absolute;
   top: 180px;
   left: 160px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent15 {
   width: 0;
   height: 0;
@@ -2519,9 +2658,10 @@ a.butto.active {
   position: absolute;
   top: 190px;
   left: 170px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent16 {
   width: 0;
   height: 0;
@@ -2531,9 +2671,10 @@ a.butto.active {
   position: absolute;
   top: 200px;
   left: 180px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent17 {
   width: 0;
   height: 0;
@@ -2543,9 +2684,10 @@ a.butto.active {
   position: absolute;
   top: 210px;
   left: 190px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent18 {
   width: 0;
   height: 0;
@@ -2555,9 +2697,10 @@ a.butto.active {
   position: absolute;
   top: 220px;
   left: 200px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent19 {
   width: 0;
   height: 0;
@@ -2567,9 +2710,10 @@ a.butto.active {
   position: absolute;
   top: 230px;
   left: 210px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent20 {
   width: 0;
   height: 0;
@@ -2579,9 +2723,10 @@ a.butto.active {
   position: absolute;
   top: 240px;
   left: 220px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent21 {
   width: 0;
   height: 0;
@@ -2591,9 +2736,10 @@ a.butto.active {
   position: absolute;
   top: 250px;
   left: 230px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent22 {
   width: 0;
   height: 0;
@@ -2603,9 +2749,10 @@ a.butto.active {
   position: absolute;
   top: 260px;
   left: 240px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent23 {
   width: 0;
   height: 0;
@@ -2615,9 +2762,10 @@ a.butto.active {
   position: absolute;
   top: 270px;
   left: 250px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent24 {
   width: 0;
   height: 0;
@@ -2627,9 +2775,10 @@ a.butto.active {
   position: absolute;
   top: 280px;
   left: 260px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent25 {
   width: 0;
   height: 0;
@@ -2639,9 +2788,10 @@ a.butto.active {
   position: absolute;
   top: 290px;
   left: 270px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent26 {
   width: 0;
   height: 0;
@@ -2651,9 +2801,10 @@ a.butto.active {
   position: absolute;
   top: 300px;
   left: 280px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent27 {
   width: 0;
   height: 0;
@@ -2663,9 +2814,10 @@ a.butto.active {
   position: absolute;
   top: 310px;
   left: 290px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent28 {
   width: 0;
   height: 0;
@@ -2675,9 +2827,10 @@ a.butto.active {
   position: absolute;
   top: 320px;
   left: 300px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent29 {
   width: 0;
   height: 0;
@@ -2687,9 +2840,10 @@ a.butto.active {
   position: absolute;
   top: 330px;
   left: 310px;
+  cursor: move;
 }
 
-/* line 557, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .hydrent30 {
   width: 0;
   height: 0;
@@ -2699,19 +2853,20 @@ a.butto.active {
   position: absolute;
   top: 340px;
   left: 320px;
+  cursor: move;
 }
 
-/* line 571, ../sass/screen.scss */
+/* line 573, ../sass/screen.scss */
 .beGone {
-  cursor: cell;
+  cursor: no-drop;
 }
 
-/* line 575, ../sass/screen.scss */
+/* line 577, ../sass/screen.scss */
 .newIcon {
   margin: 20px;
 }
 
-/* line 582, ../sass/screen.scss */
+/* line 584, ../sass/screen.scss */
 #select {
   display: inline;
   width: 170px;
