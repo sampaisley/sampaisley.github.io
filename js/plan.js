@@ -1,4 +1,4 @@
-var i = 1,del= false,
+var i = 0,del= false,
 plan = document.querySelector("#plan"),
 select = document.querySelector("#select"),
 selectedItem ='youAre';
@@ -9,7 +9,7 @@ function initDrag(el) {
     //containment: '#planImage'
   });
 }
-initDrag(".youAreHere0");
+//initDrag(".youAreHere0");
 ////// add new
 document.querySelector('#add').onclick = function () {
 
@@ -17,6 +17,7 @@ document.querySelector('#add').onclick = function () {
     newClassName;
   if (selectedItem === "youAre") {
     newClassName = "youAreHere" + i++;
+    newDiv.innerHTML="<p class='inner'></p>";
   } else if (selectedItem === "Hydrent") {
     newClassName = "hydrent" + i++;
   }else if (selectedItem === "smoke") {

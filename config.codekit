@@ -96,6 +96,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/thirdFloor_1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 362669,
+		"inputAbbreviatedPath": "\/img\/thirdFloor_1.jpg",
+		"outputAbbreviatedPath": "\/img\/thirdFloor_1.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,

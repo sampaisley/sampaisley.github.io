@@ -480,7 +480,7 @@ padding: 10px;
 #plan{
   width: 1509px;
   height: 1067px;
-   background-image: url(../img/thirdFloor.jpg);
+   background-image: url(../img/thirdFloor_1.jpg);
 
 }
 
@@ -491,15 +491,33 @@ padding: 10px;
     height: 40px;
     border-radius:25px;
     background-color: #2eb0e7;
-    border:10px solid #e31732;
+    border:6px solid #e31732;
+
+
     position: absolute;
     top: #{40+$i*10}px;
     left: #{20+$i*10}px;
     cursor: move;
 
+    color: #f3eb64;
+    &:after{
+    //  content:"&bull;"
+    }
+
   }
 }
+p.inner{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  border:1px solid #f3eb64;
 
+  background-color:  #f3eb64;
+  margin: 0 auto;
+
+  margin-top: 6px;;
+}
 
 @for $i from 0 through 30 {
   .smoke#{$i}{
@@ -558,22 +576,39 @@ padding: 10px;
 @for $i from 0 through 30 {
   .hydrent#{$i}{
 
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
+    &:after,
+    &:before {
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 30px solid #66ba5b;
+      top: #{40+$i*10}px;
+      content: '';
+      left: 40px;
+      margin-left: -20px;
+      position: absolute;
+    }
 
-    border-bottom: 45px solid #66ba5b;
-    position: absolute;
-    top: #{40+$i*10}px;
-    left: #{20+$i*10}px;
+
+    /* Styling for second triangle (border) */
+
+    &:before {
+      border-left: 23px solid transparent;
+      border-right: 23px solid transparent;
+      border-bottom: 34px solid;
+      border-bottom-color: inherit; /* Can't be included in the shorthand to work */
+      top: #{38+$i*10}px;
+      margin-left: -23px;
+    }
     cursor: move;
   }
 }
-.beGone{
 
+
+.beGone{
   cursor: no-drop;
 }
+
+
 .newIcon{
 margin: 20px;
 
