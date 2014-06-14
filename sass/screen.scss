@@ -590,10 +590,7 @@ p.inner{
       margin-left: -20px;
       position: absolute;
     }
-
-
     /* Styling for second triangle (border) */
-
     &:before {
       border-left: 23px solid transparent;
       border-right: 23px solid transparent;
@@ -613,7 +610,8 @@ p.inner{
 
 
 .newIcon{
-margin: 20px;
+margin: 3px 0 0 10px;
+border-bottom: 1px solid #21101f;
 
 
 }
@@ -630,7 +628,6 @@ margin: 20px;
   font-size: 2.5em;
   color: #1adc14;
   line-height: 0;
-  padding-top: 10px;
   margin: 10px 0 0 10px;
   &:hover{
     color: darken(#1adc14,10%);
