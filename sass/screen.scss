@@ -7,6 +7,7 @@
 @import "../css/normalize.min.css" ;
 @import "../css/foundation.min.css" ;
 @import "compass/css3/transition";
+@import "compass/css3/transform";
 @import "compass/css3/user-interface";
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
@@ -484,24 +485,101 @@ padding: 10px;
 }
 
 @for $i from 0 through 30 {
-.youAreHere#{$i}{
+  .youAreHere#{$i}{
 
-  width: 50px;
-  height: 50px;
-  border-radius:25px;
-  background-color: #2eb0e7;
-  border:10px solid #e31732;
-position: absolute;
-top: #{$i * 10}px;
-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius:25px;
+    background-color: #2eb0e7;
+    border:10px solid #e31732;
+    position: absolute;
+    top: #{40+$i*10}px;
+    left: #{20+$i*10}px;
 
+  }
 }
+
+
+@for $i from 0 through 30 {
+  .smoke#{$i}{
+
+    width: 40px;
+    height: 40px;
+    border-radius:25px;
+    background-color: #fdef55;
+    border:1px solid #000;
+    position: absolute;
+    top: #{40+$i*10}px;
+    left: #{20+$i*10}px;
+    font-size: 1.5em;
+    text-align: center;
+  }
 }
-.bb{
-  border:10px solid black !important;
+
+
+@for $i from 0 through 30 {
+  .smoke_e#{$i}{
+
+    width: 40px;
+    height: 40px;
+    border-radius:25px;
+    background-color: #fdef55;
+    border:1px solid #000;
+    position: absolute;
+    top: #{40+$i*10}px;
+    left: #{20+$i*10}px;
+    font-size: 1.5em;
+    text-align: center;
+
+      &:after{
+        content:"E";
+      }
+
+  }
+}
+
+
+@for $i from 0 through 30 {
+  .firePoint#{$i}{
+@include rotate(45deg);
+    width: 40px;
+    height: 40px;
+    background-color: #4ab6e2;
+    position: absolute;
+    top: #{40+$i*10}px;
+    left: #{20+$i*10}px;
+    border:1px solid black
+
+  }
+}
+
+@for $i from 0 through 30 {
+  .hydrent#{$i}{
+
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+
+    border-bottom: 45px solid #66ba5b;
+    position: absolute;
+    top: #{40+$i*10}px;
+    left: #{20+$i*10}px;
+
+  }
+}
+.beGone{
+
+  cursor: cell;
 }
 .newIcon{
 margin: 20px;
 
 
+}
+
+
+#select{
+  display: inline;
+  width: 170px;
 }

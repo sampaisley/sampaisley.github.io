@@ -5,7 +5,7 @@
 @import url(../css/normalize.min.css);
 @import url(../css/foundation.min.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-/* line 22, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 * {
   font-family: 'Lato' !important;
   -moz-user-select: -moz-none;
@@ -14,7 +14,7 @@
   user-select: none;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 html {
   background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -23,43 +23,43 @@ html {
   background-size: cover;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 body {
   background-color: transparent;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 h5 {
   font-size: 1.125em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 h3 {
   font-size: 1.6875em;
   font-weight: 900;
   color: #333;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 #headTitle {
   word-break: break-all;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 fieldset {
   border: none;
   margin: 0;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .circle {
   border: 2px solid rgba(255, 187, 3, 0.5);
   border-radius: 50%;
@@ -68,7 +68,7 @@ fieldset {
   margin-top: 100px;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .circleBorder {
   transition: all .5s ease-out;
   border: 3px solid #ffbb03 !important;
@@ -76,24 +76,24 @@ fieldset {
   margin-left: 25px;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .fat {
   border: 6px solid rgba(191, 154, 62, 0.65);
   transition: border .5s ease-out;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .finn {
   border: 2px solid rgba(255, 187, 3, 0.5);
   transition: border .5s ease-out;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .avaiable {
   font-weight: 900;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 iframe {
   border: none;
   width: 100%;
@@ -103,13 +103,13 @@ iframe {
   height: 457px;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .no-pad {
   padding: 0 !important;
   overflow: hidden;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 #pop {
   position: absolute;
   top: 10px;
@@ -118,26 +118,26 @@ iframe {
   z-index: 0;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 #pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
   left: -10px !important;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 129, ../sass/screen.scss */
+  /* line 130, ../sass/screen.scss */
   #pop.show {
     left: 10px !important;
   }
 }
 
-/* line 139, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 #pop.hide {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .close_pop {
   float: right;
   z-index: 200;
@@ -152,55 +152,55 @@ iframe {
   cursor: pointer;
   opacity: 0.65;
 }
-/* line 160, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .close_pop:hover {
   transition: all .2s ease-out;
   background-color: #cae393;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 ._fade_out {
   transition: opacity .9s ease-out;
   border-radius: 50%;
   opacity: 0;
 }
 
-/* line 175, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 ._fade_in {
   transition: opacity .9s ease-out;
   opacity: 1;
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .greenBg {
   background-color: rgba(182, 217, 106, 0.65) !important;
   border: none;
 }
 
-/* line 187, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .redBg {
   background-color: rgba(223, 90, 73, 0.65) !important;
   margin-top: 20px;
   border: none;
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .blueBg {
   background-color: rgba(108, 166, 217, 0.65);
   border: none;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .blueBg, .redBg, .greenBg {
   border-radius: 4px;
 }
 
-/* line 219, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 p.smallBlurb {
   font-size: 14px;
 }
 
-/* line 222, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .no-js:hover:after {
   content: " requiers javascript";
   color: orange;
@@ -208,7 +208,7 @@ p.smallBlurb {
   font-weight: 900;
 }
 
-/* line 229, ../sass/screen.scss */
+/* line 230, ../sass/screen.scss */
 #mail {
   transition: background-color .9s ease-out;
   padding: 0 5px;
@@ -216,31 +216,31 @@ p.smallBlurb {
   color: #df5a49;
   background-color: rgba(182, 217, 106, 0.2);
 }
-/* line 236, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 #mail:hover {
   background-color: rgba(182, 217, 106, 0.5);
 }
 
-/* line 242, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 #flickBody {
   background: none;
 }
 
-/* line 253, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 h3.pageTitle {
   text-align: center;
   color: #ebe8e8;
 }
-/* line 256, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 h3.pageTitle a {
   color: #d8d2d2;
 }
-/* line 258, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 h3.pageTitle a:hover {
   color: #d1caca;
 }
 
-/* line 265, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 #checkers {
   border: 10px solid #ebe8e8;
   height: 260px;
@@ -250,7 +250,7 @@ h3.pageTitle a:hover {
   margin-left: 20px;
   position: relative;
 }
-/* line 273, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 #checkers.checks {
   background-color: white;
   background-image: linear-gradient(45deg, #ebe8e8 25%, transparent 25%, transparent 75%, #ebe8e8 75%, #ebe8e8), linear-gradient(45deg, #ebe8e8 25%, transparent 25%, transparent 75%, #ebe8e8 75%, #ebe8e8);
@@ -258,7 +258,7 @@ h3.pageTitle a:hover {
   background-position: 0 0, 60px 60px;
 }
 
-/* line 286, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 #draggable {
   position: relative;
   /* top: $grid_size;
@@ -279,12 +279,12 @@ h3.pageTitle a:hover {
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
-/* line 303, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 #draggable:hover {
   border: 6px solid #c6bebe;
 }
 
-/* line 307, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 #img_div {
   margin: 0 auto;
   position: relative;
@@ -292,26 +292,26 @@ h3.pageTitle a:hover {
   text-align: center;
 }
 @media only screen and (min-width: 790px) {
-  /* line 307, ../sass/screen.scss */
+  /* line 308, ../sass/screen.scss */
   #img_div {
     float: left;
     margin-left: 20px;
     clear: none;
   }
 }
-/* line 319, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 #img_div img {
   border: 10px solid #ebe8e8;
   margin-top: 20px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 319, ../sass/screen.scss */
+  /* line 320, ../sass/screen.scss */
   #img_div img {
     margin-top: 0;
   }
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 #controls {
   border: 10px solid #ebe8e8;
   display: inline-block;
@@ -322,7 +322,7 @@ h3.pageTitle a:hover {
   font-size: 0.75em;
 }
 @media only screen and (min-width: 790px) {
-  /* line 329, ../sass/screen.scss */
+  /* line 330, ../sass/screen.scss */
   #controls {
     font-size: 1em;
     width: 210px;
@@ -337,7 +337,7 @@ h3.pageTitle a:hover {
 
 
 } */
-/* line 351, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 20px;
@@ -345,14 +345,14 @@ h3.pageTitle a:hover {
   width: 450px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 351, ../sass/screen.scss */
+  /* line 352, ../sass/screen.scss */
   #wrap {
     top: 70px;
     width: 790px;
   }
 }
 
-/* line 365, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 #title, #tit {
   color: #fff;
   /*   padding:  5px 8px; */
@@ -367,25 +367,25 @@ h3.pageTitle a:hover {
   transition: all 0.4s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 365, ../sass/screen.scss */
+  /* line 366, ../sass/screen.scss */
   #title, #tit {
     width: 115px;
   }
 }
 
-/* line 379, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 #title.moving {
   color: #fff;
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 384, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 #title.noImage {
   color: #f7ef0a !important;
   background-color: rgba(219, 30, 30, 0.71);
 }
 
-/* line 389, ../sass/screen.scss */
+/* line 390, ../sass/screen.scss */
 a.butto {
   width: 90px;
   font-size: 1.15em;
@@ -400,36 +400,36 @@ a.butto {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 389, ../sass/screen.scss */
+  /* line 390, ../sass/screen.scss */
   a.butto {
     width: 115px;
   }
 }
-/* line 402, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 405, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 411, ../sass/screen.scss */
+/* line 412, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
   border: 2px solid #ebe8e8;
 }
-/* line 414, ../sass/screen.scss */
+/* line 415, ../sass/screen.scss */
 #thumbs img.active {
   border: 5px solid #504c57;
 }
 
-/* line 419, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 422, ../sass/screen.scss */
+/* line 423, ../sass/screen.scss */
 #toggleMode {
   font-size: 1em;
   height: 24px;
@@ -449,19 +449,19 @@ a.butto.active {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 422, ../sass/screen.scss */
+  /* line 423, ../sass/screen.scss */
   #toggleMode {
     width: 115px;
     font-size: 1em;
     padding: 10px 4px;
   }
 }
-/* line 441, ../sass/screen.scss */
+/* line 442, ../sass/screen.scss */
 #toggleMode:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 447, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 #popsDiv {
   position: absolute;
   top: 0;
@@ -473,7 +473,7 @@ a.butto.active {
   height: 100%;
   background-color: #1d1f21;
 }
-/* line 457, ../sass/screen.scss */
+/* line 458, ../sass/screen.scss */
 #popsDiv img {
   border: 15px solid #ebe8e8;
   border-bottom: 25px solid #ebe8e8;
@@ -482,76 +482,28 @@ a.butto.active {
   background-color: #c8c2c2;
   max-height: 91%;
 }
-/* line 465, ../sass/screen.scss */
+/* line 466, ../sass/screen.scss */
 #popsDiv h5.popsTitle {
   color: #fbf8f8;
   padding: 10px;
 }
 
-/* line 476, ../sass/screen.scss */
+/* line 477, ../sass/screen.scss */
 #planBody {
   background: none;
 }
 
-/* line 479, ../sass/screen.scss */
+/* line 480, ../sass/screen.scss */
 #plan {
   width: 1509px;
   height: 1067px;
   background-image: url(../img/thirdFloor.jpg);
 }
 
-/* line 487, ../sass/screen.scss */
+/* line 488, ../sass/screen.scss */
 .youAreHere0 {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #2eb0e7;
-  border: 10px solid #e31732;
-  position: absolute;
-  top: 0px;
-  left: 20px;
-}
-
-/* line 487, ../sass/screen.scss */
-.youAreHere1 {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #2eb0e7;
-  border: 10px solid #e31732;
-  position: absolute;
-  top: 10px;
-  left: 20px;
-}
-
-/* line 487, ../sass/screen.scss */
-.youAreHere2 {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #2eb0e7;
-  border: 10px solid #e31732;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-/* line 487, ../sass/screen.scss */
-.youAreHere3 {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #2eb0e7;
-  border: 10px solid #e31732;
-  position: absolute;
-  top: 30px;
-  left: 20px;
-}
-
-/* line 487, ../sass/screen.scss */
-.youAreHere4 {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
@@ -560,324 +512,2207 @@ a.butto.active {
   left: 20px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere5 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere1 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 50px;
-  left: 20px;
+  left: 30px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere6 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere2 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 60px;
-  left: 20px;
+  left: 40px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere7 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere3 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 70px;
-  left: 20px;
+  left: 50px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere8 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere4 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 80px;
-  left: 20px;
+  left: 60px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere9 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere5 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 90px;
-  left: 20px;
+  left: 70px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere10 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere6 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 100px;
-  left: 20px;
+  left: 80px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere11 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere7 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 110px;
-  left: 20px;
+  left: 90px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere12 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere8 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 120px;
-  left: 20px;
+  left: 100px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere13 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere9 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 130px;
-  left: 20px;
+  left: 110px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere14 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere10 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 140px;
-  left: 20px;
+  left: 120px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere15 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere11 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 150px;
-  left: 20px;
+  left: 130px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere16 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere12 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 160px;
-  left: 20px;
+  left: 140px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere17 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere13 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 170px;
-  left: 20px;
+  left: 150px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere18 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere14 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 180px;
-  left: 20px;
+  left: 160px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere19 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere15 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 190px;
-  left: 20px;
+  left: 170px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere20 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere16 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 200px;
-  left: 20px;
+  left: 180px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere21 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere17 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 210px;
-  left: 20px;
+  left: 190px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere22 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere18 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 220px;
-  left: 20px;
+  left: 200px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere23 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere19 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 230px;
-  left: 20px;
+  left: 210px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere24 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere20 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 240px;
-  left: 20px;
+  left: 220px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere25 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere21 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 250px;
-  left: 20px;
+  left: 230px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere26 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere22 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 260px;
-  left: 20px;
+  left: 240px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere27 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere23 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 270px;
-  left: 20px;
+  left: 250px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere28 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere24 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 280px;
-  left: 20px;
+  left: 260px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere29 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere25 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 290px;
-  left: 20px;
+  left: 270px;
 }
 
-/* line 487, ../sass/screen.scss */
-.youAreHere30 {
-  width: 50px;
-  height: 50px;
+/* line 488, ../sass/screen.scss */
+.youAreHere26 {
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   background-color: #2eb0e7;
   border: 10px solid #e31732;
   position: absolute;
   top: 300px;
+  left: 280px;
+}
+
+/* line 488, ../sass/screen.scss */
+.youAreHere27 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #2eb0e7;
+  border: 10px solid #e31732;
+  position: absolute;
+  top: 310px;
+  left: 290px;
+}
+
+/* line 488, ../sass/screen.scss */
+.youAreHere28 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #2eb0e7;
+  border: 10px solid #e31732;
+  position: absolute;
+  top: 320px;
+  left: 300px;
+}
+
+/* line 488, ../sass/screen.scss */
+.youAreHere29 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #2eb0e7;
+  border: 10px solid #e31732;
+  position: absolute;
+  top: 330px;
+  left: 310px;
+}
+
+/* line 488, ../sass/screen.scss */
+.youAreHere30 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #2eb0e7;
+  border: 10px solid #e31732;
+  position: absolute;
+  top: 340px;
+  left: 320px;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke0 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke4 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke5 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 90px;
+  left: 70px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke6 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke7 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 110px;
+  left: 90px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke8 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke9 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 130px;
+  left: 110px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke10 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 140px;
+  left: 120px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke11 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke12 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 160px;
+  left: 140px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke13 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 170px;
+  left: 150px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke14 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 180px;
+  left: 160px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke15 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 190px;
+  left: 170px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke16 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 200px;
+  left: 180px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke17 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 210px;
+  left: 190px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke18 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 220px;
+  left: 200px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke19 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 230px;
+  left: 210px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke20 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 240px;
+  left: 220px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke21 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 250px;
+  left: 230px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke22 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 260px;
+  left: 240px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke23 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 270px;
+  left: 250px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke24 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 280px;
+  left: 260px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke25 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 290px;
+  left: 270px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke26 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 300px;
+  left: 280px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke27 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 310px;
+  left: 290px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke28 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 320px;
+  left: 300px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke29 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 330px;
+  left: 310px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 504, ../sass/screen.scss */
+.smoke30 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 340px;
+  left: 320px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e0 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e0:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e1:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e2:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e3:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e4 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e4:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e5 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 90px;
+  left: 70px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e5:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e6 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e6:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e7 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 110px;
+  left: 90px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e7:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e8 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e8:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e9 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 130px;
+  left: 110px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e9:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e10 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 140px;
+  left: 120px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e10:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e11 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e11:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e12 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 160px;
+  left: 140px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e12:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e13 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 170px;
+  left: 150px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e13:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e14 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 180px;
+  left: 160px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e14:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e15 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 190px;
+  left: 170px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e15:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e16 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 200px;
+  left: 180px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e16:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e17 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 210px;
+  left: 190px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e17:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e18 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 220px;
+  left: 200px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e18:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e19 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 230px;
+  left: 210px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e19:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e20 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 240px;
+  left: 220px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e20:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e21 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 250px;
+  left: 230px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e21:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e22 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 260px;
+  left: 240px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e22:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e23 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 270px;
+  left: 250px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e23:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e24 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 280px;
+  left: 260px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e24:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e25 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 290px;
+  left: 270px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e25:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e26 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 300px;
+  left: 280px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e26:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e27 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 310px;
+  left: 290px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e27:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e28 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 320px;
+  left: 300px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e28:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e29 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 330px;
+  left: 310px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e29:after {
+  content: "E";
+}
+
+/* line 521, ../sass/screen.scss */
+.smoke_e30 {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fdef55;
+  border: 1px solid #000;
+  position: absolute;
+  top: 340px;
+  left: 320px;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* line 534, ../sass/screen.scss */
+.smoke_e30:after {
+  content: "E";
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint0 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint1 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint2 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint3 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint4 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint5 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 90px;
+  left: 70px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint6 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint7 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 110px;
+  left: 90px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint8 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint9 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 130px;
+  left: 110px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint10 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 140px;
+  left: 120px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint11 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint12 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 160px;
+  left: 140px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint13 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 170px;
+  left: 150px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint14 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 180px;
+  left: 160px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint15 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 190px;
+  left: 170px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint16 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 200px;
+  left: 180px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint17 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 210px;
+  left: 190px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint18 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 220px;
+  left: 200px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint19 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 230px;
+  left: 210px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint20 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 240px;
+  left: 220px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint21 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 250px;
+  left: 230px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint22 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 260px;
+  left: 240px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint23 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 270px;
+  left: 250px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint24 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 280px;
+  left: 260px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint25 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 290px;
+  left: 270px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint26 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 300px;
+  left: 280px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint27 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 310px;
+  left: 290px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint28 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 320px;
+  left: 300px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint29 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 330px;
+  left: 310px;
+  border: 1px solid black;
+}
+
+/* line 543, ../sass/screen.scss */
+.firePoint30 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  background-color: #4ab6e2;
+  position: absolute;
+  top: 340px;
+  left: 320px;
+  border: 1px solid black;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent0 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 40px;
   left: 20px;
 }
 
-/* line 500, ../sass/screen.scss */
-.bb {
-  border: 10px solid black !important;
+/* line 557, ../sass/screen.scss */
+.hydrent1 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 50px;
+  left: 30px;
 }
 
-/* line 503, ../sass/screen.scss */
+/* line 557, ../sass/screen.scss */
+.hydrent2 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent3 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent4 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 80px;
+  left: 60px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent5 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 90px;
+  left: 70px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent6 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 100px;
+  left: 80px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent7 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 110px;
+  left: 90px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent8 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent9 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 130px;
+  left: 110px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent10 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 140px;
+  left: 120px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent11 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent12 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 160px;
+  left: 140px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent13 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 170px;
+  left: 150px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent14 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 180px;
+  left: 160px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent15 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 190px;
+  left: 170px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent16 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 200px;
+  left: 180px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent17 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 210px;
+  left: 190px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent18 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 220px;
+  left: 200px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent19 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 230px;
+  left: 210px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent20 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 240px;
+  left: 220px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent21 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 250px;
+  left: 230px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent22 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 260px;
+  left: 240px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent23 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 270px;
+  left: 250px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent24 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 280px;
+  left: 260px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent25 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 290px;
+  left: 270px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent26 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 300px;
+  left: 280px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent27 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 310px;
+  left: 290px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent28 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 320px;
+  left: 300px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent29 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 330px;
+  left: 310px;
+}
+
+/* line 557, ../sass/screen.scss */
+.hydrent30 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 45px solid #66ba5b;
+  position: absolute;
+  top: 340px;
+  left: 320px;
+}
+
+/* line 571, ../sass/screen.scss */
+.beGone {
+  cursor: cell;
+}
+
+/* line 575, ../sass/screen.scss */
 .newIcon {
   margin: 20px;
+}
+
+/* line 582, ../sass/screen.scss */
+#select {
+  display: inline;
+  width: 170px;
 }
