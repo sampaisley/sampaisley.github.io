@@ -52,14 +52,19 @@ select.onchange=function () {
 plan.onclick = function (e) {
   if(del && e.target.nodeName==="P"){
     e.target.classList.remove("beGone");
-    plan.removeChild(e.target);
+    if (e.target.className==='inner') {//nested p elements
+      e.target.parentElement.parentElement.removeChild(e.target.parentElement);
+    }else{
+      e.target.parentElement.removeChild(e.target);
+    }
+
   }
 };
 
 plan.onmouseover = function (e) {
-  if(del && e.target.nodeName==="P"){
-    e.target.classList.add("beGone");
-  }
+  // if(del && e.target.nodeName==="P"){
+  //   e.target.classList.add("beGone");
+  // }
 };
 plan.onmouseout = function (e) {
   //if(){
