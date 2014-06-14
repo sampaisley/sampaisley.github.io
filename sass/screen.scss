@@ -481,6 +481,7 @@ padding: 10px;
   width: 1509px;
   height: 1067px;
    background: url(../img/thirdFloor_2.jpg) no-repeat;
+   position: fixed;
 
 
 }
@@ -577,7 +578,7 @@ p.inner{
 }
 
 @for $i from 0 through 30 {
-  .hydrent#{$i}{
+  p.hydrent#{$i}{
 
     &:after,
     &:before {
@@ -590,7 +591,9 @@ p.inner{
       margin-left: -20px;
       position: absolute;
     }
+
     /* Styling for second triangle (border) */
+
     &:before {
       border-left: 23px solid transparent;
       border-right: 23px solid transparent;
