@@ -1,4 +1,4 @@
-var i = 0,del= false,
+var i = 0,del= false,Draggabilly,
 plan = document.querySelector("#plan"),
 select = document.querySelector("#select"),
 selectedItem ='youAre';
@@ -9,10 +9,11 @@ function initDrag(el) {
     //containment: '#planImage'
   });
 }
+
 //initDrag(".youAreHere0");
 ////// add new
 document.querySelector('#add').onclick = function () {
-
+if(i>=30){i=0;}
     var newDiv = document.createElement("p"),
     newClassName;
   if (selectedItem === "youAre") {
@@ -37,12 +38,14 @@ document.querySelector('#add').onclick = function () {
 select.onchange=function () {
   console.log(this.value);
   selectedItem=this.value;
-}
+};
  /// z key down
   window.onkeydown = function(e) {
   // console.log(e.which);
   if(e.which===90){del=true;}
+  if(e.target.nodeName==="P"){
   e.target.classList.add("beGone");
+}
 };
   window.onkeyup  = function(e) {
      del=false;
@@ -53,21 +56,22 @@ plan.onclick = function (e) {
   if(del && e.target.nodeName==="P"){
     e.target.classList.remove("beGone");
     if (e.target.className==='inner') {//nested p elements
-      e.target.parentElement.parentElement.removeChild(e.target.parentElement);
+      e.target.parentElement.parentElement.removeChild(e.target.parentElement);i--;
     }else{
-      e.target.parentElement.removeChild(e.target);
+      e.target.parentElement.removeChild(e.target);i--;
     }
 
   }
 };
 
 plan.onmouseover = function (e) {
-  // if(del && e.target.nodeName==="P"){
-  //   e.target.classList.add("beGone");
-  // }
+  if(del && e.target.nodeName==="P"){
+    e.target.classList.add("beGone");
+  }
 };
 plan.onmouseout = function (e) {
-  //if(){
+  if(del && e.target.nodeName==="P"){
     e.target.classList.remove("beGone");
-  //}
+    e.target.parentElement.removeChild(e.target);i--;
+  }
 };
