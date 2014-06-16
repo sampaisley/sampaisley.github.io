@@ -4,6 +4,7 @@ select = document.querySelector("#select"),
 selectedItem ='youAre';
 function initDrag(el) {
   var youAreHere = document.querySelector(el),
+  draggie;
   draggie = new Draggabilly(youAreHere, {
 
     //containment: '#planImage'
@@ -12,32 +13,43 @@ function initDrag(el) {
 
 //initDrag(".youAreHere0");
 ////// add new
-document.querySelector('#add').onclick = function () {
+var add = function() {
 if(i>=30){i=0;}
     var newDiv = document.createElement("p"),
     newClassName;
-  if (selectedItem === "youAre") {
+
+  switch (selectedItem) {
+  case "youAre":
     newClassName = "youAreHere" + i++;
-    newDiv.innerHTML="<p class='inner'></p>";
-  } else if (selectedItem === "Hydrent") {
+    newDiv.innerHTML = "<p class='inner'></p>";
+    break;
+  case "Hydrent":
     newClassName = "hydrent" + i++;
-  }else if (selectedItem === "smoke") {
-    newClassName = "smoke" + i++;
-  }else if (selectedItem === "smoke_e") {
-    newClassName = "smoke_e" + i++;
-  }else if (selectedItem === "firePoint") {
-    newClassName = "firePoint" + i++;
+    break;
+  case "smoke":  newClassName = "smoke" + i++;
+    break;
+  case "smoke_e": newClassName= "smoke_e" + i++;
+    break;
+  case "firePoint": newClassName = "firePoint" + i++;
+    break;
   }
+
+
   newDiv.setAttribute("class", newClassName);
 
   plan.appendChild(newDiv);
   initDrag('.' + newClassName);
-  };
+};
+
+
+  document.querySelector('#add').onclick = add;
+
   ///////////////////// select
 
 select.onchange=function () {
-  console.log(this.value);
+
   selectedItem=this.value;
+  add();
 };
  /// z key down
   window.onkeydown = function(e) {
