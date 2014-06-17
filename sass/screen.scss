@@ -478,11 +478,18 @@ padding: 10px;
   background:none;
 }
 #plan{
-  width: 1509px;
-  height: 1067px;
-   background: url(../img/thirdFloor_2.jpg) no-repeat;
-   position: relative;
+  &.thirdFloor{
+    width: 1509px;
+    height: 1067px;
+    background: url(../img/thirdFloor_3.jpg) no-repeat;
 
+  }
+  &.secondFloor{
+    width: 1469px;
+    height: 1045px;
+    background: url(../img/secondFloor.jpg) no-repeat;
+  }
+position: relative;
 
 }
 
@@ -538,6 +545,20 @@ p.inner{
   }
 }
 
+@for $i from 0 through 30 {
+  .blanket#{$i}{
+
+    width: 50px;
+    height: 50px;
+    background:url(../img/star.svg) no-repeat ;
+    position: absolute;
+    top: #{40+$i*10}px;
+    left: #{20+$i*10}px;
+
+
+    cursor: move;
+  }
+}
 
 @for $i from 0 through 30 {
   .smoke_e#{$i}{

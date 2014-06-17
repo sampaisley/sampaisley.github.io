@@ -1,7 +1,8 @@
 var i = 0,del= false,Draggabilly,
 plan = document.querySelector("#plan"),
+toggleFloor = document.querySelector("#toggleFloor"),
 select = document.querySelector("#select"),
-selectedItem ='youAre';
+selectedItem ="nada";
 function initDrag(el) {
   var youAreHere = document.querySelector(el),
   draggie;
@@ -32,13 +33,20 @@ if(i>=30){i=0;}
     break;
   case "firePoint": newClassName = "firePoint" + i++;
     break;
+  case "blanket": newClassName = "blanket" + i++;
+    break;
+  case "nada": newClassName = "nada" + i++;
+      break;
   }
 
 
   newDiv.setAttribute("class", newClassName);
 
-  plan.appendChild(newDiv);
+if(selectedItem !=='nada'){ plan.appendChild(newDiv);
   initDrag('.' + newClassName);
+}else {
+  alert("You didn't select an icon.");
+}
 };
 
 
@@ -49,7 +57,9 @@ if(i>=30){i=0;}
 select.onchange=function () {
 
   selectedItem=this.value;
+  if(selectedItem !=='nada'){
   add();
+}
 };
  /// z key down
   window.onkeydown = function(e) {
@@ -86,4 +96,15 @@ plan.onmouseout = function (e) {
     e.target.classList.remove("beGone");
     e.target.parentElement.removeChild(e.target);i--;
   }
+};
+
+
+////// CHANGE FLOOR
+
+toggleFloor.onclick = function () {
+  plan.classList.toggle("secondFloor");
+  while (plan.firstChild) {
+    plan.removeChild(plan.firstChild);
+  }
+  i=0;
 };
