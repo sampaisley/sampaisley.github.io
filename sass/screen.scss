@@ -481,16 +481,15 @@ padding: 10px;
   &.thirdFloor{
     width: 1509px;
     height: 1067px;
-    background: url(../img/thirdFloor_3.jpg) no-repeat;
+    background: url(../img/thirdFloor_4.jpg) no-repeat;
 
   }
   &.secondFloor{
     width: 1469px;
     height: 1045px;
-    background: url(../img/secondFloor.jpg) no-repeat;
+    background: url(../img/secondFloor_2.jpg) no-repeat;
   }
 position: relative;
-
 }
 
 @for $i from 0 through 30 {

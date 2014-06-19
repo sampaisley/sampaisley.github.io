@@ -96,6 +96,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/secondFloor_2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 188973,
+		"inputAbbreviatedPath": "\/img\/secondFloor_2.jpg",
+		"outputAbbreviatedPath": "\/img\/secondFloor_2.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/secondFloorKey.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -143,6 +153,16 @@
 		"initialSize": 146992,
 		"inputAbbreviatedPath": "\/img\/thirdFloor_3.jpg",
 		"outputAbbreviatedPath": "\/img\/thirdFloor_3.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/thirdFloor_4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 107456,
+		"inputAbbreviatedPath": "\/img\/thirdFloor_4.jpg",
+		"outputAbbreviatedPath": "\/img\/thirdFloor_4.jpg",
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
