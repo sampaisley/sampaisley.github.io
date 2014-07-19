@@ -3945,3 +3945,30 @@ footer {
 footer h1 {
   color: #325d8e;
 }
+
+/* line 777, ../sass/screen.scss */
+.js {
+  color: #3a0002;
+}
+
+/* line 780, ../sass/screen.scss */
+.css3 {
+  color: #306ca3;
+}
+
+/* line 783, ../sass/screen.scss */
+.html5 {
+  color: #af4e16;
+}
+.php{
+  color: #8a210a;
+}
+.spanish{
+  color: #142a4e;
+}
+.mysql{
+  color: #ea7e20;
+}
+.english{
+  color: #55aae5;
+}
