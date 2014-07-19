@@ -86,6 +86,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/poster.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40889,
+		"inputAbbreviatedPath": "\/img\/poster.png",
+		"outputAbbreviatedPath": "\/img\/poster.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/secondFloor.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -503,6 +513,14 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/newIndex.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/newIndex.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
 		},
 	"\/plan.html": {
 		"fileType": 8192,

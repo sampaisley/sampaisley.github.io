@@ -5,17 +5,11 @@
 @import url(../css/normalize.min.css);
 @import url(../css/foundation.min.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-/* line 23, ../sass/screen.scss */
-* {
+/* *{
   font-family: 'Lato' !important;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-/* line 30, ../sass/screen.scss */
-html {
+  @include user-select(none);
+} */
+/*html {
   background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -23,94 +17,89 @@ html {
   background-size: cover;
 }
 
-/* line 38, ../sass/screen.scss */
 body {
+
   background-color: transparent;
+
 }
 
-/* line 46, ../sass/screen.scss */
-h5 {
+
+
+h5{
   font-size: 1.125em;
   font-weight: 900;
   color: #333;
 }
-
-/* line 51, ../sass/screen.scss */
-h3 {
+h3{
   font-size: 1.6875em;
   font-weight: 900;
   color: #333;
+
 }
 
-/* line 62, ../sass/screen.scss */
-#headTitle {
+
+
+
+
+#headTitle{
   word-break: break-all;
 }
 
-/* line 67, ../sass/screen.scss */
+//contact
 p.info {
   position: absolute;
   margin-left: -9000em;
 }
-
-/* line 71, ../sass/screen.scss */
-fieldset {
-  border: none;
+fieldset{
+  border:none;
   margin: 0;
+
 }
 
-/* line 77, ../sass/screen.scss */
 .circle {
-  border: 2px solid rgba(255, 187, 3, 0.5);
+  border: 2px solid rgba(#ffbb03,.5);
   border-radius: 50%;
   width: 140px;
   height: 140px;
   margin-top: 100px;
 }
-
-/* line 84, ../sass/screen.scss */
 .circleBorder {
   transition: all .5s ease-out;
   border: 3px solid #ffbb03 !important;
   transition: all .9s ease-out;
   margin-left: 25px;
 }
+.fat{
+  border:6px solid rgba(191, 154, 62, .65);
+  transition: border .5s ease-out;
+}
+.finn{
+  border: 2px solid rgba(#ffbb03,.5);
 
-/* line 90, ../sass/screen.scss */
-.fat {
-  border: 6px solid rgba(191, 154, 62, 0.65);
   transition: border .5s ease-out;
 }
 
-/* line 94, ../sass/screen.scss */
-.finn {
-  border: 2px solid rgba(255, 187, 3, 0.5);
-  transition: border .5s ease-out;
+
+
+.avaiable{
+  font-weight:900 ;
 }
 
-/* line 102, ../sass/screen.scss */
-.avaiable {
-  font-weight: 900;
-}
-
-/* line 106, ../sass/screen.scss */
-iframe {
+iframe{
   border: none;
   width: 100%;
   overflow: hidden;
   background-color: transparent;
   padding: 0;
-  height: 457px;
+  height:457px;
 }
-
-/* line 114, ../sass/screen.scss */
-.no-pad {
+.no-pad{
   padding: 0 !important;
   overflow: hidden;
 }
-
-/* line 118, ../sass/screen.scss */
 #pop {
+
+
   position: absolute;
   top: 10px;
   left: -1110px;
@@ -118,32 +107,32 @@ iframe {
   z-index: 0;
 }
 
-/* line 130, ../sass/screen.scss */
+
+
 #pop.show {
   transition: opacity .9s ease-out;
   opacity: 1;
   left: -10px !important;
-}
-@media only screen and (min-width: 40.063em) {
-  /* line 130, ../sass/screen.scss */
-  #pop.show {
+
+  @media only screen and (min-width: 40.063em) {
     left: 10px !important;
+
   }
 }
-
-/* line 140, ../sass/screen.scss */
 #pop.hide {
   transition: opacity .9s ease-out;
   opacity: 0;
 }
 
-/* line 148, ../sass/screen.scss */
-.close_pop {
+
+
+
+.close_pop{
   float: right;
   z-index: 200;
   font-size: 2em;
   background-color: #b6d96a;
-  border: 1px solid #87b02d;
+  border: 1px solid darken(#b6d96a,20%);
   border-radius: 50%;
   font-weight: 900;
   color: #df5a49;
@@ -151,96 +140,109 @@ iframe {
   height: 60px;
   cursor: pointer;
   opacity: 0.65;
-}
-/* line 161, ../sass/screen.scss */
-.close_pop:hover {
-  transition: all .2s ease-out;
-  background-color: #cae393;
-}
+  &:hover {
+    transition: all .2s ease-out;
+    background-color: lighten(#b6d96a, 10%);
+  }
 
-/* line 171, ../sass/screen.scss */
-._fade_out {
+
+
+
+
+}
+._fade_out{
   transition: opacity .9s ease-out;
   border-radius: 50%;
   opacity: 0;
 }
-
-/* line 176, ../sass/screen.scss */
-._fade_in {
+._fade_in{
   transition: opacity .9s ease-out;
   opacity: 1;
 }
+$bg_opacity : 0.65;
 
-/* line 182, ../sass/screen.scss */
-.greenBg {
-  background-color: rgba(182, 217, 106, 0.65) !important;
-  border: none;
+.greenBg{
+  background-color: rgba(#b6d96a,$bg_opacity) !important;
+  //border: 1px solid darken(#b6d96a, 20%);
+  border:none;
+
 }
-
-/* line 188, ../sass/screen.scss */
-.redBg {
-  background-color: rgba(223, 90, 73, 0.65) !important;
+.redBg{
+  background-color: rgba(#df5a49,$bg_opacity) !important;
+  //border: 1px solid darken(#df5a49, 40%);
   margin-top: 20px;
-  border: none;
+
+
+
+  border:none;
 }
 
-/* line 198, ../sass/screen.scss */
 .blueBg {
-  background-color: rgba(108, 166, 217, 0.65);
-  border: none;
-}
+  background-color: rgba(#6ca6d9, $bg_opacity);
+  //border: 1px solid darken(#6ca6d9, 40%);
+  @media only screen and (min-width: 641px) and (min-height:750px) {
+    //min-height: 440px !important;
+  }
 
-/* line 213, ../sass/screen.scss */
-.blueBg, .redBg, .greenBg {
+
+
+
+
+
+
+  border:none;
+}
+.blueBg, .redBg ,.greenBg{
   border-radius: 4px;
 }
 
-/* line 220, ../sass/screen.scss */
-p.smallBlurb {
+
+
+
+p.smallBlurb{
   font-size: 14px;
 }
-
-/* line 223, ../sass/screen.scss */
-.no-js:hover:after {
-  content: " requiers javascript";
+.no-js:hover:after{
+  content:" requiers javascript";
   color: orange;
   background-color: #fff;
   font-weight: 900;
-}
 
-/* line 230, ../sass/screen.scss */
+}
 #mail {
   transition: background-color .9s ease-out;
   padding: 0 5px;
   display: block;
   color: #df5a49;
-  background-color: rgba(182, 217, 106, 0.2);
-}
-/* line 237, ../sass/screen.scss */
-#mail:hover {
-  background-color: rgba(182, 217, 106, 0.5);
-}
+  background-color: rgba(#b6d96a, .2);
 
-/* line 243, ../sass/screen.scss */
+  &:hover {
+
+    background-color: rgba(#b6d96a, .5);
+  }
+}
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+/* line 244, ../sass/screen.scss */
 #flickBody {
   background: none;
 }
 
-/* line 254, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 h3.pageTitle {
   text-align: center;
   color: #ebe8e8;
 }
-/* line 257, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 h3.pageTitle a {
   color: #d8d2d2;
 }
-/* line 259, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 h3.pageTitle a:hover {
   color: #d1caca;
 }
 
-/* line 266, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 #checkers {
   border: 10px solid #ebe8e8;
   height: 260px;
@@ -250,7 +252,7 @@ h3.pageTitle a:hover {
   margin-left: 20px;
   position: relative;
 }
-/* line 274, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 #checkers.checks {
   background-color: white;
   background-image: linear-gradient(45deg, #ebe8e8 25%, transparent 25%, transparent 75%, #ebe8e8 75%, #ebe8e8), linear-gradient(45deg, #ebe8e8 25%, transparent 25%, transparent 75%, #ebe8e8 75%, #ebe8e8);
@@ -258,7 +260,7 @@ h3.pageTitle a:hover {
   background-position: 0 0, 60px 60px;
 }
 
-/* line 287, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 #draggable {
   position: relative;
   /* top: $grid_size;
@@ -279,12 +281,12 @@ h3.pageTitle a:hover {
   -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
-/* line 304, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 #draggable:hover {
   border: 6px solid #c6bebe;
 }
 
-/* line 308, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 #img_div {
   margin: 0 auto;
   position: relative;
@@ -292,37 +294,37 @@ h3.pageTitle a:hover {
   text-align: center;
 }
 @media only screen and (min-width: 790px) {
-  /* line 308, ../sass/screen.scss */
+  /* line 309, ../sass/screen.scss */
   #img_div {
     float: left;
     margin-left: 20px;
     clear: none;
   }
 }
-/* line 320, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 #img_div img {
   border: 10px solid #ebe8e8;
   margin-top: 20px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 320, ../sass/screen.scss */
+  /* line 321, ../sass/screen.scss */
   #img_div img {
     margin-top: 0;
   }
 }
 
-/* line 330, ../sass/screen.scss */
+/* line 331, ../sass/screen.scss */
 #controls {
   border: 10px solid #ebe8e8;
   display: inline-block;
-  padding: 10px;
+  padding: 1  0px;
   text-align: center;
   width: 190px;
   float: left;
   font-size: 0.75em;
 }
 @media only screen and (min-width: 790px) {
-  /* line 330, ../sass/screen.scss */
+  /* line 331, ../sass/screen.scss */
   #controls {
     font-size: 1em;
     width: 210px;
@@ -337,7 +339,7 @@ h3.pageTitle a:hover {
 
 
 } */
-/* line 352, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 #wrap {
   position: relative;
   top: 20px;
@@ -345,14 +347,14 @@ h3.pageTitle a:hover {
   width: 450px;
 }
 @media only screen and (min-width: 790px) {
-  /* line 352, ../sass/screen.scss */
+  /* line 353, ../sass/screen.scss */
   #wrap {
     top: 70px;
     width: 790px;
   }
 }
 
-/* line 366, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 #title, #tit {
   color: #fff;
   /*   padding:  5px 8px; */
@@ -367,25 +369,25 @@ h3.pageTitle a:hover {
   transition: all 0.4s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 366, ../sass/screen.scss */
+  /* line 367, ../sass/screen.scss */
   #title, #tit {
     width: 115px;
   }
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 381, ../sass/screen.scss */
 #title.moving {
   color: #fff;
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 385, ../sass/screen.scss */
+/* line 386, ../sass/screen.scss */
 #title.noImage {
   color: #f7ef0a !important;
   background-color: rgba(219, 30, 30, 0.71);
 }
 
-/* line 390, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 a.butto {
   width: 90px;
   font-size: 1.15em;
@@ -400,36 +402,36 @@ a.butto {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 390, ../sass/screen.scss */
+  /* line 391, ../sass/screen.scss */
   a.butto {
     width: 115px;
   }
 }
-/* line 403, ../sass/screen.scss */
+/* line 404, ../sass/screen.scss */
 a.butto:hover {
   background-color: #2b9bbd;
 }
-/* line 406, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 a.butto.active {
   background-color: #1687b6;
 }
 
-/* line 412, ../sass/screen.scss */
+/* line 413, ../sass/screen.scss */
 #thumbs img {
   width: 60px;
   border: 2px solid #ebe8e8;
 }
-/* line 415, ../sass/screen.scss */
+/* line 416, ../sass/screen.scss */
 #thumbs img.active {
   border: 5px solid #504c57;
 }
 
-/* line 420, ../sass/screen.scss */
+/* line 421, ../sass/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 423, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 #toggleMode {
   font-size: 1em;
   height: 24px;
@@ -449,19 +451,19 @@ a.butto.active {
   transition: background-color 0.3s ease-in-out;
 }
 @media only screen and (min-width: 790px) {
-  /* line 423, ../sass/screen.scss */
+  /* line 424, ../sass/screen.scss */
   #toggleMode {
     width: 115px;
     font-size: 1em;
     padding: 10px 4px;
   }
 }
-/* line 442, ../sass/screen.scss */
+/* line 443, ../sass/screen.scss */
 #toggleMode:hover {
   background-color: rgba(12, 128, 14, 0.58);
 }
 
-/* line 448, ../sass/screen.scss */
+/* line 449, ../sass/screen.scss */
 #popsDiv {
   position: absolute;
   top: 0;
@@ -473,7 +475,7 @@ a.butto.active {
   height: 100%;
   background-color: #1d1f21;
 }
-/* line 458, ../sass/screen.scss */
+/* line 459, ../sass/screen.scss */
 #popsDiv img {
   border: 15px solid #ebe8e8;
   border-bottom: 25px solid #ebe8e8;
@@ -482,35 +484,35 @@ a.butto.active {
   background-color: #c8c2c2;
   max-height: 91%;
 }
-/* line 466, ../sass/screen.scss */
+/* line 467, ../sass/screen.scss */
 #popsDiv h5.popsTitle {
   color: #fbf8f8;
   padding: 10px;
 }
 
-/* line 477, ../sass/screen.scss */
+/* line 478, ../sass/screen.scss */
 #planBody {
   background: none;
 }
 
-/* line 480, ../sass/screen.scss */
+/* line 481, ../sass/screen.scss */
 #plan {
   position: relative;
 }
-/* line 481, ../sass/screen.scss */
+/* line 482, ../sass/screen.scss */
 #plan.thirdFloor {
   width: 1509px;
   height: 1067px;
   background: url(../img/thirdFloor_4.jpg) no-repeat;
 }
-/* line 487, ../sass/screen.scss */
+/* line 488, ../sass/screen.scss */
 #plan.secondFloor {
   width: 1469px;
   height: 1045px;
   background: url(../img/secondFloor_2.jpg) no-repeat;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere0 {
   width: 40px;
   height: 40px;
@@ -524,7 +526,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere1 {
   width: 40px;
   height: 40px;
@@ -538,7 +540,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere2 {
   width: 40px;
   height: 40px;
@@ -552,7 +554,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere3 {
   width: 40px;
   height: 40px;
@@ -566,7 +568,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere4 {
   width: 40px;
   height: 40px;
@@ -580,7 +582,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere5 {
   width: 40px;
   height: 40px;
@@ -594,7 +596,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere6 {
   width: 40px;
   height: 40px;
@@ -608,7 +610,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere7 {
   width: 40px;
   height: 40px;
@@ -622,7 +624,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere8 {
   width: 40px;
   height: 40px;
@@ -636,7 +638,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere9 {
   width: 40px;
   height: 40px;
@@ -650,7 +652,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere10 {
   width: 40px;
   height: 40px;
@@ -664,7 +666,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere11 {
   width: 40px;
   height: 40px;
@@ -678,7 +680,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere12 {
   width: 40px;
   height: 40px;
@@ -692,7 +694,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere13 {
   width: 40px;
   height: 40px;
@@ -706,7 +708,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere14 {
   width: 40px;
   height: 40px;
@@ -720,7 +722,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere15 {
   width: 40px;
   height: 40px;
@@ -734,7 +736,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere16 {
   width: 40px;
   height: 40px;
@@ -748,7 +750,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere17 {
   width: 40px;
   height: 40px;
@@ -762,7 +764,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere18 {
   width: 40px;
   height: 40px;
@@ -776,7 +778,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere19 {
   width: 40px;
   height: 40px;
@@ -790,7 +792,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere20 {
   width: 40px;
   height: 40px;
@@ -804,7 +806,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere21 {
   width: 40px;
   height: 40px;
@@ -818,7 +820,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere22 {
   width: 40px;
   height: 40px;
@@ -832,7 +834,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere23 {
   width: 40px;
   height: 40px;
@@ -846,7 +848,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere24 {
   width: 40px;
   height: 40px;
@@ -860,7 +862,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere25 {
   width: 40px;
   height: 40px;
@@ -874,7 +876,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere26 {
   width: 40px;
   height: 40px;
@@ -888,7 +890,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere27 {
   width: 40px;
   height: 40px;
@@ -902,7 +904,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere28 {
   width: 40px;
   height: 40px;
@@ -916,7 +918,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere29 {
   width: 40px;
   height: 40px;
@@ -930,7 +932,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .youAreHere30 {
   width: 40px;
   height: 40px;
@@ -944,7 +946,7 @@ a.butto.active {
   color: #f3eb64;
 }
 
-/* line 517, ../sass/screen.scss */
+/* line 518, ../sass/screen.scss */
 p.inner {
   position: relative;
   width: 15px;
@@ -956,7 +958,7 @@ p.inner {
   margin-top: 6px;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke0 {
   width: 30px;
   height: 30px;
@@ -971,7 +973,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke1 {
   width: 30px;
   height: 30px;
@@ -986,7 +988,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke2 {
   width: 30px;
   height: 30px;
@@ -1001,7 +1003,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke3 {
   width: 30px;
   height: 30px;
@@ -1016,7 +1018,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke4 {
   width: 30px;
   height: 30px;
@@ -1031,7 +1033,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke5 {
   width: 30px;
   height: 30px;
@@ -1046,7 +1048,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke6 {
   width: 30px;
   height: 30px;
@@ -1061,7 +1063,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke7 {
   width: 30px;
   height: 30px;
@@ -1076,7 +1078,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke8 {
   width: 30px;
   height: 30px;
@@ -1091,7 +1093,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke9 {
   width: 30px;
   height: 30px;
@@ -1106,7 +1108,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke10 {
   width: 30px;
   height: 30px;
@@ -1121,7 +1123,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke11 {
   width: 30px;
   height: 30px;
@@ -1136,7 +1138,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke12 {
   width: 30px;
   height: 30px;
@@ -1151,7 +1153,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke13 {
   width: 30px;
   height: 30px;
@@ -1166,7 +1168,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke14 {
   width: 30px;
   height: 30px;
@@ -1181,7 +1183,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke15 {
   width: 30px;
   height: 30px;
@@ -1196,7 +1198,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke16 {
   width: 30px;
   height: 30px;
@@ -1211,7 +1213,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke17 {
   width: 30px;
   height: 30px;
@@ -1226,7 +1228,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke18 {
   width: 30px;
   height: 30px;
@@ -1241,7 +1243,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke19 {
   width: 30px;
   height: 30px;
@@ -1256,7 +1258,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke20 {
   width: 30px;
   height: 30px;
@@ -1271,7 +1273,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke21 {
   width: 30px;
   height: 30px;
@@ -1286,7 +1288,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke22 {
   width: 30px;
   height: 30px;
@@ -1301,7 +1303,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke23 {
   width: 30px;
   height: 30px;
@@ -1316,7 +1318,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke24 {
   width: 30px;
   height: 30px;
@@ -1331,7 +1333,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke25 {
   width: 30px;
   height: 30px;
@@ -1346,7 +1348,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke26 {
   width: 30px;
   height: 30px;
@@ -1361,7 +1363,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke27 {
   width: 30px;
   height: 30px;
@@ -1376,7 +1378,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke28 {
   width: 30px;
   height: 30px;
@@ -1391,7 +1393,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke29 {
   width: 30px;
   height: 30px;
@@ -1406,7 +1408,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .smoke30 {
   width: 30px;
   height: 30px;
@@ -1421,7 +1423,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket0 {
   width: 50px;
   height: 50px;
@@ -1432,7 +1434,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket1 {
   width: 50px;
   height: 50px;
@@ -1443,7 +1445,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket2 {
   width: 50px;
   height: 50px;
@@ -1454,7 +1456,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket3 {
   width: 50px;
   height: 50px;
@@ -1465,7 +1467,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket4 {
   width: 50px;
   height: 50px;
@@ -1476,7 +1478,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket5 {
   width: 50px;
   height: 50px;
@@ -1487,7 +1489,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket6 {
   width: 50px;
   height: 50px;
@@ -1498,7 +1500,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket7 {
   width: 50px;
   height: 50px;
@@ -1509,7 +1511,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket8 {
   width: 50px;
   height: 50px;
@@ -1520,7 +1522,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket9 {
   width: 50px;
   height: 50px;
@@ -1531,7 +1533,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket10 {
   width: 50px;
   height: 50px;
@@ -1542,7 +1544,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket11 {
   width: 50px;
   height: 50px;
@@ -1553,7 +1555,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket12 {
   width: 50px;
   height: 50px;
@@ -1564,7 +1566,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket13 {
   width: 50px;
   height: 50px;
@@ -1575,7 +1577,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket14 {
   width: 50px;
   height: 50px;
@@ -1586,7 +1588,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket15 {
   width: 50px;
   height: 50px;
@@ -1597,7 +1599,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket16 {
   width: 50px;
   height: 50px;
@@ -1608,7 +1610,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket17 {
   width: 50px;
   height: 50px;
@@ -1619,7 +1621,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket18 {
   width: 50px;
   height: 50px;
@@ -1630,7 +1632,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket19 {
   width: 50px;
   height: 50px;
@@ -1641,7 +1643,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket20 {
   width: 50px;
   height: 50px;
@@ -1652,7 +1654,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket21 {
   width: 50px;
   height: 50px;
@@ -1663,7 +1665,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket22 {
   width: 50px;
   height: 50px;
@@ -1674,7 +1676,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket23 {
   width: 50px;
   height: 50px;
@@ -1685,7 +1687,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket24 {
   width: 50px;
   height: 50px;
@@ -1696,7 +1698,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket25 {
   width: 50px;
   height: 50px;
@@ -1707,7 +1709,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket26 {
   width: 50px;
   height: 50px;
@@ -1718,7 +1720,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket27 {
   width: 50px;
   height: 50px;
@@ -1729,7 +1731,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket28 {
   width: 50px;
   height: 50px;
@@ -1740,7 +1742,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket29 {
   width: 50px;
   height: 50px;
@@ -1751,7 +1753,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .blanket30 {
   width: 50px;
   height: 50px;
@@ -1762,7 +1764,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e0 {
   width: 30px;
   height: 30px;
@@ -1778,12 +1780,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e0:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e1 {
   width: 30px;
   height: 30px;
@@ -1799,12 +1801,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e1:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e2 {
   width: 30px;
   height: 30px;
@@ -1820,12 +1822,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e2:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e3 {
   width: 30px;
   height: 30px;
@@ -1841,12 +1843,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e3:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e4 {
   width: 30px;
   height: 30px;
@@ -1862,12 +1864,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e4:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e5 {
   width: 30px;
   height: 30px;
@@ -1883,12 +1885,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e5:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e6 {
   width: 30px;
   height: 30px;
@@ -1904,12 +1906,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e6:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e7 {
   width: 30px;
   height: 30px;
@@ -1925,12 +1927,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e7:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e8 {
   width: 30px;
   height: 30px;
@@ -1946,12 +1948,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e8:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e9 {
   width: 30px;
   height: 30px;
@@ -1967,12 +1969,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e9:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e10 {
   width: 30px;
   height: 30px;
@@ -1988,12 +1990,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e10:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e11 {
   width: 30px;
   height: 30px;
@@ -2009,12 +2011,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e11:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e12 {
   width: 30px;
   height: 30px;
@@ -2030,12 +2032,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e12:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e13 {
   width: 30px;
   height: 30px;
@@ -2051,12 +2053,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e13:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e14 {
   width: 30px;
   height: 30px;
@@ -2072,12 +2074,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e14:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e15 {
   width: 30px;
   height: 30px;
@@ -2093,12 +2095,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e15:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e16 {
   width: 30px;
   height: 30px;
@@ -2114,12 +2116,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e16:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e17 {
   width: 30px;
   height: 30px;
@@ -2135,12 +2137,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e17:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e18 {
   width: 30px;
   height: 30px;
@@ -2156,12 +2158,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e18:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e19 {
   width: 30px;
   height: 30px;
@@ -2177,12 +2179,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e19:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e20 {
   width: 30px;
   height: 30px;
@@ -2198,12 +2200,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e20:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e21 {
   width: 30px;
   height: 30px;
@@ -2219,12 +2221,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e21:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e22 {
   width: 30px;
   height: 30px;
@@ -2240,12 +2242,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e22:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e23 {
   width: 30px;
   height: 30px;
@@ -2261,12 +2263,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e23:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e24 {
   width: 30px;
   height: 30px;
@@ -2282,12 +2284,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e24:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e25 {
   width: 30px;
   height: 30px;
@@ -2303,12 +2305,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e25:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e26 {
   width: 30px;
   height: 30px;
@@ -2324,12 +2326,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e26:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e27 {
   width: 30px;
   height: 30px;
@@ -2345,12 +2347,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e27:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e28 {
   width: 30px;
   height: 30px;
@@ -2366,12 +2368,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e28:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e29 {
   width: 30px;
   height: 30px;
@@ -2387,12 +2389,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e29:after {
   content: "E";
 }
 
-/* line 563, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .smoke_e30 {
   width: 30px;
   height: 30px;
@@ -2408,12 +2410,12 @@ p.inner {
   text-align: center;
   cursor: move;
 }
-/* line 578, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .smoke_e30:after {
   content: "E";
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint0 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2429,7 +2431,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint1 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2445,7 +2447,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint2 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2461,7 +2463,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint3 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2477,7 +2479,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint4 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2493,7 +2495,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint5 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2509,7 +2511,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint6 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2525,7 +2527,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint7 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2541,7 +2543,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint8 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2557,7 +2559,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint9 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2573,7 +2575,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint10 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2589,7 +2591,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint11 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2605,7 +2607,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint12 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2621,7 +2623,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint13 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2637,7 +2639,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint14 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2653,7 +2655,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint15 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2669,7 +2671,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint16 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2685,7 +2687,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint17 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2701,7 +2703,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint18 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2717,7 +2719,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint19 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2733,7 +2735,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint20 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2749,7 +2751,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint21 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2765,7 +2767,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint22 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2781,7 +2783,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint23 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2797,7 +2799,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint24 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2813,7 +2815,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint25 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2829,7 +2831,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint26 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2845,7 +2847,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint27 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2861,7 +2863,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint28 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2877,7 +2879,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint29 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2893,7 +2895,7 @@ p.inner {
   cursor: move;
 }
 
-/* line 587, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .firePoint30 {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2909,13 +2911,13 @@ p.inner {
   cursor: move;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent0 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent0:after, p.hydrent0:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -2926,7 +2928,7 @@ p.hydrent0:after, p.hydrent0:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent0:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -2937,13 +2939,13 @@ p.hydrent0:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent1 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent1:after, p.hydrent1:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -2954,7 +2956,7 @@ p.hydrent1:after, p.hydrent1:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent1:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -2965,13 +2967,13 @@ p.hydrent1:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent2 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent2:after, p.hydrent2:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -2982,7 +2984,7 @@ p.hydrent2:after, p.hydrent2:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent2:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -2993,13 +2995,13 @@ p.hydrent2:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent3 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent3:after, p.hydrent3:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3010,7 +3012,7 @@ p.hydrent3:after, p.hydrent3:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent3:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3021,13 +3023,13 @@ p.hydrent3:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent4 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent4:after, p.hydrent4:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3038,7 +3040,7 @@ p.hydrent4:after, p.hydrent4:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent4:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3049,13 +3051,13 @@ p.hydrent4:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent5 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent5:after, p.hydrent5:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3066,7 +3068,7 @@ p.hydrent5:after, p.hydrent5:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent5:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3077,13 +3079,13 @@ p.hydrent5:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent6 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent6:after, p.hydrent6:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3094,7 +3096,7 @@ p.hydrent6:after, p.hydrent6:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent6:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3105,13 +3107,13 @@ p.hydrent6:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent7 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent7:after, p.hydrent7:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3122,7 +3124,7 @@ p.hydrent7:after, p.hydrent7:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent7:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3133,13 +3135,13 @@ p.hydrent7:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent8 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent8:after, p.hydrent8:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3150,7 +3152,7 @@ p.hydrent8:after, p.hydrent8:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent8:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3161,13 +3163,13 @@ p.hydrent8:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent9 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent9:after, p.hydrent9:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3178,7 +3180,7 @@ p.hydrent9:after, p.hydrent9:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent9:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3189,13 +3191,13 @@ p.hydrent9:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent10 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent10:after, p.hydrent10:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3206,7 +3208,7 @@ p.hydrent10:after, p.hydrent10:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent10:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3217,13 +3219,13 @@ p.hydrent10:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent11 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent11:after, p.hydrent11:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3234,7 +3236,7 @@ p.hydrent11:after, p.hydrent11:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent11:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3245,13 +3247,13 @@ p.hydrent11:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent12 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent12:after, p.hydrent12:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3262,7 +3264,7 @@ p.hydrent12:after, p.hydrent12:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent12:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3273,13 +3275,13 @@ p.hydrent12:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent13 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent13:after, p.hydrent13:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3290,7 +3292,7 @@ p.hydrent13:after, p.hydrent13:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent13:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3301,13 +3303,13 @@ p.hydrent13:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent14 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent14:after, p.hydrent14:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3318,7 +3320,7 @@ p.hydrent14:after, p.hydrent14:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent14:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3329,13 +3331,13 @@ p.hydrent14:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent15 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent15:after, p.hydrent15:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3346,7 +3348,7 @@ p.hydrent15:after, p.hydrent15:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent15:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3357,13 +3359,13 @@ p.hydrent15:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent16 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent16:after, p.hydrent16:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3374,7 +3376,7 @@ p.hydrent16:after, p.hydrent16:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent16:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3385,13 +3387,13 @@ p.hydrent16:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent17 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent17:after, p.hydrent17:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3402,7 +3404,7 @@ p.hydrent17:after, p.hydrent17:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent17:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3413,13 +3415,13 @@ p.hydrent17:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent18 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent18:after, p.hydrent18:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3430,7 +3432,7 @@ p.hydrent18:after, p.hydrent18:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent18:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3441,13 +3443,13 @@ p.hydrent18:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent19 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent19:after, p.hydrent19:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3458,7 +3460,7 @@ p.hydrent19:after, p.hydrent19:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent19:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3469,13 +3471,13 @@ p.hydrent19:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent20 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent20:after, p.hydrent20:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3486,7 +3488,7 @@ p.hydrent20:after, p.hydrent20:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent20:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3497,13 +3499,13 @@ p.hydrent20:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent21 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent21:after, p.hydrent21:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3514,7 +3516,7 @@ p.hydrent21:after, p.hydrent21:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent21:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3525,13 +3527,13 @@ p.hydrent21:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent22 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent22:after, p.hydrent22:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3542,7 +3544,7 @@ p.hydrent22:after, p.hydrent22:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent22:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3553,13 +3555,13 @@ p.hydrent22:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent23 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent23:after, p.hydrent23:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3570,7 +3572,7 @@ p.hydrent23:after, p.hydrent23:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent23:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3581,13 +3583,13 @@ p.hydrent23:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent24 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent24:after, p.hydrent24:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3598,7 +3600,7 @@ p.hydrent24:after, p.hydrent24:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent24:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3609,13 +3611,13 @@ p.hydrent24:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent25 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent25:after, p.hydrent25:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3626,7 +3628,7 @@ p.hydrent25:after, p.hydrent25:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent25:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3637,13 +3639,13 @@ p.hydrent25:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent26 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent26:after, p.hydrent26:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3654,7 +3656,7 @@ p.hydrent26:after, p.hydrent26:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent26:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3665,13 +3667,13 @@ p.hydrent26:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent27 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent27:after, p.hydrent27:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3682,7 +3684,7 @@ p.hydrent27:after, p.hydrent27:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent27:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3693,13 +3695,13 @@ p.hydrent27:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent28 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent28:after, p.hydrent28:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3710,7 +3712,7 @@ p.hydrent28:after, p.hydrent28:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent28:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3721,13 +3723,13 @@ p.hydrent28:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent29 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent29:after, p.hydrent29:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3738,7 +3740,7 @@ p.hydrent29:after, p.hydrent29:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent29:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3749,13 +3751,13 @@ p.hydrent29:before {
   margin-left: -23px;
 }
 
-/* line 601, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 p.hydrent30 {
   margin: 0;
   /* Styling for second triangle (border) */
   cursor: move;
 }
-/* line 603, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 p.hydrent30:after, p.hydrent30:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -3766,7 +3768,7 @@ p.hydrent30:after, p.hydrent30:before {
   margin-left: -20px;
   position: absolute;
 }
-/* line 617, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 p.hydrent30:before {
   border-left: 23px solid transparent;
   border-right: 23px solid transparent;
@@ -3777,25 +3779,25 @@ p.hydrent30:before {
   margin-left: -23px;
 }
 
-/* line 630, ../sass/screen.scss */
+/* line 631, ../sass/screen.scss */
 .beGone {
   cursor: no-drop;
 }
 
-/* line 635, ../sass/screen.scss */
+/* line 636, ../sass/screen.scss */
 .newIcon {
   margin: 3px 0 0 10px;
   border-bottom: 1px solid #21101f;
 }
 
-/* line 643, ../sass/screen.scss */
+/* line 644, ../sass/screen.scss */
 #select {
   display: inline-block;
   width: 170px;
   margin: 0;
 }
 
-/* line 649, ../sass/screen.scss */
+/* line 650, ../sass/screen.scss */
 #add {
   font-weight: 900;
   font-size: 2.5em;
@@ -3803,12 +3805,12 @@ p.hydrent30:before {
   line-height: 0;
   margin: 10px 0 0 10px;
 }
-/* line 655, ../sass/screen.scss */
+/* line 656, ../sass/screen.scss */
 #add:hover {
   color: #14ad10;
 }
 
-/* line 660, ../sass/screen.scss */
+/* line 661, ../sass/screen.scss */
 #tits {
   font-size: 2.5em;
   font-family: Helvetica !important;
@@ -3816,4 +3818,130 @@ p.hydrent30:before {
   margin: 0 auto;
   text-align: center;
   width: 90%;
+}
+
+/*/////////////////////////////////////////////////////////////////
+
+//_______________ NEW INDEX _______________________________________
+____________________________________________________________________*/
+/* line 677, ../sass/screen.scss */
+body {
+  font-family: courier;
+  margin: 0 20%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
+}
+@media screen and (max-width: 1000px) {
+  /* line 677, ../sass/screen.scss */
+  body {
+    margin: 0 10%;
+  }
+}
+
+/* line 687, ../sass/screen.scss */
+#outer {
+  border: 35px solid rgba(170, 170, 170, 0.1);
+}
+
+/* line 690, ../sass/screen.scss */
+h1 {
+  font-family: 'Gill Sans' ,'Open Sans',Helvetica, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 4em;
+  padding: 40px 10px;
+}
+
+/* line 698, ../sass/screen.scss */
+#one {
+  min-height: 330px;
+  width: 100%;
+  background-image: url("http://farm6.staticflickr.com/5324/9656307798_0fd21e725b_h.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* line 704, ../sass/screen.scss */
+#one P {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 5px 30%;
+  color: #3477b0;
+  font-size: 2.1em;
+  line-height: 1.25;
+  text-align: center;
+}
+/* line 712, ../sass/screen.scss */
+#one h1 {
+  color: #bcc749;
+  text-shadow: 1px 1px 1px #fc7b0c;
+}
+
+/* line 717, ../sass/screen.scss */
+#two {
+  min-height: 330px;
+  margin-top: -3px;
+  width: 100%;
+  background-image: url("http://farm8.staticflickr.com/7284/9653068581_bca0dbffec_h.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* line 724, ../sass/screen.scss */
+#two P {
+  background-color: rgba(255, 192, 203, 0.4);
+  padding: 10px 20%;
+  line-height: 50px;
+  text-align: center;
+}
+/* line 730, ../sass/screen.scss */
+#two h1 {
+  color: #49a447;
+  text-shadow: 1px 1px 1px #df5853;
+  padding: 150px 0px;
+}
+
+/* line 736, ../sass/screen.scss */
+#three {
+  min-height: 330px;
+  width: 100%;
+  background-image: url("http://farm8.staticflickr.com/7284/9653068581_bca0dbffec_h.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* line 742, ../sass/screen.scss */
+#three P {
+  background-color: rgba(142, 108, 69, 0.35);
+  padding: 15px 15%;
+  line-height: 30px;
+  font-size: 1.3em;
+  color: red;
+  text-align: center;
+}
+/* line 750, ../sass/screen.scss */
+#three h1 {
+  color: #d8c5b8;
+  text-shadow: 1px 1px 1px #030207;
+}
+
+/* line 756, ../sass/screen.scss */
+#fill {
+  min-height: 200px;
+  padding: 20px;
+  font-size: 2em;
+  background-color: rgba(198, 202, 74, 0.75);
+}
+/* line 761, ../sass/screen.scss */
+#fill p {
+  text-align: center;
+  font-size: 3em;
+}
+
+/* line 767, ../sass/screen.scss */
+footer {
+  min-height: 400px;
+  background-image: url("http://farm6.staticflickr.com/5324/9656307798_0fd21e725b_h.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: -5px;
+}
+/* line 773, ../sass/screen.scss */
+footer h1 {
+  color: #325d8e;
 }
