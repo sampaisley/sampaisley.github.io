@@ -674,7 +674,7 @@ border-bottom: 1px solid #21101f;
 ____________________________________________________________________*/
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
-body {
+#body {
     font-family: courier;
     margin:  0 20%;
     @media screen and (max-width: 1000px) {
@@ -691,7 +691,7 @@ h1{
     font-family:'Gill Sans' ,'Open Sans',Helvetica, sans-serif;
     font-weight: 900;
     text-align: center;
-    font-size: 4em;
+      font-size: 4em;
     padding: 40px 10px;
 }
 

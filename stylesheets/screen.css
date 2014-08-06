@@ -3825,14 +3825,14 @@ p.hydrent30:before {
 //_______________ NEW INDEX _______________________________________
 ____________________________________________________________________*/
 /* line 677, ../sass/screen.scss */
-body {
+#body {
   font-family: courier;
   margin: 0 20%;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
 }
 @media screen and (max-width: 1000px) {
   /* line 677, ../sass/screen.scss */
-  body {
+  #body {
     margin: 0 10%;
   }
 }
@@ -3959,16 +3959,4 @@ footer h1 {
 /* line 783, ../sass/screen.scss */
 .html5 {
   color: #af4e16;
-}
-.php{
-  color: #8a210a;
-}
-.spanish{
-  color: #142a4e;
-}
-.mysql{
-  color: #ea7e20;
-}
-.english{
-  color: #55aae5;
 }
