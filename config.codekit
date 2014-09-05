@@ -76,6 +76,36 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/cloud_h4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8775,
+		"inputAbbreviatedPath": "\/img\/cloud_h4.png",
+		"outputAbbreviatedPath": "\/img\/cloud_h4.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cloudPt1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7636,
+		"inputAbbreviatedPath": "\/img\/cloudPt1.png",
+		"outputAbbreviatedPath": "\/img\/cloudPt1.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cloudPt2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7349,
+		"inputAbbreviatedPath": "\/img\/cloudPt2.png",
+		"outputAbbreviatedPath": "\/img\/cloudPt2.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/noImage.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -191,6 +221,14 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/index_original.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index_original.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
@@ -639,14 +677,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/stylesheets\/screen.min.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
-		},
-	"\/tempindex.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/tempindex.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		}
