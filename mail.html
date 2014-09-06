@@ -34,11 +34,17 @@
         <input type="email" placeholder="youremail@gmail.com" name="email" id="email" required>
         </label>
 
-        <input class="sendButton" type="submit" name="Submit" value="Send">
+        <input id="submit" class="sendButton" type="submit" name="Submit" value="Send">
 
     </form>
+    <p id="fanx"></p>
     </div>
    </div>
-
+<script>
+  sessionStorage.text = "foo";
+  var submit = document.querySelector("#submit").onclick=function(){
+    var fanx = document.querySelector("#fanx").innerHTML= sessionStorage.text;
+  }
+</script>
 </body>
 </html>
