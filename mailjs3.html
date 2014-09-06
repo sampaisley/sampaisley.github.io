@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <script src="js/vendor/jquery.js"></script>
 <script>
-function c(){
+function submitForm(){
   var name = $("#name").text();
   var phone = $("#phone").text();
   var email = $("#email").text();
@@ -24,7 +24,7 @@ function c(){
   <p>
     111
   </p>
-<form method="post" action="" onsubmit="submitForm(this,e);">
+<form method="post" action="" onsubmit="submitForm();">
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
