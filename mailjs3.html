@@ -3,20 +3,11 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <script src="js/vendor/jquery.js"></script>
-<script>
-$.ajax({
-  type: "POST",
-  url: "http://cmh.netne.net/mail/mail.php",
-  data: { name: "Johzzzzzn", city: "Bozzzzston" ,phone: 50, email: "fff@dd.com" }
-})
-  .done(function( msg ) {
-    alert( "Data Saved: " + msg );
-  });
-</script>
+
 </head>
 
 <body>
-<form method="post" action="" onsubmit="submitForm(this,e);">
+<form method="post" action="" >
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
@@ -38,5 +29,28 @@ $.ajax({
     </label>
     <input type="submit" value="post request"/>
 </form>
+<button name="button" id="but">but</button>
+
+<script>
+$( document ).ready(function() {
+  function go(){
+    $.ajax({
+      type: "POST",
+      url: "http://cmh.netne.net/mail/mail.php",
+      data: { name: "Johzzxxxxxxxxzzzn", city: "Bozzzzston" ,phone: 50, email: "fff@dd.com" }
+    })
+      .done(function( msg ) {
+        alert( "Data Saved: " + msg );
+      });
+  }
+
+  $("#but").click(
+    function(){
+      go();
+    }
+  )
+});
+
+</script>
 </body>
 </html>
