@@ -5,7 +5,7 @@
 <script src="js/vendor/jquery.js"></script>
 <script>
 function submitForm(e){
-  e.preventDefault();
+  //e.preventDefault();
   var name = $("#name").text();
   var phone = $("#phone").text();
   var email = $("#email").text();
@@ -23,9 +23,9 @@ function submitForm(e){
 
 <body>
   <p>
-    222
+    333
   </p>
-<form method="" action="" onsubmit="submitForm(e);">
+<form onsubmit="submitForm(e);">
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
