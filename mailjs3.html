@@ -5,7 +5,7 @@
 <script src="js/vendor/jquery.js"></script>
 <script>
 function submitForm(e){
-  //e.preventDefault();
+  e.preventDefault();alert("foo");
   var name = $("#name").text();
   var phone = $("#phone").text();
   var email = $("#email").text();
@@ -23,7 +23,7 @@ function submitForm(e){
 
 <body>
   <p>
-    333
+    222
   </p>
 <form onsubmit="submitForm(e);">
     <label>
