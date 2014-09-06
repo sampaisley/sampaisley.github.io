@@ -29,15 +29,16 @@
     </label>
     <input type="submit" value="post request"/>
 </form>
-<button name="button" id="but">but</button>
+<button name="button" id="but">buttt</button>
 
 <script>
 $( document ).ready(function() {
+  var name = $("#name").text();
   function go(){
     $.ajax({
       type: "POST",
       url: "http://cmh.netne.net/mail/mail.php",
-      data: { name: "Johzzxxxxxxxxzzzn", city: "Bozzzzston" ,phone: 50, email: "fff@dd.com" }
+      data: { name: name, city: "Bozzzzston" ,phone: 50, email: "fff@dd.com" }
     })
       .done(function( msg ) {
         alert( "Data Saved: " + msg );
