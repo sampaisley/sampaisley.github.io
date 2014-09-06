@@ -5,25 +5,31 @@
   <title>mailJS</title>
 </head>
 <body>
-<h1>hello</h1>
+  <h1>hello</h1>
+  <form id="form_id" action="" method="">
+    <input type="text"><input id="go" type="submit" value="go">
+  </form>
   <script>
 
+function go(){
+  var go = document.querySelector("go").onclick=go;
   var http = new XMLHttpRequest();
-var url = "http://cmh.netne.net/mail/mail.php";
-var params = "name=ipsum&city=binny&phone=50&email=foo@bar.com";
-http.open("POST", url, true);
+  var url = "http://cmh.netne.net/mail/mail.php";
+  var params = "name=ipsum&city=binny&phone=50&email=foo@bar.com";
+  http.open("POST", url, true);
 
-//Send the proper header information along with the request
-http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-http.setRequestHeader("Content-length", params.length);
-http.setRequestHeader("Connection", "close");
+  //Send the proper header information along with the request
+  http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  http.setRequestHeader("Content-length", params.length);
+  http.setRequestHeader("Connection", "close");
 
-http.onreadystatechange = function() {//Call a function when the state changes.
+  http.onreadystatechange = function() {//Call a function when the state changes.
     if(http.readyState == 4 && http.status == 200) {
-        alert(http.responseText);
+      alert("http.responseText");
     }
+  }
+  http.send(params);
 }
-http.send(params);
   </script>
 </body>
 </html>
