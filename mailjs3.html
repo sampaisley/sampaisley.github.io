@@ -29,12 +29,13 @@
     </label>
     <input type="submit" value="post request"/>
 </form>
-<button name="button" id="but">xxxxxx</button>
+<button name="button" id="but">www</button>
 
 <script>
 $( document ).ready(function() {
-  var name = $("#name").val();
+
   function go(){
+    var name = $("#name").val();
     $.ajax({
       type: "POST",
       url: "http://cmh.netne.net/mail/mail.php",
