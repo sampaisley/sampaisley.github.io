@@ -4,28 +4,33 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <script src="js/vendor/jquery.js"></script>
 <script>
-$.ajax({
-  type: "POST",
-  url: "http://cmh.netne.net/mail/mail.php",
-  data: { name: "John", city: "Boston" ,phone: 50, email: "fff@dd.com" }
-})
-  .done(function( msg ) {
-    alert( "Data Saved: " + msg );
-  });
+function c(){
+  var name = $("#name").text();
+  var phone = $("#phone").text();
+  var email = $("#email").text();
+  $.ajax({
+    type: "POST",
+    url: "http://cmh.netne.net/mail/mail.php",
+    data: { name: name ,phone: phone, email: email }
+  })
+    .done(function( msg ) {
+      alert( "Data Saved: " + msg );
+    });
+}
 </script>
 </head>
 
 <body>
+  <p>
+    111
+  </p>
 <form method="post" action="" onsubmit="submitForm(this,e);">
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
     </label>
 
-    <label>
-    <span>City*:</span>
-    <input type="text" placeholder="Please enter your city" name="city" id="city" required>
-    </label>
+
 
     <label>
     <span>Phone:</span>
