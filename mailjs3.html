@@ -26,23 +26,26 @@
     </label>
 
 </form>
-<button name="button" id="but">submit</button>
-
+<button name="button" id="but">submit..</button>
+<p id="error">.</p>
 <script>
 $( document ).ready(function() {
-
+  function handleData(){
+    alert("cool");
+  }
   function go(){
     var name = $("#name").val();
     var phone = $("#phone").val();
     var email = $("#email").val();
-    if(!name){
-      alert("no name");
+    if(!name || !phone || !email){
+      $("#error").text("check you input.")
       return;
     }
     $.ajax({
       type: "POST",
       url: "http://cmh.netne.net/mail/mail.php",
-      data: { name: name, phone: phone, email: email }
+      data: { name: name, phone: phone, email: email },
+      success : handleData
     })
       .done(function( msg ) {
         alert( "Data Saved: " + msg );
