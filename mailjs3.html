@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <script src="js/vendor/jquery.js"></script>
-<title>Page Tixxdddddxtle</title>
+<title>Page Te</title>
 </head>
 
 <body>
-<form>
+<form id="form">
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
@@ -30,9 +30,7 @@
 <p id="error">.</p>
 <script>
 $( document ).ready(function() {
-  function handleData(){
-    alert("cool");
-  }
+
   function go(){
     var name = $("#name").val();
     var phone = $("#phone").val();
@@ -40,6 +38,9 @@ $( document ).ready(function() {
     if(!name || !phone || !email){
       $("#error").text("check yous input.")
       return;
+    }else{
+      $("#error").text("Bienisimo.");
+      $("#form").reset();
     }
     $.ajax({
       type: "POST",
