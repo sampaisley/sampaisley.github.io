@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="js/vendor/jquery.js"></script>
   <meta charset="UTF-8">
   <title>samPaisley</title>
   <link href="css/normalize.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
@@ -36,6 +37,27 @@
   }
   .cloudImg{
     margin-top:1em;
+  }
+  /*form-------------------------------*/
+   #contact{
+     cursor:pointer;
+   }
+   #but, #error{
+     margin-top:10px;
+   }
+  .hid{
+    display:none;
+  }
+  .vis{
+    display:block;
+  }
+  input, textarea{
+    display:block;
+    margin:0 auto;
+    text-align:left !important;
+  }
+  label, input,textarea{
+    padding:5px;
   }
   footer{
     height:20px;
@@ -76,10 +98,25 @@
 
 <p class="bdrTop">&nbsp;</p>
 
-<h4>Contact</h4>
-<img class="cloudImg" src="img/cloudPt1.png" alt="" /><img class="cloudImg" src="img/cloudPt2.png" alt="" />
+<h4 id="contact">Contact</h4>
+<br>
+<form id="form" class="hid">
+    <label for="msg">Message:</label>
+    <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
+    <textarea  name="msg"  rows="5"  placeholder="Type away..." id="msg" required autofocus></textarea><br />
+
+    <label for="phone">1/2 of a hundred?:</label>
+    <input type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" placeholder="email" name="email" id="email" required>
+<button name="button" id="but">submit</button>
+
+</form>
+<p id="error"></p>
 <footer><p>
   &nbsp;
 </p></footer>
+<script src="js/index.js"></script>
 </body>
 </html>

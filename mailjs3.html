@@ -8,25 +8,17 @@
 
 <body>
 <form id="form">
-    <label>
-    <span>Message:</span>
+    <label for="msg">Message:</label>
     <input type="text" placeholder="Type away..." name="msg" id="msg" required autofocus>
-    </label>
 
-
-
-    <label>
-    <span>1/2 of a hundred?:</span>
+    <label for="phone">1/2 of a hundred?:</label>
     <input type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
-    </label>
 
-    <label>
-    <span>Email:</span>
+    <label for="email">Email:</label>
     <input type="email" placeholder="youremail@gmail.com" name="email" id="email" required>
-    </label>
 
 </form>
-<button name="button" id="but">submit..</button>
+<button name="button" id="but">submit</button>
 <p id="error">.</p>
 <script>
 $( document ).ready(function() {
