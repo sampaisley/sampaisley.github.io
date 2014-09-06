@@ -5,8 +5,9 @@
 
 <script>
 "use strict";
-function submitForm(oFormElement)
+function submitForm(oFormElement,e)
 {
+  e.preventDefault();
   var xhr = new XMLHttpRequest();
   xhr.onload = function(){ alert (xhr.responseText); }
   xhr.open (oFormElement.method, oFormElement.action, true);
@@ -17,7 +18,7 @@ function submitForm(oFormElement)
 </head>
 
 <body>
-<form method="post" action="http://cmh.netne.net/mail/mail.php" onsubmit="submitForm(this);">
+<form method="post" action="http://cmh.netne.net/mail/mail.php" onsubmit="submitForm(this,e);">
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
