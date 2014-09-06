@@ -10,9 +10,9 @@
     <input type="text"><input id="go" type="submit" value="go">
   </form>
   <script>
-
+var go = document.querySelector("#go").onclick=go;
 function go(){
-  var go = document.querySelector("#go").onclick=go;
+
   var http = new XMLHttpRequest();
   var url = "http://cmh.netne.net/mail/mail.php";
   var params = "name=ipsum&city=binny&phone=50&email=foo@bar.com";
