@@ -44,10 +44,7 @@ $( document ).ready(function() {
     $.ajax({
       type: "POST",
       url: "http://cmh.netne.net/mail/mail.php",
-      data: { name: name, phone: phone, email: email },
-      success: function() {
-        alert("fofo")
-      }
+      data: { name: name, phone: phone, email: email }
     })
 
   }
