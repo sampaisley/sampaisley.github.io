@@ -2,23 +2,21 @@
 <html>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
-
+<script src="js/vendor/jquery.js"></script>
 <script>
-"use strict";
-function submitForm(oFormElement,e)
-{
-  e.preventDefault();
-  var xhr = new XMLHttpRequest();
-  xhr.onload = function(){ alert (xhr.responseText); }
-  xhr.open (oFormElement.method, oFormElement.action, true);
-  xhr.send (new FormData (oFormElement));
-  return false;
-}
+$.ajax({
+  type: "POST",
+  url: "http://cmh.netne.net/mail/mail.php",
+  data: { name: "John", city: "Boston" ,phone: 50, email: "fff@dd.com" }
+})
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
 </script>
 </head>
 
 <body>
-<form method="post" action="http://cmh.netne.net/mail/mail.php" onsubmit="submitForm(this,e);">
+<form method="post" action="" onsubmit="submitForm(this,e);">
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
