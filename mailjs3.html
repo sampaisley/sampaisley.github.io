@@ -38,20 +38,17 @@ $( document ).ready(function() {
     var phone = $("#phone").val();
     var email = $("#email").val();
     if(!name || !phone || !email){
-      $("#error").text("check you input.")
+      $("#error").text("check yous input.")
       return;
     }
     $.ajax({
       type: "POST",
       url: "http://cmh.netne.net/mail/mail.php",
-      data: { name: name, phone: phone, email: email },
-      success : handleData
+      data: { name: name, phone: phone, email: email }
     })
-      .done(function( msg ) {
-        alert( "Data Saved: " + msg );
-      });
-  }
 
+  }
+go().done(handleData);
   $("#but").click(
     function(){
       go();
