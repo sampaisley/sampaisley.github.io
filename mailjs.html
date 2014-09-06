@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mailJS</title>
+</head>
+<body>
+<h1>hello</h1>
+  <script>
+  var r = new XMLHttpRequest();
+  r.open("POST", "http://cmh.netne.net/mail/mail.php", true);
+  r.onreadystatechange = function () {
+    if (r.readyState != 4 || r.status != 200) return;
+    alert("Success: " + r.responseText);
+  };
+  r.send("name=yellow");
+  r.send("city=yellow");
+  r.send("email=yellow");
+  </script>
+</body>
+</html>
