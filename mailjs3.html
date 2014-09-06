@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <script src="js/vendor/jquery.js"></script>
-<title>Page Tzzzze</title>
+<title>Page foo</title>
 </head>
 
 <body>
@@ -34,16 +34,12 @@ $( document ).ready(function() {
 
         $(ele).find(':input').each(function() {
             switch(this.type) {
-                case 'password':
-                case 'select-multiple':
-                case 'select-one':
+                case 'tel':
+                case 'email':
                 case 'text':
                 case 'textarea':
                     $(this).val('');
-                    break;
-                case 'checkbox':
-                case 'radio':
-                    this.checked = false;
+
             }
         });
 
