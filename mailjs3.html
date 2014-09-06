@@ -9,19 +9,19 @@
 <body>
 <form id="form">
     <label>
-    <span>Name*:</span>
-    <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
+    <span>Message:</span>
+    <input type="text" placeholder="Type away..." name="msg" id="msg" required autofocus>
     </label>
 
 
 
     <label>
-    <span>Phone:</span>
-    <input type="tel" placeholder="Please enter your phone" name="phone" id="phone">
+    <span>1/2 of a hundred?:</span>
+    <input type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
     </label>
 
     <label>
-    <span>Email*:</span>
+    <span>Email:</span>
     <input type="email" placeholder="youremail@gmail.com" name="email" id="email" required>
     </label>
 
@@ -31,37 +31,34 @@
 <script>
 $( document ).ready(function() {
   function clear_form(ele) {
-
         $(ele).find(':input').each(function() {
             switch(this.type) {
-                case 'tel':
+                case 'number':
                 case 'email':
                 case 'text':
                 case 'textarea':
                     $(this).val('');
-
             }
         });
-
     }
 
 
   function go(){
-    var name = $("#name").val();
+    var msg = $("#msg").val();
     var phone = $("#phone").val();
     var email = $("#email").val();
     if(!name || !phone || !email){
-      $("#error").text("check yous input.")
+      $("#error").text("check yous input.").css("color","red");
       return;
     }else{
-      $("#error").text("Bienisimo.");
+      $("#error").text("Bienisimo.").css("color","green");
       clear_form($("#form"));
 
     }
     $.ajax({
       type: "POST",
       url: "http://cmh.netne.net/mail/mail.php",
-      data: { name: name, phone: phone, email: email }
+      data: { msg: msg, phone: phone, email: email }
     })
 
   }
