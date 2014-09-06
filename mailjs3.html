@@ -4,16 +4,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 <script src="js/vendor/jquery.js"></script>
 <script>
-var name = $("#name").text();
-var phone = $("#phone").text();
-var email = $("#email").text();
-function submitForm(e){
-  e.preventDefault();alert("foo");
-
+function c(){
+  var name = $("#name").text();
+  var phone = $("#phone").text();
+  var email = $("#emai").text();
   $.ajax({
     type: "POST",
     url: "http://cmh.netne.net/mail/mail.php",
-    data: { name: name ,phone: phone, email: email }
+    data: { name: "Joxxxxxxxhn", city: "Boston" ,phone: 50, email: "fff@dd.com" }
   })
     .done(function( msg ) {
       alert( "Data Saved: " + msg );
@@ -23,10 +21,7 @@ function submitForm(e){
 </head>
 
 <body>
-  <p>
-    222
-  </p>
-<form onsubmit="submitForm(e);">
+<form method="post" action="" onsubmit="c();">
     <label>
     <span>Name*:</span>
     <input type="text" placeholder="Please enter your name" name="name" id="name" required autofocus>
