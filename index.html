@@ -19,6 +19,7 @@
     margin-top:25px;
     background-color:#eee;
     color:#230c01;
+    font-size:80%;
   }
   p{
     line-height:.75;
@@ -39,22 +40,70 @@
     margin-top:1em;
   }
   /*form-------------------------------*/
+  #form{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:600px;
+    height:340px;
+    margin-left:-300px;
+    margin-top:-160px;
+    padding-top:10px
+
+  }
    #contact{
      cursor:pointer;
    }
    #but, #error{
      margin-top:10px;
+     z-index:300;
+   }
+   #error{
+     display:block;
+     margin-top:-20px;
+     color:#ff0019;
+     background-color:#c4dcc3;
+     margin:-20px 30%;
+
+   }
+   #but{
+     margin-bottom:30px;
    }
   .hid{
     display:none;
   }
   .vis{
     display:block;
+    position:absolute;
+    border:10px solid #495e58;
+    border-radius:3px;
+
+  background-color:rgba(73, 94, 87, 0.64);
   }
-  input, textarea{
+  .green{
+    color:#0a924a;
+    font-size:2em;
+  }
+  .fade{
+    opacity:.2;
+  }
+  #close{
+    position:relative;
+    float:right;
+    font-size:.7eml
+    padding:15px;
+    margin-right:7px;
+    cursor:pointer;
+    color:#ff0019;
+    background-color:#c4dcc3;
+  }
+  input, textarea, label{
     display:block;
     margin:0 auto;
     text-align:left !important;
+  }
+  label{
+    margin-left:184px;
   }
   label, input,textarea{
     padding:5px;
@@ -74,6 +123,7 @@
     }
     body{
       margin-top:75px;
+      font-size:100%;
 
     }
   </style>
@@ -101,19 +151,21 @@
 <h4 id="contact">Contact</h4>
 <br>
 <form id="form" class="hid">
-    <label for="msg">Message:</label>
+<span id="close">[close]</span>
+    <label for="msg">Message</label>
     <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
     <textarea  name="msg"  rows="5"  placeholder="Type away..." id="msg" required autofocus></textarea><br />
 
-    <label for="phone">1/2 of a hundred?:</label>
+    <label for="phone">1/2 of a hundred?</label>
     <input type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
 
-    <label for="email">Email:</label>
+    <label for="email">Email</label>
     <input type="email" placeholder="email" name="email" id="email" required>
 <button name="button" id="but">submit</button>
+<span id="error"></span>
 
 </form>
-<p id="error"></p>
+
 <footer><p>
   &nbsp;
 </p></footer>

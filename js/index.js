@@ -18,12 +18,13 @@ $( document ).ready(function() {
     var phone = $("#phone").val();
     var email = $("#email").val();
     if(!msg || !phone || !email){
-      $("#error").text("Check Your Inputs.").css("color","red");
+      $("#error").text("Check Your Inputs.");
       return;
     }else{
-      $("#error").text("Message Sent").css("color","green");
+      $("#contact").addClass('green').text("Message Sent").fadeOut(3000,function(){$(this).text("Contact").removeClass("green").fadeIn()});
       clear_form($("#form"));
       $("#form").toggleClass("vis");
+      $('h4,h3,p,ul,li').toggleClass("fade");
 
     }
     $.ajax({
@@ -41,10 +42,11 @@ $( document ).ready(function() {
       go();
     }
   );
-  $("#contact").click(
+  $("#contact, #close").click(
     function(){
       $("#error").text("")
       $("#form").toggleClass("vis");
+      $('h4,h3,p,ul,li').toggleClass("fade");
     }
   )
 });
