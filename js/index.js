@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  $("#contact").html("Contact");
   function clear_form(ele) {
         $(ele).find(':input').each(function() {
             switch(this.type) {
@@ -18,8 +19,8 @@ $( document ).ready(function() {
     var msg = $("#msg").val(),
     phone = $("#phone").val(),
      email = $("#email").val();
-    if(!msg || !phone || !email || !isValidEmailAddress(email)){
-      $("#error").text("Check Your Inputs.");
+    if(!msg || !phone || isNaN(phone) || !email || !isValidEmailAddress(email)){
+      $("#error").text("Check Your Input Values.");
       return;
     }else{
       $("#contact").addClass('green').text("Message Sent").fadeOut(3000,function(){$(this).text("Contact").removeClass("green").fadeIn();});
@@ -46,6 +47,7 @@ $( document ).ready(function() {
   $("#contact, #close").click(
     function(){
       $("#error").text("");
+      clear_form($("#form"));
       $("#form").toggleClass("vis");
       $('h4,h3,p,ul,li').toggleClass("fade");
     }
