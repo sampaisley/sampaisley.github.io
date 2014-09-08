@@ -32,7 +32,8 @@ $( document ).ready(function() {
     $.ajax({
       type: "POST",
       //url: "http://cmh.netne.net/mail/mail.php",
-     url:"http://paisley.orgfree.com/mail.php",
+     //url:"http://paisley.orgfree.com/mail.php",
+     url : "http://eatpies.esy.es/mail.php",
       data: { msg: msg, phone: phone, email: email }
     });
 
