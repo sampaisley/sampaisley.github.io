@@ -1,0 +1,149 @@
+@import url(../css/normalize.min.css);
+*{
+  font-family:courier;
+  text-align:center;
+  padding:0;
+  margin:0;
+}
+body{
+  margin-left:31%;
+  margin-right:30%;
+  margin-top:25px;
+  background-color:#eee;
+  color:#230c01;
+  font-size:80%;
+}
+p{
+  line-height:.75;
+}
+h4{
+  font-weight:bold;
+}
+li{
+  list-style-type:none;
+  padding:.25em;
+}
+.bdrTop{
+  background-image:url("img/bdrDot2.gif");
+  background-repeat: repeat-x;
+  margin:1em;
+  font-size:1.3em !important;
+}
+.cloudImg{
+  margin-top:1em;
+}
+/*form-------------------------------*/
+#form{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:380px;
+  height:360px;
+  margin-left:-190px;
+  margin-top:-180px;
+  padding-top:10px;
+  border:10px solid #6bb7d5;
+  border-radius:15px;
+  background-color:rgba(128, 193, 226, 0.64);
+}
+ #contact{
+   cursor:pointer;
+ }
+ #but, #error{
+   margin-top:10px;
+   z-index:300;
+ }
+ #error{
+   display:block;
+   line-height: 1.42857143;
+   color:#ff0019;
+   background-color:#c4dcc3;
+   margin:10px 10%;
+   border-radius: 4px;
+ }
+ #but, #close{
+   margin-bottom:30px;
+   display: inline-block;
+   background-color:#c0c0c0;
+padding: 5px 10px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+transition: all .3s ease-out;
+&:hover{
+  border: 1px solid #a4a0a5;
+}
+ }
+
+ #close{
+   position:absolute;
+   right:8px;
+   float:right;
+   font-size:.9em;
+   margin-right:px;
+ }
+
+.hid{
+  display:none;
+}
+.vis{
+  display:block;
+  position:absolute;
+}
+.green{
+  color:#076731;
+  font-size:3em;
+}
+.fade{
+  opacity:.2;
+}
+
+#close:hover{
+  background-color:#a4c3cb;
+}
+input, textarea, label{
+  display:block;
+  margin:0 auto;
+  text-align:left !important;
+  width:200px;
+}
+label{
+
+}
+label, input,textarea{
+  padding:5px;
+}
+footer{
+  height:20px;
+  position:fixed;
+  bottom:0;
+  left:0;
+  background-color:rgba(1, 31, 23, 0.69);
+  width:100%;
+}
+
+@media (min-height: 550px) {
+  footer {
+    height:100px;
+    border-bottom:25px solid #0c1e18;
+  }
+  body{
+    margin-top:75px;
+    font-size:100%;
+   }
+   #close{
+     font-size:.7em;
+   }
+ }

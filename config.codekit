@@ -646,6 +646,21 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/indx.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 2,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/indx.scss",
+		"outputAbbreviatedPath": "\/stylesheets\/indx.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/print.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 2,
@@ -697,6 +712,14 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/stylesheets\/ie.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/stylesheets\/indx.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/stylesheets\/indx.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
