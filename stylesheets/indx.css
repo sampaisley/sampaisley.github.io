@@ -35,7 +35,7 @@ li {
 
 /* line 26, ../sass/indx.scss */
 .bdrTop {
-  background-image: url("img/bdrDot2.gif");
+  background-image: url("../img/bdrDot2.gif");
   background-repeat: repeat-x;
   margin: 1em;
   font-size: 1.3em !important;
@@ -66,14 +66,19 @@ li {
 #contact {
   cursor: pointer;
 }
+/* line 51, ../sass/indx.scss */
+#contact:hover {
+  text-decoration: underline;
+  color: #495e58;
+}
 
-/* line 52, ../sass/indx.scss */
+/* line 56, ../sass/indx.scss */
 #but, #error {
   margin-top: 10px;
   z-index: 300;
 }
 
-/* line 56, ../sass/indx.scss */
+/* line 60, ../sass/indx.scss */
 #error {
   display: block;
   line-height: 1.42857143;
@@ -83,7 +88,7 @@ li {
   border-radius: 4px;
 }
 
-/* line 64, ../sass/indx.scss */
+/* line 68, ../sass/indx.scss */
 #but, #close {
   margin-bottom: 30px;
   display: inline-block;
@@ -105,12 +110,12 @@ li {
   border-radius: 4px;
   transition: all .3s ease-out;
 }
-/* line 84, ../sass/indx.scss */
+/* line 88, ../sass/indx.scss */
 #but:hover, #close:hover {
   border: 1px solid #a4a0a5;
 }
 
-/* line 89, ../sass/indx.scss */
+/* line 93, ../sass/indx.scss */
 #close {
   position: absolute;
   right: 8px;
@@ -118,34 +123,34 @@ li {
   font-size: .9em;
 }
 
-/* line 97, ../sass/indx.scss */
+/* line 101, ../sass/indx.scss */
 .hid {
   display: none;
 }
 
-/* line 100, ../sass/indx.scss */
+/* line 104, ../sass/indx.scss */
 .vis {
   display: block;
   position: absolute;
 }
 
-/* line 104, ../sass/indx.scss */
+/* line 108, ../sass/indx.scss */
 .green {
   color: #076731;
   font-size: 3em;
 }
 
-/* line 108, ../sass/indx.scss */
+/* line 112, ../sass/indx.scss */
 .fade {
   opacity: .2;
 }
 
-/* line 112, ../sass/indx.scss */
+/* line 116, ../sass/indx.scss */
 #close:hover {
   background-color: #a4c3cb;
 }
 
-/* line 115, ../sass/indx.scss */
+/* line 119, ../sass/indx.scss */
 input, textarea, label {
   display: block;
   margin: 0 auto;
@@ -153,12 +158,12 @@ input, textarea, label {
   width: 200px;
 }
 
-/* line 124, ../sass/indx.scss */
+/* line 128, ../sass/indx.scss */
 label, input, textarea {
   padding: 5px;
 }
 
-/* line 127, ../sass/indx.scss */
+/* line 131, ../sass/indx.scss */
 footer {
   height: 20px;
   position: fixed;
@@ -169,19 +174,19 @@ footer {
 }
 
 @media (min-height: 550px) {
-  /* line 137, ../sass/indx.scss */
+  /* line 141, ../sass/indx.scss */
   footer {
     height: 100px;
     border-bottom: 25px solid #0c1e18;
   }
 
-  /* line 141, ../sass/indx.scss */
+  /* line 145, ../sass/indx.scss */
   body {
     margin-top: 75px;
     font-size: 100%;
   }
 
-  /* line 145, ../sass/indx.scss */
+  /* line 149, ../sass/indx.scss */
   #close {
     font-size: .7em;
   }

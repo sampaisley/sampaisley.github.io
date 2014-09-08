@@ -24,7 +24,7 @@ li{
   padding:.25em;
 }
 .bdrTop{
-  background-image:url("img/bdrDot2.gif");
+  background-image:url("../img/bdrDot2.gif");
   background-repeat: repeat-x;
   margin:1em;
   font-size:1.3em !important;
@@ -48,6 +48,10 @@ li{
 }
  #contact{
    cursor:pointer;
+   &:hover{
+    text-decoration: underline;
+    color: #495e58;
+   }
  }
  #but, #error{
    margin-top:10px;
