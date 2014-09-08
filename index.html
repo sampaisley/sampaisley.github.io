@@ -45,14 +45,14 @@
     position:absolute;
     top:50%;
     left:50%;
-    width:600px;
-    height:340px;
-    margin-left:-300px;
-    margin-top:-160px;
+    width:380px;
+    height:360px;
+    margin-left:-190px;
+    margin-top:-180px;
     padding-top:10px;
-    border:10px solid #495e58;
+    border:10px solid #6bb7d5;
     border-radius:15px;
-
+    background-color:rgba(128, 193, 226, 0.64);
   }
    #contact{
      cursor:pointer;
@@ -63,14 +63,49 @@
    }
    #error{
      display:block;
-     margin-top:-20px;
+
      color:#ff0019;
      background-color:#c4dcc3;
-     margin:-20px 30%;
+     margin:10px 10%;
 
    }
-   #but{
+   #but, #close{
      margin-bottom:30px;
+     display: inline-block;
+     background-color:#c0c0c0;
+padding: 5px 10px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+transition: all .3s ease-out;
+   }
+   #but:hover{
+     border: 1px solid #a4a0a5;
+   }
+   #close{
+     position:absolute;
+     right:8px;
+     float:right;
+     font-size:.7em;
+     margin-right:px;
+     /*padding:3px;
+
+     cursor:pointer;
+     color:#ff0019;
+     background-color:#c4dcc3;*/
+
    }
   .hid{
     display:none;
@@ -78,9 +113,6 @@
   .vis{
     display:block;
     position:absolute;
-
-
-  background-color:rgba(73, 94, 87, 0.64);
   }
   .green{
     color:#0a924a;
@@ -89,23 +121,18 @@
   .fade{
     opacity:.2;
   }
-  #close{
-    position:relative;
-    float:right;
-    font-size:.7em;
-    padding:3px;
-    margin-right:7px;
-    cursor:pointer;
-    color:#ff0019;
-    background-color:#c4dcc3;
+
+  #close:hover{
+    background-color:#a4c3cb;
   }
   input, textarea, label{
     display:block;
     margin:0 auto;
     text-align:left !important;
+    width:200px;
   }
   label{
-    margin-left:184px;
+
   }
   label, input,textarea{
     padding:5px;
@@ -118,6 +145,7 @@
     background-color:rgba(1, 31, 23, 0.69);
     width:100%;
   }
+
   @media (min-height: 550px) {
     footer {
       height:100px;
@@ -153,7 +181,7 @@
 <h4 id="contact">Contact <br>[requiers javascript]</h4>
 <br>
 <form id="form" class="hid">
-<span id="close">[close]</span>
+<span id="close">close</span>
     <label for="msg">Message</label>
     <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
     <textarea  name="msg"  rows="5"  placeholder="Type away..." id="msg" required autofocus></textarea><br />
@@ -163,7 +191,7 @@
 
     <label for="email">Email</label>
     <input type="email" placeholder="email" name="email" id="email" required>
-<button name="button" id="but">submit</button>
+<button name="button" id="but">SEND</button>
 <span id="error"></span>
 
 </form>
