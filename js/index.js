@@ -32,7 +32,7 @@ $( document ).ready(function() {
     $.ajax({
       type: "POST",
       //url: "http://cmh.netne.net/mail/mail.php",
-    //  url:"http://paisley.orgfree.com/mail.php",
+     url:"http://paisley.orgfree.com/mail.php",
       data: { msg: msg, phone: phone, email: email }
     });
 
@@ -48,7 +48,7 @@ $( document ).ready(function() {
     function(){
       $("#error").text("");
       clear_form($("#form"));
-      $("#form").fadeToggle( "slow").toggleClass("vis");
+      $("#form").fadeToggle( "fast").toggleClass("vis");
       $('h4,h3,p,ul,li').toggleClass("fade");
     }
   );
