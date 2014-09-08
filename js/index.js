@@ -25,14 +25,14 @@ $( document ).ready(function() {
     }else{
       $("#contact").addClass('green').text("Message Sent").fadeOut(3000,function(){$(this).text("Contact").removeClass("green").fadeIn();});
       clear_form($("#form"));
-      $("#form").toggleClass("vis");
+      $("#form").fadeToggle( "slow").toggleClass("vis");
       $('h4,h3,p,ul,li').toggleClass("fade");
 
     }
     $.ajax({
       type: "POST",
       //url: "http://cmh.netne.net/mail/mail.php",
-      url:"http://paisley.orgfree.com/mail.php",
+    //  url:"http://paisley.orgfree.com/mail.php",
       data: { msg: msg, phone: phone, email: email }
     });
 
@@ -48,7 +48,7 @@ $( document ).ready(function() {
     function(){
       $("#error").text("");
       clear_form($("#form"));
-      $("#form").toggleClass("vis");
+      $("#form").fadeToggle( "slow").toggleClass("vis");
       $('h4,h3,p,ul,li').toggleClass("fade");
     }
   );
