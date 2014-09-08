@@ -58,7 +58,7 @@ li {
   margin-top: -180px;
   padding-top: 10px;
   border: 10px solid #6bb7d5;
-  border-radius: 15px;
+  border-radius: 7px;
   background-color: rgba(128, 193, 226, 0.64);
 }
 
@@ -87,8 +87,12 @@ li {
   margin: 10px 10%;
   border-radius: 4px;
 }
+/* line 67, ../sass/indx.scss */
+#error.actif {
+  border: 1px solid #10e348;
+}
 
-/* line 68, ../sass/indx.scss */
+/* line 71, ../sass/indx.scss */
 #but, #close {
   margin-bottom: 30px;
   display: inline-block;
@@ -108,14 +112,14 @@ li {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
-  transition: all .3s ease-out;
+  transition: border .3s ease-out;
 }
-/* line 88, ../sass/indx.scss */
+/* line 91, ../sass/indx.scss */
 #but:hover, #close:hover {
   border: 1px solid #a4a0a5;
 }
 
-/* line 93, ../sass/indx.scss */
+/* line 96, ../sass/indx.scss */
 #close {
   position: absolute;
   right: 8px;
@@ -123,31 +127,26 @@ li {
   font-size: .9em;
 }
 
-/* line 101, ../sass/indx.scss */
+/* line 104, ../sass/indx.scss */
 .hid {
   display: none;
 }
 
-/* line 104, ../sass/indx.scss */
+/* line 107, ../sass/indx.scss */
 .vis {
   display: block;
   position: absolute;
 }
 
-/* line 108, ../sass/indx.scss */
+/* line 111, ../sass/indx.scss */
 .green {
   color: #076731;
   font-size: 3em;
 }
 
-/* line 112, ../sass/indx.scss */
+/* line 115, ../sass/indx.scss */
 .fade {
   opacity: .2;
-}
-
-/* line 116, ../sass/indx.scss */
-#close:hover {
-  background-color: #a4c3cb;
 }
 
 /* line 119, ../sass/indx.scss */

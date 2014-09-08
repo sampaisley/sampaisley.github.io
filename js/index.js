@@ -20,7 +20,7 @@ $( document ).ready(function() {
     phone = $("#phone").val(),
      email = $("#email").val();
     if(!msg || !phone || isNaN(phone) || !email || !isValidEmailAddress(email)){
-      $("#error").text("Check Your Input Values.");
+      $("#error").text("Check Your Input Values.").addClass("actif");
       return;
     }else{
       $("#contact").addClass('green').text("Message Sent").fadeOut(3000,function(){$(this).text("Contact").removeClass("green").fadeIn();});
@@ -47,7 +47,7 @@ $( document ).ready(function() {
   );
   $("#contact, #close").click(
     function(){
-      $("#error").text("");
+      $("#error").text("").removeClass("actif");
       clear_form($("#form"));
       $("#form").fadeToggle( "fast").toggleClass("vis");
       $('h4,h3,p,ul,li').toggleClass("fade");
