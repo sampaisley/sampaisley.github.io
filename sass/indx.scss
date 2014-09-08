@@ -48,8 +48,9 @@ li{
 }
  #contact{
    cursor:pointer;
+   transition: color .2s ease-out;
    &:hover{
-    text-decoration: underline;
+
     color: #495e58;
    }
  }
@@ -114,6 +115,7 @@ li{
 }
 .fade{
   opacity:.2;
+
 }
 
 input, textarea, label{
