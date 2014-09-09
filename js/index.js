@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  var opeen = true;
   $("#contact").html("Contact");
   function clear_form(ele) {
         $(ele).find(':input').each(function() {
@@ -26,14 +27,16 @@ $( document ).ready(function() {
       $("#contact").addClass('green').text("Message Sent").fadeOut(3000,function(){$(this).text("Contact").removeClass("green").fadeIn();});
       clear_form($("#form"));
       $("#form").fadeToggle( "slow").toggleClass("vis");
-      $('h4,h3,p,ul,li').toggleClass("fade");
+      //$('h4,h3,p,ul,li').toggleClass("fade");
+      $('h4,h3,p,ul,li').fadeTo("slow",1);
+      opeen= !opeen;
 
     }
     $.ajax({
       type: "POST",
       //url: "http://cmh.netne.net/mail/mail.php",
      //url:"http://paisley.orgfree.com/mail.php",
-     url : "http://eatpies.esy.es/mail.php",
+       url : "http://eatpies.esy.es/mail.php",
       data: { msg: msg, phone: phone, email: email }
     });
 
@@ -55,7 +58,13 @@ $( document ).ready(function() {
         $("#error").text("").removeClass("actif");
         clear_form($("#form"));
         $("#form").fadeToggle( "slow").toggleClass("vis");
-        $('h4,h3,p,ul,li').toggleClass("fade");
+        // $('h4,h3,p,ul,li').toggleClass("fade");
+        if(opeen){
+          $('h4,h3,p,ul,li').fadeTo("slow",0.2);
+        }else {
+          $('h4,h3,p,ul,li').fadeTo("slow",1);
+        }
+        opeen =! opeen;
       }
     );
 
