@@ -40,15 +40,11 @@ $(document).ready(function() {
       type: "POST",
       crossDomain: true,
 	  dataType: 'jsonp',
-      //url: "http://cmh.netne.net/mail/mail.php",
-      //url:"http://paisley.orgfree.com/mail.php",
       url: "http://cmh.netne.net/mail.php",
-      data: {
-        msg: msg,
-        phone: phone,
-        email: email
-      },
 	  success: function (d) {
+		   msg: msg;
+        phone: phone;
+        email: email;
              console.log('ho ho  ' + d)
         },
 	  error: function (err) {
