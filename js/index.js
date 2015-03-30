@@ -37,18 +37,18 @@ $(document).ready(function() {
 
     }
     $.ajax({
+      type: "POST",
       crossDomain: true,
 	  dataType: 'jsonp',
+      //url: "http://cmh.netne.net/mail/mail.php",
+      //url:"http://paisley.orgfree.com/mail.php",
       url: "http://cmh.netne.net/mail.php",
       data: {
         msg: msg,
         phone: phone,
         email: email
-      },
-	  error: function(e){console.log("bollox " + e)}
-    }).done(function( msg ) {
-    alert( "Data Saved: " + msg );
-  });
+      }
+    });
 
   }
 
