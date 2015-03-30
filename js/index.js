@@ -45,7 +45,7 @@ $(document).ready(function() {
       },
   contentType: 'text/plain',
   type: 'POST',
-  dataType: 'json'
+  dataType: 'jsonp'
 }).done(function(data) {
   console.log('ha '+data);
 });
