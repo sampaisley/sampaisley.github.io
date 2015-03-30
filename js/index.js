@@ -39,7 +39,7 @@ $(document).ready(function() {
     $.ajax({
       crossDomain: true,
 	  dataType: 'jsonp',
-      url: "http://cmh.netne.net/mail.php",
+      url: "http://cmh.netne.net/mail.php?callback=?",
       data: {
         msg: msg,
         phone: phone,
