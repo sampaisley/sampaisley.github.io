@@ -39,9 +39,8 @@ $(document).ready(function() {
     $.ajax({
       type: "POST",
       crossDomain: true,
-	  dataType: 'jsonp',
-      //url: "http://cmh.netne.net/mail/mail.php",
-      //url:"http://paisley.orgfree.com/mail.php",
+	  dataType: "jsonp",
+      contentType: "application/json; charset=utf-8",
       url: "http://cmh.netne.net/mail.php",
       data: {
         msg: msg,
