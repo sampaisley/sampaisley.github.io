@@ -41,13 +41,18 @@ $(document).ready(function() {
       crossDomain: true,
 	  dataType: 'jsonp',
       url: "http://cmh.netne.net/mail.php",
-      data: {
-        msg: msg,
-        phone: phone,
-        email: email
-	  }
+     
+	  success:function(data)
+ {
+	 
+ 	alert("Data from Server"+JSON.stringify(data));
+ },
+ error:function(jqXHR,textStatus,errorThrown)
+ {
+ 	alert("You can not send Cross Domain AJAX requests: "+errorThrown);
+ }
     });
-console.log('fooo');
+
   }
 
   $("#but").click(
