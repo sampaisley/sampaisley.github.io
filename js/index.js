@@ -52,7 +52,7 @@ $(document).ready(function() {
              console.log('ho ho  ' + data)
         },
 	  error: function (err) {
-            console.log('shit ' + err[1])// handle your error logic here
+            console.log('shittt ' + err.split(','))// handle your error logic here
         }
     });
 
