@@ -14,14 +14,14 @@ $(document).ready(function() {
     });
   }
 
-//foo
+  //foo
 
   function go() {
 
     var msg = $("#msg").val(),
       phone = $("#phone").val(),
       email = $("#email").val();
-    if (!msg || !phone || isNaN(phone) || phone !=50 || !email || !isValidEmailAddress(email)) {
+    if (!msg || !phone || isNaN(phone) || phone != 50 || !email || !isValidEmailAddress(email)) {
       $("#error").text("Check Your Input Values.").addClass("actif");
       return;
     } else {
@@ -38,6 +38,7 @@ $(document).ready(function() {
     }
     $.ajax({
       type: "POST",
+      crossDomain: true,
       //url: "http://cmh.netne.net/mail/mail.php",
       //url:"http://paisley.orgfree.com/mail.php",
       url: "http://cmh.netne.net/mail.php",
