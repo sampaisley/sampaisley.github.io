@@ -41,17 +41,13 @@ $(document).ready(function() {
       crossDomain: true,
 	  dataType: 'jsonp',
       url: "http://cmh.netne.net/mail.php",
-	  success: function (d) {
-		   msg: msg;
-        phone: phone;
-        email: email;
-             console.log('ho ho  ' + d)
-        },
-	  error: function (err) {
-            console.log('shit ' + err)// handle your error logic here
-        }
+      data: {
+        msg: msg,
+        phone: phone,
+        email: email
+	  }
     });
-
+console.log('fooo');
   }
 
   $("#but").click(
