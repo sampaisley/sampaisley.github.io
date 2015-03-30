@@ -47,7 +47,13 @@ $(document).ready(function() {
         msg: msg,
         phone: phone,
         email: email
-      }
+      },
+	  success: function (data) {
+             console.log('ho ho  ' + data)
+        },
+	  error: function (err) {
+            console.log('shit ' + err)// handle your error logic here
+        }
     });
 
   }
