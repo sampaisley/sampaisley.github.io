@@ -39,14 +39,16 @@ $(document).ready(function() {
     $.ajax({
       crossDomain: true,
 	  dataType: 'jsonp',
-      url: "http://cmh.netne.net/mail.php?callback=?",
+      url: "http://cmh.netne.net/mail.php",
       data: {
         msg: msg,
         phone: phone,
         email: email
       },
 	  error: function(e){console.log("bollox " + e)}
-    });
+    }).done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
 
   }
 
