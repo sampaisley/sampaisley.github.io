@@ -19,6 +19,7 @@ body{
   color:#230c01;
   font-size:80%;
 }
+
 p{
   line-height:.75;
 }
@@ -54,6 +55,7 @@ li{
     @include background-image(linear-gradient(to bottom , rgba(128, 193, 226, 0.54) , rgba(97, 189, 229, 0.44)));
 
 }
+
  #contact{
    cursor:pointer;
    transition: color .2s ease-out;
