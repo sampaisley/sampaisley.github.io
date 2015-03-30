@@ -44,7 +44,8 @@ $(document).ready(function() {
         msg: msg,
         phone: phone,
         email: email
-      }
+      },
+	  error: function(e){console.log("bollox " + e)}
     });
 
   }
