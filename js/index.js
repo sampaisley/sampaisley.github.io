@@ -36,19 +36,7 @@ $(document).ready(function() {
       opeen = !opeen;
 
     }
-	$.ajax({
-  url: 'http://cmh.netne.net/mail/mail.php',
-  data: {
-        msg: msg,
-        phone: phone,
-        email: email
-      },
-  type: 'POST',
-  dataType: 'jsonp'
-}).done(function(data) {
-  console.log('ha '+data);
-});
-   /* $.ajax({
+    $.ajax({
       type: "POST",
       crossDomain: true,
 	  dataType: 'jsonp',
@@ -61,7 +49,7 @@ $(document).ready(function() {
         email: email
       }
     });
-*/
+
   }
 
   $("#but").click(
