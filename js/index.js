@@ -48,11 +48,11 @@ $(document).ready(function() {
         phone: phone,
         email: email
       },
-	  success: function (data) {
-             console.log('ho ho  ' + data)
+	  success: function (d) {
+             console.log('ho ho  ' + d)
         },
 	  error: function (err) {
-            console.log('shittt ' + err.split(','))// handle your error logic here
+            console.log('shit ' + err)// handle your error logic here
         }
     });
 
