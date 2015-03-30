@@ -43,7 +43,6 @@ $(document).ready(function() {
         phone: phone,
         email: email
       },
-  contentType: 'text/plain',
   type: 'POST',
   dataType: 'jsonp'
 }).done(function(data) {
