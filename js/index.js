@@ -37,16 +37,24 @@ $(document).ready(function() {
 
     }
     $.ajax({
-      type: "POST",
+      url: "http://petalski.bezoka.com/mail.php",
       crossDomain: true,
       dataType: "jsonp",
-      contentType: "application/json; charset=utf-8",
-      url: "http://petalski.bezoka.com/mail.php",
+      contentType: "json",
       data: {
         msg: msg,
         phone: phone,
         email: email
-      }
+      },
+	  success: function(responseData, textStatus, jqXHR) 
+    {
+        console.log("the response is", responseData);
+    },
+    error: function (responseData, textStatus, errorThrown) 
+    {
+        console.warn(responseData, textStatus, errorThrown);
+        alert('JSONP failed - ' + textStatus);
+    }
     });
 
   }
