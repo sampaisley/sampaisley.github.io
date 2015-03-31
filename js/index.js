@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log('two');
+	console.log('two.1');
   var opeen = true;
   $("#contact").html("Contact");
 
@@ -38,9 +38,9 @@ $(document).ready(function() {
 
     }
     $.ajax({
+		type: "POST",
       url: "http://petalski.bezoka.com/mail.php",
       crossDomain: true,
-      dataType: "json",
       data: {
         msg: msg,
         phone: phone,
