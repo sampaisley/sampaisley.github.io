@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     }
     $.ajax({
-      url: "http://petalski.bezoka.com/mail.php?jsoncallback=?",
+      url: "http://petalski.bezoka.com/mail.php?jsoncallback=data",
       crossDomain: true,
       dataType: "jsonp",
 	  jsonp:    "jsoncallback",
