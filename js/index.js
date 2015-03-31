@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log('one.4');
+	console.log('one.5');
   var opeen = true;
   $("#contact").html("Contact");
 
@@ -38,10 +38,9 @@ $(document).ready(function() {
 
     }
     $.ajax({
-      url: "http://petalski.bezoka.com/mail.php?jsoncallback=?",
+      url: "http://petalski.bezoka.com/mail.php",
       crossDomain: true,
       dataType: "jsonp",
-	  jsonp:    "jsoncallback",
 	  jsonpCallback:hdater,
       contentType: "json",
 	  success: function(responseData, textStatus, jqXHR) 
