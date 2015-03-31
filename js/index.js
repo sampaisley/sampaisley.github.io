@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log('one');
+	console.log('one.2');
   var opeen = true;
   $("#contact").html("Contact");
 
@@ -56,7 +56,8 @@ $(document).ready(function() {
 	function hdater(data){
 		data={msg: msg,
         phone: phone,
-        email: email}
+        email: email};
+		alert("foo"+ data);
 	}
 
   }
