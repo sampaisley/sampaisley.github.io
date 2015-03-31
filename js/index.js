@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log('one.7');
+	console.log('two');
   var opeen = true;
   $("#contact").html("Contact");
 
@@ -37,29 +37,25 @@ $(document).ready(function() {
       opeen = !opeen;
 
     }
-	function hdater(data){
-		data={msg: msg,
-        phone: phone,
-        email: email};
-	}
     $.ajax({
       url: "http://petalski.bezoka.com/mail.php",
       crossDomain: true,
-      dataType: "jsonp",
-	  jsonp: false,
-	  jsonpCallback:"hdater",
-      contentType: "json",
+      dataType: "json",
+      data: {
+        msg: msg,
+        phone: phone,
+        email: email
+      },
 	  success: function(responseData, textStatus, jqXHR) 
     {
         console.log("the response is", responseData);
     },
     error: function (responseData, textStatus, errorThrown) 
     {
-        console.log(responseData, textStatus, errorThrown);
-        alert('JSONP failed - ' + textStatus+ '  ' +errorThrown);
+        console.warn(responseData, textStatus, errorThrown);
+        alert('JSONP failed - ' + textStatus);
     }
     });
-	
 
   }
 
