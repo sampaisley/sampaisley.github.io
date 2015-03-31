@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log('one.3');
+	console.log('one.4');
   var opeen = true;
   $("#contact").html("Contact");
 
@@ -58,7 +58,6 @@ $(document).ready(function() {
 		data={msg: msg,
         phone: phone,
         email: email};
-		con
 	}
 
   }
