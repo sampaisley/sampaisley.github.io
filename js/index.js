@@ -39,9 +39,9 @@ $(document).ready(function() {
     $.ajax({
       type: "POST",
       crossDomain: true,
-	  dataType: "jsonp",
+      dataType: "jsonp",
       contentType: "application/json; charset=utf-8",
-      url: "http://cmh.netne.net/mail.php",
+      url: "http://petalski.bezoka.com/mail.php",
       data: {
         msg: msg,
         phone: phone,
