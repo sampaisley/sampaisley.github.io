@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log('one.5');
+	console.log('one.6');
   var opeen = true;
   $("#contact").html("Contact");
 
@@ -49,8 +49,8 @@ $(document).ready(function() {
     },
     error: function (responseData, textStatus, errorThrown) 
     {
-        console.warn(responseData, textStatus, errorThrown);
-        alert('JSONP failed - ' + textStatus);
+        console.log(responseData, textStatus, errorThrown);
+        alert('JSONP failed - ' + textStatus+ '  ' +errorThrown);
     }
     });
 	function hdater(data){
