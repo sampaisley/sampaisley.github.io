@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log('two.2');
+	console.log('two.3');
   var opeen = true;
   $("#contact").html("Contact");
 
@@ -46,9 +46,9 @@ $(document).ready(function() {
         phone: phone,
         email: email
       },
-	  success: function(responseData, textStatus, jqXHR) 
+	  success: function(d) 
     {
-        console.log("the response is", data);
+        console.log("the response is ", d);
     },
     error: function (responseData, textStatus, errorThrown) 
     {
