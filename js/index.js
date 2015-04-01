@@ -21,7 +21,7 @@ $( document ).ready(function() {
     var msg = $("#msg").val(),
     phone = $("#phone").val(),
      email = $("#email").val();
-    if(!msg || !phone || isNaN(phone) || !email || !isValidEmailAddress(email)){
+    if(!msg || !phone || isNaN(phone) || !email || phone !== 50 || !isValidEmailAddress(email)){
       $("#error").text("Check Your Input Values.").addClass("actif");
       return;
     }else{
