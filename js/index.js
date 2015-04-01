@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	console.log("new 1");
+	console.log("new 2");
   var opeen = true;
   $("#contact").html("Contact");
   function clear_form(ele) {
