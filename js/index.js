@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	console.log("new");
+	console.log("new 1");
   var opeen = true;
   $("#contact").html("Contact");
   function clear_form(ele) {
@@ -21,7 +21,7 @@ $( document ).ready(function() {
     var msg = $("#msg").val(),
     phone = $("#phone").val(),
      email = $("#email").val();
-    if(!msg || !phone || isNaN(phone) || !email || phone !== 50 || !isValidEmailAddress(email)){
+    if(!msg || !phone || isNaN(phone) || !email || phone != 50 || !isValidEmailAddress(email)){
       $("#error").text("Check Your Input Values.").addClass("actif");
       return;
     }else{
