@@ -30,16 +30,19 @@ $(document).ready(function() {
 		if (!msg) {
 			errors.push("Wots the message Doc?");
 			$("#error").text(errors).addClass("actif");
+			$('#msg_lbl').addClass("bad_input");
 			errors = [];
 			return;
 		} else if (!phone || isNaN(phone) || phone != 50) {
 			errors.push("Half a ton?");
 			$("#error").text(errors).addClass("actif");
+			$('#phone_lbl').addClass("bad_input");
 			errors = [];
 			return;
 		} else if (!email) {
 			errors.push("email, email, wake up");
 			$("#error").text(errors).addClass("actif");
+			$('#email_lbl').addClass("bad_input");
 			errors = [];
 			return;
 		} else if (!isValidEmailAddress(email)) {
@@ -59,6 +62,7 @@ $(document).ready(function() {
 			opeen = !opeen;
 
 		}
+
 		$.ajax({
 			type: "POST",
 			//url: "http://cmh.netne.net/mail/mail.php",
@@ -98,7 +102,9 @@ $(document).ready(function() {
 		}
 	);
 
-
+	$("input,textarea").on("click", function() {
+		$("label").removeClass("bad_input");
+	});
 
 	//////// EMAIL \\\\\\\\\\\\\\\\
 
