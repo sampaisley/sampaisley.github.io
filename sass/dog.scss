@@ -166,7 +166,9 @@ ul{
   position:absolute;
 }
 .green{
-  color:#076731;
+  color: rgba(250, 238, 6, 0.98);
+  opacity: .7;
+  text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
   font-size:3em;
 }
 .fade{
