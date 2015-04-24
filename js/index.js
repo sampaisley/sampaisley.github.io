@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("new 2");
   var opeen = true;
   $("#contact").html("Contact");
 
