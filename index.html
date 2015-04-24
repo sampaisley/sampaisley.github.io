@@ -1,53 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>samPaisley</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/indx.css">
+	<link rel="stylesheet" href="stylesheets/dog.css">
+<meta charset="UTF-8">
+<title><PAISLEY></PAISLEY></title>
 
 </head>
 <body>
-<h3>Sam Paisley</h3>
-<p class="bdrTop">&nbsp;</p>
+  	<div id="head"><h1 id="tit">SAM PAISLEY</h1>
+      <h4>LANGUAGES SPOKEN</h4>
+      <br>
+        <ul>
+          <li>JAVASCRIPT</li>
+          <li>CSS3</li>
+          <li>HTML5</li>
+          <li>PHP</li>
+          <li>SPANISH</li>
+          <li>MYSQL</li>
+          <li>ENGLISH</li>
 
+        </ul>
+        <h4 id="contact"><span>CONTACT</span><br>[requiers javascript]</h4>
+        <br>
+        <form id="form" class="hid">
+        <span id="close">Close</span>
+            <label for="msg">Message</label>
+            <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
+            <textarea  name="msg"  rows="5"  placeholder="Type away..." id="msg" required autofocus></textarea><br />
 
-<h4>Languages Spoken</h4>
-<br>
-  <ul>
-    <li>JAVASCRIPT</li>
-    <li>CSS3</li>
-    <li>HTML5</li>
-    <li>PHP</li>
-    <li>SPANISH</li>
-    <li>MYSQL</li>
-    <li>ENGLISH</li>
+            <label for="phone">1/2 of a hundred?</label>
+            <input type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
 
-  </ul>
+            <label for="email">Email</label>
+            <input type="email" placeholder="email" name="email" id="email" required>
+        <button name="button" id="but">Send</button>
+        <span id="error"></span>
 
-<p class="bdrTop">&nbsp;</p>
+        </form>
+    </div>
 
-<h4 id="contact"><span>Contact</span><br>[requiers javascript]</h4>
-<br>
-<form id="form" class="hid">
-<span id="close">close</span>
-    <label for="msg">Message</label>
-    <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
-    <textarea  name="msg"  rows="5"  placeholder="Type away..." id="msg" required autofocus></textarea><br />
-
-    <label for="phone">1/2 of a hundred?</label>
-    <input type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
-
-    <label for="email">Email</label>
-    <input type="email" placeholder="email" name="email" id="email" required>
-<button name="button" id="but">SEND</button>
-<span id="error"></span>
-
-</form>
-
-<footer><p>&nbsp;
-  
-</p></footer>
-<script src="js/vendor/jquery.js"></script>
-<script src="js/index.js"></script>
-</body>
-</html>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/index.js"></script>
+    </body>
+    </html>

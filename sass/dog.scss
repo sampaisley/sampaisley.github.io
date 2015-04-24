@@ -31,15 +31,16 @@ html {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size:1.5em;
+  font-size:2em;
+  margin-bottom: .3em;
   color: rgba(250, 238, 6, 0.98);
   opacity: .7;
   text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
   @include media(">=tablet") {
-    font-size:3em;
+    font-size:4em;
   }
   @include media(">=desktop") {
-    font-size:5.5em;
+    font-size:6em;
   }
 
 }
@@ -48,6 +49,8 @@ h4{
   color: rgba(250, 238, 6, 0.98);
   font-size:1em;
   font-family: 'Raleway', sans-serif;
+  /* font-variant: small-caps; */
+  letter-spacing: 0.0625em;
   text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
   opacity: .7;
   @include media(">=tablet") {
@@ -97,10 +100,9 @@ ul{
    border-top: 2px solid rgba(250, 238, 6, 0.98);
    margin-top: 1em;
    padding: 1em;
-   transition: color .2s ease-out;
+   transition: background-color .2s ease-out;
    &:hover{
-
-    color: #495e58;
+     background-color: rgba(236, 82, 16, 0.68);
    }
  }
  #but, #error{
@@ -114,6 +116,7 @@ ul{
    background-color:#c4dcc3;
    margin:10px 10%;
    border-radius: 4px;
+   text-align: center;
    &.actif{
    border: 1px solid #10e348;
  }
