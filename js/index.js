@@ -40,7 +40,7 @@ $(document).ready(function() {
 			errors = [];
 			return;
 		} else if (!email) {
-			errors.push("email, email, wake up!");
+			errors.push("Hombre! Email! Wake up!");
 			$("#error").text(errors).addClass("actif");
 			$('#email_lbl').addClass("bad_input");
 			errors = [];
