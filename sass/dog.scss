@@ -2,7 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 
 $color1 : #1f0d3b;
-
+$background_color_1 : #E55D00;
+$border_color_1:#4894b8;
 *{
   border:0;
   padding:0;
@@ -11,7 +12,7 @@ $color1 : #1f0d3b;
 
 
 html {
-  background: url(https://farm4.staticflickr.com/3809/14291165735_bba64c5e4c_o.jpg) no-repeat center center fixed;
+  background: url(../img/french_dog.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -88,7 +89,7 @@ ul{
   padding-top:10px;
   border:10px solid #4894B8;
   border-radius:7px;
-  background-color:#E55D00;
+  background-color:$background_color_1;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
     //@include background-image(linear-gradient(to bottom , rgba(128, 193, 226, 0.54) , rgba(97, 189, 229, 0.44)));
@@ -128,7 +129,7 @@ ul{
    padding: 5px 10px;
    margin-bottom: 0;
    font-size: 14px;
-   font-weight: 400;
+   font-weight: 100;
    line-height: 1.42857143;
    text-align: center;
    white-space: nowrap;
@@ -142,7 +143,7 @@ ul{
    border-radius: 4px;
    transition: border .3s ease-out;
    &:hover{
-     border: 1px solid #a4a0a5;
+     border: 1px solid $border_color_1;
    }
  }
 
@@ -180,7 +181,10 @@ input, textarea, label{
   display:block;
   margin:0 auto;
   text-align:left !important;
-  width:200px;
+  width:175px;
+  @include media(">=tablet") {
+    width:210px
+  }
 }
 label{
 padding: 10px;
