@@ -35,7 +35,7 @@ html {
   font-size:2em;
   margin-bottom: .3em;
   color: rgba(250, 238, 6, 0.98);
-  opacity: .7;
+  opacity: .9;
   text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
   @include media(">=tablet") {
     font-size:4em;
@@ -53,7 +53,7 @@ h4{
   /* font-variant: small-caps; */
   letter-spacing: 0.0625em;
   text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
-  opacity: .7;
+  opacity: .9;
   @include media(">=tablet") {
     font-size:1.5em;
   }
@@ -66,7 +66,9 @@ ul{
   text-align: center;
   font-family: 'Raleway', sans-serif;
   color: rgba(250, 238, 6, 0.98);
-  opacity: .7;
+  opacity: .9;
+  border-bottom: 2px solid rgba(250, 238, 6, 0.98);
+  padding-bottom: 1.75em;
   text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
   li{
     padding: 4px;
@@ -98,9 +100,8 @@ ul{
 
  #contact{
    cursor:pointer;
-   border-top: 2px solid rgba(250, 238, 6, 0.98);
-   margin-top: 1em;
-   padding: 1em;
+   //border-top: 2px solid rgba(250, 238, 6, 0.98);
+   padding: .5em;
    transition: background-color .2s ease-out;
    &:hover{
      background-color: rgba(236, 82, 16, 0.68);
@@ -166,12 +167,7 @@ ul{
   display:block;
   position:absolute;
 }
-.green{
-  color: rgba(250, 238, 6, 0.98);
-  opacity: .7;
-  text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
-  font-size:3em;
-}
+
 .fade{
   opacity:.2;
 
@@ -189,7 +185,7 @@ input, textarea, label{
 label{
 padding: 10px;
 color: rgba(250, 238, 6, 0.98);
-opacity: .7;
+opacity: .9;
 background-color: #0D1117;
 border-bottom:5px solid #0D1117;
 &.bad_input{
