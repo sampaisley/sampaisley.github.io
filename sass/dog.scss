@@ -1,7 +1,7 @@
 @import "media-queries";
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 
-$color1 : #1f0d3b;
+$txtShadColor : #1f0d3b;
 $background_color_1 : #E55D00;
 $border_color_1:#4894b8;
 *{
@@ -12,11 +12,11 @@ $border_color_1:#4894b8;
 
 
 html {
-/*   background: url(../img/french_dog_opt.jpg) no-repeat center center fixed;
+ background: url(../img/french_dog_opt.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover; */
+background-size: cover;
 }
 
 #head{
@@ -43,7 +43,7 @@ background-size: cover; */
   margin-bottom: .3em;
   color: rgba(250, 238, 6, 0.98);
   opacity: .9;
-  text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
+  text-shadow: 1px 1px 14px $txtShadColor;
   @include media(">=tablet") {
     font-size:4em;
   }
@@ -58,7 +58,7 @@ h4{
   font-size:1em;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.0625em;
-  text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
+  text-shadow: 1px 1px 14px $txtShadColor;
   opacity: .9;
   @include media(">=tablet") {
     font-size:1.5em;
@@ -75,9 +75,18 @@ ul{
   opacity: .9;
   border-bottom: 2px solid rgba(250, 238, 6, 0.98);
   padding-bottom: 1.75em;
-  text-shadow: 0 0 150px $color1, 0 0 60px $color1, 0 0 10px $color1;
+  text-shadow: 1px 1px 14px $txtShadColor;
+  @include media(">=desktop") {
+  width: 618px;
+  margin: 0 auto;
+}
   li{
     padding: 4px;
+    font-weight: 700;
+    font-size:.75em;
+    @include media(">=tablet") {
+      font-size:1em;
+    }
   }
 }
 
