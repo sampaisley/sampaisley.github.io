@@ -24,6 +24,7 @@ $(document).ready(function() {
 
   function changeText() {
     $("#contact").text("CONTACT");
+    window.clearTimeout(timeoutID);
   }
 
   function go() {
@@ -42,7 +43,7 @@ $(document).ready(function() {
       $('#msg_lbl').addClass("bad_input");
       errors = [];
       return;
-    } else if (!phone || isNaN(phone) || phone != 50) {
+    } else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
       errors.push("Half a ton?");
       $("#error").text(errors).addClass("actif");
       $('#phone_lbl').addClass("bad_input");
