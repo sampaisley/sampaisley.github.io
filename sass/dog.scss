@@ -21,15 +21,17 @@ background-size: cover;
 
 
 #inner {
-    width: 57%;
     margin: 0 auto;
     margin-top: 15%;
-    @include media(">=desktop") {
-      width: 61%;
-    }
+    width: 60%;
     @include media(">=tablet") {
       margin-top: 10%;
+      width: 418px;
     }
+
+     @include media(">=desktop") {
+      width: 618px;
+     }
 }
 #tit{
   position: relative;
@@ -71,7 +73,6 @@ ul{
   font-family: 'Raleway', sans-serif;
   color: rgba(250, 238, 6, 0.98);
   opacity: .9;
-  border-bottom: 2px solid rgba(250, 238, 6, 0.98);
   padding-bottom: 1.75em;
   text-shadow: 1px 1px 14px $txtShadColor;
   width: 60%;
@@ -117,6 +118,7 @@ ul{
    cursor:pointer;
    padding: .5em;
    transition: background-color .2s ease-out;
+   border-top: 2px solid rgba(250, 238, 6, 0.98);
    &:hover{
      background-color: rgba(236, 82, 16, 0.68);
    }
