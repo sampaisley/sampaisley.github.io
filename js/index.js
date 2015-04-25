@@ -75,7 +75,7 @@ $(document).ready(function() {
       type: "POST",
       //url: "http://cmh.netne.net/mail/mail.php",
       //url:"http://paisley.orgfree.com/mail.php",
-      //  url: "http://cmh.netne.net/mail.php",
+      url: "http://cmh.netne.net/mail.php",
       data: {
         msg: msg,
         phone: phone,
