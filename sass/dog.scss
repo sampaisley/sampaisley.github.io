@@ -19,18 +19,16 @@ html {
 background-size: cover;
 }
 
-#head{
-  width:100%;
-}
+
 #inner {
     width: 57%;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 15%;
     @include media(">=desktop") {
       width: 61%;
     }
     @include media(">=tablet") {
-      margin-top: 15%;
+      margin-top: 10%;
     }
 }
 #tit{
@@ -76,10 +74,14 @@ ul{
   border-bottom: 2px solid rgba(250, 238, 6, 0.98);
   padding-bottom: 1.75em;
   text-shadow: 1px 1px 14px $txtShadColor;
-  @include media(">=desktop") {
-  width: 618px;
+  width: 60%;
   margin: 0 auto;
-}
+  @include media(">=tablet") {
+   width: 418px;
+  }
+   @include media(">=desktop") {
+    width: 618px;
+   }
   li{
     padding: 4px;
     font-weight: 700;
