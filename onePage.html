@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ONE PAGE</title>
+  <style>
+  *{
+    padding:0;
+    margin:0;
+  }
+  div{
+    min-height:100%;
+  }
+  body {
+    overflow-y:hidden;
+}
+  #one{
+    background-color: #d57979;
+    position: absolute;
+    width: 100%;
+
+  }
+  #two{
+    background-color: #9bc495;
+    position: absolute;
+    top:100%;
+    width: 100%;
+  }
+  </style>
+</head>
+<body>
+  <div id="one">
+    <a name="one"></a>
+    <a href="#two">link to two</a>
+      <h1>ONE</h1>
+    </div>
+    <div id="two">
+      <a name="two"></a>
+      <a href="#one">link to one</a>
+      <form id="form" class="hid">
+  			<span id="close">Close</span>
+  			<label for="msg" id="msg_lbl">Message</label>
+  			<!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
+  			<textarea  name="msg"  rows="5"  placeholder="Type away..." id="msg" required></textarea><br />
+
+  			<label for="phone" id="phone_lbl">1/2 of a hundred?</label>
+  			<input type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
+
+  			<label for="email" id="email_lbl">Email</label>
+  			<input type="email" placeholder="email" name="email" id="email" required>
+  			<button name="button" id="but">Send</button>
+  			<span id="error"></span>
+
+  		</form>
+    </div>
+  </body>
+  </html>
