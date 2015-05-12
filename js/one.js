@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 	var errors = [],
 		timeoutID;
+	//$('#one').toggleClass('hid');
 	$("#contact").html("<a href='#two'>CONTACT</a>").click(
 		function() {
 			$('#one, #two').toggleClass('hid');

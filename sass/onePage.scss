@@ -31,16 +31,27 @@ background-size: cover;
 body {
 
 }
-#one{
+
+#one,#two{
+opacity: 1;
+visibility:visible;
+  &.hid{
+    visibility:hidden;
+ opacity:0;
+ transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  }
 
 
 
 }
-#two{
-
-  &.hid{
-    display: none;
-  }
+.vis{
+  visibility:visible;
+ opacity:1;
+ transition: opacity .25s ease-in-out;
+-moz-transition: opacity .25s ease-in-out;
+-webkit-transition: opacity .25s ease-in-out;
 }
 /* --------------------------------------- */
 #tit{
