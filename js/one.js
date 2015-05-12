@@ -2,7 +2,11 @@ $(document).ready(function() {
 
   var errors = [],
     timeoutID;
-  $("#contact").html("<a href='#two'>CONTACT</a>");
+  $("#contact").html("<a href='#two'>CONTACT</a>").click(
+    function() {
+      $('#one, #two').toggleClass('hid');
+    }
+  );
 
   function clear_form(ele) {
     $("label").removeClass("bad_input");
@@ -73,7 +77,7 @@ $(document).ready(function() {
       //$('h4,h3,p,ul,li').toggleClass("fade");
       //$('h1,h4,h3,p,ul,li').fadeTo("slow", 1);
 
-      window.location = "#one";
+      $('#one, #two').toggleClass('hid');
     }
 
     $.ajax({
@@ -101,7 +105,7 @@ $(document).ready(function() {
       $("#error").html("&nbsp;").removeClass("actif");
       clear_form($("#form"));
 
-      window.location = "#one";
+      $('#one, #two').toggleClass('hid');
     }
   );
 

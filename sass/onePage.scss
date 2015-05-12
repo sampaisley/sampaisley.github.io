@@ -15,20 +15,24 @@ $border_color_1:#4894b8;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-body {
-  overflow-y:hidden;
-}
-#one{
   position: absolute;
   width: 100%;
+  top:0;
+  left:0;
+}
+body {
+  
+}
+#one{
+
 
 
 }
 #two{
-  position: absolute;
-  top:100%;
-  width: 100%;
+
+  &.hid{
+    display: none;
+  }
 }
 /* --------------------------------------- */
 #tit{
@@ -40,7 +44,12 @@ body {
   font-size:2em;
   margin-bottom: .3em;
   color: rgba(250, 238, 6, 0.98);
-  
+  @media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    /* Retina-specific stuff here */
+    color:#941912;
+}
   opacity: .9;
   text-shadow: 1px 1px 14px $txtShadColor;
   @include media(">=tablet") {
@@ -185,6 +194,6 @@ label{
   border: 5px solid transparent;
   &.bad_input{
     border:5px solid rgba(255, 217, 3, 0.58);
-
+    background-color: rgba(255, 217, 3, 0.58);
   }
 }
