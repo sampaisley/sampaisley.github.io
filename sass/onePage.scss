@@ -1,0 +1,208 @@
+@import "media-queries";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$txtShadColor : #1f0d3b;
+$background_color_1 : #E55D00;
+$border_color_1:#4894b8;
+*{
+  padding:0;
+  margin:0;
+}
+#one, #two{
+  min-height:100%;
+  background: url(../img/french_dog_opt3.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+body {
+  overflow-y:hidden;
+}
+#one{
+  position: absolute;
+  width: 100%;
+
+}
+#two{
+  position: absolute;
+  top:100%;
+  width: 100%;
+}
+/* --------------------------------------- */
+#tit{
+  position: relative;
+  top:50%;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size:2em;
+  margin-bottom: .3em;
+  color: rgba(250, 238, 6, 0.98);
+  opacity: .9;
+  text-shadow: 1px 1px 14px $txtShadColor;
+  @include media(">=tablet") {
+    font-size:4em;
+  }
+  @include media(">=desktop") {
+    font-size:6em;
+  }
+
+}
+h4{
+  text-align: center;
+  color: rgba(250, 238, 6, 0.98);
+  font-size:1em;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.2em;
+  text-shadow: 1px 1px 14px $txtShadColor;
+  opacity: .9;
+  @include media(">=tablet") {
+    font-size:1.5em;
+  }
+  @include media(">=desktop") {
+    font-size:2em;
+  }
+}
+ul{
+  list-style-type: none;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: rgba(250, 238, 6, 0.98);
+  opacity: .9;
+  padding-bottom: 1.75em;
+  text-shadow: 1px 1px 14px $txtShadColor;
+  width: 60%;
+  margin: 0 auto;
+  @include media(">=tablet") {
+   width: 418px;
+  }
+   @include media(">=desktop") {
+    width: 618px;
+   }
+  li{
+    padding: 4px;
+    background-color: rgba(220, 206, 206, 0.1);
+    border-left: 5px solid rgba(6, 14, 42, 0.1);
+    border-right: 5px solid rgba(6, 14, 42, 0.1);
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size:.75em;
+    @include media(">=tablet") {
+      font-size:1em;
+    }
+  }
+}
+/*form-------------------------------*/
+#form{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:330px;
+  @include media(">=tablet") {
+    width:380px;
+    margin-left:-190px;
+  }
+  height:360px;
+  margin-left:-180px;
+  margin-top:-200px;
+  padding-top:10px;
+  border:10px solid #4894B8;
+  border-radius:7px;
+  background-color:$background_color_1;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+ #contact{
+   cursor:pointer;
+   padding: .5em;
+   transition: background-color .2s ease-out;
+   border-top: 2px solid rgba(250, 238, 6, 0.98);
+   &:hover{
+     background-color: rgba(236, 82, 16, 0.68);
+   }
+ }
+ #but, #error{
+   margin-top:10px;
+   z-index:300;
+ }
+ #error{
+   display:block;
+   line-height: 1.42857143;
+   color:#ff0019;
+   background-color:#c4dcc3;
+   margin:10px 10%;
+   border-radius: 4px;
+   text-align: center;
+   &.actif{
+   border: 1px solid #10e348;
+ }
+ }
+ #but, #close{
+   margin-bottom:30px;
+   display: inline-block;
+   background-color:#c0c0c0;
+   padding: 5px 10px;
+   margin-bottom: 0;
+   font-size: 14px;
+   font-weight: 100;
+   line-height: 1.42857143;
+   text-align: center;
+   white-space: nowrap;
+   vertical-align: middle;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   background-image: none;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   transition: border .3s ease-out;
+   &:hover{
+     border: 1px solid $border_color_1;
+   }
+ }
+
+ #close{
+   position:absolute;
+   right:8px;
+   float:right;
+   font-size:.9em;
+
+ }
+ #but{
+  position: relative;
+  float: right;
+  margin: 54px  10px  0  0;
+ }
+
+
+.fade{
+  opacity:.2;
+
+}
+
+input, textarea, label{
+  display:block;
+  margin:0 auto;
+  text-align:left !important;
+  width:175px;
+  @include media(">=tablet") {
+    width:210px
+  }
+}
+label{
+padding: 10px;
+color: rgba(250, 238, 6, 0.98);
+opacity: .9;
+background-color: #0D1117;
+border-bottom:5px solid #0D1117;
+&.bad_input{
+  border-bottom:5px solid #fe044f;
+}
+}
+label, input,textarea{
+  padding:5px;
+  font-weight: 100;
+}
