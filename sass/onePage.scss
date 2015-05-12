@@ -11,10 +11,10 @@ $border_color_1:#4894b8;
 #one, #two{
   min-height:100%;
   background: url(../img/french_dog_opt3.jpg) no-repeat center center fixed;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 body {
   overflow-y:hidden;
@@ -75,11 +75,11 @@ ul{
   width: 60%;
   margin: 0 auto;
   @include media(">=tablet") {
-   width: 418px;
+    width: 418px;
   }
-   @include media(">=desktop") {
+  @include media(">=desktop") {
     width: 618px;
-   }
+  }
   li{
     padding: 4px;
     background-color: rgba(220, 206, 206, 0.1);
@@ -96,113 +96,83 @@ ul{
 /*form-------------------------------*/
 #form{
   position:absolute;
-  top:50%;
-  left:50%;
-  width:330px;
+  top:0;
+  left:0D1117;
+  width: 80%;
+  margin-left: 10%;
+  opacity: .5;
+
   @include media(">=tablet") {
-    width:380px;
-    margin-left:-190px;
+
   }
-  height:360px;
-  margin-left:-180px;
-  margin-top:-200px;
-  padding-top:10px;
-  border:10px solid #4894B8;
-  border-radius:7px;
-  background-color:$background_color_1;
+
+
   font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
 
- #contact{
-   cursor:pointer;
-   padding: .5em;
-   transition: background-color .2s ease-out;
-   border-top: 2px solid rgba(250, 238, 6, 0.98);
-   &:hover{
-     background-color: rgba(236, 82, 16, 0.68);
-   }
- }
- #but, #error{
-   margin-top:10px;
-   z-index:300;
- }
- #error{
-   display:block;
-   line-height: 1.42857143;
-   color:#ff0019;
-   background-color:#c4dcc3;
-   margin:10px 10%;
-   border-radius: 4px;
-   text-align: center;
-   &.actif{
-   border: 1px solid #10e348;
- }
- }
- #but, #close{
-   margin-bottom:30px;
-   display: inline-block;
-   background-color:#c0c0c0;
-   padding: 5px 10px;
-   margin-bottom: 0;
-   font-size: 14px;
-   font-weight: 100;
-   line-height: 1.42857143;
-   text-align: center;
-   white-space: nowrap;
-   vertical-align: middle;
-   cursor: pointer;
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   background-image: none;
-   border: 1px solid transparent;
-   border-radius: 4px;
-   transition: border .3s ease-out;
-   &:hover{
-     border: 1px solid $border_color_1;
-   }
- }
+#contact{
+  cursor:pointer;
 
- #close{
-   position:absolute;
-   right:8px;
-   float:right;
-   font-size:.9em;
+}
+#but, #error{
 
- }
- #but{
-  position: relative;
-  float: right;
-  margin: 54px  10px  0  0;
- }
+  z-index:300;
+}
+#error{
+  display:block;
+  line-height: 1.42857143;
+  color:#e2ff00;
+  padding: 10px;
 
 
-.fade{
-  opacity:.2;
+  margin-top: 20px;
+  text-align: center;
+  &.actif{
+
+  }
+}
+#but, #close{
+width: 49%;
+height: 50px;
+font-size:2em;
+display: inline-block;
+text-align: center;
+}
+
+#close{
+background-color: #d35b5b;
+
+}
+#but{
+background-color: #fff;
 
 }
 
-input, textarea, label{
+
+
+
+input, textarea{
   display:block;
-  margin:0 auto;
-  text-align:left !important;
-  width:175px;
+  width: 100%;
+  font-size: 1em;
+  margin-bottom: 30px;
+
+
   @include media(">=tablet") {
-    width:210px
+
   }
 }
 label{
-padding: 10px;
-color: rgba(250, 238, 6, 0.98);
-opacity: .9;
-background-color: #0D1117;
-border-bottom:5px solid #0D1117;
-&.bad_input{
-  border-bottom:5px solid #fe044f;
-}
-}
-label, input,textarea{
-  padding:5px;
-  font-weight: 100;
+  width: 100%;
+//  margin-left: 10%;
+  display: block;
+  font-size:3em;
+  color: #f0e6e6;
+  text-align: center !important;
+  border: 5px solid transparent;
+  &.bad_input{
+    border:5px solid rgba(255, 217, 3, 0.58);
+
+  }
 }

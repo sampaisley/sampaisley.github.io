@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  var opeen = true,
-    errors = [],
+
+  var errors = [],
     timeoutID;
   $("#contact").html("<a href='#two'>CONTACT</a>");
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
         case 'email':
         case 'text':
         case 'textarea':
-          $(this).val('');
+          $(this).val('').blur();
       }
     });
   }
@@ -23,7 +23,7 @@ $(document).ready(function() {
   }
 
   function changeText() {
-    $("#contact").text("CONTACT");
+    $("#contact").html("<a href='#two'>CONTACT</a>");
     window.clearTimeout(timeoutID);
   }
 
@@ -72,7 +72,7 @@ $(document).ready(function() {
       //$("#form").fadeToggle("slow").toggleClass("vis");
       //$('h4,h3,p,ul,li').toggleClass("fade");
       //$('h1,h4,h3,p,ul,li').fadeTo("slow", 1);
-      opeen = !opeen;
+
       window.location = "#one";
     }
 
@@ -100,13 +100,7 @@ $(document).ready(function() {
 
       $("#error").text("").removeClass("actif");
       clear_form($("#form"));
-      //$("#form").fadeToggle("slow").toggleClass("vis");
-      // $('h4,h3,p,ul,li').toggleClass("fade");
-      if (opeen) {
-        $("#msg").focus();
-        //	$('h1,h4,h3,p,ul,li').fadeTo("slow", 0.5);
-      }
-      opeen = !opeen;
+
       window.location = "#one";
     }
   );
