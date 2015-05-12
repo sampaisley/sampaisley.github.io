@@ -40,12 +40,7 @@ body {
   font-size:2em;
   margin-bottom: .3em;
   color: rgba(250, 238, 6, 0.98);
-  @media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-    /* Retina-specific stuff here */
-    color:#941912;
-}
+  
   opacity: .9;
   text-shadow: 1px 1px 14px $txtShadColor;
   @include media(">=tablet") {
