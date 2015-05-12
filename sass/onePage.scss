@@ -23,6 +23,7 @@ body {
   position: absolute;
   width: 100%;
 
+
 }
 #two{
   position: absolute;
@@ -47,6 +48,9 @@ body {
   @include media(">=desktop") {
     font-size:6em;
   }
+  @media screen and (orientation:portrait) {
+    margin-top: 30%;
+  }
 
 }
 h4{
@@ -68,17 +72,18 @@ ul{
   list-style-type: none;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  color: rgba(250, 238, 6, 0.98);
+  font-size: 1.5em;
+  color: rgba(223, 139, 49, 0.98);
   opacity: .9;
   padding-bottom: 1.75em;
   text-shadow: 1px 1px 14px $txtShadColor;
-  width: 60%;
-  margin: 0 auto;
+  width: 80%;
+  margin-left:10%;
   @include media(">=tablet") {
-    width: 418px;
+    font-size: 1.5em;
   }
   @include media(">=desktop") {
-    width: 618px;
+    font-size: 2em;
   }
   li{
     padding: 4px;
@@ -113,7 +118,10 @@ ul{
 
 #contact{
   cursor:pointer;
-
+  a{
+    color: rgba(250, 238, 6, 0.98);
+    text-decoration: none;
+  }
 }
 #but, #error{
 
@@ -124,7 +132,7 @@ ul{
   line-height: 1.42857143;
   color:#e2ff00;
   padding: 10px;
-
+  font-size: 2em;
 
   margin-top: 20px;
   text-align: center;
@@ -138,14 +146,16 @@ height: 50px;
 font-size:2em;
 display: inline-block;
 text-align: center;
+cursor: pointer;
 }
 
 #close{
 background-color: #d35b5b;
+float: right;
 
 }
 #but{
-background-color: #fff;
+background-color: rgba(141, 244, 6, 0.67);
 
 }
 
@@ -157,6 +167,7 @@ input, textarea{
   width: 100%;
   font-size: 1em;
   margin-bottom: 30px;
+  height:50px;
 
 
   @include media(">=tablet") {

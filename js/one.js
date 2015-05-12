@@ -98,7 +98,7 @@ $(document).ready(function() {
 
     function() {
 
-      $("#error").text("").removeClass("actif");
+      $("#error").html("&nbsp;").removeClass("actif");
       clear_form($("#form"));
 
       window.location = "#one";
