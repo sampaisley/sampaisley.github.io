@@ -144,7 +144,7 @@ $(document).ready(function() {
 
 		[].forEach.call(lbl, function(lbl) {
 			lbl.style.height = h / 11 + "px";
-			lbl.style.fontSize = (h / 9) / 3 + "px";
+			lbl.style.fontSize = (h / 9) / 2 + "px";
 			lbl.style.marginTop = "10px";
 		});
 
