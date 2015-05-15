@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <style>
+  @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+  html, body {
+  height: 100%; /* IMPORTANT!!! stretches viewport to 100% */
+  padding: 0;
+  margin: 0;
+  font-family: "Lato";
+}
+
+#two {
+  min-height: 100%; /* min. height for modern browser */
+  height:auto !important; /* important rule for modern Browser */
+  height:100%; /* min. height for IE */
+  overflow: hidden !important; /* FF scroll-bar */
+  background-color: rgba(155, 121, 121, 0.72);
+}
+
+.formEl{
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  line-height:150% ;
+}
+#but, #close{
+width: 49%;
+height: 50px;
+font-size:2em;
+display: inline-block;
+text-align: center;
+cursor: pointer;
+}
+
+#close{
+background-color: #d35b5b;
+float: right;
+
+}
+#but{
+background-color: rgba(141, 244, 6, 0.67);
+
+}
+label{
+  width: 100%;
+//  margin-left: 10%;
+  display: block;
+  font-size:3em;
+  color: #f0e6e6;
+  text-align: center !important;
+  border: 5px solid transparent;
+  &.bad_input{
+    border:5px solid rgba(255, 217, 3, 0.58);
+    background-color: rgba(255, 217, 3, 0.58);
+  }
+}
+  </style>
+</head>
+<body>
+  <div id="two" class="hid">
+
+
+    <form id="form">
+
+      <label class='formEl' for="msg" id="msg_lbl">MESSAGE</label>
+      <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
+      <textarea class='formEl'  name="msg"  rows="5"  placeholder="Type away..." id="msg" required></textarea><br />
+
+      <label class='formEl' for="phone" id="phone_lbl">1/2 OF A HUNDRED?</label>
+      <input class='formEl' type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
+
+      <label class='formEl' for="email" id="email_lbl">EMAIL</label>
+      <input class='formEl' type="email" placeholder="email" name="email" id="email" required>
+        <span class='formEl' id="error">ERROR</span>
+      <span class="bigBut" name="button" id="but">SEND</span>
+      <span class="bigBut" id="close">CLOSE</span>
+
+
+    </form>
+  </div>
+  <script>
+  var h = "innerHeight" in window
+  ? window.innerHeight
+  : document.documentElement.offsetHeight,
+
+  els =   document.querySelectorAll(".formEl"),
+
+  bigBut =   document.querySelectorAll(".bigBut");;
+
+  for (var i = 0, element; element = els[i]; i++) {
+    element.style.height = h/9 + "px";
+    element.style.fontSize = (h/9) / 3 +"px";
+  }
+  for (var i = 0, element; element = bigBut[i]; i++) {
+    element.style.height = h/9 + "px";console.log(h/9+"px");
+  }
+  </script>
+</body>
+</html>
