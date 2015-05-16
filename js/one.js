@@ -6,6 +6,7 @@ $(document).ready(function() {
   $("#contact").html("CONTACT").click(
     function() {
       $('#one, #two').toggleClass('hid');
+      $('#one, #two').toggleClass('vis');
     }
   );
 
@@ -74,11 +75,8 @@ $(document).ready(function() {
       delayedText();
 
       clear_form($("#form"));
-      //$("#form").fadeToggle("slow").toggleClass("vis");
-      //$('h4,h3,p,ul,li').toggleClass("fade");
-      //$('h1,h4,h3,p,ul,li').fadeTo("slow", 1);
 
-      $('#one, #two').toggleClass('hid');
+      $('#one, #two').toggleClass('hid,vis');
     }
 
     $.ajax({
@@ -106,6 +104,7 @@ $(document).ready(function() {
       $("#error").html("&nbsp;").removeClass("actif");
       clear_form($("#form"));
 
+      $('#one, #two').toggleClass('vis');
       $('#one, #two').toggleClass('hid');
     }
   );

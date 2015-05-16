@@ -38,9 +38,10 @@ visibility:visible;
   &.hid{
     visibility:hidden;
  opacity:0;
- transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+ -webkit-transition: all 200ms cubic-bezier(0.600, 0.040, 0.980, 0.335);
+   -moz-transition: all 200ms cubic-bezier(0.600, 0.040, 0.980, 0.335);
+     -o-transition: all 200ms cubic-bezier(0.600, 0.040, 0.980, 0.335);
+        transition: all 200ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
   }
 
 
@@ -49,9 +50,10 @@ visibility:visible;
 .vis{
   visibility:visible;
  opacity:1;
- transition: opacity .25s ease-in-out;
--moz-transition: opacity .25s ease-in-out;
--webkit-transition: opacity .25s ease-in-out;
+ -webkit-transition: all 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335);
+   -moz-transition: all 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335);
+     -o-transition: all 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335);
+        transition: all 500ms cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
 }
 /* --------------------------------------- */
 #tit{
