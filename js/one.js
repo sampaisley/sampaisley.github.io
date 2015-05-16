@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     $.ajax({
       type: "POST",
-      //  url: "http://cmh.netne.net/mail.php",
+      url: "http://cmh.netne.net/mail.php",
       data: {
         msg: msg,
         phone: phone,
