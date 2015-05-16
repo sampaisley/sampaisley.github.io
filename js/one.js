@@ -76,12 +76,14 @@ $(document).ready(function() {
 
       clear_form($("#form"));
 
-      $('#one, #two').toggleClass('hid,vis');
+      $('#one, #two').toggleClass('vis');
+      $('#one, #two').toggleClass('hid');
+      console.log('hello');
     }
 
     $.ajax({
       type: "POST",
-      url: "http://cmh.netne.net/mail.php",
+      //  url: "http://cmh.netne.net/mail.php",
       data: {
         msg: msg,
         phone: phone,
@@ -90,11 +92,13 @@ $(document).ready(function() {
     });
 
   }
-
+  console.log('95');
   $("#but").click(
     function(e) {
+      console.log('97');
       e.preventDefault();
       go();
+
     }
   );
   $("#close").click(
