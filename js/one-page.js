@@ -3,7 +3,12 @@ $(document).ready(function() {
   var errors = [],
     timeoutID;
   //$('#one').toggleClass('hid');
+  $("#contact").html("CONTACT").click(
+    function() {
 
+      moveTo(".main", 3);
+    }
+  );
 
   function clear_form(ele) {
     $("label").removeClass("bad_input");
@@ -46,13 +51,6 @@ $(document).ready(function() {
       $("#msg").focus();
       errors = [];
       return;
-    } else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
-      errors.push("Half a ton?");
-      $("#error").text(errors).addClass("actif");
-      $('#phone_lbl').addClass("bad_input");
-      $("#phone").focus();
-      errors = [];
-      return;
     } else if (!email) {
       errors.push("Hombre! Email! Wake up!");
       $("#error").text(errors).addClass("actif");
@@ -64,6 +62,13 @@ $(document).ready(function() {
       errors.push("Is that an address?");
       $("#error").text(errors).addClass("actif");
       $("#email").focus();
+      errors = [];
+      return;
+    } else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
+      errors.push("Half a ton?");
+      $("#error").text(errors).addClass("actif");
+      $('#phone_lbl').addClass("bad_input");
+      $("#phone").focus();
       errors = [];
       return;
     } else {
