@@ -173,121 +173,20 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/poster.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 40889,
-		"inputAbbreviatedPath": "\/img\/poster.png",
-		"outputAbbreviatedPath": "\/img\/poster.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/secondFloor.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 251570,
-		"inputAbbreviatedPath": "\/img\/secondFloor.jpg",
-		"outputAbbreviatedPath": "\/img\/secondFloor.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/secondFloor_2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 188973,
-		"inputAbbreviatedPath": "\/img\/secondFloor_2.jpg",
-		"outputAbbreviatedPath": "\/img\/secondFloor_2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/secondFloorKey.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 27475,
-		"inputAbbreviatedPath": "\/img\/secondFloorKey.png",
-		"outputAbbreviatedPath": "\/img\/secondFloorKey.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thirdFloor.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 375953,
-		"inputAbbreviatedPath": "\/img\/thirdFloor.jpg",
-		"outputAbbreviatedPath": "\/img\/thirdFloor.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thirdFloor_1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 362669,
-		"inputAbbreviatedPath": "\/img\/thirdFloor_1.jpg",
-		"outputAbbreviatedPath": "\/img\/thirdFloor_1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thirdFloor_2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 351726,
-		"inputAbbreviatedPath": "\/img\/thirdFloor_2.jpg",
-		"outputAbbreviatedPath": "\/img\/thirdFloor_2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thirdFloor_3.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 146992,
-		"inputAbbreviatedPath": "\/img\/thirdFloor_3.jpg",
-		"outputAbbreviatedPath": "\/img\/thirdFloor_3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thirdFloor_4.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 107456,
-		"inputAbbreviatedPath": "\/img\/thirdFloor_4.jpg",
-		"outputAbbreviatedPath": "\/img\/thirdFloor_4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thirdFloorKey.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 20251,
-		"inputAbbreviatedPath": "\/img\/thirdFloorKey.png",
-		"outputAbbreviatedPath": "\/img\/thirdFloorKey.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/index_dog1.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index_dog1.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -309,17 +208,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/js\/desandroDrag.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/desandroDrag.js",
-		"outputAbbreviatedPath": "\/js\/min\/desandroDrag-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
 		},
 	"\/js\/flickr.js": {
 		"fileType": 64,
@@ -607,6 +495,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/min\/one-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/one-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/one-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/min\/plan-ck.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -618,12 +517,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/plan.js": {
+	"\/js\/one.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/plan.js",
-		"outputAbbreviatedPath": "\/js\/min\/plan-ck.js",
+		"inputAbbreviatedPath": "\/js\/one.js",
+		"outputAbbreviatedPath": "\/js\/min\/one-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/onepagescroll.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/onepagescroll.js",
+		"outputAbbreviatedPath": "\/js\/min\/onepagescroll-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -702,24 +612,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/mailjs.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/mailjs.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/mailjs3.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/mailjs3.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/newIndex.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -729,20 +621,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/onePage.html": {
+	"\/one-page.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/onePage.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/plan.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/plan.html",
+		"inputAbbreviatedPath": "\/one-page.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -784,6 +667,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/sass\/_onepage-scroll.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 2,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/_onepage-scroll.scss",
+		"outputAbbreviatedPath": "\/stylesheets\/_onepage-scroll.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/sass\/dog.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 2,
@@ -800,15 +699,31 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/ie.scss": {
+	"\/sass\/flickr.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 2,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/ie.scss",
-		"outputAbbreviatedPath": "\/stylesheets\/ie.css",
+		"inputAbbreviatedPath": "\/sass\/flickr.scss",
+		"outputAbbreviatedPath": "\/stylesheets\/flickr.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/index-div-swap.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 2,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/index-div-swap.scss",
+		"outputAbbreviatedPath": "\/stylesheets\/index-div-swap.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -832,31 +747,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/onePage.scss": {
+	"\/sass\/one-page.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 2,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/onePage.scss",
-		"outputAbbreviatedPath": "\/stylesheets\/onePage.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/sass\/print.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 2,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/print.scss",
-		"outputAbbreviatedPath": "\/stylesheets\/print.css",
+		"inputAbbreviatedPath": "\/sass\/one-page.scss",
+		"outputAbbreviatedPath": "\/stylesheets\/one-page.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -889,15 +788,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/stylesheets\/deleteMe.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/deleteMe.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/stylesheets\/dog.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -907,20 +797,20 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/stylesheets\/ie.css": {
+	"\/stylesheets\/flickr.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/ie.css",
+		"inputAbbreviatedPath": "\/stylesheets\/flickr.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/stylesheets\/ie.min.css": {
+	"\/stylesheets\/index-div-swap.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/ie.min.css",
+		"inputAbbreviatedPath": "\/stylesheets\/index-div-swap.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -934,29 +824,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/stylesheets\/onePage.css": {
+	"\/stylesheets\/one-page.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/onePage.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/stylesheets\/print.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/print.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/stylesheets\/print.min.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/print.min.css",
+		"inputAbbreviatedPath": "\/stylesheets\/one-page.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

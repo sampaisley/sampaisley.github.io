@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>one paisley###</title>
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<!-- <link rel="shortcut icon" id="favicon" href="favicon.png"> -->
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/onepagescroll.js"></script>
+<!-- 	<link href='stylesheets/onepage-scroll.css' rel='stylesheet' type='text/css'> -->
+	<link href='stylesheets/one-page.css' rel='stylesheet' type='text/css'>
+	<style>
+
+
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="main">
+
+			<section class="page1">
+				<div class="page_container">
+					<h1>SAM PAISLEY</h1>
+
+				</div>
+				<!-- <img src="phones.png" alt="phones"> -->
+			</section>
+
+			<section class="page2" style=" overflow:auto !important">
+				<div id="langSpoke" class="page_container">
+					<h4>LANGUAGES SPOKEN</h4>
+
+					<ul>
+						<li>JAVASCRIPT</li>
+						<li>CSS3</li>
+						<li>SPANISH</li>
+						<li>PHP</li>
+
+						<li>HTML5</li>
+						<li>ENGLISH</li>
+
+					</ul>
+					<h4 id="contact"><span>CONTACT</span><!-- <br>[requiers javascript] --></h4>
+				</div>
+
+			</section>
+
+			<section class="page3">
+				<div class="page_container">
+					<form id="form">
+
+	        <label class=' lbl' for="msg" id="msg_lbl">MESSAGE</label>
+	        <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
+	        <textarea class='formEl'  name="msg"  rows="5"  placeholder="Type away..." id="msg" required></textarea><br />
+
+	        <label class=' lbl' for="phone" id="phone_lbl">1/2 OF A HUNDRED?</label>
+	        <input class='formEl' type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
+
+	        <label class=' lbl' for="email" id="email_lbl">EMAIL</label>
+	        <input class='formEl' type="email" placeholder="email" name="email" id="email" required>
+	          <span class='formEl' id="error">&nbsp;</span>
+	        <span class="bigBut" name="button" id="but">SEND</span>
+	        <span class="bigBut" id="close">CLOSE</span>
+
+
+	      </form>
+				</div>
+			</section>
+
+		</div>
+
+	</div>
+	<script>
+	onePageScroll(".main", {
+		sectionContainer: "section",
+		loop: true,
+		responsiveFallback: false
+	});
+
+	</script>
+</body>
+</html>
