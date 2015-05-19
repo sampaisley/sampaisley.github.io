@@ -22,7 +22,7 @@
 
 			<section class="page1">
 				<div class="page_container">
-					<h1>SAM PAISLEY</h1>
+					<h1 id="tit">SAM PAISLEY</h1>
 
 				</div>
 				<!-- <img src="phones.png" alt="phones"> -->
@@ -49,20 +49,21 @@
 
 			<section class="page3">
 				<div class="page_container">
-					<form id="form">
+					<form id="form" oninput="amount.value=range.value">
 
 	        <label class=' lbl' for="msg" id="msg_lbl">MESSAGE</label>
 	        <!-- <input type="textarea" placeholder="Type away..." name="msg" id="msg" required autofocus> -->
-	        <textarea class='formEl'  name="msg"  rows="5"  placeholder="Type away..." id="msg" required></textarea><br />
+	        <textarea class='formEl'  name="msg"  rows="5"  placeholder="Type away..." id="msg" required></textarea>
 
-	        <label class=' lbl' for="phone" id="phone_lbl">1/2 OF A HUNDRED?</label>
-	        <input class='formEl' type="number" placeholder="half of 100 ?" name="phone" id="phone" required>
 
 	        <label class=' lbl' for="email" id="email_lbl">EMAIL</label>
-	        <input class='formEl' type="email" placeholder="email" name="email" id="email" required>
-	          <span class='formEl' id="error">&nbsp;</span>
+	        <input class='formEl' type="email" placeholder="email" name="email" id="email" required />
+					<label class=' lbl' for="phone" id="phone_lbl">1/2 OF A HUNDRED?</label>
+				<input class='formEl' type="number" placeholder="half of 100 ?" name="phone" id="phone" required />
+
+		          <span class='lbl' id="error">&nbsp;</span>
 	        <span class="bigBut" name="button" id="but">SEND</span>
-	        <span class="bigBut" id="close">CLOSE</span>
+	        <span class="bigBut" id="close">CLEAR</span>
 
 
 	      </form>
@@ -80,5 +81,7 @@
 	});
 
 	</script>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/one-page.js"></script>
 </body>
 </html>
