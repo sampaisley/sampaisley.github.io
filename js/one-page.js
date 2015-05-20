@@ -9,6 +9,11 @@ $(document).ready(function() {
       moveTo(".main", 3);
     }
   );
+  $("#q_mark").click(
+    function() {
+      moveTo(".main", 2);
+    }
+  )
 
   function clear_form(ele) {
     $("label").removeClass("bad_input");

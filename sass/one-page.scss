@@ -1,6 +1,12 @@
 @import "_onepage-scroll";
 @import "_media-queries";
+@import "_colours";
 //@import "compass/reset";
+///////////   colors \\\\\\\\\\\\\\\\\
+
+
+
+
 @font-face {
   font-family: 'MyWebFont';
   src: url('../fonts/GillSansDisplayMTPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
@@ -21,7 +27,7 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'MyWebFont';
-  color: #399fd3;
+  color: $blueIsh;
   position: relative;
   margin: 0;
   height: 100%;
@@ -61,16 +67,18 @@ header {
 
  /* \\\\\\\\ PAGE ONE \\\\\\\\\ */
 .main section.page1 {
-  background:rgb(230, 217, 200);
+  background:$yellowIsh;
 }
 .main section.page1 h1 {
   display: inline-block;
-  padding: 2vh;
+
   padding-bottom: 0;
   font-size: 8vmax;
-  /* border-bottom: 1vw solid green;
-  border-top: 1vh solid green; */
+  border-bottom: 1vw solid $redIsh;
+  /*border-top: 1vh solid green; */
   margin-top: 30vh;
+  //max-width: 80%;
+  color: $blueIsh;
 
 }
 
@@ -78,7 +86,7 @@ header {
 .main section.page1 h2 {
   font-size: 18px;
   display: block;
-  color: rgba(0,0,0,0.85);
+  color: $blueIsh;
   text-align: center;
   width: 435px;
   line-height: 160%;
@@ -87,12 +95,13 @@ header {
 
 
 /* \\\\\\\\ PAGE TWO \\\\\\\\\ */
-section.page2{
-  background-color: rgba(236, 165, 72, 0.78);
+.main section.page2{
+ background-color: $blueIsh;
 }
 #langSpoke h4{
-  font-size: 5.7vh;
+  font-size: 6vh;
   text-align: center;
+  color: $redIsh;
 }
 #langSpoke ul, #langSpoke ul li{
   font-size: 4.7vh;
@@ -100,24 +109,40 @@ section.page2{
   padding: 0;
   margin: 0;
   text-align: center;
+  color: $blueIsh;
 }
-
+#langSpoke ul li{
+  color: $yellowIsh;
+}
 #contact{
   cursor: pointer;
   display: inline-block;
   border-bottom: 6px solid rgba(15, 1, 28, 0);
   transition: border-bottom .2s ease-out;
   &:hover{
-    border-bottom: 6px solid rgba(15, 1, 28, 0.26);
+    border-bottom: 6px solid $yellowIsh;
+  }
+}
+#q_mark{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 5vh;
+  color: $redIsh;
+  cursor: pointer;
+  &:hover{
+    color: $blueIsh;
   }
 }
 
 
 
-
 /* \\\\\\\\ PAGE THREE \\\\\\\\\ */
+
+
 .main section.page3 {
-  background:rgb(213, 157, 110);
+  background:$yellowIsh;
+
 }
 
 .main section.page3 .page_container {
@@ -169,17 +194,20 @@ section.page2{
 .bad_input{
 
   &::after {
-  content: "  <<<<<";
-  color: #f05010;
+    content: "  <<<<<";
+    color: $redIsh;
 
+  }
 }
+#error{
+  color: $redIsh;
 }
 .bigBut{
 width: 49%;
 display: inline-block;
 height: 8vh;
-background-color: #87e089;
-line-height: 1.8;
+background-color: $redIsh;
+line-height: 2.2;
 font-size: 4vh;
 }
 #but{
