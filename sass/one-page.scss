@@ -117,7 +117,7 @@ section.page2{
 
 /* \\\\\\\\ PAGE THREE \\\\\\\\\ */
 .main section.page3 {
-  background:rgb(224, 221, 218);
+  background:rgb(213, 157, 110);
 }
 
 .main section.page3 .page_container {
@@ -127,19 +127,27 @@ section.page2{
   font-weight: 900;
 
 }
+
  .formEl{
   display: block;
   width: 96%;
   height: 8vh;
   font-size: 2vh;
- border: none;
+ border: none !important;
  padding: 5px;
  padding-left: 20px;
-
+ background-color: #fff !important;
+ outline:none;
+  &:focus{
+    border: none !important;
+    outline:none;
+    background-color: rgba(white, 0.75)!important;
+  }
   @include media(">=tablet") {
    width: 100%;
   }
 }
+
 .lbl {
   display: block;
   width: 100% !important;

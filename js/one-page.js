@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   function clear_form(ele) {
     $("label").removeClass("bad_input");
-    $("error").html("&nbsp;");
+    $("#error").html("&nbsp;");
     $(ele).find(':input').each(function() {
       switch (this.type) {
         case 'number':
@@ -30,7 +30,7 @@ $(document).ready(function() {
   }
 
   function changeText() {
-    $("#tit").html("SAM PAISLEY");
+    $("#tit").html("SAM&nbsp;PAISLEY");
     window.clearTimeout(timeoutID);
   }
 
@@ -39,11 +39,7 @@ $(document).ready(function() {
     var msg = $("#msg").val(),
       phone = $("#phone").val(),
       email = $("#email").val();
-    // if (!msg || !phone || isNaN(phone) || !email || phone != 50 || !
-    //   isValidEmailAddress(email)) {
-    //   $("#error").text("Check Your Input Values.").addClass("actif");
-    //   return;
-    // }
+
     if (!msg) {
       errors.push("Wots the message Doc?");
       $("#error").text(errors).addClass("actif");
@@ -61,6 +57,7 @@ $(document).ready(function() {
     } else if (!isValidEmailAddress(email)) {
       errors.push("Is that an address?");
       $("#error").text(errors).addClass("actif");
+      $('#email_lbl').addClass("bad_input");
       $("#email").focus();
       errors = [];
       return;
@@ -72,11 +69,10 @@ $(document).ready(function() {
       errors = [];
       return;
     } else {
-      moveTo(".main", 1);
-      $("#tit").text("MESSAGE SENT");
-      delayedText();
-
       clear_form($("#form"));
+      moveTo(".main", 1);
+      $("#tit").html("MESSAGE&nbsp;SENT");
+      delayedText();
 
 
 
@@ -112,7 +108,7 @@ $(document).ready(function() {
     }
   );
 
-  $("input,textarea").on("click", function() {
+  $("input,textarea").on("keydown", function() {
     $("label").removeClass("bad_input");
   });
 
