@@ -2,6 +2,9 @@
 @import "_media-queries";
 @import "_colours";
 @import "compass/reset";
+
+@import "compass/css3/transition";
+@import "compass/css3/transform";
 ///////////   colors \\\\\\\\\\\\\\\\\
 
 
@@ -100,6 +103,7 @@ header {
   bottom: 0;
   padding: 20px 30px 2px 30px;
   left: 50%;
+  margin-left: -30px;
   font-size: 5vh;
   color: $redIsh;
   cursor: pointer;
@@ -166,8 +170,19 @@ header {
   font-weight: 900;
 
 }
+/* #form{
+  @media (orientation: landscape) {
 
+   -webkit-transform: rotate(-90deg);
+   -moz-transform: rotate(-90deg);
+   -o-transform: rotate(-90deg);
+   -ms-transform: rotate(-90deg);
+   transform: rotate(-90deg);
+
+}
+} */
  .formEl{
+
   display: block;
   width: 96%;
   height: 8vh;
@@ -219,9 +234,9 @@ header {
 .bigBut{
 width: 49%;
 display: inline-block;
-height: 8vh;
+height: 9vh;
 background-color: $redIsh;
-line-height: 2.2;
+line-height: 2.6;
 font-size: 4vh;
 }
 #but{
