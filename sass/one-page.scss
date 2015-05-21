@@ -19,6 +19,9 @@
 a,a:hover, a:active, a:focus {
   outline: 0 !important;
 }
+a:active{
+  background-color: transparent;
+}
 html {
   height: 100%;
 }
