@@ -13,7 +13,7 @@ $(document).ready(function() {
 		function() {
 			moveTo(".main", 2);
 		}
-	)
+	);
 
 	function clear_form(ele) {
 		$("label").removeClass("bad_input");
@@ -35,7 +35,9 @@ $(document).ready(function() {
 	}
 
 	function changeText() {
-		$("#tit").html("SAM&nbsp;PAISLEY");
+		$("#tit").fadeOut(200, function() {
+			$(this).html("SAM&nbsp;PAISLEY").fadeIn();
+		});
 		window.clearTimeout(timeoutID);
 	}
 

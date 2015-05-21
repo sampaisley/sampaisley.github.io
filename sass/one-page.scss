@@ -103,6 +103,7 @@ header {
   font-size: 5vh;
   color: $redIsh;
   cursor: pointer;
+  transition: color .4s ease-out;
   &:hover{
     color: $blueIsh;
   }
