@@ -92,7 +92,18 @@ header {
   line-height: 160%;
 }
 
-
+#q_mark{
+  position: absolute;
+  bottom: 0;
+  padding: 20px 30px 2px 30px;
+  left: 50%;
+  font-size: 5vh;
+  color: $redIsh;
+  cursor: pointer;
+  &:hover{
+    color: $blueIsh;
+  }
+}
 
 /* \\\\\\\\ PAGE TWO \\\\\\\\\ */
 .main section.page2{
@@ -123,17 +134,7 @@ header {
     border-bottom: 6px solid $yellowIsh;
   }
 }
-#q_mark{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  font-size: 5vh;
-  color: $redIsh;
-  cursor: pointer;
-  &:hover{
-    color: $blueIsh;
-  }
-}
+
 
 
 
