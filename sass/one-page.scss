@@ -1,7 +1,7 @@
 @import "_onepage-scroll";
 @import "_media-queries";
 @import "_colours";
-//@import "compass/reset";
+@import "compass/reset";
 ///////////   colors \\\\\\\\\\\\\\\\\
 
 
@@ -113,6 +113,14 @@ header {
  background-color: $blueIsh;
 }
 #langSpoke h4{
+  font-size: 7vh;
+  text-align: center;
+  color: $redIsh;
+  margin-top: 7.5%;
+  margin-bottom: 6%;
+}
+#langSpoke h5{
+  margin-top: 6%;
   font-size: 6vh;
   text-align: center;
   color: $redIsh;
@@ -127,6 +135,7 @@ header {
 }
 #langSpoke ul li{
   color: $yellowIsh;
+  padding: 1vh;
 }
 #contact{
   cursor: pointer;
@@ -152,7 +161,7 @@ header {
 .main section.page3 .page_container {
   overflow: hidden;
   width: 80%;
-  margin-top: 5vh;
+  margin-top: 6vh;
   font-weight: 900;
 
 }
