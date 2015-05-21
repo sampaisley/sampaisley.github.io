@@ -242,11 +242,16 @@ header {
 }
 .bigBut{
 width: 49%;
+color: $yellowIsh;
 display: inline-block;
 height: 9vh;
 background-color: $redIsh;
 line-height: 2.6;
 font-size: 4vh;
+transition: color .2s ease-out;
+ &:hover{
+   color: $blueIsh;
+ }
 }
 #but{
 float: left;
