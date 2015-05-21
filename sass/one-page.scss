@@ -120,7 +120,7 @@ header {
   margin-bottom: 6%;
 }
 #langSpoke h5{
-  margin-top: 6%;
+  margin-top: 6vh;
   font-size: 6vh;
   text-align: center;
   color: $redIsh;
@@ -135,7 +135,7 @@ header {
 }
 #langSpoke ul li{
   color: $yellowIsh;
-  padding: 1vh;
+  padding-bottom: 1vh;
 }
 #contact{
   cursor: pointer;
