@@ -11,9 +11,14 @@
 
 
 @font-face {
-  font-family: 'MyWebFont';
+  font-family: 'G_S_Bold';
   src: url('../fonts/GillSansDisplayMTPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
        url('../fonts/GillSansDisplayMTPro-Bold.ttf')  format('truetype')
+}
+@font-face {
+  font-family: 'G_S_X_Bold';
+  src: url('../fonts/GillSansMTPro-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../GillSansMTPro-ExtraBold.ttf')  format('truetype')
 }
 
 *{
@@ -32,7 +37,7 @@ body {
 
   padding: 0;
   text-align: center;
-  font-family: 'MyWebFont';
+  font-family: 'G_S_Bold','Helvetica';
   color: $blueIsh;
   position: relative;
   margin: 0;
@@ -77,7 +82,7 @@ header {
 }
 .main section.page1 h1 {
   display: inline-block;
-
+  font-family: 'G_S_X_Bold';
   padding-bottom: 0;
   font-size: 8vmax;
   border-bottom: 1vw solid $redIsh;
@@ -85,6 +90,10 @@ header {
   margin-top: 30vh;
   //max-width: 80%;
   color: $blueIsh;
+/*   text-shadow: 1px 1px $redIsh,
+              2px 2px $redIsh,
+              3px 3px $redIsh,
+              4px 4px $redIsh; */
 
 }
 
@@ -122,7 +131,7 @@ header {
   text-align: center;
   color: $redIsh;
   margin-top: 7.5%;
-  margin-bottom: 6%;
+  margin-bottom: 5%;
 }
 #langSpoke h5{
   margin-top: 6vh;
