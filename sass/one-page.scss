@@ -190,6 +190,7 @@ header {
 
 }
 } */
+////////////////// FORM ALL SIZE \\\\\\\\\\\\\\\\\\\\\\\\\
 *:invalid {
     -moz-box-shadow: none;
 }
@@ -204,6 +205,19 @@ header {
 *:-moz-ui-invalid {
   box-shadow:none;
 }
+.formEl{
+  text-indent: .5em;
+}
+.bigBut{
+  transition: color .2s ease-out;
+  color: $yellowIsh;
+  background-color: $redIsh;
+  display: inline-block;
+  width: 49%;
+   &:hover{
+     color: $blueIsh;
+   }
+}
 /////////////// FORM SMALL \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 @include media("<desktop") {
 
@@ -216,9 +230,9 @@ header {
     font-size: 3em;
     font-family: 'Courier';
     color: $blueIsh;
-    padding-left: .5em;
     margin-right: 10px;
     margin-bottom: 10px;
+
   }
   @include media("<tablet") {
     #phone{font-size: 2em;}
@@ -264,28 +278,20 @@ header {
   }
 
 .bigBut{
-  display: inline-block;
-  width: 48%;
-  background-color: $redIsh;
-  color: $yellowIsh;
-  height: 5vh;
+  height: 10vh;
   line-height: 2.5;
+  font-size: 4vh;
   @media (max-height: 500px) {
     height: 8vh;
   }
   //border: 1px solid #22b4ef;
 
 }
-.clear{
-  display: block;
-  width: 100%;
-}
+
 #but{
-  position: relative;
   float: left;
 }
 #close{
-  position: relative;
   float: right;
 }
 
@@ -297,12 +303,12 @@ header {
 .formEl{
 
   display: block;
-  width: 96%;
+  width: 100%;
   height: 8vh;
   font-size: 2vh;
   border: none !important;
   padding: 5px;
-  padding-left: 20px;
+  padding-left: 0;
   background-color: #fff !important;
   outline:none;
   &:focus{
@@ -345,17 +351,10 @@ header {
   color: $redIsh;
 }
 .bigBut{
-width: 49%;
 color: $yellowIsh;
-display: inline-block;
 height: 9vh;
-background-color: $redIsh;
 line-height: 2.6;
 font-size: 4vh;
-transition: color .2s ease-out;
- &:hover{
-   color: $blueIsh;
- }
 }
 #but{
 float: left;
