@@ -211,6 +211,10 @@ header {
   }
   #msg,#email_lbl{
     min-height: 50vh;
+    @media (max-height: 500px) {
+      min-height: 20vh;
+      border: 1px solid red;
+    }
   }
   #email_lbl, #email{
     min-height: 10vh;
@@ -247,6 +251,9 @@ header {
   color: $yellowIsh;
   height: 5vh;
   line-height: 2.5;
+  @media (max-height: 500px) {
+    height: 8vh;
+  }
   //border: 1px solid #22b4ef;
 
 }
