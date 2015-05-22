@@ -190,24 +190,102 @@ header {
 
 }
 } */
- .formEl{
+/////////////// FORM SMALL \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+@include media("<desktop") {
+
+  .main section.page3 .page_container {
+    margin-top: 0;
+  }
+
+  #msg_lbl, #msg,#email_lbl, #email, #phone_lbl, #phone{
+    float: left;
+    font-size: 3em;
+    font-family: 'Courier';
+    color: $blueIsh;
+    padding-left: .5em;
+ //width: 40%;
+
+ //border: 1px solid #990000;
+ margin-right: 10px;
+ margin-bottom: 10px;
+  }
+  #msg,#email_lbl{
+    min-height: 50vh;
+  }
+  #email_lbl, #email{
+    min-height: 10vh;
+  }
+  #phone_lbl, #phone{
+    min-height: 10vh;
+  }
+  .lbl{
+    width: 30%;
+    text-align: right;
+    display: none;
+  }
+  .formEl{
+    width: 100%;
+    border: none !important;
+    &:focus{
+      border: none !important;
+      outline:none;
+      background-color: rgba(white, 0.75)!important;
+    }
+  }
+  #error{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $redIsh;
+    padding: .4em;
+  }
+
+.bigBut{
+  display: inline-block;
+  width: 48%;
+  background-color: $redIsh;
+  color: $yellowIsh;
+  height: 5vh;
+  line-height: 2.5;
+  //border: 1px solid #22b4ef;
+
+}
+.clear{
+  display: block;
+  width: 100%;
+}
+#but{
+  position: relative;
+  float: left;
+}
+#close{
+  position: relative;
+  float: right;
+}
+
+}
+
+
+///////////////  FORM DESKTOP  \\\\\\\\\\\\\\\\\\\\\\\\\\\
+@include media(">=desktop") {
+.formEl{
 
   display: block;
   width: 96%;
   height: 8vh;
   font-size: 2vh;
- border: none !important;
- padding: 5px;
- padding-left: 20px;
- background-color: #fff !important;
- outline:none;
+  border: none !important;
+  padding: 5px;
+  padding-left: 20px;
+  background-color: #fff !important;
+  outline:none;
   &:focus{
     border: none !important;
     outline:none;
     background-color: rgba(white, 0.75)!important;
   }
   @include media(">=tablet") {
-   width: 100%;
+    width: 100%;
   }
 }
 
@@ -258,4 +336,6 @@ float: left;
 }
 #close{
 float: right;
+}
+
 }
