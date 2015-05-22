@@ -24,7 +24,7 @@ $(document).ready(function() {
 				case 'email':
 				case 'text':
 				case 'textarea':
-					$(this).val('').blur();
+					$(this).val('');
 			}
 		});
 	}
