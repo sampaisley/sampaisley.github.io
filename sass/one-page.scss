@@ -211,7 +211,7 @@ header {
     margin-top: 0;
   }
 
-  #msg_lbl, #msg,#email_lbl, #email, #phone_lbl, #phone{
+ #msg, #email,  #phone{
     float: left;
     font-size: 3em;
     font-family: 'Courier';
@@ -224,22 +224,21 @@ header {
     #phone{font-size: 2em;}
 
   }
-  #msg,#email_lbl{
+  #msg,{
     min-height: 50vh;
     @media (max-height: 500px) {
-      min-height: 20vh;
+      min-height: 30vh;
       border: 1px solid red;
     }
   }
-  #email_lbl, #email{
+ #email{
     min-height: 10vh;
   }
-  #phone_lbl, #phone{
+ #phone{
     min-height: 10vh;
   }
   .lbl{
-    width: 30%;
-    text-align: right;
+
     display: none;
   }
   .formEl{
