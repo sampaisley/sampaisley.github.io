@@ -190,6 +190,9 @@ header {
 
 }
 } */
+input:invalid {
+    -moz-box-shadow: none;
+}
 /////////////// FORM SMALL \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 @include media("<desktop") {
 
