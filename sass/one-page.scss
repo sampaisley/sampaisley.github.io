@@ -217,11 +217,12 @@ header {
     font-family: 'Courier';
     color: $blueIsh;
     padding-left: .5em;
- //width: 40%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  @include media("<tablet") {
+    #phone{font-size: 2em;}
 
- //border: 1px solid #990000;
- margin-right: 10px;
- margin-bottom: 10px;
   }
   #msg,#email_lbl{
     min-height: 50vh;
