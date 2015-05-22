@@ -234,8 +234,12 @@ header {
       border: none !important;
       outline:none;
       background-color: rgba(white, 0.75)!important;
+      &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
     }
-    
+
   }
   #error{
     display: block;
