@@ -310,6 +310,7 @@ header {
   padding: 5px;
   padding-left: 0;
   background-color: #fff !important;
+  text-indent: 3.3em;
   outline:none;
   &:focus{
     border: none !important;
@@ -329,7 +330,9 @@ header {
   text-align: left;
   padding-top: 4vh;
   margin-bottom: -1vh;
-//  background-color: #b2dee3;
+  background-color: $blueIsh;
+  color: $yellowIsh;
+  text-indent: 2em;
   font-size: 3vh;
   @include media(">=tablet") {
   font-size: 3vh;
@@ -349,6 +352,8 @@ header {
 }
 #error{
   color: $redIsh;
+  background-color: transparent;
+  text-align: center;
 }
 .bigBut{
 color: $yellowIsh;
