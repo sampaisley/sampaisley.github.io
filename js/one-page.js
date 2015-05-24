@@ -49,28 +49,28 @@ $(document).ready(function() {
 			email = $("#email").val();
 
 		if (!msg) {
-			errors.push("Wots the message Doc?");
+			errors.push("WOTS THE MESSAGE DOC?");
 			$("#error").text(errors).addClass("actif");
 			//$('#msg_lbl').addClass("bad_input");
 			$("#msg").val("").addClass("bollox").addClass("bollox").focus();
 			errors = [];
 			return;
 		} else if (!email) {
-			errors.push("Hombre! Email! Wake up!");
+			errors.push("HOMBRE! EMAIL! WAKE UP!");
 			$("#error").text(errors).addClass("actif");
 			$('#email_lbl').addClass("bad_input");
 			$("#email").val('').addClass("bollox").focus();
 			errors = [];
 			return;
 		} else if (!isValidEmailAddress(email)) {
-			errors.push("Is that an address?");
+			errors.push("IS THAT ADDRESS KOSHER?");
 			$("#error").text(errors).addClass("actif");
 			$('#email_lbl').addClass("bad_input");
 			$("#email").addClass("bollox").focus();
 			errors = [];
 			return;
 		} else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
-			errors.push("Half a ton?");
+			errors.push("HALF A TON?");
 			$("#error").text(errors).addClass("actif");
 			$('#phone_lbl').addClass("bad_input");
 			$("#phone").addClass("bollox").focus();

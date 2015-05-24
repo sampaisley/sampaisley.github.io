@@ -258,7 +258,7 @@ span.butTxt{
 
   }
   @include media("<tablet") {
-    #phone{font-size: 2em;}
+  //  #phone{font-size: 2em;}
 
   }
   #msg{
@@ -374,6 +374,7 @@ span.butTxt{
   color: $redIsh;
   background-color: transparent;
   text-align: center;
+  line-height: .5;
 }
 .bigBut{
 color: $yellowIsh;
