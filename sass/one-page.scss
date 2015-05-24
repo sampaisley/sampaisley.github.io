@@ -333,7 +333,7 @@ span.butTxt{
   text-indent: 3.3em;
   outline:none;
   @include placeholder {
-    
+
     color: #fff !important;
 }
   &:focus{
@@ -358,6 +358,7 @@ span.butTxt{
   color: $yellowIsh;
   text-indent: 2em;
   font-size: 3vh;
+  line-height: .5;
   @include media(">=tablet") {
   font-size: 3vh;
   }
