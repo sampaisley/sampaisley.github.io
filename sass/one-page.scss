@@ -332,6 +332,10 @@ span.butTxt{
   background-color: #fff !important;
   text-indent: 3.3em;
   outline:none;
+  @include placeholder {
+    
+    color: #fff !important;
+}
   &:focus{
     border: none !important;
     outline:none;
