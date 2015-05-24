@@ -82,17 +82,11 @@ body, .onepage-wrapper, html {
 }
 
 .onepage-pagination li a.active:before{
-  width: 18px;
-  height: 18px;
+/*   width: 18px;
+height: 18px; */
   border:2px solid $redIsh;
   background: none;
-  @include media("<tablet") {
-    width:13px;
-    height:13px;
 
-  }
-  margin-top: 0;
-  left: 22px;
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
