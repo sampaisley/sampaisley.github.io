@@ -7,6 +7,13 @@
 @import "compass/css3/transform";
 ///////////   colors \\\\\\\\\\\\\\\\\
 
+//// placeholder mixin
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
 
 
 
@@ -219,6 +226,15 @@ header {
      color: $blueIsh;
    }
 }
+.bollox{
+  @include placeholder {
+    font-style:italic !important;;
+    color: $redIsh !important;
+}
+color: $redIsh !important;
+font-style:italic !important;;
+}
+
 /////////////// FORM SMALL \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 @include media("<desktop") {
 
@@ -271,11 +287,8 @@ header {
 
   }
   #error{
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: $redIsh;
-    padding: .4em;
+    display: none;
+
   }
 
 .bigBut{

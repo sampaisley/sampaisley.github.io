@@ -17,6 +17,7 @@ $(document).ready(function() {
 
 	function clear_form(ele) {
 		$("label").removeClass("bad_input");
+		$("input, textarea").removeClass("bollox");
 		$("#error").html("&nbsp;");
 		$(ele).find(':input').each(function() {
 			switch (this.type) {
@@ -50,29 +51,29 @@ $(document).ready(function() {
 		if (!msg) {
 			errors.push("Wots the message Doc?");
 			$("#error").text(errors).addClass("actif");
-			$('#msg_lbl').addClass("bad_input");
-			$("#msg").focus();
+			//$('#msg_lbl').addClass("bad_input");
+			$("#msg").val("").addClass("bollox").addClass("bollox").focus();
 			errors = [];
 			return;
 		} else if (!email) {
 			errors.push("Hombre! Email! Wake up!");
 			$("#error").text(errors).addClass("actif");
 			$('#email_lbl').addClass("bad_input");
-			$("#email").focus();
+			$("#email").val('').addClass("bollox").focus();
 			errors = [];
 			return;
 		} else if (!isValidEmailAddress(email)) {
 			errors.push("Is that an address?");
 			$("#error").text(errors).addClass("actif");
 			$('#email_lbl').addClass("bad_input");
-			$("#email").focus();
+			$("#email").addClass("bollox").focus();
 			errors = [];
 			return;
 		} else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
 			errors.push("Half a ton?");
 			$("#error").text(errors).addClass("actif");
 			$('#phone_lbl').addClass("bad_input");
-			$("#phone").focus();
+			$("#phone").addClass("bollox").focus();
 			errors = [];
 			return;
 		} else {
@@ -117,6 +118,7 @@ $(document).ready(function() {
 
 	$("input,textarea").on("keydown", function() {
 		$("label").removeClass("bad_input");
+		$("input, textarea").removeClass("bollox");
 	});
 
 	//////// EMAIL \\\\\\\\\\\\\\\\
