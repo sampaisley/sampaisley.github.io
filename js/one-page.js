@@ -51,7 +51,7 @@ $(document).ready(function() {
 		if (!msg) {
 			errors.push("WOTS THE MESSAGE DOC?");
 			$("#error").text(errors).addClass("actif");
-			//$('#msg_lbl').addClass("bad_input");
+			$('#msg_lbl').addClass("bad_input");
 			$("#msg").val("").addClass("bollox").addClass("bollox").focus();
 			errors = [];
 			return;
