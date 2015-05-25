@@ -244,7 +244,7 @@ span.butTxt{
 /////////////// FORM SMALL \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //@media screen and (max-width: desktop) , screen and (max-height: 500px) {
 //@media screen and (max-width: 1024px) , screen and (max-height: 500px) {
-@include media("<desktop") {
+//@include media("<desktop") {
 
   .main section.page3 .page_container {
     margin-top: 0;
@@ -319,11 +319,11 @@ span.butTxt{
   float: right;
 }
 
-}
+//}
 
 
 ///////////////  FORM DESKTOP  \\\\\\\\\\\\\\\\\\\\\\\\\\\
-@include media(">=desktop") {
+/* @include media(">=desktop") {
 .formEl{
 
   display: block;
@@ -399,3 +399,4 @@ float: right;
 }
 
 }
+ */
