@@ -242,6 +242,8 @@ span.butTxt{
   top: 30%;
 }
 /////////////// FORM SMALL \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//@media screen and (max-width: desktop) , screen and (max-height: 500px) {
+//@media screen and (max-width: 1024px) , screen and (max-height: 500px) {
 @include media("<desktop") {
 
   .main section.page3 .page_container {
@@ -255,12 +257,13 @@ span.butTxt{
     color: $blueIsh;
     margin-right: 10px;
     margin-bottom: 10px;
+    @include placeholder {
+
+      color: #aaa ;
+  }
 
   }
-  @include media("<tablet") {
-  //  #phone{font-size: 2em;}
 
-  }
   #msg{
     min-height: 50vh;
     @media (max-height: 500px) {
@@ -274,7 +277,7 @@ span.butTxt{
  #phone{
     min-height: 10vh;
   }
-  .lbl{
+  label.lbl{
 
     display: none;
   }
@@ -303,6 +306,7 @@ span.butTxt{
   font-size: 4vh;
   @media (max-height: 500px) {
     min-height: 15vh;
+    font-size: 6vh;
   }
   //border: 1px solid #22b4ef;
 
@@ -334,7 +338,7 @@ span.butTxt{
   outline:none;
   @include placeholder {
 
-    color: #fff !important;
+    color: #fff ;
 }
   &:focus{
     border: none !important;
