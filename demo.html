@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js - Pure Javascript version</title>
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/full-page.css" />
+
+
+</head>
+<body>
+
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="content">
+			<h1 id="tit">SAM&nbsp;PAISLEY</h1>
+			<span id="q_mark">?</span>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div id="langSpoke" class="page_container">
+		<h4>LANGUAGES SPOKEN</h4>
+
+		<ul>
+			<li>JAVASCRIPT</li>
+			<li>CSS3</li>
+			<li>SPANISH</li>
+			<li>PHP</li>
+
+			<li>HTML5</li>
+			<li>ENGLISH</li>
+
+		</ul>
+		<h5 id="contact"><span>CONTACT</span><br>[requiers javascript]</h5>
+	</div>
+
+	</div>
+	<div class="section" id="section2">
+		<div class="content">
+			<form id="form">
+
+		<label class=' lbl' for="msg" id="msg_lbl">MESSAGE</label>
+		<!-- <input class='formEl' type="textarea" placeholder="MESSAGE" name="msg" id="msg" required autofocus /> -->
+		<textarea class='formEl'  name="msg"  placeholder="Message" id="msg" required></textarea>
+
+
+		<label class=' lbl' for="email" id="email_lbl">EMAIL</label>
+		<input class='formEl' type="email" placeholder="Email" name="email" id="email" required />
+		<label class=' lbl' for="phone" id="phone_lbl">ONE + 49?</label>
+		<input class='formEl' type="number" step="25" placeholder="One + 49?" name="phone" id="phone" required />
+
+		<span class='lbl' id="error">&nbsp;</span>
+		<span class="bigBut"  id="but"><span class="butTxt">SEND</span></span>
+		<span class="bigBut" id="close"><span class="butTxt">CLEAR</span></span>
+
+
+	</form>
+
+		</div>
+	</div>
+</div>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/min/full-pag-min.js"></script>
+<script type="text/javascript" src="js/javascript.fullPage.js"></script>
+<script type="text/javascript">
+	fullpage.initialize('#fullpage', {
+
+
+	});
+
+</script>
+
+</body>
+</html>

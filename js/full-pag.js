@@ -6,12 +6,12 @@ $(document).ready(function() {
 	$("#contact").html("CONTACT").click(
 		function() {
 
-			moveTo(".main", 3);
+			fullpage.moveSectionDown();
 		}
 	);
 	$("#q_mark").click(
 		function() {
-			moveTo(".main", 2);
+			fullpage.moveSectionDown();
 		}
 	);
 
@@ -78,7 +78,7 @@ $(document).ready(function() {
 			return;
 		} else {
 			clear_form($("#form"));
-			moveTo(".main", 1);
+			fullpage.moveTo(1);
 			$("#tit").html("MESSAGE&nbsp;SENT");
 			delayedText();
 
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 		$.ajax({
 			type: "POST",
-			url: "http://cmh.netne.net/mail.php",
+			//	url: "http://cmh.netne.net/mail.php",
 			data: {
 				msg: msg,
 				phone: phone,
