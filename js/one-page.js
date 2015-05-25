@@ -120,6 +120,11 @@ $(document).ready(function() {
 		$("label").removeClass("bad_input");
 		$("input, textarea").removeClass("bollox");
 	});
+	$("input,textarea").on("click", function() {
+		$("label").removeClass("bad_input");
+		$("input, textarea").removeClass("bollox");
+	});
+
 
 	//////// EMAIL \\\\\\\\\\\\\\\\
 
