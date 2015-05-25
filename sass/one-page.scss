@@ -91,10 +91,13 @@ header {
   display: inline-block;
   font-family: 'G_S_X_Bold';
   padding-bottom: 0;
+  font-size:5em;
   font-size: 8vw;
   /* font-size: 6em; */
+  border-bottom: 10px solid $redIsh;
   border-bottom: 2vw solid $redIsh;
   /*border-top: 1vh solid green; */
+  margin-top:20%;
   margin-top: 30vh;
   //max-width: 80%;
   color: $blueIsh;
@@ -218,24 +221,28 @@ header {
 }
 .formEl{
   text-indent: .5em;
+  padding:0;
 }
 .bigBut{
   transition: color .2s ease-out;
   color: $yellowIsh;
-  background-color: $redIsh;
+  background-color: $blueIsh;
   display: inline-block;
   width: 49%;
    &:hover{
      color: $blueIsh;
    }
 }
-.bollox{
+#msg.bollox, #email.bollox,  #phone.bollox{
   @include placeholder {
     font-style:italic !important;;
-    color: $redIsh !important;
-}
-color: $redIsh !important;
-font-style:italic !important;;
+    color: $yellowIsh !important;
+    background-color:$redIsh;
+  }
+
+  font-style:italic !important;
+  color: $yellowIsh !important;
+  background-color:$redIsh !important;;
 }
 span.butTxt{
   position: relative;
@@ -260,6 +267,7 @@ span.butTxt{
     @include placeholder {
 
       color: #aaa ;
+      opacity:.9;
   }
 
   }
@@ -295,10 +303,10 @@ span.butTxt{
     }
 
   }
-  #error{
-    display: none;
+/*   #error{
+  display: none;
 
-  }
+} */
 
 .bigBut{
   height: 10vh;

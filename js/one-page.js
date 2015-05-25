@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var errors = [],
+	var //errors = [],
 		timeoutID;
 	//$('#one').toggleClass('hid');
 	$("#contact").html("CONTACT").click(
@@ -16,9 +16,9 @@ $(document).ready(function() {
 	);
 
 	function clear_form(ele) {
-		$("label").removeClass("bad_input");
+		//$("label").removeClass("bad_input");
 		$("input, textarea").removeClass("bollox");
-		$("#error").html("&nbsp;");
+		//$("#error").html("&nbsp;");
 		$(ele).find(':input').each(function() {
 			switch (this.type) {
 				case 'number':
@@ -49,32 +49,32 @@ $(document).ready(function() {
 			email = $("#email").val();
 
 		if (!msg) {
-			errors.push("WOTS THE MESSAGE DOC?");
-			$("#error").text(errors).addClass("actif");
-			$('#msg_lbl').addClass("bad_input");
+			//	errors.push("WOTS THE MESSAGE DOC?");
+			//	$("#error").text(errors).addClass("actif");
+			//	$('#msg_lbl').addClass("bad_input");
 			$("#msg").val("").addClass("bollox").addClass("bollox").focus();
-			errors = [];
+			//errors = [];
 			return;
 		} else if (!email) {
-			errors.push("HOMBRE! EMAIL! WAKE UP!");
-			$("#error").text(errors).addClass("actif");
-			$('#email_lbl').addClass("bad_input");
+			///	errors.push("HOMBRE! EMAIL! WAKE UP!");
+			//	$("#error").text(errors).addClass("actif");
+			//$('#email_lbl').addClass("bad_input");
 			$("#email").val('').addClass("bollox").focus();
-			errors = [];
+			//	errors = [];
 			return;
 		} else if (!isValidEmailAddress(email)) {
-			errors.push("IS THAT ADDRESS KOSHER?");
-			$("#error").text(errors).addClass("actif");
-			$('#email_lbl').addClass("bad_input");
+			//	errors.push("IS THAT ADDRESS KOSHER?");
+			//$("#error").text(errors).addClass("actif");
+			//$('#email_lbl').addClass("bad_input");
 			$("#email").addClass("bollox").focus();
-			errors = [];
+			//	errors = [];
 			return;
 		} else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
-			errors.push("HALF A TON?");
-			$("#error").text(errors).addClass("actif");
-			$('#phone_lbl').addClass("bad_input");
+			//	errors.push("HALF A TON?");
+			//$("#error").text(errors).addClass("actif");
+			//	$('#phone_lbl').addClass("bad_input");
 			$("#phone").addClass("bollox").focus();
-			errors = [];
+			//	errors = [];
 			return;
 		} else {
 			clear_form($("#form"));
@@ -109,7 +109,7 @@ $(document).ready(function() {
 	$("#close").click(
 		function() {
 
-			$("#error").html("&nbsp;").removeClass("actif");
+			//	$("#error").html("&nbsp;").removeClass("actif");
 			clear_form($("#form"));
 
 
@@ -117,7 +117,7 @@ $(document).ready(function() {
 	);
 
 	$("input,textarea").on("keydown", function() {
-		$("label").removeClass("bad_input");
+		//$("label").removeClass("bad_input");
 		$("input, textarea").removeClass("bollox");
 	});
 	$("input,textarea").on("click", function() {
