@@ -45,21 +45,21 @@ $(document).ready(function() {
 	function go() {
 
 		var msg = $("#msg").val(),
-			phone = $("#phone").val(),
+			phone = parseInt($("#phone").val()),
 			email = $("#email").val();
-
+		//	console.log("line 50 " + phone);
 		if (!msg) {
 			//	errors.push("WOTS THE MESSAGE DOC?");
 			//	$("#error").text(errors).addClass("actif");
 			//	$('#msg_lbl').addClass("bad_input");
-			$("#msg").val("").addClass("bollox").addClass("bollox").focus();
+			$("#msg").addClass("bollox").addClass("bollox").focus();
 			//errors = [];
 			return;
 		} else if (!email) {
 			///	errors.push("HOMBRE! EMAIL! WAKE UP!");
 			//	$("#error").text(errors).addClass("actif");
 			//$('#email_lbl').addClass("bad_input");
-			$("#email").val('').addClass("bollox").focus();
+			$("#email").addClass("bollox").focus();
 			//	errors = [];
 			return;
 		} else if (!isValidEmailAddress(email)) {
@@ -73,6 +73,10 @@ $(document).ready(function() {
 			//	errors.push("HALF A TON?");
 			//$("#error").text(errors).addClass("actif");
 			//	$('#phone_lbl').addClass("bad_input");
+			if (isNaN(phone)) {
+				$("#phone").val("");
+			}
+			//	console.log("line 79 " + isNaN(phone));
 			$("#phone").addClass("bollox").focus();
 			//	errors = [];
 			return;
