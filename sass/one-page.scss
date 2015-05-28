@@ -205,12 +205,12 @@ header {
 }
 } */
 ////////////////// FORM ALL SIZE \\\\\\\\\\\\\\\\\\\\\\\\\
-*:invalid {
+/* *:invalid {
     -moz-box-shadow: none;
 }
 *:invalid {
   box-shadow: none;
-}
+} */
 
 *:-moz-submit-invalid {
   box-shadow: none;
