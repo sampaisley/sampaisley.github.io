@@ -142,43 +142,71 @@ text-shadow:
 }
 #langSpoke h4{
   font-size: 7vh;
-  text-align: center;
+  text-align: left;
   color: $redIsh;
-  margin-top: 10%;
-  margin-bottom: 5%;
+  margin-top: .2%;
+  margin-bottom: 4%;
+  letter-spacing:-2px;
+  @include media(">phone") {
+    font-size: 9vh;
+    margin-top: 1%;
+  }
+  @include media(">tablet") {
+    border-top:2%;
+    font-size: 17vh;
+  }
   @media (max-height: 500px) {
     margin-top: 3%;
   }
 }
-#langSpoke h5{
+
+#contact{
   margin-top: 6vh;
   font-size: 6vh;
-  text-align: center;
+  margin-right:20%;
+  text-align: left;
   color: $redIsh;
-}
-#langSpoke ul, #langSpoke ul li{
-  font-size: 4.7vh;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  color: $blueIsh;
-}
-#langSpoke ul li{
-  color: $yellowIsh;
-  padding-bottom: 1vh;
-}
-#contact{
   cursor:s-resize;
-  display: inline-block;
-  padding:0 1em;
+  //display: inline-block;
+  //padding:0 1em;
+  letter-spacing:.3em;
   border-bottom: 6px solid rgba(15, 1, 28, 0);
   transition: border-bottom .2s ease-out;
   &:hover{
-    border-bottom: 6px solid $yellowIsh;
+    border-bottom: 5vw solid $yellowIsh;
   }
 }
 
+#langSpoke ul, #langSpoke ul li{
+  font-size: 2.7vh;
+  @include media(">phone") {
+    font-size: 4.7vh;
+  }
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width:45%;
+  color: $blueIsh;
+}
+#langSpoke ul{
+  border-left:5vw solid $redIsh !important;
+
+}
+
+
+#langSpoke ul li{
+  color: $yellowIsh;
+  padding-top: 1vh;
+
+  margin-left:.75em;
+}
+
+@include media("<=tablet") {
+  #langSpoke ul, #langSpoke h4, #contact{
+ margin-left:2vw;
+ }
+}
 
 
 
