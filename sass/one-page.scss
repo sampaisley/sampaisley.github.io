@@ -121,7 +121,7 @@ text-shadow:
   line-height: 160%;
 }
 
-#q_mark{
+.q_mark{
   position: absolute;
   bottom: 0;
   padding: 20px 30px 2px 30px;
@@ -224,6 +224,9 @@ text-shadow:
   margin-top: 6vh;
   font-weight: 900;
 
+}
+#top{
+  cursor:n-resize;
 }
 /* #form{
   @media (orientation: landscape) {

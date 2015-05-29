@@ -14,6 +14,11 @@ $(document).ready(function() {
 			moveTo(".main", 2);
 		}
 	);
+	$("#top").click(
+		function() {
+			moveTo(".main", 1);
+		}
+	);
 
 	function clear_form(ele) {
 		//$("label").removeClass("bad_input");
