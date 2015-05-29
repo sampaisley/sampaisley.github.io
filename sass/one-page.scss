@@ -101,10 +101,13 @@ header {
   margin-top: 30vh;
   //max-width: 80%;
   color: $blueIsh;
-/*   text-shadow: 1px 1px $redIsh,
-              2px 2px $redIsh,
-              3px 3px $redIsh,
-              4px 4px $redIsh; */
+/*   @include media(">tablet") {
+text-shadow:
+ -2px -2px 0 darken($yellowIsh,20%),
+  2px -2px 0 darken($yellowIsh,20%),
+  -2px 2px 0 darken($yellowIsh,20%),
+   2px 2px 0 darken($yellowIsh,20%),
+ } */
 
 }
 
@@ -126,10 +129,10 @@ header {
   margin-left: -30px;
   font-size: 5vh;
   color: $redIsh;
-  cursor: pointer;
   transition: color .4s ease-out;
   &:hover{
     color: $blueIsh;
+    cursor:s-resize;
   }
 }
 
@@ -166,7 +169,7 @@ header {
   padding-bottom: 1vh;
 }
 #contact{
-  cursor: pointer;
+  cursor:s-resize;
   display: inline-block;
   border-bottom: 6px solid rgba(15, 1, 28, 0);
   transition: border-bottom .2s ease-out;
@@ -229,6 +232,13 @@ header {
   background-color: $blueIsh;
   display: inline-block;
   width: 48.5%;
+  height: 10vh;
+//  line-height: 2.5;
+  font-size: 4vh;
+  @media (max-height: 500px) {
+    min-height: 15vh;
+    font-size: 6vh;
+  }
   @include media(">phone") {
  width:49%;
 
@@ -272,6 +282,8 @@ span.butTxt{
     color: $blueIsh;
     margin-right: 10px;
     margin-bottom: 10px;
+    background-color:#fff !important;
+    transition: background-color .2s ease-out;
     @include placeholder {
 
       color: #aaa ;
@@ -317,13 +329,7 @@ span.butTxt{
 } */
 
 .bigBut{
-  height: 10vh;
-//  line-height: 2.5;
-  font-size: 4vh;
-  @media (max-height: 500px) {
-    min-height: 15vh;
-    font-size: 6vh;
-  }
+
   //border: 1px solid #22b4ef;
 
 }
