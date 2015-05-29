@@ -171,6 +171,7 @@ text-shadow:
 #contact{
   cursor:s-resize;
   display: inline-block;
+  padding:0 1em;
   border-bottom: 6px solid rgba(15, 1, 28, 0);
   transition: border-bottom .2s ease-out;
   &:hover{
