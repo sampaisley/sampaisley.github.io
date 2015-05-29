@@ -228,7 +228,15 @@ header {
   color: $yellowIsh;
   background-color: $blueIsh;
   display: inline-block;
-  width: 49%;
+  width: 48.5%;
+  @include media(">phone") {
+ width:49%;
+
+  }
+  @include media(">tablet") {
+ width:49.4%;
+ }
+
    &:hover{
      color: $redIsh;
    }
