@@ -178,11 +178,12 @@ text-shadow:
   transition: border-bottom .2s ease-out;
   &:hover{
     border-bottom: 5vw solid $yellowIsh;
+    border-bottom-left-radius: $border-radius;
   }
 }
 
 #langSpoke ul, #langSpoke ul li{
-  font-size: 2.7vh;
+
 
   @include media(">phone") {
     font-size: 4.7vh;
@@ -197,16 +198,24 @@ text-shadow:
 #langSpoke ul{
   border-left:$bigRedBorderWidth solid $redIsh !important;
   border-top-left-radius:$border-radius;
+  height:27.8vh;
 }
 
 
 #langSpoke ul li{
   color: $yellowIsh;
   padding-bottom: 1vh;
+  font-size: 4vh;
 
-  //line-height:.7;
+  vertical-align: baseline !important;
+  line-height:4vh;
+
+  //position:relative;
+//  float:left;
   &:last-child{
     padding-bottom:0;
+    vertical-align: sub;
+
   }
 
   margin-left:.75em;
