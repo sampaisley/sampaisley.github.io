@@ -15,7 +15,8 @@
   &:-ms-input-placeholder      {@content}
 }
 
-
+$bigRedBorderWidth : 14vh;
+$border-radius     : 20px;
 
 @font-face {
   font-family: 'G_S_Bold';
@@ -95,12 +96,15 @@ header {
   font-size: 8vw;
   /* font-size: 6em; */
   border-bottom: 10px solid $redIsh;
-  border-bottom: 5vw solid $redIsh;
+  border-bottom: $bigRedBorderWidth solid $redIsh;
+  border-bottom-left-radius:$border-radius !important;
+
   /*border-top: 1vh solid green; */
   margin-top:20%;
   margin-top: 30vh;
   //max-width: 80%;
   color: $blueIsh;
+
 /*   @include media(">tablet") {
 text-shadow:
  -2px -2px 0 darken($yellowIsh,20%),
@@ -190,7 +194,8 @@ text-shadow:
   color: $blueIsh;
 }
 #langSpoke ul{
-  border-left:5vw solid $redIsh !important;
+  border-left:$bigRedBorderWidth solid $redIsh !important;
+  border-top-left-radius:$border-radius;
 
 }
 
@@ -368,6 +373,7 @@ span.butTxt{
 
 #but{
   float: left;
+  border-bottom-left-radius:$border-radius;
 }
 #close{
   float: right;
