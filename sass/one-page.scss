@@ -136,7 +136,7 @@ text-shadow:
   transition: color .4s ease-out;
   &:hover{
     color: $blueIsh;
-    cursor:s-resize;
+    cursor:pointer;
   }
 }
 
@@ -172,7 +172,7 @@ text-shadow:
   text-align: left;
   color: $blueIsh;
   background:$yellowIsh;
-  cursor:s-resize;
+  cursor:pointer;
   line-height:1.3;
   letter-spacing:.3em;
   padding-left:1vw;
@@ -248,7 +248,7 @@ text-shadow:
 
 }
 #top{
-  cursor:n-resize;
+  cursor:pointer;
 }
 /* #form{
   @media (orientation: landscape) {
