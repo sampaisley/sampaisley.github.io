@@ -209,8 +209,9 @@ text-shadow:
   border-bottom-left-radius: 0;
   @include single-transition(all, 0.2s, ease-out);
   &:hover{
-    border-bottom: 1vw solid $yellowIsh;
+    //border-bottom: .5vw solid $yellowIsh;
     border-bottom-left-radius: $border-radius;
+    color:lighten($blueIsh,7%);
   }
 }
 
