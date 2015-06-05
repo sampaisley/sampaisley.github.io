@@ -15,7 +15,7 @@
   &:-ms-input-placeholder      {@content}
 }
 
-$bigRedBorderWidth : 14vh;
+$bigRedBorderWidth : 10vh;
 $border-radius     : 20px;
 
 @font-face {
@@ -82,7 +82,10 @@ header {
 .main section  {
   overflow: hidden;
 }
-
+///// hide the nax \\\\\\\\\\\\\\\
+ul.onepage-pagination{
+  display:none;
+}
 
  /* \\\\\\\\ PAGE ONE \\\\\\\\\ */
 .main section.page1 {
@@ -138,11 +141,19 @@ text-shadow:
     color: $blueIsh;
     cursor:pointer;
   }
+  @media (max-height: 500px) {
+    font-size:9vh;
+    padding-bottom:0;
+  }
 }
 
 /* \\\\\\\\ PAGE TWO \\\\\\\\\ */
 .main section.page2{
  background-color: $blueIsh;
+ padding-left:3vw;
+ @include media("<tablet") {
+
+ }
 }
 #langSpoke h4{
   font-size: 7vh;
@@ -199,34 +210,39 @@ text-shadow:
   color: $blueIsh;
 }
 #langSpoke ul{
-  border-left:$bigRedBorderWidth solid $redIsh !important;
-  border-top-left-radius:$border-radius;
-  height:27.8vh;
+
+
+  @media (max-height: 500px) {
+    //height:35vh;
+  }
 }
 
+#outList{
+  border-left:$bigRedBorderWidth solid $redIsh !important;
+  border-top-left-radius:$border-radius;
+//  border:1px solid red;
+  padding-top:5px;
 
+}
 #langSpoke ul li{
   color: $yellowIsh;
   padding-bottom: 1vh;
   font-size: 4vh;
 
-  vertical-align: baseline !important;
-  line-height:4vh;
-
-  //position:relative;
-//  float:left;
+  @media (max-height: 500px) {
+    font-size:6vh;
+  }
   &:last-child{
     padding-bottom:0;
-    vertical-align: sub;
-
-  }
-
+    position:relative;
+    bottom:-1vh;
+   }
   margin-left:.75em;
 }
 
 @include media("<=tablet") {
   #langSpoke ul, #langSpoke h4, #contact{
- margin-left:2vw;
+ //margin-left:2vw;
  }
 }
 
