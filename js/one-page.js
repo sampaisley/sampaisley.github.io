@@ -14,7 +14,7 @@ $(document).ready(function() {
 			moveTo(".main", 2);
 		}
 	);
-	$("#top").click(
+	$("#top, .left_side").click(
 		function() {
 			moveTo(".main", 1);
 		}

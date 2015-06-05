@@ -98,6 +98,7 @@ ul.onepage-pagination{
   padding-bottom: 0;
   font-size:5em;
   font-size: 8vw;
+  line-height:.6;
   /* font-size: 6em; */
   border-bottom: 10px solid $redIsh;
   border-bottom: $bigRedBorderWidth solid $redIsh;
@@ -137,7 +138,7 @@ text-shadow:
   margin-left: -30px;
   font-size: 5vh;
   color: $redIsh;
-  transition: color .4s ease-out;
+  @include single-transition(color, 0.4s, ease-out);
   &:hover{
     color: $blueIsh;
     cursor:pointer;
@@ -154,12 +155,12 @@ text-shadow:
  background-color: $blueIsh;
  padding-left:3vw;
 
- @include media("<tablet") {
-   padding-top:15%;
-   @media (max-height: 500px) {
-     padding-top:4%;
-   }
- }
+/*  @include media("<tablet") {
+  padding-top:15%;
+  @media (max-height: 500px) {
+    padding-top:4%;
+  }
+} */
 }
 #langSpoke h4{
   font-size: 7vh;
@@ -168,6 +169,15 @@ text-shadow:
   margin-top: .2%;
   margin-bottom: 4%;
   letter-spacing:-2px;
+
+  @include media("<tablet") {
+    padding-top:2%;
+    @media (max-height: 500px) {
+    padding-top:4%;
+    }
+  }
+
+
   @include media(">phone") {
     font-size: 9vh;
     margin-top: 1%;
@@ -195,7 +205,9 @@ text-shadow:
   padding-left:1vw;
   padding-bottom:0;
   border-top: 1.5vh solid $yellowIsh;
-  transition: border-bottom .2s ease-out;
+  border-bottom: 0 solid $yellowIsh;
+  border-bottom-left-radius: 0;
+  @include single-transition(all, 0.2s, ease-out);
   &:hover{
     border-bottom: 1vw solid $yellowIsh;
     border-bottom-left-radius: $border-radius;
@@ -226,10 +238,46 @@ text-shadow:
 #outList{
   border-left:$bigRedBorderWidth solid $redIsh !important;
   border-top-left-radius:$border-radius;
+  position:relative;
 //  border:1px solid red;
   padding-top:5px;
+   .left_side{
+     position: absolute;
+     top:0;
+     left:-$bigRedBorderWidth;
+     min-width:$bigRedBorderWidth;
+     min-height:100%;
+     background-color:transparent;
+     cursor:pointer;
+
+       &:hover{
+         .triangle{
+           opacity:1;
+           top:-2vh;
+         }
+       }
+
+    .triangle {
+    background: $redIsh;
+    opacity:0;
+    border-width: 2px 2px 0 0;
+  //  transform: rotate(-45deg);
+    @include transform (rotate(-45deg) );
+    position: relative;
+    color:white;
+    float:left;
+    left: 3.75vh;
+    top: 2vh;
+    width: 4vh;
+    height: 4vh;
+    cursor:pointer;
+    @include single-transition(all, 0.4s, ease);
+  }
+}
+
 
 }
+
 #langSpoke ul li{
   color: $yellowIsh;
   padding-bottom: 1vh;
@@ -244,6 +292,7 @@ text-shadow:
     bottom:-1vh;
    }
   margin-left:.75em;
+
 }
 
 @include media("<=tablet") {
@@ -303,7 +352,8 @@ text-shadow:
   padding:0;
 }
 .bigBut{
-  transition: color .2s ease-out;
+//  transition: color .2s ease-out;
+  @include single-transition(color, 0.2s, ease-out);
   color: $yellowIsh;
   background-color: $blueIsh;
   display: inline-block;
@@ -359,7 +409,7 @@ span.butTxt{
     margin-right: 10px;
     margin-bottom: 10px;
     background-color:#fff ;
-    transition: background-color .2s ease-out;
+    @include single-transition(background-color, 0.2s, ease-out);
     @include placeholder {
 
       color: #aaa ;
