@@ -418,12 +418,18 @@ span.butTxt{
 
  #msg, #email,  #phone{
     float: left;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Courier';
     color: $blueIsh;
     margin-right: 10px;
     margin-bottom: 10px;
     background-color:#fff ;
+    @include media(">phone") {
+      font-size: 3em;
+    }
+    @include media(">desktop") {
+      font-size: 3.5em;
+    }
 
     @include single-transition(background-color, 0.2s, ease-out);
 
