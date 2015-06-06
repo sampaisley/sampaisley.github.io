@@ -193,7 +193,7 @@ text-shadow:
     margin-top: 1%;
   }
   @include media(">tablet") {
-    border-top:2%;
+    margin-top:2%;
     font-size: 17vh;
   }
   @media (max-height: 500px) {
@@ -333,7 +333,6 @@ text-shadow:
 #top{
   cursor:pointer;
   line-height:1.75em;
-  margin-bottom:-.1.5em;
   @include media(">phone") {
     line-height:2em;
   }
@@ -434,7 +433,7 @@ span.butTxt{
     @include single-transition(background-color, 0.2s, ease-out);
 
     @include input-placeholder {
-      color: hsva(0, 4%, 34%, 0.56);
+      color: rgba(#575353, 0.56);
     }
   }
 
