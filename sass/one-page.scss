@@ -125,21 +125,36 @@ text-shadow:
 }
 
 .q_mark{
+  font-size:100%;
   position: absolute;
   bottom: 0;
-  padding: 20px 30px 2px 30px;
+  //padding: 20px 30px 2px 30px;
   left: 50%;
   margin-left: -30px;
-  font-size: 5vh;
+  font-size: 1.5em;
+  line-height:1.9em;
   color: $redIsh;
-  @include single-transition(color, 0.4s, ease-out);
+  background-color:$yellowIsh;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+
+  @include single-transition(all, 0.4s, ease);
+  @include media(">phone") {
+    font-size: 2em;
+    width:50px;
+    height:50px;
+  }
   &:hover{
     color: $blueIsh;
     cursor:pointer;
+    background-color:$redIsh;
+    color:$yellowIsh;
+    bottom:1vh;
   }
   @media (max-height: 500px) {
-    font-size:9vh;
-    padding-bottom:0;
+    /* font-size:9vh;
+    padding-bottom:0; */
   }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -304,17 +319,20 @@ text-shadow:
 .main section.page3 {
   background:$yellowIsh;
 
+
 }
 
 .main section.page3 .page_container {
   overflow: hidden;
   width: 80%;
-  margin-top: 6vh;
+//  margin-top: 3vh;
   font-weight: 900;
 
 }
 #top{
   cursor:pointer;
+  line-height:2em;
+  margin-bottom:-.1.5em;
 }
 /* #form{
   @media (orientation: landscape) {
@@ -402,6 +420,7 @@ span.butTxt{
     margin-right: 10px;
     margin-bottom: 10px;
     background-color:#fff ;
+
     @include single-transition(background-color, 0.2s, ease-out);
 
     @include input-placeholder {
@@ -410,17 +429,20 @@ span.butTxt{
   }
 
   #msg{
-    min-height: 50vh;
-    @media (max-height: 500px) {
-      min-height: 30vh;
-      border: 9px solid red;
+    min-height: 45vh;
+     @media (max-height: 500px) {
+       min-height: 30vh;
+    }
+    @include media(">=desktop") {
+      margin-top:.5em;
     }
   }
- #email{
+
+  #email,  #phone{
     min-height: 10vh;
-  }
- #phone{
-    min-height: 10vh;
+    @media (max-height: 500px) {
+      min-height: 9vh;
+    }
   }
   label.lbl{
 
