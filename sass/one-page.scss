@@ -5,15 +5,9 @@
 
 @import "compass/css3/transition";
 @import "compass/css3/transform";
+@import "compass/css3/user-interface";
 ///////////   colors \\\\\\\\\\\\\\\\\
 
-//// placeholder mixin
-@mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}
-}
 
 $bigRedBorderWidth : 10vh;
 $border-radius     : 20px;
@@ -98,7 +92,7 @@ ul.onepage-pagination{
   padding-bottom: 0;
   font-size:5em;
   font-size: 8vw;
-  line-height:.6;
+  line-height:.65em;
   /* font-size: 6em; */
   border-bottom: 10px solid $redIsh;
   border-bottom: $bigRedBorderWidth solid $redIsh;
@@ -334,12 +328,7 @@ text-shadow:
 }
 } */
 ////////////////// FORM ALL SIZE \\\\\\\\\\\\\\\\\\\\\\\\\
-/* *:invalid {
-    -moz-box-shadow: none;
-}
-*:invalid {
-  box-shadow: none;
-} */
+
 
 *:-moz-submit-invalid {
   box-shadow: none;
@@ -379,11 +368,14 @@ text-shadow:
    }
 }
 #msg.bollox, #email.bollox,  #phone.bollox{
-  @include placeholder {
+
+  @include input-placeholder {
     font-style:italic !important;;
     color: $yellowIsh !important;
     background-color:$redIsh;
   }
+
+
 
   font-style:italic !important;
   color: $yellowIsh !important;
@@ -411,12 +403,10 @@ span.butTxt{
     margin-bottom: 10px;
     background-color:#fff ;
     @include single-transition(background-color, 0.2s, ease-out);
-    @include placeholder {
 
-      color: #aaa ;
-      opacity:.9;
-  }
-
+    @include input-placeholder {
+      color: hsva(0, 4%, 34%, 0.56);
+    }
   }
 
   #msg{
