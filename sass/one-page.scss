@@ -138,9 +138,16 @@ text-shadow:
   border-radius:50%;
   width:30px;
   height:30px;
-
+  
   @include single-transition(all, 0.4s, ease);
   @include media(">phone") {
+    font-size: 1.75em;
+    line-height:1.9em;
+    width:40px;
+    height:40px;
+
+  }
+  @include media(">tablet") {
     font-size: 2em;
     line-height:1.9em;
     width:50px;
