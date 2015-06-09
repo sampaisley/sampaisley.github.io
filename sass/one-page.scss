@@ -138,7 +138,7 @@ text-shadow:
   border-radius:50%;
   width:30px;
   height:30px;
-  
+
   @include single-transition(all, 0.4s, ease);
   @include media(">phone") {
     font-size: 1.75em;
@@ -337,8 +337,8 @@ text-shadow:
   font-weight: 900;
 
 }
-#top{
-  cursor:pointer;
+#top.q_mark{
+  margin-left:42% ;
   line-height:1.75em;
   @include media(">phone") {
     line-height:2em;
@@ -369,32 +369,7 @@ text-shadow:
   text-indent: .5em;
   padding:0;
 }
-.bigBut{
-//  transition: color .2s ease-out;
-  @include single-transition(color, 0.2s, ease-out);
-  color: $yellowIsh;
-  background-color: $blueIsh;
-  display: inline-block;
-  width: 48.5%;
-  height: 10vh;
-//  line-height: 2.5;
-  font-size: 4vh;
-  @media (max-height: 500px) {
-    min-height: 15vh;
-    font-size: 6vh;
-  }
-  @include media(">phone") {
- width:49%;
 
-  }
-  @include media(">tablet") {
- width:49.4%;
- }
-
-   &:hover{
-     color: $redIsh;
-   }
-}
 #msg.bollox, #email.bollox,  #phone.bollox{
 
   @include input-placeholder {
@@ -478,17 +453,34 @@ span.butTxt{
     }
 
   }
-/*   #error{
-  display: none;
 
-} */
+  .bigBut{
+  //  transition: color .2s ease-out;
+    @include single-transition(color, 0.2s, ease-out);
+    color: $yellowIsh;
+    background-color: $blueIsh;
+    display: inline-block;
+    width: 48.5%;
+    height: 10vh;
+  //  line-height: 2.5;
+    font-size: 4vh;
+    @media (max-height: 500px) {
+      min-height: 15vh;
+      font-size: 6vh;
+    }
+    @include media(">phone") {
+   width:49%;
 
-.bigBut{
+    }
+    @include media(">tablet") {
+   width:49.4%;
+   }
 
-  //border: 1px solid #22b4ef;
-
-}
-
+     &:hover{
+       color: $redIsh;
+     }
+  }
+  
 #but{
   float: left;
   border-bottom-left-radius:$border-radius;
