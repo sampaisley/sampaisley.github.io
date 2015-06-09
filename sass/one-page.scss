@@ -129,8 +129,8 @@ text-shadow:
   position: absolute;
   bottom: 0;
   //padding: 20px 30px 2px 30px;
-  left: 50%;
-  margin-left: -30px;
+  right: 50%;
+  margin-right: -30px;
   font-size: 1.5em;
   line-height:1.5em;
   color: $redIsh;
@@ -338,11 +338,19 @@ text-shadow:
 
 }
 #top.q_mark{
-  margin-left:42% ;
+  //margin-left:42% ;
+  right:11vw ;
   line-height:1.75em;
   @include media(">phone") {
     line-height:2em;
-  }
+    right:8vw ;
+  
+   }
+   @include media(">tablet") {
+     line-height:2em;
+     right:4vw ;
+
+    }
 }
 /* #form{
   @media (orientation: landscape) {
@@ -480,7 +488,7 @@ span.butTxt{
        color: $redIsh;
      }
   }
-  
+
 #but{
   float: left;
   border-bottom-left-radius:$border-radius;
