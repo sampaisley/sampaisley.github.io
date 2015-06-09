@@ -78,9 +78,9 @@ $(document).ready(function() {
 			//	errors.push("HALF A TON?");
 			//$("#error").text(errors).addClass("actif");
 			//	$('#phone_lbl').addClass("bad_input");
-			if (isNaN(phone)) {
-				$("#phone").val("");
-			}
+			//if (isNaN(phone)) {
+			$("#phone").val("");
+			//	}
 			//	console.log("line 79 " + isNaN(phone));
 			$("#phone").addClass("bollox").focus();
 			//	errors = [];

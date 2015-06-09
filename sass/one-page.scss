@@ -344,13 +344,14 @@ text-shadow:
   @include media(">phone") {
     line-height:2em;
     right:8vw ;
-  
+
    }
    @include media(">tablet") {
      line-height:2em;
      right:4vw ;
 
     }
+
 }
 /* #form{
   @media (orientation: landscape) {
