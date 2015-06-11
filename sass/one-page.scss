@@ -94,8 +94,8 @@ ul.onepage-pagination{
   font-size: 8vw;
   //line-height:.65;
   border-bottom: 10px solid $redIsh;
-  border-bottom: $bigRedBorderWidth solid $redIsh;
-  border-bottom-left-radius:$border-radius !important;
+  border-bottom: 5vh solid $redIsh;
+  border-bottom-left-radius:7px ;
 
   /*border-top: 1vh solid green; */
   margin-top:20%;
@@ -105,14 +105,14 @@ ul.onepage-pagination{
    &.lh{
      line-height:.65em;//see one-page.js
    }
-
-/*   @include media(">tablet") {
-text-shadow:
- -2px -2px 0 darken($yellowIsh,20%),
-  2px -2px 0 darken($yellowIsh,20%),
-  -2px 2px 0 darken($yellowIsh,20%),
-   2px 2px 0 darken($yellowIsh,20%),
- } */
+   @include media(">phone") {
+     border-bottom: 7.5vh solid $redIsh;
+     border-bottom-left-radius:10px ;
+   }
+   @include media(">tablet") {
+     border-bottom: 10vh solid $redIsh;
+     border-bottom-left-radius:20px ;
+   }
 
 }
 
@@ -393,7 +393,7 @@ text-shadow:
 
   font-style:italic !important;
   color: $yellowIsh !important;
-  background-color:$redIsh !important;;
+  background-color:$redIsh !important;
 }
 span.butTxt{
   position: relative;
@@ -411,7 +411,7 @@ span.butTxt{
  #msg, #email,  #phone{
     float: left;
     font-size: 2em;
-    font-family: "Courier New","Courier", "Lucida Sans Typewriter", "Andale Mono WT", "Andale Mono", "Lucida Console",  "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,  Courier, monospace;
+    font-family: "Courier New","Courier", "Lucida Sans Typewriter", "Andale Mono WT", monospace;
     color: $blueIsh;
     margin-right: 10px;
     margin-bottom: 10px;
