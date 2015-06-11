@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	if (navigator.appVersion.indexOf("Win") != -1) {
+		$('#tit').removeClass('lh');
+
+	}
 	var //errors = [],
 		timeoutID;
 	//$('#one').toggleClass('hid');

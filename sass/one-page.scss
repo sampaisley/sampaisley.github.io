@@ -93,9 +93,6 @@ ul.onepage-pagination{
   font-size:5em;
   font-size: 8vw;
   //line-height:.65;
-  padding-bottom:1px;
-  background-color:darken($yellowIsh,10%);
-  /* font-size: 6em; */
   border-bottom: 10px solid $redIsh;
   border-bottom: $bigRedBorderWidth solid $redIsh;
   border-bottom-left-radius:$border-radius !important;
@@ -105,6 +102,9 @@ ul.onepage-pagination{
   margin-top: 30vh;
   //max-width: 80%;
   color: $blueIsh;
+   &.lh{
+     line-height:.65em;//see one-page.js
+   }
 
 /*   @include media(">tablet") {
 text-shadow:
