@@ -226,11 +226,12 @@ ul.onepage-pagination{
   border-top: 1.5vh solid $yellowIsh;
   border-bottom: 0 solid $yellowIsh;
   border-bottom-left-radius: 0;
-  @include single-transition(all, 0.2s, ease-out);
+  @include single-transition(all, 0.3s, ease-out);
+
   &:hover{
     //border-bottom: .5vw solid $yellowIsh;
     border-bottom-left-radius: $border-radius;
-    color:lighten($blueIsh,7%);
+    color:$redIsh;
   }
 }
 
