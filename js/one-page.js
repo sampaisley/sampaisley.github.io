@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	if (navigator.appVersion.indexOf("Win") != -1) {
+	if (navigator.appVersion.indexOf("Win") !== -1) { // line-height not working for gill sans on windows so removeClass
 		$('#tit').removeClass('lh');
 
 	}
