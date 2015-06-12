@@ -49,7 +49,7 @@ $(document).ready(function() {
 	}
 
 	function changeText() {
-		$("#tit").fadeOut(500, function() {
+		$("#tit").fadeOut(501, function() {
 			$(this).html("SAM&nbsp;PAISLEY").fadeIn();
 		});
 		window.clearTimeout(timeoutID);
@@ -118,9 +118,6 @@ $(document).ready(function() {
 			$("#tit").html("MESSAGE&nbsp;SENT");
 			delayedText();
 			sendMessage();
-
-
-
 		}
 	}
 	$("#but").click(
@@ -144,8 +141,7 @@ $(document).ready(function() {
 	$("input,textarea").on("click", function() {
 
 		last_selected_field = document.activeElement.id;
-		console.log("blar " + "#" + last_selected_field);
-		$("label").removeClass("bad_input");
+
 		$("input, textarea").removeClass("bollox");
 	});
 
