@@ -62,7 +62,7 @@ $(document).ready(function() {
 	function sendMessage() {
 		$.ajax({
 			type: "POST",
-			url: "http://cmh.netne.net/mail.php",
+			//	url: "http://cmh.netne.net/mail.php",
 			data: {
 				msg: msg,
 				phone: phone,
@@ -84,11 +84,6 @@ $(document).ready(function() {
 			warning("#msg");
 
 			return;
-		} else if (!email && last_selected_field === 'email') {
-
-			warning("#email");
-
-			return;
 		} else if (!isValidEmailAddress(email) && last_selected_field === 'email') {
 
 			warning("#email");
@@ -104,11 +99,6 @@ $(document).ready(function() {
 			///////////////////////// no focus, start at the top
 		} else if (!msg) {
 			warning("#msg");
-			return;
-		} else if (!email) {
-
-			warning("#email");
-
 			return;
 		} else if (!isValidEmailAddress(email)) {
 
@@ -168,7 +158,6 @@ $(document).ready(function() {
 		);
 		return pattern.test(emailAddress);
 	}
-
 
 
 });
