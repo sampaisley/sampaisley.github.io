@@ -4,12 +4,15 @@ $(document).ready(function() {
 		$('#tit').removeClass('lh');
 
 	}
-	var //errors = [],
-		timeoutID;
-	//$('#one').toggleClass('hid');
+	var
+		last_selected_field = null,
+		timeoutID,
+		msg,
+		phone,
+		email;
+
 	$("#contact").html("CONTACT").click(
 		function() {
-
 			moveTo(".main", 3);
 		}
 	);
@@ -25,9 +28,10 @@ $(document).ready(function() {
 	);
 
 	function clear_form(ele) {
-		//$("label").removeClass("bad_input");
+
 		$("input, textarea").removeClass("bollox");
-		//$("#error").html("&nbsp;");
+		last_selected_field = null;
+
 		$(ele).find(':input').each(function() {
 			switch (this.type) {
 				case 'number':
@@ -45,60 +49,17 @@ $(document).ready(function() {
 	}
 
 	function changeText() {
-		$("#tit").fadeOut(200, function() {
+		$("#tit").fadeOut(500, function() {
 			$(this).html("SAM&nbsp;PAISLEY").fadeIn();
 		});
 		window.clearTimeout(timeoutID);
 	}
 
-	function go() {
+	function warning(e) {
+		$(e).addClass("bollox").focus();
+	}
 
-		var msg = $("#msg").val(),
-			phone = parseInt($("#phone").val()),
-			email = $("#email").val();
-		//	console.log("line 50 " + phone);
-		if (!msg) {
-			//	errors.push("WOTS THE MESSAGE DOC?");
-			//	$("#error").text(errors).addClass("actif");
-			//	$('#msg_lbl').addClass("bad_input");
-			$("#msg").addClass("bollox").addClass("bollox").focus();
-			//errors = [];
-			return;
-		} else if (!email) {
-			///	errors.push("HOMBRE! EMAIL! WAKE UP!");
-			//	$("#error").text(errors).addClass("actif");
-			//$('#email_lbl').addClass("bad_input");
-			$("#email").addClass("bollox").focus();
-			//	errors = [];
-			return;
-		} else if (!isValidEmailAddress(email)) {
-			//	errors.push("IS THAT ADDRESS KOSHER?");
-			//$("#error").text(errors).addClass("actif");
-			//$('#email_lbl').addClass("bad_input");
-			$("#email").addClass("bollox").focus();
-			//	errors = [];
-			return;
-		} else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
-			//	errors.push("HALF A TON?");
-			//$("#error").text(errors).addClass("actif");
-			//	$('#phone_lbl').addClass("bad_input");
-			//if (isNaN(phone)) {
-			$("#phone").val("");
-			//	}
-			//	console.log("line 79 " + isNaN(phone));
-			$("#phone").addClass("bollox").focus();
-			//	errors = [];
-			return;
-		} else {
-			clear_form($("#form"));
-			moveTo(".main", 1);
-			$("#tit").html("MESSAGE&nbsp;SENT");
-			delayedText();
-
-
-
-		}
-
+	function sendMessage() {
 		$.ajax({
 			type: "POST",
 			url: "http://cmh.netne.net/mail.php",
@@ -108,9 +69,70 @@ $(document).ready(function() {
 				email: email
 			}
 		});
-
 	}
 
+	function go() {
+
+		msg = $("#msg").val();
+		phone = parseInt($("#phone").val());
+		email = $("#email").val();
+
+		///////////////////////// first check for selected field
+
+		if (!msg && last_selected_field === 'msg') {
+
+			warning("#msg");
+
+			return;
+		} else if (!email && last_selected_field === 'email') {
+
+			warning("#email");
+
+			return;
+		} else if (!isValidEmailAddress(email) && last_selected_field === 'email') {
+
+			warning("#email");
+
+			return;
+		} else if ((!phone || isNaN(phone) || phone < 50 || phone > 50) &&
+			last_selected_field === 'phone') {
+
+			$("#phone").val("");
+
+			warning("#phone");
+			return;
+			///////////////////////// no focus, start at the top
+		} else if (!msg) {
+			warning("#msg");
+			return;
+		} else if (!email) {
+
+			warning("#email");
+
+			return;
+		} else if (!isValidEmailAddress(email)) {
+
+			warning("#email");
+
+			return;
+		} else if (!phone || isNaN(phone) || phone < 50 || phone > 50) {
+
+			$("#phone").val("");
+
+			warning("#phone");
+			return;
+
+		} else { ////////////////// all is good
+			clear_form($("#form"));
+			moveTo(".main", 1);
+			$("#tit").html("MESSAGE&nbsp;SENT");
+			delayedText();
+			sendMessage();
+
+
+
+		}
+	}
 	$("#but").click(
 		function(e) {
 
@@ -121,19 +143,18 @@ $(document).ready(function() {
 	);
 	$("#close").click(
 		function() {
-
-			//	$("#error").html("&nbsp;").removeClass("actif");
 			clear_form($("#form"));
-
-
 		}
 	);
 
 	$("input,textarea").on("keydown", function() {
-		//$("label").removeClass("bad_input");
+
 		$("input, textarea").removeClass("bollox");
 	});
 	$("input,textarea").on("click", function() {
+
+		last_selected_field = document.activeElement.id;
+		console.log("blar " + "#" + last_selected_field);
 		$("label").removeClass("bad_input");
 		$("input, textarea").removeClass("bollox");
 	});
