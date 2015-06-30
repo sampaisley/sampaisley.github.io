@@ -354,6 +354,15 @@ ul.onepage-pagination{
      right:4vw ;
 
     }
+    @include media(">desktop") {
+      line-height:2em;
+      position:absolute;
+      left:50%;
+      width:50px;
+      margin-left:-25px;
+    
+
+     }
 
 }
 /* #form{
@@ -476,6 +485,7 @@ span.butTxt{
     height: 10vh;
   //  line-height: 2.5;
     font-size: 4vh;
+    font-weight:200 !important;
     @media (max-height: 500px) {
       min-height: 15vh;
       font-size: 6vh;
