@@ -355,12 +355,13 @@ ul.onepage-pagination{
 
     }
     @include media(">desktop") {
+        @media (min-height: 620px) {
       line-height:2em;
       position:absolute;
       left:50%;
       width:50px;
       margin-left:-25px;
-    
+    }
 
      }
 
