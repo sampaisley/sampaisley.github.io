@@ -17,7 +17,7 @@ var thumbsMode = true;
 var images = [];
 var Draggabilly; // declare Draggabilly to keep jsHint quiet;
 var jso = {};
-var tag = 'france';
+var tag = 'food';
 var currentThumb = 0;
 var dragStartPoint = 0;
 var _X = 0,
@@ -316,8 +316,8 @@ draggie.on('dragMove', onDragMove);
 draggie.on('dragEnd', onDragEnd);
 
 ///set tags
-var france = document.querySelector('#france');
-var food = document.querySelector('#food');
+var france = document.querySelector('#ohsix');
+var field = document.querySelector('#food');
 var sea = document.querySelector('#sea');
 var numbers = document.querySelector('#numbers');
 // var tagName = document.querySelector('#tagName');
@@ -340,7 +340,7 @@ function changeSet(set) {
 }
 france.onclick =
   numbers.onclick =
-  food.onclick =
+  field.onclick =
   sea.onclick = function() {
     changeSet(this.getAttribute('id'));
     setActiveClass('.butto', "active", this);
