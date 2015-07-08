@@ -121,10 +121,10 @@ font-size: 1em;
   top: 20px;
   margin: 0 auto;
   width: 450px;
-  @include larger-than-width(790) {
+  @include larger-than-width(795) {
 
     top: 70px;
-    width: 790px;
+    width: 795px;
 
   }
 }
