@@ -316,7 +316,7 @@ draggie.on('dragMove', onDragMove);
 draggie.on('dragEnd', onDragEnd);
 
 ///set tags
-var france = document.querySelector('#ohsix');
+var france = document.querySelector('#francia');
 var field = document.querySelector('#food');
 var sea = document.querySelector('#sea');
 var numbers = document.querySelector('#numbers');
