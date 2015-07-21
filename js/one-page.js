@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 
 	function delayedText() {
-		timeoutID = window.setTimeout(changeText, 2001);
+		timeoutID = window.setTimeout(changeText, 2000);
 	}
 
 	function changeText() {
