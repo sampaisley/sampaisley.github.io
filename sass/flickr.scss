@@ -97,7 +97,7 @@ position: relative;
 #controls{
   border:$borderSize solid $bg_color1 ;
   display: inline-block;
-  padding: 1  0px;
+  padding: 1em  0px;
   text-align: center;
   width: 190px;
 float: left;
@@ -200,7 +200,8 @@ a.butto{
   padding-bottom: 9px;
   text-align: center;
   color: #fff;
-  margin: 9px auto;
+  margin: 0px auto;
+  margin-bottom:9px;
   display: block;
   line-height: 0;
   cursor: pointer;
