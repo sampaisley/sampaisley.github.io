@@ -25,8 +25,9 @@ var _X = 0,
 var oldNumOfPhotos;
 var timeoutID;
 //var windowWidth = window.innerWidth;
+// old api key = 2fdc79859cd894e55ee6fb2d0a4e6acf
 var flickrURL =
-  "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=2fdc79859cd894e55ee6fb2d0a4e6acf&user_id=100786833%40N08&extras=tags%2Curl_n%2Curl_c%2Curl_sq%2Cdate_taken&format=json";
+  "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=857e33af61016743c64d4aa90fa4782a&user_id=100786833%40N08&extras=tags%2Curl_n%2Curl_c%2Curl_sq%2Cdate_taken&format=json";
 
 //add the flickr javascript to the page so it gets executed
 //flickr automatically calls jsonflickrAPI(rsp)
@@ -318,7 +319,7 @@ draggie.on('dragEnd', onDragEnd);
 ///set tags
 var france = document.querySelector('#francia');
 var field = document.querySelector('#food');
-var sea = document.querySelector('#sea');
+var sea = document.querySelector('#briny');
 var numbers = document.querySelector('#numbers');
 // var tagName = document.querySelector('#tagName');
 // tagName.innerHTML = "Tag: " + tag;
