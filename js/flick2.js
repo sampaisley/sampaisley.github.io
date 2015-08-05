@@ -55,9 +55,7 @@ $("#images").on('click', '.thumb', function(e) {
   $("#tit").text(title);
   //$("<img/>").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop").appendTo("#pops");
   $("#bigImg").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop");
-  $('#pops').imagesLoaded(function() {
-    console.log("img done");
-  });
+
 })
 $("#images").on('mouseover', '.thumb', function(e) {
   $("#tit").addClass("tit_hover").text(e.target.alt);
