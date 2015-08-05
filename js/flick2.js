@@ -34,7 +34,7 @@ function go(tag) {
         firstImageSrc = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" +
           item.secret + "_c.jpg";
         $("<img/>").attr("src", firstImageSrc).attr("class", "thumb").attr("alt", item.title).appendTo("#pops");
-        $("#tit").text(item.title);
+        //  $("#tit").text(item.title);
         //$(".thumb").addClass("activ");
       }
     });
