@@ -30,19 +30,20 @@ function go(tag) {
         "_s.jpg";
       $("<img/>").attr("src", src).attr("class", "thumb").attr("alt", item.title).appendTo("#images");
       // set main image
-      if (i == 0) {
+      /*if (i == 0) {
         firstImageSrc = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" +
           item.secret + "_c.jpg";
         $("<img/>").attr("src", firstImageSrc).attr("class", "thumb").attr("alt", item.title).appendTo("#pops");
+
         //  $("#tit").text(item.title);
         //$(".thumb").addClass("activ");
-      }
+      }*/
     });
   });
 }
 
 $('.but').click(function() {
-  $("#images, #pops, #tit").empty();
+  $("#images,  #tit").empty();
   go($(this).attr('id'));
 })
 $("#images").on('click', '.thumb', function(e) {
@@ -50,9 +51,13 @@ $("#images").on('click', '.thumb', function(e) {
   $(".thumb").removeClass("activ");
   $(this).addClass('activ');
   $("#tit").removeClass("tit_hover")
-  $("#pops").empty().removeClass("hid");
+  $("#pops").removeClass("hid");
   $("#tit").text(title);
-  $("<img/>").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop").appendTo("#pops");
+  //$("<img/>").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop").appendTo("#pops");
+  $("#bigImg").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop");
+  $('#pops').imagesLoaded(function() {
+    console.log("img done");
+  });
 })
 $("#images").on('mouseover', '.thumb', function(e) {
   $("#tit").addClass("tit_hover").text(e.target.alt);
@@ -64,6 +69,7 @@ $("#images").on('mouseout', function(e) {
 
 $('#pops').click(function() {
   $(this).addClass("hid");
+  $("#bigImg").attr("src", "img/loading.png");
 });
 
 
