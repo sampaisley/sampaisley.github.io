@@ -48,8 +48,12 @@ img.thumb{
   border:7px solid $redIsh;
   border-bottom-left-radius:7px;
   margin: 5px;
+  width:75px;
+  height:75px;
+  background-color:$blueIsh;
   @media (max-height: 600px) {
     width:45px;
+    height:45px;
   }
 
 }
