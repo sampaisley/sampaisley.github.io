@@ -103,6 +103,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/camera-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1529,
+		"inputAbbreviatedPath": "\/img\/camera-icon.png",
+		"outputAbbreviatedPath": "\/img\/camera-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/cloud_h4.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -176,6 +187,17 @@
 		"initialSize": 64302,
 		"inputAbbreviatedPath": "\/img\/french_dog_opt3.jpg",
 		"outputAbbreviatedPath": "\/img\/french_dog_opt3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/home-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1143,
+		"inputAbbreviatedPath": "\/img\/home-icon.png",
+		"outputAbbreviatedPath": "\/img\/home-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
