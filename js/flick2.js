@@ -55,7 +55,7 @@ $("#images").on('click', '.thumb', function(e) {
   $("#tit").text(title);
   //$("<img/>").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop").appendTo("#pops");
   $("#bigImg").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop");
-  $("#casa").hide();
+  $("#casa, #foot").hide();
 
 })
 $("#images").on('mouseover', '.thumb', function(e) {
@@ -69,7 +69,7 @@ $("#images").on('mouseout', function(e) {
 $('#pops').click(function() {
   $(this).addClass("hid");
   $("#bigImg").attr("src", "");
-  $("#casa").show();
+  $("#casa, #foot").show();
 });
 
 
