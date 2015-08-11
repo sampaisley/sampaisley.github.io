@@ -102,9 +102,11 @@ background-position: center 40%;
 }
 
 #pops img {
+  box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
   border:10px solid rgb(66, 65, 71);
+  border-bottom-left-radius:20px;
   @media (min-width: 660px) {
       border:30px solid rgb(66, 65, 71);
   }
