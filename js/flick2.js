@@ -72,5 +72,8 @@ $('#pops').click(function() {
   $("#casa, #foot").show();
 });
 
-
+$("ul").on('click', '.but', function(e) {
+  $(".but").removeClass('actif');
+  $(this).addClass('actif');
+});
 go("sea");
