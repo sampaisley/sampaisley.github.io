@@ -40,6 +40,7 @@ li{
   display:inline-block;
   text-align:center;
   cursor:pointer;
+  outline:1px solid black;
   &.actif{
     background-color:$blueIsh;
     //color:$redIsh;
@@ -49,10 +50,7 @@ li{
   //  width:45%;
     margin:3px auto;
     &:nth-child(2){
-
-      clear:both;
-      margin-right:25%;
-
+      margin-right:26%;
     }
   }
 }
