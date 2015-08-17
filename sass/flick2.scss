@@ -130,10 +130,10 @@ background-position: center 40%;
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
-  border:10px solid rgb(66, 65, 71);
+  border:10px solid rgba(7, 4, 19, 0.9);
   border-bottom-left-radius:20px;
   @media (min-width: 660px) {
-      border:30px solid rgb(66, 65, 71);
+      border:30px solid rgba(7, 4, 19, 0.9);
   }
   max-height:95vh;
   //border:10px solid rgba(1, 11, 3, 0.74);
