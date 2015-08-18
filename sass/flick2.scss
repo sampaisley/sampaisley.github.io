@@ -41,6 +41,7 @@ li{
   text-align:center;
   cursor:pointer;
   transition: all .65s;
+  margin:3px auto;
   &:hover{
     border:4px solid darken($redIsh,7%);
     border-bottom-left-radius:1px;
@@ -52,7 +53,7 @@ li{
   }
   @media (max-width: 502px) {
   //  width:45%;
-    margin:3px auto;
+
     &:nth-child(2){
       margin-right:26%;
     }
