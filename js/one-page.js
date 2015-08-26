@@ -62,8 +62,8 @@ $(document).ready(function() {
 	function sendMessage() {
 		$.ajax({
 			type: "POST",
-			url: "http://cmh.netne.net/mail.php",
-			//url: "http://petalski.byethost7.com/mail.php",
+			//url: "http://cmh.netne.net/mail.php",
+			url: "http://petalski.byethost7.com/mail.php",
 			data: {
 				msg: msg,
 				phone: phone,
