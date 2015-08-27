@@ -334,11 +334,12 @@ ul.onepage-pagination{
 
 #camera{
   position:absolute;
-  bottom:11px;
-  right:21px;
+  bottom:1vh;
+  right:4vw;
   width:25px;
-  padding-top:30px;
-  padding-right:30px;
+  //padding-top:30px;
+  //padding-right:30px;
+//  outline:1px solid black;
   opacity:.65;
   cursor:pointer;
   @include single-transition(all, 0.4s, ease);
