@@ -1,6 +1,5 @@
 var src,
-  title,
-  firstImageSrc;
+  title;
 
 
 function sortbydate(a, b) {
@@ -45,24 +44,24 @@ function go(tag) {
 $('.but').click(function() {
   $("#images,  #tit").empty();
   go($(this).attr('id'));
-})
+});
 $("#images").on('click', '.thumb', function(e) {
   title = e.target.alt;
   $(".thumb").removeClass("activ");
   $(this).addClass('activ');
-  $("#tit").removeClass("tit_hover")
+  $("#tit").removeClass("tit_hover");
   $("#pops").removeClass("hid");
   $("#tit").text(title);
   //$("<img/>").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop").appendTo("#pops");
   $("#bigImg").attr("src", e.target.src.slice(0, -5) + "c.jpg").attr("class", "pop");
   $("#casa, #foot").hide();
 
-})
+});
 $("#images").on('mouseover', '.thumb', function(e) {
   $("#tit").addClass("tit_hover").text(e.target.alt);
 });
 
-$("#images").on('mouseout', function(e) {
+$("#images").on('mouseout', function() {
   $("#tit").removeClass("tit_hover").text(title);
 });
 
@@ -72,8 +71,33 @@ $('#pops').click(function() {
   $("#casa, #foot").show();
 });
 
-$("ul").on('click', '.but', function(e) {
+$("ul").on('click', '.but', function() {
   $(".but").removeClass('actif');
   $(this).addClass('actif');
 });
 go("sea");
+
+////////////////////////////////////////// test \\\\\\\\\\\\\\\\\\\\\
+function reverse(s) {
+  var o = '';
+  for (var i = s.length - 1; i >= 0; i--) {
+    o += s[i];
+  }
+  return o;
+}
+
+
+var m = 'otliam',
+  s = 'sam',
+  p = 'yelsiap',
+  a = '&#64;',
+  h = 'liamtoh',
+  d = '&#46;',
+  c = 'com';
+$("#cont").click(
+  function function_name() {
+
+    $(this).html('<a href="' + reverse(m) + ':' + s + reverse(p) + a + reverse(h) + d + c +
+      '?subject=Mail from Our Site">' + s + reverse(p) + a + reverse(h) + d + c + '</a>');
+  }
+);
