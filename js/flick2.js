@@ -76,28 +76,3 @@ $("ul").on('click', '.but', function() {
   $(this).addClass('actif');
 });
 go("sea");
-
-////////////////////////////////////////// test \\\\\\\\\\\\\\\\\\\\\
-function reverse(s) {
-  var o = '';
-  for (var i = s.length - 1; i >= 0; i--) {
-    o += s[i];
-  }
-  return o;
-}
-
-
-var m = 'otliam',
-  s = 'sam',
-  p = 'yelsiap',
-  a = '&#64;',
-  h = 'liamtoh',
-  d = '&#46;',
-  c = 'com';
-$("#cont").click(
-  function function_name() {
-
-    $(this).html('<a href="' + reverse(m) + ':' + s + reverse(p) + a + reverse(h) + d + c +
-      '?subject=Mail from Our Site">' + s + reverse(p) + a + reverse(h) + d + c + '</a>');
-  }
-);

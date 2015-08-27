@@ -226,8 +226,18 @@ ul.onepage-pagination{
   border-top: 1.5vh solid $yellowIsh;
   border-bottom: 0 solid $yellowIsh;
   border-bottom-left-radius: 0;
+  font-variant:small-caps;
   @include single-transition(all, 0.3s, ease-out);
-
+  a{
+    text-decoration:none;
+    color:$blueIsh;
+    letter-spacing:0;
+    padding-right:.35em;
+    font-size:5vh;
+    &:hover{
+      color:$redIsh;
+    }
+  }
   &:hover{
     //border-bottom: .5vw solid $yellowIsh;
     border-bottom-left-radius: $border-radius;
@@ -322,12 +332,26 @@ ul.onepage-pagination{
  }
 }
 
-
+#camera{
+  position:absolute;
+  bottom:11px;
+  right:21px;
+  width:25px;
+  padding-top:30px;
+  padding-right:30px;
+  opacity:.65;
+  cursor:pointer;
+  @include single-transition(all, 0.4s, ease);
+  &:hover{
+    opacity:1;
+    width:50px;
+  }
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////
                                /* \\\\\\\\ PAGE THREE \\\\\\\\\ */
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-.main section.page3 {
+/*.main section.page3 {
   background:$yellowIsh;
 
 
@@ -366,6 +390,7 @@ ul.onepage-pagination{
      }
 
 }
+*/
 /* #form{
   @media (orientation: landscape) {
 
@@ -379,7 +404,7 @@ ul.onepage-pagination{
 } */
 ////////////////// FORM ALL SIZE \\\\\\\\\\\\\\\\\\\\\\\\\
 
-
+/*
 *:-moz-submit-invalid {
   box-shadow: none;
 }

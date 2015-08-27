@@ -9,11 +9,27 @@ $(document).ready(function() {
 		timeoutID,
 		msg,
 		phone,
-		email;
+		email,
+		m = 'otliam',
+		s = 'sam',
+		p = 'yelsiap',
+		a = '&#64;',
+		h = 'liamtoh',
+		d = '&#46;',
+		c = 'com';
 
+	function reverse(s) {
+		var o = '';
+		for (var i = s.length - 1; i >= 0; i--) {
+			o += s[i];
+		}
+		return o;
+	}
 	$("#contact").html("CONTACT").click(
 		function() {
-			moveTo(".main", 3);
+			//moveTo(".main", 3);
+			$(this).html('<a class="cont" href="' + reverse(m) + ':' + s + reverse(p) + a + reverse(h) + d + c +
+				'?subject=Mail from Our Site">' + s + reverse(p) + a + reverse(h) + d + c + '</a>');
 		}
 	);
 	$("#q_mark").click(
@@ -26,6 +42,14 @@ $(document).ready(function() {
 			moveTo(".main", 1);
 		}
 	);
+	$("section").click(
+		function(e) {
+			//	console.log(e.target.id);
+			if (e.target.id !== 'contact') {
+				$("#contact").html("CONTACT");
+			}
+
+		});
 
 	function clear_form(ele) {
 
