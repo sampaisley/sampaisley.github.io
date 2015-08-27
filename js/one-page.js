@@ -29,7 +29,7 @@ $(document).ready(function() {
 		function() {
 			//moveTo(".main", 3);
 			$(this).html('<a class="cont" href="' + reverse(m) + ':' + s + reverse(p) + a + reverse(h) + d + c +
-				'?subject=Mail from Our Site">' + s + reverse(p) + a + reverse(h) + d + c + '</a>');
+				'?subject=Mail from Git Site">' + s + reverse(p) + a + reverse(h) + d + c + '</a>');
 		}
 	);
 	$("#q_mark").click(
