@@ -97,12 +97,12 @@ img.activ{
   position: fixed;
   width: 100vw;
   text-align: center;
- background: rgba(6,6,6, 0.91);
-   background-image: url('../img/loading.png');
+ background: rgba(#060606, 0.91);
+   background-image: url('../img/a-loader.gif');
    background-repeat:no-repeat;
 background-position: center 40%;
 @media (max-width: 600px) {
-   background-image: url('../img/loading_sml.png');
+   background-image: url('../img/a-loader.gif');
 }
 //@include background-image(linear-gradient(rgba(240, 230, 235, 0.22), #1d0303 5%, #170202 95%, #000));
   top: 0px;
