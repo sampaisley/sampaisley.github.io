@@ -1,0 +1,101 @@
+* {
+	//box-sizing: border-box;
+}
+
+
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 768px) {}
+
+////////////////////////
+
+.box {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.box2 {
+	display: flex;
+	height: 200px;
+	
+	justify-content: center;
+
+}
+
+.one {
+	flex: 1 1 auto;
+
+}
+
+.two {
+	flex: 2 1 auto;
+}
+
+.three {
+	flex: 4 1 auto;
+}
+
+.four {
+	width: 200px;
+}
+
+.all {
+	background-color: aliceblue;
+	padding: 4px;
+	margin: 4px;
+	color: #3d3d52;
+	font-size: 120%;
+
+}
+/////////////////////////////////////////////////////////////////////////////////
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+	max-width: 770px;
+}
+
+.item {
+  width: 25%;
+ height:  25%; /* Same as width, sets height */
+  margin-bottom: 0%; /* (100-32*3)/2 */
+  position: relative;
+	text-align: center;
+	//background-color: aliceblue;
+	img{
+		width: 100%;
+		border: 2px solid #fff;
+	}
+}
+
+#bar{
+	
+	img{
+		width: 32%;
+		border: 2px solid grey;
+	}
+}
+///////// DRAGULA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}

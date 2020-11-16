@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.452.min.css">
+	<link rel="stylesheet" href="css/flex.css?v=<?php echo date( filemtime('css/flex.css')); ?>">
+	<title>F L E X</title>
+</head>
+
+<body>
+
+	<div class="container border py-3 mt-4" id="picsDiv">
+	</div>
+	<div id="bar" class="container mb-3">
+		<span role="button" class="text-muted text-monospace" id="solve">solve</span>
+		<span role="button" class="float-right text-muted text-monospace" id="unsolve">un-solve</span>
+	</div>
+	<script src='https://rawgit.com/bevacqua/dragula/master/dist/dragula.min.js'></script>
+	<script>
+		function shuffleArray(array) {
+			for (let i = array.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[array[i], array[j]] = [array[j], array[i]];
+			}
+		}
+
+
+		var divi = document.getElementById("picsDiv");
+		var solve = document.getElementById("solve");
+		var unsolve = document.getElementById("unsolve");
+		var ar = [];
+		var numOfPics = 20;
+		for (var j = 0; j < numOfPics; j++) {
+			ar.push(j);
+
+
+		}
+
+		function jig() {
+
+			shuffleArray(ar);
+			for (var j = 0; j < numOfPics; j++) {
+				divi.innerHTML += '<div class="item"><img src="img/' + ar[j] + '.jpg"  class="img-fluid" alt=""></div>';
+			}
+		};
+
+
+		solve.onclick = function() {
+			divi.innerHTML = '';
+			for (var j = 0; j < numOfPics; j++) {
+				divi.innerHTML += '<div class="item"><img src="img/' + j + '.jpg"  class="img-fluid" alt=""></div>';
+			}
+		}
+
+		unsolve.onclick = function() {
+			divi.innerHTML = '';
+			jig();
+		};
+
+		jig();
+
+		////////////////////////////////////////
+		dragula([document.querySelector('#picsDiv')]).on('drop', function(el) {
+			//alert(el);
+		});
+
+	</script>
+</body>
+
+</html>
