@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOO</title>
+</head>
+<body>
+	<h1 id="foo">........</h1>
+	<script type="text/javascript">
+	var data = "foo";
+		var foo = document.getElementById("foo");
+
+			var r = new XMLHttpRequest();
+			r.open("POST", "http://paisley.byethost15.com/foo.php/", true);
+			r.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			r.onreadystatechange = function() {
+				if (r.readyState != 4 || r.status != 200) return;
+				//makeTable();
+				foo.innerHTML=r.responseText;
+
+			};
+			r.send(data);
+	</script>
+</body>
+</html>
