@@ -12,8 +12,7 @@
 </head>
 
 <body>
-
-	<div class="container border py-3 mt-4" id="picsDiv">
+<div class="container border py-3 mt-4" id="picsDiv">
 	</div>
 	<div id="bar" class="container mb-3">
 		<span role="button" class="text-muted text-monospace" id="solve">solve</span>
@@ -29,17 +28,14 @@
 		}
 
 
-		var divi = document.getElementById("picsDiv");
-		var solve = document.getElementById("solve");
-		var unsolve = document.getElementById("unsolve");
-		var ar = [];
+		const divi = document.getElementById("picsDiv");
+		const solve = document.getElementById("solve");
+		const unsolve = document.getElementById("unsolve");
 		var numOfPics = 20;
-		for (var j = 0; j < numOfPics; j++) {
-			ar.push(j);
+		
+		const ar = [...Array(numOfPics).keys()];
 
-
-		}
-
+	
 		function jig() {
 
 			shuffleArray(ar);
@@ -64,9 +60,7 @@
 		jig();
 
 		////////////////////////////////////////
-		dragula([document.querySelector('#picsDiv')]).on('drop', function(el) {
-			//alert(el);
-		});
+		dragula([document.querySelector('#picsDiv')]);
 
 	</script>
 </body>
