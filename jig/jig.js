@@ -39,3 +39,8 @@ jig();
 
 
 dragula([document.querySelector('#picsDiv')]);
+
+
+
+
+
