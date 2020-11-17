@@ -18,7 +18,7 @@ function jig() {
 
 	shuffleArray(ar);
 	for (var j = 0; j < numOfPics; j++) {
-		divi.innerHTML += '<div class="item"><img src="img/' + ar[j] + '.jpg"  class="img-fluid" alt=""></div>';
+		divi.innerHTML += '<div class="item"><img src="img/2020/' + ar[j] + '.gif"  class="img-fluid" alt=""></div>';
 	}
 };
 
@@ -26,7 +26,7 @@ function jig() {
 solve.onclick = function () {
 	divi.innerHTML = '';
 	for (var j = 0; j < numOfPics; j++) {
-		divi.innerHTML += '<div class="item"><img src="img/' + j + '.jpg"  class="img-fluid" alt=""></div>';
+		divi.innerHTML += '<div class="item"><img src="img/2020/' + j + '.gif"  class="img-fluid" alt=""></div>';
 	}
 }
 
