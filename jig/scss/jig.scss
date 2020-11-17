@@ -1,54 +1,4 @@
-* {
-	//box-sizing: border-box;
-}
 
-
-
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 768px) {}
-
-////////////////////////
-
-.box {
-	display: flex;
-	flex-wrap: wrap;
-	text-align: center;
-}
-
-.box2 {
-	display: flex;
-	height: 200px;
-	
-	justify-content: center;
-
-}
-
-.one {
-	flex: 1 1 auto;
-
-}
-
-.two {
-	flex: 2 1 auto;
-}
-
-.three {
-	flex: 4 1 auto;
-}
-
-.four {
-	width: 200px;
-}
-
-.all {
-	background-color: aliceblue;
-	padding: 4px;
-	margin: 4px;
-	color: #3d3d52;
-	font-size: 120%;
-
-}
-/////////////////////////////////////////////////////////////////////////////////
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -59,7 +9,7 @@
 .item {
   width: 25%;
  height:  25%; /* Same as width, sets height */
-  margin-bottom: 0%; /* (100-32*3)/2 */
+  margin-bottom: 0%; 
   position: relative;
 	text-align: center;
 	//background-color: aliceblue;
@@ -69,13 +19,6 @@
 	}
 }
 
-#bar{
-	
-	img{
-		width: 32%;
-		border: 2px solid grey;
-	}
-}
 ///////// DRAGULA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .gu-mirror {
   position: fixed !important;
