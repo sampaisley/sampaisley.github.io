@@ -13,34 +13,33 @@ var numOfPics = 20;
 
 
 solve.onclick = function () {
-	showPics(50,0);
+	showPics(0);
 }
 
 unsolve.onclick = function () {
-	showPics(10,1);
+	showPics(1);
 };
 
 
 
-function showPics(speed,shuf){
+function showPics(shuf) {
 	var i = 0;
-//	if(!speed){
-//		speed=0;
-//	}
+
 	const ar = [...Array(numOfPics).keys()];
 	divi.innerHTML = '';
 
-	if(shuf){
+	if (shuf) {
 		shuffleArray(ar);
 	}
 
-	var countdown = setInterval(function () {
-		divi.innerHTML += '<div class="item"><img src="img/2020/' + ar[i++] + '.gif"  class="img-fluid" alt=""></div>';
-		if (i == numOfPics) {
-			clearTimeout(countdown);
-		}
-	}, speed);
+	for (; i < numOfPics;) {
+		divi.innerHTML += '<div class="item"><img src="img/2020/' + ar[i++] + '.gif"  class="img-fluid" alt="hohoho"></div>';
+	};
 }
-showPics(0,1);
- 
+
+
+showPics(1);
+
 dragula([document.querySelector('#picsDiv')]);
+
+
