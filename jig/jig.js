@@ -11,36 +11,33 @@ const solve = document.getElementById("solve");
 const unsolve = document.getElementById("unsolve");
 var numOfPics = 20;
 
-const ar = [...Array(numOfPics).keys()];
-
-
-function jig() {
-
-	shuffleArray(ar);
-	for (var j = 0; j < numOfPics; j++) {
-		divi.innerHTML += '<div class="item"><img src="img/2020/' + ar[j] + '.gif"  class="img-fluid" alt=""></div>';
-	}
-};
-
 
 solve.onclick = function () {
-	divi.innerHTML = '';
-	for (var j = 0; j < numOfPics; j++) {
-		divi.innerHTML += '<div class="item"><img src="img/2020/' + j + '.gif"  class="img-fluid" alt=""></div>';
-	}
+	showPics();
 }
 
 unsolve.onclick = function () {
-	divi.innerHTML = '';
-	jig();
+	showPics(1);
 };
 
-jig();
 
 
+function showPics(shuf){
+	var i = 0;
+	const ar = [...Array(numOfPics).keys()];
+	divi.innerHTML = '';
+
+	if(shuf){
+		shuffleArray(ar);
+	}
+
+	var countdown = setInterval(function () {
+		divi.innerHTML += '<div class="item"><img src="img/2020/' + ar[i++] + '.gif"  class="img-fluid" alt=""></div>';
+		if (i == numOfPics) {
+			clearTimeout(countdown);
+		}
+	}, 25);
+}
+showPics(1);
+////////////////////////////////////////////
 dragula([document.querySelector('#picsDiv')]);
-
-
-
-
-
