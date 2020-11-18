@@ -39,5 +39,5 @@ function showPics(shuf){
 	}, 25);
 }
 showPics(1);
-////////////////////////////////////////////
+ 
 dragula([document.querySelector('#picsDiv')]);
