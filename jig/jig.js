@@ -13,17 +13,20 @@ var numOfPics = 20;
 
 
 solve.onclick = function () {
-	showPics();
+	showPics(50,0);
 }
 
 unsolve.onclick = function () {
-	showPics(1);
+	showPics(10,1);
 };
 
 
 
-function showPics(shuf){
+function showPics(speed,shuf){
 	var i = 0;
+//	if(!speed){
+//		speed=0;
+//	}
 	const ar = [...Array(numOfPics).keys()];
 	divi.innerHTML = '';
 
@@ -36,8 +39,8 @@ function showPics(shuf){
 		if (i == numOfPics) {
 			clearTimeout(countdown);
 		}
-	}, 25);
+	}, speed);
 }
-showPics(1);
+showPics(0,1);
  
 dragula([document.querySelector('#picsDiv')]);
