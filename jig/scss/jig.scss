@@ -4,7 +4,11 @@
 	justify-content: space-between;
 	max-width: 60vh;
 	padding: 10px;
-	background-color: aquamarine;
+	@media  (max-width: 600px){
+		background-color: hotpink;
+		max-width: 100%;
+	}
+	
 }
 
 .item {
