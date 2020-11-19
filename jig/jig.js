@@ -1,3 +1,6 @@
+(function () {
+   'use strict';
+
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -6,40 +9,53 @@ function shuffleArray(array) {
 }
 
 
-const divi = document.getElementById("picsDiv");
+const picsDiv = document.getElementById("picsDiv");
 const solve = document.getElementById("solve");
 const unsolve = document.getElementById("unsolve");
-var numOfPics = 20;
+let numOfPics = 20;
 
+const synomns=["confound", "obfuscate","problemise","perplex","obscure", "muddle", "becloud", "mystify", "befuddle", "complicate"];
 
 solve.onclick = function () {
 	showPics(0);
-}
+};
 
 unsolve.onclick = function () {
 	showPics(1);
+	shuffleArray(synomns);
+	this.innerHTML=synomns[0];
 };
 
 
 
 function showPics(shuf) {
-	var i = 0;
+	let i = 0;
 
 	const ar = [...Array(numOfPics).keys()];
-	divi.innerHTML = '';
+	picsDiv.innerHTML = '';
 
 	if (shuf) {
 		shuffleArray(ar);
 	}
 
 	for (; i < numOfPics;) {
-		divi.innerHTML += '<div class="item"><img src="img/2020/' + ar[i++] + '.gif"  class="img-fluid" alt="hohoho"></div>';
-	};
+		picsDiv.innerHTML += '<div class="item"><img src="img/2020/' + ar[i++] + '.gif"  class="img-fluid" alt="hohoho' + i +'"></div>';
+	}
 }
 
 
 showPics(1);
 
+
+
 dragula([document.querySelector('#picsDiv')]);
+function fooo(n){
+	return 10*n;
+}
+	
+
+	
 
 
+
+}());
