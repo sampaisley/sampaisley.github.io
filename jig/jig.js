@@ -49,10 +49,7 @@ showPics(1);
 
 
 dragula([document.querySelector('#picsDiv')]);
-function fooo(n){
-	return 10*n;
-}
-	
+
 
 	
 
