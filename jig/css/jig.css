@@ -19,6 +19,15 @@
     width: 100%;
     border: 2px solid #fff; }
 
+.green {
+  color: green; }
+
+.big {
+  font-size: 7em; }
+
+.underline {
+  text-decoration: underline; }
+
 .gu-mirror {
   position: fixed !important;
   margin: 0 !important;
