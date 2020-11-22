@@ -25,6 +25,10 @@
 		"mystify",
 		"befuddle",
 		"complicate",
+		"disconcert",
+		"puzzle",
+		"discombobulate",
+		"muddy",
 	];
 
 	solve.onclick = function () {
@@ -50,7 +54,9 @@
 		}
 
 		for (; i < numOfPics;) {
-			picsDiv.innerHTML += '<div class="item"><img src="img/2020/' + ar[i++] + '.gif"  class="img-fluid" alt="hohoho' + i + '"></div>';
+			picsDiv.innerHTML += `<div class="item">
+                                  <img src="img/2020/${ar[i]}.gif"  class="img-fluid" alt="hohoho ${i++} ">
+                                  </div>`;
 		}
 	}
 
@@ -61,30 +67,6 @@
 
 	dragula([document.querySelector('#picsDiv')]);
 
-
-
-	function ElFromId(e) {
-		this.el = document.getElementById(e);
-		
-		this.text = function (tx) {
-			this.el.innerHTML = tx;
-			return this;
-		};
-		this.addClass = function (cl) {
-
-			this.el.classList.add(cl);
-			return this;
-
-		};
-		this.removeClass = function (cl) {
-			
-			this.el.classList.remove(cl);
-			return this;
-		};
-	}
-	let dog = new ElFromId("dog");
-
-	dog.addClass('big').text("green").removeClass("underline").addClass("green");
-
-
+	
+	
 }());
