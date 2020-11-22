@@ -4,6 +4,7 @@
 	  "globals" : {
 		  "dragula":true,
 		  "console":true,
-		  "alert"  :true
+		  "alert"  :true,
+		  "$"      :true
 	  } 
 }
