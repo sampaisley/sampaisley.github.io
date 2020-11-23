@@ -28,6 +28,9 @@
 .underline {
   text-decoration: underline; }
 
+.noDragin {
+  outline: 2px dotted !important; }
+
 .gu-mirror {
   position: fixed !important;
   margin: 0 !important;

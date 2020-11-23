@@ -36,6 +36,10 @@
 .underline{
 	text-decoration: underline;
 }
+.noDragin{
+	outline: 2px dotted !important;
+	//position: fixed;
+}
 ///////// DRAGULA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .gu-mirror {
 	position: fixed !important;
