@@ -96,7 +96,7 @@
 
 	dragula([document.querySelector('#picsDiv')]).on("drop",
 		function () {
-          if (solve.classList.contains('d-none'))  swapButtons(unsolve,solve);
+          if (solve.classList.contains('d-none'))  swapButtons(unsolve,solve);changeText(unsolve);
 		});
 
 
