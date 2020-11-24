@@ -8,34 +8,57 @@
 	const numOfPics = 20;
 
 	const synomns = [
-		"confound",
-		"obfuscate",
-		"problemise",
-		"perplex",
-		"obscure",
-		"muddle",
 		"becloud",
-		"mystify",
 		"befuddle",
+		"bol-ox",
+		"confound",
+		"confusticate",
 		"complicate",
-		"disconcert",
-		"puzzle",
+		"disband",
 		"discombobulate",
+		"discompose",
+		"disconcert",
+		"disturb",
+		"jumble",
+		"muddle",
 		"muddy",
-	];
+		"mystify",
+		"obfuscate",
+		"obscure",
+		"perplex",
+		"problemise",
+		"puzzle",
+		"scramble",
+		"shuffle",
+		"undo",
+		"unsolve",
+		];
+
+	changeText(unsolve);
+
 
 	solve.onclick = function () {
 		showPics(0);
+		swapButtons(this, unsolve);
+
 	};
 
 	unsolve.onclick = function () {
 		showPics(1);
 		changeText(this);
+		swapButtons(this, solve);
+
 	};
-	
-	function changeText(el){
+
+	function changeText(el) {
 		shuffleArray(synomns);
 		el.innerHTML = synomns[0];
+	}
+
+
+	function swapButtons(el1, el2) {
+		el1.classList.add('d-none');
+		el2.classList.remove('d-none');
 	}
 
 
@@ -52,7 +75,7 @@
 
 		for (; i < numOfPics;) {
 			picsDiv.innerHTML += `<div class="item">
-                                  <img src="img/2020/${picsArray[i]}.gif"  class="img-fluid" alt="hohoho ${i++} ">
+                                  <img src="img/2020/${picsArray[i]}.gif"  class="img-fluid" alt="pic ${i++} ">
                                   </div>`;
 		}
 	}
@@ -71,9 +94,10 @@
 
 
 
-	dragula([document.querySelector('#picsDiv')]);
-
-
+	dragula([document.querySelector('#picsDiv')]).on("drop",
+		function () {
+          if (solve.classList.contains('d-none'))  swapButtons(unsolve,solve);
+		});
 
 
 }());
