@@ -4,6 +4,7 @@
 	const picsDiv = document.getElementById("picsDiv");
 	const solve = document.getElementById("solve");
 	const unsolve = document.getElementById("unsolve");
+	const imgs = document.getElementsByClassName('img-fluid');
 	const numOfPics = 20;
 
 	const synomns = [
@@ -29,9 +30,13 @@
 
 	unsolve.onclick = function () {
 		showPics(1);
-		shuffleArray(synomns);
-		this.innerHTML = synomns[0];
+		changeText(this);
 	};
+	
+	function changeText(el){
+		shuffleArray(synomns);
+		el.innerHTML = synomns[0];
+	}
 
 
 
@@ -54,8 +59,8 @@
 
 
 	showPics(1);
-	
-	
+
+
 	function shuffleArray(array) {
 		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -67,10 +72,8 @@
 
 
 	dragula([document.querySelector('#picsDiv')]);
-	
-	
 
-	
+
+
+
 }());
-
-

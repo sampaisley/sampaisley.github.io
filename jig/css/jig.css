@@ -17,7 +17,9 @@
   text-align: center; }
   .item img {
     width: 100%;
-    border: 2px solid #fff; }
+    border: 3px solid #fff; }
+  .item img.noBorder {
+    border: 0px solid #fff; }
 
 .green {
   color: green; }
