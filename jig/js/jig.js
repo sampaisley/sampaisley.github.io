@@ -4,7 +4,6 @@
 	const picsDiv = document.getElementById("picsDiv");
 	const solve = document.getElementById("solve");
 	const unsolve = document.getElementById("unsolve");
-	const imgs = document.getElementsByClassName('img-fluid');
 	const numOfPics = 20;
 
 	const synomns = [
@@ -96,8 +95,9 @@
 
 	dragula([document.querySelector('#picsDiv')]).on("drop",
 		function () {
-          if (solve.classList.contains('d-none'))  swapButtons(unsolve,solve);changeText(unsolve);
+			if (solve.classList.contains('d-none')) swapButtons(unsolve, solve);
+			changeText(unsolve);
 		});
-
+	
 
 }());

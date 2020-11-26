@@ -34,11 +34,20 @@
 .green{
 	color: green;
 }
+.red{
+	color: red;
+}
 .big{
 	font-size: 7em;
 }
 .underline{
 	text-decoration: underline;
+	&:hover{
+		filter: brightness(200%);
+		filter: drop-shadow(17px -13px 0.25px #5d5d65);
+		text-decoration: none;
+		
+	}
 }
 .noDragin{
 	outline: 2px dotted !important;
