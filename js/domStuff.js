@@ -1,19 +1,25 @@
 const $ = (function () {
-    let Constructor = function (el) {
+    let Constructor = function (el, n) {
 
         if (!el) return;
 
         this.el = document.querySelectorAll(el);
+        this.n = n;
+
 
 
         this.text = (tx) => {
 
             if (tx) {
-                this.el.forEach(function (item) {
-                    item.innerHTML = tx;
-                });
+                for (let i = 0; i < this.el.length; i++) {
+
+                    if ((this.n || this.n === 0) && this.n !== i) continue;
+                    this.el[i].innerHTML = tx;
+                }
+
                 return this;
             }
+
             return this.el[0].innerHTML;
         };
 
@@ -23,8 +29,10 @@ const $ = (function () {
 
             if (cl && !cl.trim()) return this; // can't trim empty space
             cl = cl.trim().split(' ');
-            this.el.forEach(function (item) {
+            this.el.forEach((item, index) => { // arrow functions don't have own 'this', ha!
+
                 for (let j = 0; j < cl.length; j++) {
+                    if ((this.n || this.n === 0) && this.n !== index) continue;
                     item.classList.add(cl[j]);
                 }
             });
@@ -36,11 +44,13 @@ const $ = (function () {
 
             if (cl && !cl.trim()) return this; // can't trim empty space
             cl = cl.trim().split(' ');
-            this.el.forEach(function (item) {
+            this.el.forEach(function (item,index) {
                 for (let j = 0; j < cl.length; j++) {
+                    if ((this.n || this.n === 0) && this.n !== index) continue;
+
                     item.classList.remove(cl[j]);
                 }
-            });
+            },this);// pass 'this' to .forEach loop
             return this;
         };
 
@@ -50,11 +60,12 @@ const $ = (function () {
 
             if (cl && !cl.trim()) return this; // can't trim empty space
             cl = cl.trim().split(' ');
-            this.el.forEach(function (item) {
+            this.el.forEach(function (item, index) {
                 for (let j = 0; j < cl.length; j++) {
+                    if ((this.n || this.n === 0) && this.n !== index) continue;
                     item.classList.toggle(cl[j]);
                 }
-            });
+            },this);
             return this;
         };
 
@@ -63,7 +74,7 @@ const $ = (function () {
 
         this.attribute = (att, str) => {
             if (str) {
-                this.el.forEach(function (item) {
+                this.el.forEach(function (item, index) {
                     item.setAttribute(att, str);
                 });
                 return this;
@@ -93,12 +104,19 @@ const $ = (function () {
             this.el[0].focus();
             return this;
         };
+        
+        this.eq = (n) => {
+            this.n=n;
+            return this;
+        };
 
 
         this.scrollToView = (bool) => {
             this.el[0].scrollIntoView(bool);
             return this;
         };
+
+
 
         this.hasClass = (cl) => {
             return this.el[0].classList.contains(cl);
@@ -124,8 +142,8 @@ const $ = (function () {
     /**
      * Instantiate a new constructor
      */
-    let instantiate = function (selector) {
-        return new Constructor(selector);
+    let instantiate = function (...args) {
+        return new Constructor(...args);
     };
 
     /**
