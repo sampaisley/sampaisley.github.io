@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.452.min.css">
+
+    <title>sampaisley</title>
+    <style>
+        .red {
+            color: orangered;
+        }
+
+        .green {
+            color: aquamarine !important;
+            background-color: orange;
+            padding: .4em;
+        }
+
+        .pink {
+            font-weight: bold;
+            color: deeppink;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p id="hola" class="foo pink">hola</p>
+        <p id="foo" class="foo one pink">hola</p>
+        <p class="foo pink">22</p>
+        <p class="foo pink">33</p>
+    </div>
+    <input type="text" id="inp" value="putPut">
+    <script src="js/pQuery.js"></script>
+    <script>
+        //        $(".foo",0).text("onn--ne");
+        let oi = (t) => alert(t);
+
+
+        $(".foo").text("one").eq(1).text('click me').putClass('green').eq(2).text('three').eq(3).text('four').eq(null).putClass('underline');
+ $(".foo",3).on("click",function(){
+	 $('#inp').fuckOff();
+ });
+ // $("#foo").on("click", () => oi('h98989898ooo'));
+
+
+      
+        
+        
+      
+// $('.foo').eq(0).text("2").putClass('underline').takeClass('pink').eq(3).putClass("green").eq(2).text('Toooooooooo').eq(2).attribute("role","button");   
+				$('#foo').text('hash foo').takeClass("pink").on('click', function(){
+						$('.foo',2).togClass("pink mx-3 underline");		
+				});
+				
+		
+
+    </script>
+</body>
+
+</html>
