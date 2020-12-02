@@ -1,9 +1,15 @@
-function $(selector) {
+function $(selector, n) {
 	const el = document.querySelectorAll(selector);
-	let n = null;
-
-
+	
 	if (!el) return;
+
+	if (n >= 0) {
+		n = n;
+	} else {
+		n = null;
+	}
+	
+
 
 	return {
 		el,
@@ -17,13 +23,13 @@ function $(selector) {
 
 
 
-		text(tx) {
+		text(newText) {
 
-			if (tx) {
+			if (newText) {
 				for (let i = 0; i < el.length; i++) {
 
 					if ((n || n === 0) && n !== i) continue;
-					el[i].innerHTML = tx;
+					el[i].innerHTML = newText;
 				}
 
 				return this;
@@ -44,6 +50,7 @@ function $(selector) {
 					if ((n || n === 0) && n !== index) continue;
 					item.classList.add(cl[j]);
 				}
+				
 			});
 			return this;
 		},
@@ -56,12 +63,14 @@ function $(selector) {
 			if (cl && !cl.trim()) return this; // can't trim empty space
 			cl = cl.trim().split(' ');
 			el.forEach(function (item, index) {
+				
 				for (let j = 0; j < cl.length; j++) {
 					if ((n || n === 0) && n !== index) continue;
 
 					item.classList.remove(cl[j]);
 				}
-			}); // pass 'this' to .forEach loop
+				
+			});
 			return this;
 		},
 
@@ -84,8 +93,8 @@ function $(selector) {
 
 		attribute(att, str) {
 			if (str) {
-				for(let i=0; i< el.length; i++) {
-						if ((n || n === 0) && n !== i) continue;
+				for (let i = 0; i < el.length; i++) {
+					if ((n || n === 0) && n !== i) continue;
 					el[i].setAttribute(att, str);
 				}
 				return this;
