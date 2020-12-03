@@ -55,8 +55,8 @@
 				<p class="lef-3" role="button"><code>
 						$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
 
-				$('.foo').eq(1).togClass('pink');
-				$('#inp').val(`q= ${q++} init!`).focus();
+				$('.foo').eq(1).togClass(' linethrough pink');
+				$('#inp').val(`q= ${q++} init!`);
 
 			})
 
@@ -91,8 +91,8 @@
 		$('.lef-3').on("click", function() {
 			$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
 
-				$('.foo').eq(1).togClass('pink');
-				$('#inp').val(`q= ${q++} init!`).focus();
+				$('.foo').eq(1).togClass(' pink linethrough');
+				$('#inp').val(`q= ${q++} init!`);
 
 			})
 		})
