@@ -2,94 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.452.min.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.452.min.css">
 
-    <title>sampaisley</title>
-    <style>
-        .red {
-            color: orangered;
-        }
+	<title>sampaisley</title>
+	<style>
+		.red {
+			color: orangered;
+		}
 
-        .green {
-            color: aquamarine !important;
-            background-color: orange;
-            padding: .4em;
-        }
+		.green {
+			color: aquamarine !important;
+			background-color: orange;
+			padding: .4em;
+		}
 
-        .pink {
-            font-weight: bold;
-            color: deeppink;
-        }
+		.pink {
+			font-weight: bold;
+			color: deeppink;
+		}
 
-        .underline {
-            text-decoration: underline;
-        }
-			.linethrough{
-				text-decoration: line-through;
-			}
-			.long{
-				margin-top: 150vh;
-				margin-bottom: 70vh;
-			}
+		.underline {
+			text-decoration: underline;
+		}
 
-    </style>
+		.linethrough {
+			text-decoration: line-through;
+		}
+
+		.long {
+			margin-top: 150vh;
+			margin-bottom: 70vh;
+		}
+
+	</style>
 </head>
 
 <body>
 
-    <div class="container">
-        <p id="hola" class="foo one pink">hola</p>
-        <p id="foo" class="foo one pink">hola</p>
-        <p class="foo pink">22</p>
-        <p class="foo pink ">33</p>
-    </div>
-    <input type="text" id="inp" value="putPut">
-    <script src="js/pQuery.js"></script>
-    <script>
-        //        $(".foo",0).text("onn--ne");
-        let oi = (t) => alert(t);
+	<div class="container">
+		<div class="row">
+			<div class="column col-md-6">
+				<p class="lef-1" role="button"><code>$('.foo').eq(2).text('xxx').eq(3).putClass('underline')</code></p>
+				<hr>
+				<p class="lef-2" role="button"><code>$('.foo').eq(0).takeClass('pink').eq().putClass('linethrough')</code></p>
+				<hr>
+				<p class="lef-3" role="button"><code>
+						$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
 
-
-       // $(".foo").text("one").eq(1).text('click me').putClass('green').eq(2).text('three').eq(3).text('four').eq(null).putClass('underline');
-// $(".foo",3).on("click",function(){
-	// $('#inp').val("gogogogogo");
- //});
- // $("#foo").on("click", () => oi('h98989898ooo'));
-
-
-  //$(".foo",2).putClass("underline").eq(3).text('pqpqpqpqpqpqpqpqp').eq(1).takeClass('pink').attribute('role','button').on("click",function(){
-	//	$('.long').scrollToView(true);
-//	}).eq(0).putClass('ml-3');    
-        
-        
-      
-// $('.foo').eq(0).text("2").putClass('underline').takeClass('pink').eq(3).putClass("green").eq(2).text('Toooooooooo').eq(2).attribute("role","button");   
-			//	$('#foo').text('hash foo').takeClass("pink").on('click', function(){
-					//	$('.foo',3).togClass("pink mx-3 underline");		
-			//	});
-			let q=0;
-			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink').eq().putClass('linethrough');
-			$('#foo').text("Hash foo");
-			$('.one').putClass('ml-3').eq(0).attribute('role','button').on("click", function(){
-		
 				$('.foo').eq(1).togClass('pink');
 				$('#inp').val(`q= ${q++} init!`).focus();
-				
-			});
 
-		
-			
-//		a.forEach((item, index) => {
-//			console.log('item', item);
-//			
-//		});
-			
-			
+			})
 
-    </script>
+						});
+					</code></p>
+					<hr>
+			</div>
+
+			<div class="column col-md-6">
+				<p id="hola" class="foo one pink">hola</p>
+				<p id="foo" class="foo one pink">hola</p>
+				<p class="foo pink">22</p>
+				<p class="foo pink ">33</p>
+				<input type="text" id="inp" value="putPut">
+			</div>
+		</div>
+	</div>
+
+	<script src="js/pQuery.js"></script>
+	<script>
+		let q = 0;
+		$('.lef-1').on("click", function() {
+			$('.foo').eq(2).text('xxx').eq(3).putClass('underline');
+		})
+
+		$('.lef-2').on("click", function() {
+			$('.foo').eq(0).takeClass('pink').eq().putClass('linethrough');
+		})
+
+		$('.lef-3').on("click", function() {
+			$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
+
+				$('.foo').eq(1).togClass('pink');
+				$('#inp').val(`q= ${q++} init!`).focus();
+
+			})
+		})
+
+
+
+
+		//			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink').eq().putClass('linethrough');
+		//			$('#foo').text("Hash foo");
+		//			$('.one').putClass('ml-3').eq(0).attribute('role','button').on("click", function(){
+		//		
+		//				$('.foo').eq(1).togClass('pink');
+		//				$('#inp').val(`q= ${q++} init!`).focus();
+		//				
+		//			});
+
+
+
+		//		a.forEach((item, index) => {
+		//			console.log('item', item);
+		//			
+		//		});
+
+	</script>
 </body>
 
 </html>
