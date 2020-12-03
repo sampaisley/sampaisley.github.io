@@ -20,13 +20,27 @@
 			font-size: 40vw;
 			line-height: 1;
 			margin-top: 5vh;
+		
             -moz-osx-font-smoothing: grayscale;
             
+		}
+		.blur1{
+			filter: blur(10px)
+		}
+		.blur2{
+			filter: blur(20px)
+		}
+		.blur3{
+			filter: blur(30px)
+		}
+		.blur4{
+			filter: blur(40px)
 		}
 		@media (orientation: portrait) {
 			#hola {
 				font-size: 50vw;
 				margin-top: 30vh;
+				
 			}
 		}
 	</style>
@@ -35,7 +49,9 @@
 <body>
 
 	<div class="d-flex justify-content-center p-0 m-0">
-		<p id="hola" class="text-center">hola</p>
+		<p id="hola" class="text-center">
+		<span class="blur blur1">h</span><span class="blur blur2">o</span><span class="blur blur3">l</span><span class="blur blur4">a</span>
+		</p>
 	</div>
 	<!-- ------------------------------	 that's all folks -->
 </body></html>
