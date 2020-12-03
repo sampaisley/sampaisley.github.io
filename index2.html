@@ -96,13 +96,9 @@
 
 			})
 		})
-		
+		let divTxt = $('#right-col').text();
 	$('.lef-4').on('click', function(){
-		$('#right-col').text(`<p id="hola" class="foo one pink big">hola</p>
-				<p id="foo" class="foo one pink">hola</p>
-				<p class="foo pink">22</p>
-				<p class="foo pink ">33</p>
-				<input type="text" id="inp" value="putPut">`);
+		$('#right-col').text(divTxt);
 		 $('#inp').val('putPut');
 	})
 
