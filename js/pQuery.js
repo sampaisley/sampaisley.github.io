@@ -1,29 +1,36 @@
 function $(selector, indx) {
+	
+	if(!selector) return;
+	
+	
 	let els = document.querySelectorAll(selector);
 
-	if (!els) return;
-	
+
 	let el;
 
-	if (indx >= 0 && indx <= el.length) {
-		indx = indx;
+	if (indx >= 0 && indx <= els.length) {
+		
+console.log('indx', indx);
 		el = [els[indx]];
+
 	} else {
 		indx = null;
-		el=els;
+		el = els;
 	}
 
 
 
 	return {
 		el,
+
+
 		indx,
 
 
 		eq(eq) {
 
 			el = els; // re-set el
-			if (eq >= 0 && eq <= el.length) {
+			if (eq >= 0 && eq <= el.length && eq !==null) {
 				indx = eq;
 				el = [els[indx]];
 			}
@@ -88,11 +95,11 @@ function $(selector, indx) {
 			if (cl && !cl.trim()) return this; // can't trim empty space
 			cl = cl.trim().split(' ');
 			el.forEach(function (item, index) {
-				
+
 				for (let j = 0; j < cl.length; j++) {
 					item.classList.toggle(cl[j]);
 				}
-				
+
 			});
 			return this;
 		},
@@ -102,7 +109,7 @@ function $(selector, indx) {
 		attribute(att, str) {
 			if (str) {
 				for (let i = 0; i < el.length; i++) {
-					
+
 					el[i].setAttribute(att, str);
 				}
 				return this;

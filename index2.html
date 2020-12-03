@@ -27,6 +27,9 @@
         .underline {
             text-decoration: underline;
         }
+			.linethrough{
+				text-decoration: line-through;
+			}
 			.long{
 				margin-top: 150vh;
 				margin-bottom: 70vh;
@@ -67,12 +70,13 @@
 			//	$('#foo').text('hash foo').takeClass("pink").on('click', function(){
 					//	$('.foo',3).togClass("pink mx-3 underline");		
 			//	});
-			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink');
+			let q=0;
+			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink').eq().putClass('linethrough');
 			$('#foo').text("Hash foo");
 			$('.one').putClass('ml-3').eq(0).attribute('role','button').on("click", function(){
 		
 				$('.foo').eq(1).togClass('pink');
-				$('#inp').val("foo").focus();
+				$('#inp').val(`q= ${q++} init!`).focus();
 				
 			});
 
@@ -82,7 +86,7 @@
 //			console.log('item', item);
 //			
 //		});
-			alert($('#foo').hasClass('owne'));
+			
 			
 
     </script>
