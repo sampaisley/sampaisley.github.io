@@ -10,7 +10,6 @@ function $(selector, indx) {
 
 	if (indx >= 0 && indx <= els.length) {
 		
-console.log('indx', indx);
 		el = [els[indx]];
 
 	} else {
