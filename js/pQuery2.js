@@ -1,32 +1,28 @@
 function $(selector, indx) {
-	let els = document.querySelectorAll(selector);
-
-	if (!els) return;
-	
 	let el;
+	checkIndx();
 
-	if (indx >= 0 && indx <= el.length) {
-		indx = indx;
-		el = [els[indx]];
-	} else {
-		indx = null;
-		el=els;
+	function checkIndx() {
+		
+		el = Array.from(document.querySelectorAll(selector));
+
+		if (indx >= 0 && indx <= el.length) {
+			indx = indx;
+			el = [el[indx]];
+
+		} 
+
+		if (!el) return;
+
 	}
-
-
-
 	return {
 		el,
 		indx,
 
 
 		eq(eq) {
-
-			el = els; // re-set el
-			if (eq >= 0 && eq <= el.length) {
-				indx = eq;
-				el = [els[indx]];
-			}
+			indx = eq;
+			checkIndx();
 			return this;
 		},
 
@@ -52,10 +48,10 @@ function $(selector, indx) {
 
 			if (cl && !cl.trim()) return this; // can't trim empty space
 			cl = cl.trim().split(' ');
-			el.forEach((item, index) => {
+			el.forEach((item) => {
 
 				for (let j = 0; j < cl.length; j++) {
-
+				
 					item.classList.add(cl[j]);
 				}
 
@@ -70,9 +66,10 @@ function $(selector, indx) {
 
 			if (cl && !cl.trim()) return this; // can't trim empty space
 			cl = cl.trim().split(' ');
-			el.forEach(function (item, index) {
+			el.forEach(function (item) {
 
 				for (let j = 0; j < cl.length; j++) {
+					
 
 					item.classList.remove(cl[j]);
 				}
@@ -87,12 +84,11 @@ function $(selector, indx) {
 
 			if (cl && !cl.trim()) return this; // can't trim empty space
 			cl = cl.trim().split(' ');
-			el.forEach(function (item, index) {
-				
+			el.forEach(function (item) {
 				for (let j = 0; j < cl.length; j++) {
+				
 					item.classList.toggle(cl[j]);
 				}
-				
 			});
 			return this;
 		},
@@ -102,7 +98,7 @@ function $(selector, indx) {
 		attribute(att, str) {
 			if (str) {
 				for (let i = 0; i < el.length; i++) {
-					
+				
 					el[i].setAttribute(att, str);
 				}
 				return this;
