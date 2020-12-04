@@ -9,14 +9,20 @@
 
 	<title>sampaisley</title>
 	<style>
+		.foo {
+			padding-left: 1em;
+		}
+
 		.red {
 			color: orangered;
 		}
 
 		.green {
-			color: aquamarine !important;
+			color: #10b57e !important;
+		}
+
+		.bg-yell {
 			background-color: orange;
-			padding: .4em;
 		}
 
 		.pink {
@@ -36,7 +42,8 @@
 			margin-top: 150vh;
 			margin-bottom: 70vh;
 		}
-		.big{
+
+		.big {
 			font-size: 120%;
 		}
 
@@ -48,29 +55,33 @@
 	<div class="container">
 		<div class="row mt-2">
 			<div class="column col-md-6">
-				<p class="lef-1" role="button"><code>$('.foo').eq(2).text('xxx').eq(3).putClass('underline green')</code></p>
+				<p class="lef-1" role="button"><code>$('.foo').eq(2,2).text('New Text').eq(3).putClass('underline green')</code></p>
 				<hr>
-				<p class="lef-2" role="button"><code>$('.foo').eq(0).takeClass('pink big').eq().putClass('linethrough')</code></p>
+				<p class="lef-2" role="button"><code>$('.foo').eq(0).takeClass('pink big').eq(4,4).putClass('bg-yell')</code></p>
 				<hr>
 				<p class="lef-3" role="button"><code>
 						$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
 
-				$('.foo').eq(1).togClass(' linethrough pink');
-				$('#inp').val(`q= ${q++} init!`);
+						$('.foo').eq(1).togClass(' pink linethrough ml-3');
+						$('#inp').val(`click = ${q++} hoho`);
 
-			})
+						})
 
 						});
 					</code></p>
-					<hr>
-					<p class="lef-4" role="button">reset</p>
-					<hr>
+				<hr>
+				<p class="lef-4" role="button">reset</p>
+				<hr>
 			</div>
 
 			<div id="right-col" class="column col-md-6  border-left">
-				<p  class="foo one big pink">p .foo .one .pink .big</p>
+				<p class="foo one big pink">p .foo .one .pink .big</p>
 				<p id="foo" class="foo one pink">p .foo .one .pink</p>
 				<p class="foo pink">p .foo .pink</p>
+				<p class="foo pink ">p .foo .pink</p>
+				<p class="foo pink ">p .foo .pink</p>
+				<p class="foo pink ">p .foo .pink</p>
+				<p class="foo pink ">p .foo .pink</p>
 				<p class="foo pink ">p .foo .pink</p>
 				<input type="text" id="inp" value="putPut">
 			</div>
@@ -81,28 +92,30 @@
 	<script>
 		let q = 0;
 		$('.lef-1').on("click", function() {
-			$('.foo').eq(2).text('xxx').eq(3).putClass('underline green');
+			$('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
 		})
 
 		$('.lef-2').on("click", function() {
-			$('.foo').eq(0).takeClass('pink big').eq().putClass('linethrough');
+			$('.foo').eq(0).takeClass('pink big').eq(4,4).putClass('bg-yell');
 		})
 
 		$('.lef-3').on("click", function() {
 			$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
 
-				$('.foo').eq(1).togClass(' pink linethrough');
-				$('#inp').val(`q= ${q++} init!`);
+				$('.foo').eq(1).togClass(' pink linethrough ml-3');
+				$('#inp').val(`click = ${q++} hoho`);
 
 			})
 		})
 		let divTxt = $('#right-col').text();
-	$('.lef-4').on('click', function(){
-		$('#right-col').text(divTxt);
-		 $('#inp').val('putPut');
-	})
+		$('.lef-4').on('click', function() {
+			$('#right-col').text(divTxt);
+			$('#inp').val('putPut');
+			q=0;
+		})
 
-
+//		$('.foo').eq(1, 2).putClass("green").eq(4, 3).putClass("green bg-yell text-center");
+//		$('.bg-yell', 1).putClass('mx-2').eq(2).putClass('mx-3');
 
 
 		//			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink').eq().putClass('linethrough');

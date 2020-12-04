@@ -3,7 +3,7 @@ function $(selector, indx) {
 	if(!selector) return;
 	
 	
-	let els = document.querySelectorAll(selector);
+	let els = Array.from(document.querySelectorAll(selector));
 
 
 	let el;
@@ -26,12 +26,14 @@ function $(selector, indx) {
 		indx,
 
 
-		eq(eq) {
+		eq(eq,amount=1) {
 
-			el = els; // re-set el
+			el = Array.from(els); // re-set el
 			if (eq >= 0 && eq <= el.length && eq !==null) {
 				indx = eq;
-				el = [els[indx]];
+				//el = [els[indx]];
+				el = (el.splice(indx,amount));
+	
 			}
 			return this;
 		},
