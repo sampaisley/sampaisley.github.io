@@ -8,6 +8,13 @@
     .container {
       max-width: 100%; } }
 
+.border {
+  border: 1px solid #dee2e6 !important; }
+
+.text-monospace {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
+  color: #6c757d; }
+
 .item {
   width: 25%;
   height: 25%;
@@ -20,25 +27,6 @@
     border: 3px solid #fff; }
   .item img.noBorder {
     border: 0px solid #fff; }
-
-.green {
-  color: green; }
-
-.red {
-  color: red; }
-
-.big {
-  font-size: 7em; }
-
-.underline {
-  text-decoration: underline; }
-  .underline:hover {
-    filter: brightness(200%);
-    filter: drop-shadow(17px -13px 0.25px #5d5d65);
-    text-decoration: none; }
-
-.noDragin {
-  outline: 2px dotted !important; }
 
 .gu-mirror {
   position: fixed !important;
@@ -62,4 +50,4 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   filter: alpha(opacity=20); }
 
-/*# sourceMappingURL=jig.css.map */
+/*# sourceMappingURL=merry.css.map */

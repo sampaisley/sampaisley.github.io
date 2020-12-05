@@ -60,7 +60,7 @@
 				<p class="lef-2" role="button"><code>$('.foo').eq(0).takeClass('pink big').eq(4,4).putClass('bg-yell')</code></p>
 				<hr>
 				<p class="lef-3" role="button"><code>
-						$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
+						$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
 
 						$('.foo').eq(1).togClass(' pink linethrough ml-3');
 						$('#inp').val(`click = ${q++} hoho`);
@@ -100,7 +100,7 @@
 		})
 
 		$('.lef-3').on("click", function() {
-			$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').on("click", function() {
+			$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
 
 				$('.foo').eq(1).togClass(' pink linethrough ml-3');
 				$('#inp').val(`click = ${q++} hoho`);
