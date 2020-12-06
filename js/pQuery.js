@@ -1,15 +1,16 @@
 function $(selector, indx) {
+
 	
-	if(!selector) return;
-	
+	let el;
+
+	if (!selector) {
+		el = {};
+	}
 	
 	let els = Array.from(document.querySelectorAll(selector));
 
-
-	let el;
-
 	if (indx >= 0 && indx <= els.length) {
-		
+
 		el = [els[indx]];
 
 	} else {
@@ -26,14 +27,14 @@ function $(selector, indx) {
 		indx,
 
 
-		eq(eq,amount=1) {
+		eq(eq, amount = 1) {
 
 			el = Array.from(els); // re-set el
-			if (eq >= 0 && eq <= el.length && eq !==null) {
+			if (eq >= 0 && eq <= el.length && eq !== null) {
 				indx = eq;
 				//el = [els[indx]];
-				el = (el.splice(indx,amount));
-	
+				el = (el.splice(indx, amount));
+
 			}
 			return this;
 		},
@@ -165,6 +166,26 @@ function $(selector, indx) {
 				item.addEventListener(event, callback, false);
 			});
 			return this;
+		},
+
+
+
+
+
+		postJax(url, data, call) {
+			let r = new XMLHttpRequest();
+
+			r.open("POST", url, true);
+			r.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			r.onreadystatechange = function () {
+				if (r.readyState != 4 || r.status != 200) return;
+				call(this);
+			};
+
+			r.send(data);
+
+			return this;
+
 		},
 
 

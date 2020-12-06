@@ -1,0 +1,48 @@
+@import 'bootstrap-reboot.min.css';
+
+body {
+	background-color: #f2e763;
+	box-sizing: border-box;
+}
+
+.container {
+	display: -ms-flexbox !important;
+	display: flex !important;
+	justify-content: center;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	overflow: hidden;
+	
+}
+
+#hola {
+	color: #fc6c03;
+	font-weight: bold;
+	font-size: 50vw;
+	line-height: 1;
+	text-align: center;
+	
+}
+
+.blur1 {
+	filter: blur(1vw)
+}
+
+.blur2 {
+	filter: blur(2vw)
+}
+
+.blur3 {
+	filter: blur(3vw)
+}
+
+.blur4 {
+	filter: blur(3vw)
+}
+
+@media (orientation: portrait) {
+	#hola {
+		font-size: 51vw;
+		margin-top: 30vh;
+
+	}
+}
