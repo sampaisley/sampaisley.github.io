@@ -1,18 +1,40 @@
+@import url(../../css/bootstrap-reboot.min.css);
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 60vh;
-  padding: 10px; }
+  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto; }
   @media (max-width: 600px) {
     .container {
       max-width: 100%; } }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+      margin-top: 1.5em; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+#bar {
+  margin-top: 0;
+  margin-bottom: 2em; }
+
+.d-none {
+  display: none; }
 
 .border {
   border: 1px solid #dee2e6 !important; }
 
 .text-monospace {
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
   color: #6c757d; }
 
 .item {

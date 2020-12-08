@@ -1,12 +1,10 @@
 function $(selector, indx) {
 
-	
+
 	let el;
 
-	if (!selector) {
-		el = {};
-	}
 	
+
 	let els = Array.from(document.querySelectorAll(selector));
 
 	if (indx >= 0 && indx <= els.length) {
@@ -58,15 +56,13 @@ function $(selector, indx) {
 
 
 		putClass(cl) {
+      if (cl && !cl.trim()) return this; // can't trim empty space
 
-			if (cl && !cl.trim()) return this; // can't trim empty space
 			cl = cl.trim().split(' ');
-			el.forEach((item, index) => {
+			
+			el.forEach((item) => {
 
-				for (let j = 0; j < cl.length; j++) {
-
-					item.classList.add(cl[j]);
-				}
+				item.classList.add(...cl);
 
 			});
 			return this;
@@ -76,15 +72,13 @@ function $(selector, indx) {
 
 
 		takeClass(cl) {
+     if (cl && !cl.trim()) return this; 
 
-			if (cl && !cl.trim()) return this; // can't trim empty space
 			cl = cl.trim().split(' ');
-			el.forEach(function (item, index) {
 
-				for (let j = 0; j < cl.length; j++) {
+			el.forEach((item) => {
 
-					item.classList.remove(cl[j]);
-				}
+				item.classList.remove(...cl);
 
 			});
 			return this;
@@ -94,15 +88,14 @@ function $(selector, indx) {
 
 		togClass(cl) {
 
-			if (cl && !cl.trim()) return this; // can't trim empty space
+			if (cl && !cl.trim()) return this; 
 			cl = cl.trim().split(' ');
-			el.forEach(function (item, index) {
+		
 
-				for (let j = 0; j < cl.length; j++) {
-					item.classList.toggle(cl[j]);
+				for (let j = 0; j < el.length; j++) {
+					el[j].classList.toggle(cl[j]);
 				}
 
-			});
 			return this;
 		},
 
@@ -172,7 +165,7 @@ function $(selector, indx) {
 
 
 
-		postJax(url, data, call) {
+		jaxPost(url, data, call) {
 			let r = new XMLHttpRequest();
 
 			r.open("POST", url, true);
@@ -183,6 +176,23 @@ function $(selector, indx) {
 			};
 
 			r.send(data);
+
+			return this;
+
+		},
+
+
+		jaxGet(url, call) {
+			let r = new XMLHttpRequest();
+
+			r.open("GET", url, true);
+			r.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			r.onreadystatechange = function () {
+				if (r.readyState != 4 || r.status != 200) return;
+				call(this);
+			};
+
+			r.send();
 
 			return this;
 
