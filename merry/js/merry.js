@@ -1,5 +1,5 @@
-(function () {
-	'use strict';
+'use strict';
+
 
 	const picsDiv = document.getElementById("picsDiv");
 	const solve = document.getElementById("solve");
@@ -84,10 +84,11 @@
 
 
 	function shuffleArray(array) {
-		for (let i = array.length - 1; i > 0; i--) {
+		let i = array.length - 1;
+		for (; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 				[array[i], array[j]] = [array[j], array[i]];
-		}
+		}    
 	}
 
 
@@ -100,4 +101,4 @@
 		});
 	
 
-}());
+

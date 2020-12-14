@@ -24,11 +24,11 @@ body {
 }
 
 .blur1 {
-	filter: blur(1vw)
+	filter: blur(2vw)
 }
 
 .blur2 {
-	filter: blur(2vw)
+	filter: blur(4vw)
 }
 
 .blur3 {
