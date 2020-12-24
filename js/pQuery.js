@@ -142,7 +142,7 @@ function $(selector, indx) {
 
     selectedIndex(i) {
 
-      if (i) {
+      if (i || i===0) {
         el[0].options.selectedIndex = i;
         return this;
       }
