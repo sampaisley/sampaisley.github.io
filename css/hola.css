@@ -3,6 +3,7 @@
 body {
 	background-color: #f2e763;
 	box-sizing: border-box;
+  overflow: hidden;
 }
 
 .container {
