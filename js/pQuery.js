@@ -185,6 +185,15 @@ function $(selector, indx) {
       el[0].focus();
       return this;
     },
+    
+    
+    blur()  {
+      
+       el.forEach(function (item) {
+          item.blur();
+        });
+        return this;
+    },
 
 
     scrollToView(bool) {
