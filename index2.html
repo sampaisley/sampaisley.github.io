@@ -2,141 +2,177 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/bootstrap.452.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.452.min.css">
 
-	<title>sampaisley</title>
-	<style>
-		.foo {
-			padding-left: 1em;
-		}
+  <title>sampaisley</title>
+  <style>
+    .foo {
+      padding-left: 1em;
+    }
 
-		.red {
-			color: orangered;
-		}
+    .red {
+      color: orangered;
+    }
 
-		.green {
-			color: #10b57e !important;
-		}
+    .green {
+      color: #10b57e !important;
+    }
 
-		.bg-yell {
-			background-color: orange;
-		}
+    .bg-yell {
+      background-color: orange;
+    }
 
-		.pink {
-			font-weight: bold;
-			color: deeppink;
-		}
+    .pink {
+      font-weight: bold;
+      color: deeppink;
+    }
 
-		.underline {
-			text-decoration: underline;
-		}
+    .underline {
+      text-decoration: underline;
+    }
 
-		.linethrough {
-			text-decoration: line-through;
-		}
+    .linethrough {
+      text-decoration: line-through;
+    }
 
-		.long {
-			margin-top: 150vh;
-			margin-bottom: 70vh;
-		}
+    .long {
+      margin-top: 150vh;
+      margin-bottom: 70vh;
+    }
 
-		.big {
-			font-size: 120%;
-		}
+    .big {
+      font-size: 120%;
+    }
+    #play{
 
-	</style>
+      color: gray;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+  </style>
 </head>
 
 <body>
 
-	<div class="container">
-		<div class="row mt-2">
-			<div class="column col-md-6">
-				<p class="lef-1" role="button"><code>$('.foo').eq(2,2).text('New Text').eq(3).putClass('underline green')</code></p>
-				<hr>
-				<p class="lef-2" role="button"><code>$('.foo').eq(0).takeClass('pink big').eq(4,3).putClass('bg-yell')</code></p>
-				<hr>
-				<p class="lef-3" role="button"><code>
-						$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
+  <div class="container">
+    <div class="row mt-2">
+      <div class="column col-md-6">
+        <p class="lef-1" role="button"><code>$('.foo').eq(2,2).text('New Text').eq(3).putClass('underline green')</code></p>
+        <hr>
+        <p class="lef-2" role="button"><code>$('.foo').eq(0).takeClass('pink big').eq(4,3).putClass('bg-yell')</code></p>
+        <hr>
+        <p class="lef-3" role="button"><code>
+            $('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
 
-						$('.foo').eq(1).togClass(' pink linethrough ml-3');
-						$('#inp').val(`click = ${q++} hoho`);
+            $('.foo').eq(1).togClass(' pink linethrough ml-3');
+            $('#inp').val(`click = ${q++} hoho`);
 
-						})
+            })
 
-						});
-					</code></p>
-				<hr>
-				<p class="lef-4" role="button">reset</p>
-				<hr>
-			</div>
+            });
+          </code></p>
+        <hr>
+        <p class="lef-4" role="button">reset</p>
+        <hr>
+      </div>
 
-			<div id="right-col" class="column col-md-6  border-left">
-				<p class="foo one big pink">p .foo .one .pink .big</p>
-				<p id="foo" class="foo one pink">p .foo .one .pink</p>
-				<p class="foo pink">p .foo .pink</p>
-				<p class="foo pink ">p .foo .pink</p>
-				<p class="foo pink ">p .foo .pink</p>
-				<p class="foo pink ">p .foo .pink</p>
-				<p class="foo pink ">p .foo .pink</p>
-				<p class="foo pink ">p .foo .pink</p>
-				<input type="text" id="inp" value="putPut">
-			</div>
-		</div>
-	</div>
+      <div id="right-col" class="column col-md-6  border-left">
+        <p class="foo one big pink">p .foo .one .pink .big</p>
+        <p id="foo" class="foo one pink">p .foo .one .pink</p>
+        <p class="foo pink">p .foo .pink</p>
+        <p class="foo pink ">p .foo .pink</p>
+        <p class="foo pink ">p .foo .pink</p>
+        <p class="foo pink ">p .foo .pink</p>
+        <p class="foo pink ">p .foo .pink</p>
+        <p class="foo pink ">p .foo .pink</p>
+        <input type="text" id="inp" value="putPut">
+      </div>
+    </div>
+<img id="me" width="200px" src="img/me.jpg" alt="">
 
-	<script src="js/pQuery.js"></script>
-	<script>
-		let q = 0;
-		$('.lef-1').on("click", function() {
-			$('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
-		})
+    <video width="500" id="vidPie">
 
-		$('.lef-2').on("click", function() {
-			$('.foo').eq(0).takeClass('pink big').eq(4,3).putClass('bg-yell');
-		})
+      <source src="vid/Pie_Noir_Dos.mp4" type="video/mp4">
 
-		$('.lef-3').on("click", function() {
-			$('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
-
-				$('.foo').eq(1).togClass(' pink linethrough ml-3');
-				$('#inp').val(`click = ${q++} hoho`);
-
-			})
-		})
-		let divTxt = $('#right-col').text();
-		$('.lef-4').on('click', function() {
-			$('#right-col').text(divTxt);
-			$('#inp').val('putPut');
-			q=0;
-		})
-		
-		
-
-//		$('.foo').eq(1, 2).putClass("green").eq(4, 3).putClass("green bg-yell text-center");
-//		$('.bg-yell', 1).putClass('mx-2').eq(2).putClass('mx-3');
-
-
-		//			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink').eq().putClass('linethrough');
-		//			$('#foo').text("Hash foo");
-		//			$('.one').putClass('ml-3').eq(0).attribute('role','button').on("click", function(){
-		//		
-		//				$('.foo').eq(1).togClass('pink');
-		//				$('#inp').val(`q= ${q++} init!`).focus();
-		//				
-		//			});
+      Sorry, your browser doesn't support embedded videos.
+    </video>
 
 
 
-		//		a.forEach((item, index) => {
-		//			console.log('item', item);
-		//			
-		//		});
+<!--    <p id="play">></p>-->
 
-	</script>
+  </div>
+
+  <script src="js/pQuery.js"></script>
+  <script>
+    let q = 0;
+    $('.lef-1').on("click", function() {
+      $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
+    })
+
+    $('.lef-2').on("click", function() {
+      $('.foo').eq(0).takeClass('pink big').eq(4, 3).putClass('bg-yell');
+    })
+
+    $('.lef-3').on("click", function() {
+      $('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
+
+        $('.foo').eq(1).togClass(' pink linethrough ml-3');
+        $('#inp').val(`click = ${q++} hoho`);
+
+      })
+    })
+    let divTxt = $('#right-col').text();
+    $('.lef-4').on('click', function() {
+      $('#right-col').text(divTxt);
+      $('#inp').val('putPut');
+      q = 0;
+    })
+    let playStop = 0;
+    let vid1 = document.getElementById("vidPie");
+
+    $('#vidPie').on('click', function() {
+
+
+      if (playStop % 2 === 0) {
+        vid1.play();
+          $('#me').fade(50,false);
+        // $('#play').text("||");
+      } else {
+        vid1.pause();
+          $('#me').fadeUp(50);
+        // $('#play').text(">");
+      }
+
+      playStop++;
+
+    });
+
+    //		$('.foo').eq(1, 2).putClass("green").eq(4, 3).putClass("green bg-yell text-center");
+    //		$('.bg-yell', 1).putClass('mx-2').eq(2).putClass('mx-3');
+
+
+    //			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink').eq().putClass('linethrough');
+    //			$('#foo').text("Hash foo");
+    //			$('.one').putClass('ml-3').eq(0).attribute('role','button').on("click", function(){
+    //
+    //				$('.foo').eq(1).togClass('pink');
+    //				$('#inp').val(`q= ${q++} init!`).focus();
+    //
+    //			});
+
+
+
+    //		a.forEach((item, index) => {
+    //			console.log('item', item);
+    //
+    //		});
+
+  </script>
 </body>
 
 </html>
