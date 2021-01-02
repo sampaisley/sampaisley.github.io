@@ -134,13 +134,17 @@
     })
     let playStop = 0;
     let vid1 = document.getElementById("vidPie");
-
+   
+    
+    
     $('#vidPie').on('click', function() {
 
 
       if (playStop % 2 === 0) {
         vid1.play();
-          $('#me').fade(50,false);
+          $('#me').fade(50,false,function gogo(){
+      alert("gogo");
+    });
         // $('#play').text("||");
       } else {
         vid1.pause();
