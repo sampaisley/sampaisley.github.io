@@ -92,7 +92,7 @@
         <input type="text" id="inp" value="putPut">
       </div>
     </div>
-<img id="me" width="200px" src="img/me.jpg" alt="">
+<img id="me" width="400px" src="img/me.jpg" alt="">
 
     <video width="500" id="vidPie">
 
@@ -109,6 +109,41 @@
 
   <script src="js/pQuery.js"></script>
   <script>
+   
+    
+    function fadeInn(element, duration = 600) {
+  element.style.display = '';
+  element.style.opacity = 0;
+  var last = +new Date();
+  var tick = function() {
+    element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
+    last = +new Date();
+    if (+element.style.opacity < 1) {
+      setTimeout(tick, 16);
+    }
+  };
+  tick();
+}
+    
+    
+      function fadeOot(element, duration = 600) {
+       
+  element.style.display = '';
+ element.style.opacity = 1;
+  var last = +new Date();
+  var tick = function() {
+    element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
+   
+    last -= new Date();
+    if (+element.style.opacity > 1) {
+      setTimeout(tick, 16);
+    }
+  };
+  tick();
+}
+    
+    
+    ///////////////////////////////
     let q = 0;
     $('.lef-1').on("click", function() {
       $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
@@ -141,14 +176,19 @@
 
 
       if (playStop % 2 === 0) {
-        vid1.play();
-          $('#me').fade(50,false,function gogo(){
-      alert("gogo");
-    });
+//        vid1.play();
+//          $('.foo').fade(50,false,function gogo(){
+//    
+//    }).text("fade" + playStop);
+        
+        $("#me").fade(500, false);
+        // fadeOot(document.getElementById('me'), 1000);
         // $('#play').text("||");
       } else {
-        vid1.pause();
-          $('#me').fadeUp(50);
+//        vid1.pause();
+//          $('.foo').fadeUp(50).text("fadeUp" + playStop);
+      $("#me").fadeUp(500);
+     //  fadeInn(document.getElementById('me'), 1000);
         // $('#play').text(">");
       }
 

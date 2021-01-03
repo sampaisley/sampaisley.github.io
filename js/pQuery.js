@@ -218,7 +218,7 @@ function $(selector, indx) {
             item.style.opacity = 1;
           }
           if (item.style.opacity > 0) {
-            item.style.opacity -= 0.1;
+            item.style.opacity -= 0.02;
           } else {
             clearInterval(fadeEffect);
             if (del){
@@ -229,7 +229,7 @@ function $(selector, indx) {
             }
               
           }
-        }, t);
+        }, t/50);
 
       });
       return this;
@@ -238,20 +238,21 @@ function $(selector, indx) {
 
 
     fadeUp(t = 50) {
-      console.log('234');
+     
+
       el.forEach((item) => {
         let i = 0;
         let fadeEffect = setInterval(function () {
 
           if (item.style.opacity < 1) {
             item.style.opacity = i;
-            i += 0.1;
-            console.log('i', i);
+            i += 0.02;
+  
           } else {
             clearInterval(fadeEffect);
 
           }
-        }, t);
+        }, t/50);
 
       });
 
