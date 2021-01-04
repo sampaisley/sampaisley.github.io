@@ -241,6 +241,7 @@ function $(selector, indx) {
      
 
       el.forEach((item) => {
+         item.style.opacity = 0;
         let i = 0;
         let fadeEffect = setInterval(function () {
 
