@@ -46,7 +46,8 @@
     .big {
       font-size: 120%;
     }
-    #play{
+
+    #play {
 
       color: gray;
       font-size: 2em;
@@ -90,9 +91,11 @@
         <p class="foo pink ">p .foo .pink</p>
         <p class="foo pink ">p .foo .pink</p>
         <input type="text" id="inp" value="putPut">
+        <input type="radio" name="rad" class="rad"> <input type="radio" name="rad" class="rad"> <input type="radio" name="rad" class="rad">
+        <input type="checkbox" id="check1">
       </div>
     </div>
-<img id="me" width="400px" src="img/me.jpg" alt="">
+    <img id="me" width="400px" src="img/me.jpg" alt="">
 
     <video width="500" id="vidPie">
 
@@ -103,46 +106,44 @@
 
 
 
-<!--    <p id="play">></p>-->
+    <!--    <p id="play">></p>-->
 
   </div>
 
   <script src="js/pQuery.js"></script>
   <script>
-   
-    
     function fadeInn(element, duration = 600) {
-  element.style.display = '';
-  element.style.opacity = 0;
-  var last = +new Date();
-  var tick = function() {
-    element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
-    last = +new Date();
-    if (+element.style.opacity < 1) {
-      setTimeout(tick, 16);
+      element.style.display = '';
+      element.style.opacity = 0;
+      var last = +new Date();
+      var tick = function() {
+        element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
+        last = +new Date();
+        if (+element.style.opacity < 1) {
+          setTimeout(tick, 16);
+        }
+      };
+      tick();
     }
-  };
-  tick();
-}
-    
-    
-      function fadeOot(element, duration = 600) {
-       
-  element.style.display = '';
- element.style.opacity = 1;
-  var last = +new Date();
-  var tick = function() {
-    element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
-   
-    last -= new Date();
-    if (+element.style.opacity > 1) {
-      setTimeout(tick, 16);
+
+
+    function fadeOot(element, duration = 600) {
+
+      element.style.display = '';
+      element.style.opacity = 1;
+      var last = +new Date();
+      var tick = function() {
+        element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
+
+        last -= new Date();
+        if (+element.style.opacity > 1) {
+          setTimeout(tick, 16);
+        }
+      };
+      tick();
     }
-  };
-  tick();
-}
-    
-    
+
+
     ///////////////////////////////
     let q = 0;
     $('.lef-1').on("click", function() {
@@ -169,26 +170,35 @@
     })
     let playStop = 0;
     let vid1 = document.getElementById("vidPie");
-   
-    
-    
-    $('#vidPie').on('click', function() {
 
+
+
+    $('#vidPie').on('click', function() {
+      
+    
+
+$('.rad').isChecked(false).eq(1).isChecked(true);
+      
+      if (! $("#check1").isChecked()) {
+   console.log("nooooo");
+  }else{
+    console.log("si!");
+  }
 
       if (playStop % 2 === 0) {
-//        vid1.play();
-//          $('.foo').fade(50,false,function gogo(){
-//    
-//    }).text("fade" + playStop);
-        
+        //        vid1.play();
+        //          $('.foo').fade(50,false,function gogo(){
+        //    
+        //    }).text("fade" + playStop);
+
         $("#me").fade(500, false);
         // fadeOot(document.getElementById('me'), 1000);
         // $('#play').text("||");
       } else {
-//        vid1.pause();
-//          $('.foo').fadeUp(50).text("fadeUp" + playStop);
-      $("#me").fadeUp(500);
-     //  fadeInn(document.getElementById('me'), 1000);
+        //        vid1.pause();
+        //          $('.foo').fadeUp(50).text("fadeUp" + playStop);
+        $("#me").fadeUp(600);
+        //  fadeInn(document.getElementById('me'), 1000);
         // $('#play').text(">");
       }
 
@@ -196,25 +206,8 @@
 
     });
 
-    //		$('.foo').eq(1, 2).putClass("green").eq(4, 3).putClass("green bg-yell text-center");
-    //		$('.bg-yell', 1).putClass('mx-2').eq(2).putClass('mx-3');
 
 
-    //			$('.foo').eq(2).text('xxx').eq(3).putClass('underline').eq(0).takeClass('pink').eq().putClass('linethrough');
-    //			$('#foo').text("Hash foo");
-    //			$('.one').putClass('ml-3').eq(0).attribute('role','button').on("click", function(){
-    //
-    //				$('.foo').eq(1).togClass('pink');
-    //				$('#inp').val(`q= ${q++} init!`).focus();
-    //
-    //			});
-
-
-
-    //		a.forEach((item, index) => {
-    //			console.log('item', item);
-    //
-    //		});
 
   </script>
 </body>

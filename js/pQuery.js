@@ -208,8 +208,23 @@ function $(selector, indx) {
     },
     
     
+    isChecked(b) {
+      if(b===true || b===false){
+        
+      el.forEach(function (item) {
+        item.checked = b;
+      });
+      }else{
+         return el[0].checked;
+      }
+      return this;
+    },
+    
+    
 
-    fade(t = 50, del = true,func=null) {
+
+
+    fade(t = 50, del = true, func = null) {
 
       el.forEach((item) => {
 
@@ -221,15 +236,15 @@ function $(selector, indx) {
             item.style.opacity -= 0.02;
           } else {
             clearInterval(fadeEffect);
-            if (del){
+            if (del) {
               item.remove();
             }
-            if(func){
+            if (func) {
               func();
             }
-              
+
           }
-        }, t/50);
+        }, t / 50);
 
       });
       return this;
@@ -237,23 +252,26 @@ function $(selector, indx) {
     },
 
 
-    fadeUp(t = 50) {
-     
+    fadeUp(t = 50, func = null) {
+
 
       el.forEach((item) => {
-         item.style.opacity = 0;
+        item.style.opacity = 0;
         let i = 0;
         let fadeEffect = setInterval(function () {
 
           if (item.style.opacity < 1) {
             item.style.opacity = i;
             i += 0.02;
-  
+
           } else {
             clearInterval(fadeEffect);
+            if (func) {
+              func();
+            }
 
           }
-        }, t/50);
+        }, t / 50);
 
       });
 
