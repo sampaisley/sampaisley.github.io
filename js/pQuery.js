@@ -113,14 +113,7 @@ function $(selector, indx) {
 
     },
 
-    checked() {
-
-
-      return el[0].checked;
-
-    },
-
-
+   
 
     removeAtt(att) {
 
