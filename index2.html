@@ -77,7 +77,7 @@
             });
           </code></p>
         <hr>
-        <p class="lef-4" role="button">reset</p>
+        <p id="proto" class="lef-4" role="button">reset</p>
         <hr>
       </div>
 
@@ -91,7 +91,7 @@
         <p class="foo pink ">p .foo .pink</p>
         <p class="foo pink ">p .foo .pink</p>
         <input type="text" id="inp" value="putPut">
-        <input type="radio" name="rad" class="rad"> <input type="radio" name="rad" class="rad"> <input type="radio" name="rad" class="rad">
+        <input type="radio" name="rad" class="rad" value="foo"> <input type="radio" name="rad" class="rad" value="bar"> <input type="radio" name="rad" class="rad" value="twat">
         <input type="checkbox" id="check1">
       </div>
     </div>
@@ -112,6 +112,10 @@
 
   <script src="js/pQuery.js"></script>
   <script>
+    //    $.prototype = window;
+    //    
+    //    $('#proto').innerHTML="ofofofofofofofofo";
+    //console.log('$(#proto).innerHTML', $('#proto').innerHTML);
     function fadeInn(element, duration = 600) {
       element.style.display = '';
       element.style.opacity = 0;
@@ -174,16 +178,22 @@
 
 
     $('#vidPie').on('click', function() {
-      
-    
 
-$('.rad').isChecked(false).eq(1).isChecked(true);
-      
-      if (! $("#check1").isChecked()) {
-   console.log("nooooo");
-  }else{
-    console.log("si!");
-  }
+      let rv = $().radioVal('rad');
+           
+
+      let ri = $().radioIndex('rad');
+  
+      $('.foo').eq(7).text(rv);
+      $('.foo').eq(6).text(ri);
+
+      $('.rad').isChecked(false).eq(1).isChecked(true);
+
+      if (!$("#check1").isChecked()) {
+        console.log("nooooo");
+      } else {
+        console.log("si!");
+      }
 
       if (playStop % 2 === 0) {
         //        vid1.play();
@@ -191,7 +201,7 @@ $('.rad').isChecked(false).eq(1).isChecked(true);
         //    
         //    }).text("fade" + playStop);
 
-        $("#me").fade(500, false);
+        $("#me").fade(500, 0);
         // fadeOot(document.getElementById('me'), 1000);
         // $('#play').text("||");
       } else {
@@ -205,9 +215,6 @@ $('.rad').isChecked(false).eq(1).isChecked(true);
       playStop++;
 
     });
-
-
-
 
   </script>
 </body>

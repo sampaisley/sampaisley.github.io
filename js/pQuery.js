@@ -42,7 +42,7 @@ function $(selector, indx) {
 
     text(newText) {
 
-      if (newText) {
+      if (newText || newText===0) {
         for (let i = 0; i < el.length; i++) {
 
           el[i].innerHTML = newText;
@@ -113,7 +113,7 @@ function $(selector, indx) {
 
     },
 
-   
+
 
     removeAtt(att) {
 
@@ -138,6 +138,45 @@ function $(selector, indx) {
       return el[0].selectedIndex;
 
     },
+
+
+
+
+    radioVal(name) {
+
+
+      let val;
+      document.getElementsByName(name).forEach((item, index) => {
+        if (item.getAttribute("type")!= 'radio') return;
+
+          if (item.checked)
+            val = item.value;
+
+      });
+      return val;
+    },
+    
+    
+    
+    
+     radioIndex(name) {
+
+
+      let val;
+      document.getElementsByName(name).forEach((item, index) => {
+        if (item.getAttribute("type")!= 'radio') return;
+
+          if (item.checked)
+            val = index;
+
+      });
+      return val;
+    },
+
+
+
+
+
 
     placeholder(t) {
 
@@ -199,21 +238,21 @@ function $(selector, indx) {
         item.remove();
       });
     },
-    
-    
+
+
     isChecked(b) {
-      if(b===true || b===false){
-        
-      el.forEach(function (item) {
-        item.checked = b;
-      });
-      }else{
-         return el[0].checked;
+      if (b === true || b === false) {
+
+        el.forEach(function (item) {
+          item.checked = b;
+        });
+      } else {
+        return el[0].checked;
       }
       return this;
     },
-    
-    
+
+
 
 
 
