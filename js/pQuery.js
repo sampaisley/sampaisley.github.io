@@ -42,7 +42,7 @@ function $(selector, indx) {
 
     text(newText) {
 
-      if (newText || newText===0) {
+      if (newText || newText === 0) {
         for (let i = 0; i < el.length; i++) {
 
           el[i].innerHTML = newText;
@@ -145,29 +145,29 @@ function $(selector, indx) {
     radioVal(name) {
 
 
-      let val;
+      let val = "no value";
       document.getElementsByName(name).forEach((item, index) => {
-        if (item.getAttribute("type")!= 'radio') return;
+        if (item.getAttribute("type") != 'radio') return;
 
-          if (item.checked)
-            val = item.value;
+        if (item.checked)
+          val = item.value;
 
       });
       return val;
     },
-    
-    
-    
-    
-     radioIndex(name) {
 
 
-      let val;
+
+
+    radioIndex(name) {
+
+
+      let val ='no index';
       document.getElementsByName(name).forEach((item, index) => {
-        if (item.getAttribute("type")!= 'radio') return;
+        if (item.getAttribute("type") != 'radio') return;
 
-          if (item.checked)
-            val = index;
+        if (item.checked)
+          val = index ;
 
       });
       return val;
@@ -220,6 +220,20 @@ function $(selector, indx) {
       });
       return this;
     },
+    
+    
+
+    reset() {
+
+      el.forEach(function (item) {
+        item.reset();
+      });
+      return this;
+
+    },
+
+
+
 
 
     scrollToView(bool) {
