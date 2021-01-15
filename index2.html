@@ -54,6 +54,26 @@
       cursor: pointer;
     }
 
+    #controls {
+     max-width: 100px;
+    }
+
+    .play {
+      color: orangered;
+    }
+
+    .play::after {
+      content: "PLAY";
+    }
+
+    .pause {
+      color: orangered;
+    }
+
+    .pause::after {
+      content: "PAUSE";
+    }
+
   </style>
 </head>
 
@@ -79,81 +99,51 @@
         <hr>
         <p id="proto" class="lef-4" role="button">reset</p>
         <hr>
+
+        <img id="me" width="400px" src="img/3.webp" alt="">
+
+
+
       </div>
 
-     <form action="" id="theForm">
-       
-        <div id="right-col" class="column col-md-6  border-left">
-        <p class="foo one big pink">p .foo .one .pink .big</p>
-        <p id="foo" class="foo one pink">p .foo .one .pink</p>
-        <p class="foo pink">p .foo .pink</p>
-        <p class="foo pink ">p .foo .pink</p>
-        <p class="foo pink ">p .foo .pink</p>
-        <p class="foo pink ">p .foo .pink</p>
-        <p class="foo pink ">p .foo .pink</p>
-        <p class="foo pink ">p .foo .pink</p>
-        <input type="text" id="inp" value="putPut">
-        <input type="radio" name="rad" class="rad" value="foo"> <input type="radio" name="rad" class="rad" value="bar"> <input type="radio" name="rad" class="rad" value="twat">
-        <input type="checkbox" id="check1">
-        <button class="ml-1 my-3" id="clear">CLEAR</button>
+
+
+      <div id="right-col" class="column col-md-6  border-left ">
+
+        <form action="" id="theForm">
+          <p class="foo one big pink">p .foo .one .pink .big</p>
+          <p id="foo" class="foo one pink">p .foo .one .pink</p>
+          <p class="foo pink">p .foo .pink</p>
+          <p class="foo pink ">p .foo .pink</p>
+          <p class="foo pink ">p .foo .pink</p>
+          <p class="foo pink ">p .foo .pink</p>
+          <p class="foo pink ">p .foo .pink</p>
+          <p class="foo pink ">p .foo .pink</p>
+          <input type="text" id="inp" value="putPut">
+          <input type="radio" name="rad" class="rad" value="foo"> <input type="radio" name="rad" class="rad" value="bar"> <input type="radio" name="rad" class="rad" value="twat">
+          <input type="checkbox" id="check1">
+          <button class="ml-1 my-3" id="clear">CLEAR</button>
+
+        </form>
+        <h3 id="controls" role="button" class=" play"></h3>
+        <video width="200" id="vidPie">
+
+          <source src="vid/snow.mp4" type="video/mp4" loop="true">
+
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+
+
       </div>
-      
-     </form>
+
+
     </div>
-    <img id="me" width="400px" src="img/me.jpg" alt="">
-
-    <video width="500" id="vidPie">
-
-      <source src="vid/Pie_Noir_Dos.mp4" type="video/mp4">
-
-      Sorry, your browser doesn't support embedded videos.
-    </video>
-
-
-
-    <!--    <p id="play">></p>-->
 
   </div>
 
   <script src="js/pQuery.js"></script>
   <script>
-    //    $.prototype = window;
-    //    
-    //    $('#proto').innerHTML="ofofofofofofofofo";
-    //console.log('$(#proto).innerHTML', $('#proto').innerHTML);
-    function fadeInn(element, duration = 600) {
-      element.style.display = '';
-      element.style.opacity = 0;
-      var last = +new Date();
-      var tick = function() {
-        element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
-        last = +new Date();
-        if (+element.style.opacity < 1) {
-          setTimeout(tick, 16);
-        }
-      };
-      tick();
-    }
-
-
-    function fadeOot(element, duration = 600) {
-
-      element.style.display = '';
-      element.style.opacity = 1;
-      var last = +new Date();
-      var tick = function() {
-        element.style.opacity = +element.style.opacity + (new Date() - last) / duration;
-
-        last -= new Date();
-        if (+element.style.opacity > 1) {
-          setTimeout(tick, 16);
-        }
-      };
-      tick();
-    }
-
-
-    ///////////////////////////////
+    "use strict";
     let q = 0;
     $('.lef-1').on("click", function() {
       $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
@@ -180,21 +170,28 @@
     let playStop = 0;
     let vid1 = document.getElementById("vidPie");
 
-
+    //$(".rad").each(function(el){
+    //  console.log(el);
+    //})
+    $('#vidPie').on('ended', function() {
+      console.log('ended ' + this);
+      this.load();
+      this.play();
+    });
 
     $('#vidPie').on('click', function() {
-      
-      
 
-      let rv = $().radioVal('rad') ;
-           
+
+
+      let rv = $().radioVal('rad');
+
 
       let ri = $().radioIndex('rad');
-  
-      $('.foo').eq(7).text(rv).eq(6).text(ri.toString());;
-    
 
-     // $('.rad').isChecked(false).eq(1).isChecked(true);
+      $('.foo').eq(7).text(rv).eq(6).text(ri).eq(5).text(rv + ' booo ' + ri);
+      // $('.foo', 5).text(rv + ' booo ' + ri);
+
+      // $('.rad').isChecked(false).eq(1).isChecked(true);
 
       if (!$("#check1").isChecked()) {
         console.log("nooooo");
@@ -202,35 +199,52 @@
         console.log("si!");
       }
 
-      if (playStop % 2 === 0) {
-        //        vid1.play();
-        //          $('.foo').fade(50,false,function gogo(){
-        //    
-        //    }).text("fade" + playStop);
+      if (playStop++ % 2 === 0) {
+
 
         $("#me").fade(500, 0);
-        // fadeOot(document.getElementById('me'), 1000);
-        // $('#play').text("||");
+
       } else {
-        //        vid1.pause();
-        //          $('.foo').fadeUp(50).text("fadeUp" + playStop);
+
         $("#me").fadeUp(600);
-        // $("#theForm").reset();
-        //  fadeInn(document.getElementById('me'), 1000);
-        // $('#play').text(">");
+
       }
 
-      playStop++;
 
     });
-    
-    
-    $("#clear").on('click', function(e){
+
+
+    $("#clear").on('click', function(e) {
       $("#theForm").reset();
-      console.log('theForm' );
+      console.log('theForm');
       e.preventDefault();
-      
+
     })
+
+
+    let playStop2 = 0;
+    let controls = $("#controls");
+
+    controls.on("click", function() {
+
+      controls.togClass("pause");
+      if (playStop2++ % 2 === 0) {
+        vid1.play();
+
+      } else {
+
+        vid1.pause();
+      }
+
+    });
+
+    controls.on("mouseover", function() {
+      controls.putClass("underline green");
+
+    });
+    controls.on("mouseout", function() {
+      controls.takeClass("underline green");
+    });
 
   </script>
 </body>

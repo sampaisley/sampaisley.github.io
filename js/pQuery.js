@@ -162,12 +162,12 @@ function $(selector, indx) {
     radioIndex(name) {
 
 
-      let val ='no index';
+      let val = 'no index';
       document.getElementsByName(name).forEach((item, index) => {
         if (item.getAttribute("type") != 'radio') return;
 
         if (item.checked)
-          val = index ;
+          val = index;
 
       });
       return val;
@@ -220,8 +220,8 @@ function $(selector, indx) {
       });
       return this;
     },
-    
-    
+
+
 
     reset() {
 
@@ -231,6 +231,15 @@ function $(selector, indx) {
       return this;
 
     },
+
+
+//    each(func) {
+//
+//      el.forEach(function (item) {
+//        func(item);
+//      });
+//      return this;
+//    },
 
 
 
@@ -328,9 +337,13 @@ function $(selector, indx) {
 
 
     on(event, callback) {
+      
       el.forEach(function (item) {
         item.addEventListener(event, callback, false);
+        
+       
       });
+      
       return this;
     },
 
