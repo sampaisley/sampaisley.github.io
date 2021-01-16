@@ -55,7 +55,7 @@
     }
 
     #controls {
-     max-width: 100px;
+      max-width: 300px;
     }
 
     .play {
@@ -120,20 +120,20 @@
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
           <input type="text" id="inp" value="putPut">
-          <input type="radio" name="rad" class="rad" value="foo"> <input type="radio" name="rad" class="rad" value="bar"> <input type="radio" name="rad" class="rad" value="twat">
+          <input type="radio" name="rad" class="rad" value="room1" selected> <input type="radio" name="rad" class="rad" value="room2"> <input type="radio" name="rad" class="rad" value="room3">
           <input type="checkbox" id="check1">
           <button class="ml-1 my-3" id="clear">CLEAR</button>
 
         </form>
         <h3 id="controls" role="button" class=" play"></h3>
-        <video width="200" id="vidPie">
+        <video width="400" id="vidPie" preload="auto">
 
-          <source src="vid/snow.mp4" type="video/mp4" loop="true">
+          <source src="vid/room1.mp4" type="video/mp4">
 
           Sorry, your browser doesn't support embedded videos.
         </video>
 
-
+        <h1 id="zoo">Zoo</h1>
       </div>
 
 
@@ -173,17 +173,19 @@
     //$(".rad").each(function(el){
     //  console.log(el);
     //})
-    $('#vidPie').on('ended', function() {
-      console.log('ended ++++' + this);
-     // this.load();
-      this.play();
-    });
+        $('#vidPie').on('ended', function() {
+         resetControles();
+        });
+    
+   
 
     $('#vidPie').on('click', function() {
 
 
 
       let rv = $().radioVal('rad');
+
+
 
 
       let ri = $().radioIndex('rad');
@@ -220,7 +222,35 @@
       e.preventDefault();
 
     })
-
+    
+    function setVidSrc() {
+      
+      let rv = $().radioVal('rad');
+      
+      $('#vidPie').attribute('src', `vid/${rv}.mp4`);
+      
+    }
+    
+    function resetControles(){
+      
+       controls.togClass("pause");
+          playStop2++;
+      
+    }
+    
+      setVidSrc();
+    
+    $(".rad").on("click", function(){
+      
+    
+     
+      if(!vid1.paused){
+       resetControles();
+      }
+      setVidSrc();
+    //  
+      
+    });
 
     let playStop2 = 0;
     let controls = $("#controls");
@@ -230,6 +260,10 @@
       controls.togClass("pause");
       if (playStop2++ % 2 === 0) {
         vid1.play();
+
+
+        //        let t = this.id;
+        //        $(`#${t}`).putClass("foo red pink linethrough");
 
       } else {
 
@@ -245,7 +279,9 @@
     controls.on("mouseout", function() {
       controls.takeClass("underline green");
     });
-
+//$('#me').on('click',function(){
+//  console.log(vid1.paused);
+//})
   </script>
 </body>
 
