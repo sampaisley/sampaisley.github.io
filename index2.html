@@ -133,7 +133,7 @@
           Sorry, your browser doesn't support embedded videos.
         </video>
 
-        <h1 id="zoo">Zoo</h1>
+        <h1 id="nowShowing">Zoo</h1>
       </div>
 
 
@@ -239,10 +239,11 @@
     }
     
       setVidSrc();
+    $('#nowShowing').text($().radioVal('rad'));
     
     $(".rad").on("click", function(){
       
-    
+    $('#nowShowing').text($().radioVal('rad'));
      
       if(!vid1.paused){
        resetControles();
