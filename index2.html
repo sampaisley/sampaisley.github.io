@@ -173,11 +173,11 @@
     //$(".rad").each(function(el){
     //  console.log(el);
     //})
-        $('#vidPie').on('ended', function() {
-         resetControles();
-        });
-    
-   
+    $('#vidPie').on('ended', function() {
+      resetControles();
+    });
+
+
 
     $('#vidPie').on('click', function() {
 
@@ -222,35 +222,48 @@
       e.preventDefault();
 
     })
+
+    function preloadImage(url) {
+      let img = new Image();
+      img.src = url;
+    }
+    
+    let i = 0;
+    for(;i++ <=2;){
+      
+     preloadImage(`img/room${i}.jpg`);
+    }
+
+    
     
     function setVidSrc() {
-      
+
       let rv = $().radioVal('rad');
-      
+
       $('#vidPie').attribute('src', `vid/${rv}.mp4`).attribute("poster", `img/${rv}.jpg`);
-      
+
     }
-    
-    function resetControles(){
-      
-       controls.togClass("pause");
-          playStop2++;
-      
+
+    function resetControles() {
+
+      controls.togClass("pause");
+      playStop2++;
+
     }
-    
-      setVidSrc();
+
+    setVidSrc();
     $('#nowShowing').text($().radioVal('rad'));
-    
-    $(".rad").on("click", function(){
-      
-    $('#nowShowing').text($().radioVal('rad'));
-     
-      if(!vid1.paused){
-       resetControles();
+
+    $(".rad").on("click", function() {
+
+      $('#nowShowing').text($().radioVal('rad'));
+
+      if (!vid1.paused) {
+        resetControles();
       }
       setVidSrc();
-    //  
-      
+      //  
+
     });
 
     let playStop2 = 0;
@@ -280,9 +293,10 @@
     controls.on("mouseout", function() {
       controls.takeClass("underline green");
     });
-//$('#me').on('click',function(){
-//  console.log(vid1.paused);
-//})
+    //$('#me').on('click',function(){
+    //  console.log(vid1.paused);
+    //})
+
   </script>
 </body>
 
