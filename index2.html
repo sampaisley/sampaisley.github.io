@@ -73,6 +73,10 @@
     .pause::after {
       content: "PAUSE";
     }
+    
+    #vid1, #vid2, #vid3, #vidPie{
+      width: 100%;
+    }
 
   </style>
 </head>
@@ -99,8 +103,10 @@
         <hr>
         <p id="proto" class="lef-4" role="button">reset</p>
         <hr>
+         <div class="ml-md-3 mr-md-3">
+                   <img id="me" src="img/3.webp" alt="" class="w-100 ">
 
-        <img id="me" width="400px" src="img/3.webp" alt="">
+         </div>
 
 
 
@@ -126,7 +132,7 @@
 
         </form>
         <h3 id="controls" role="button" class=" play"></h3>
-        <video width="400" id="vidPie" preload="auto">
+        <video id="vidPie" preload="auto" class="ml-md-3 mr-md-3">
 
           <source src="vid/room1.mp4" type="video/mp4">
 
@@ -144,7 +150,7 @@
     <div class="row mt-2 border-top">
       <div id="" class="column col-md-4 mt-4">
 
-        <video width="400" id="vid1" preload="auto" poster="img/room1.1.jpg">
+        <video id="vid1" preload="auto" poster="img/room1.1.jpg">
 
           <source src="vid/room/room1.1.mp4" type="video/mp4">
 
@@ -155,7 +161,7 @@
 
       <div id="" class="column col-md-4 mt-4">
 
-        <video width="400" id="vid2" preload="auto" poster="img/room2.2.jpg">
+        <video id="vid2" preload="auto" poster="img/room2.2.jpg">
 
           <source src="vid/room/room2.2.mp4" type="video/mp4">
 
@@ -166,7 +172,7 @@
 
       <div id="" class="column col-md-4 mt-4">
 
-        <video width="400" id="vid3" preload="auto" poster="img/room3.3.jpg">
+        <video id="vid3" preload="auto" poster="img/room3.3.jpg">
 
           <source src="vid/room/room3.3.mp4" type="video/mp4">
 
