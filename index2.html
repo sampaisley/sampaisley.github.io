@@ -120,7 +120,7 @@
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
           <input type="text" id="inp" value="putPut">
-          <input type="radio" name="rad" class="rad" value="room1" checked> <input type="radio" name="rad" class="rad" value="room2"> <input type="radio" name="rad" class="rad" value="room3">
+          <input type="radio" name="rad" class="rad" value="room1.1" checked> <input type="radio" name="rad" class="rad" value="room2.2"> <input type="radio" name="rad" class="rad" value="room3.3">
           <input type="checkbox" id="check1">
           <button class="ml-1 my-3" id="clear">CLEAR</button>
 
@@ -227,16 +227,16 @@
       let img = new Image();
       img.src = url;
     }
-    
-    
-    for(let i = 0;i <=2;){
-      
-     preloadImage(`img/room${i++}.jpg`);
-     
+
+
+    for (let i = 0; i <= 2;) {
+
+      preloadImage(`img/room${i++}.jpg`);
+
     }
 
-    
-    
+
+
     function setVidSrc() {
 
       let rv = $().radioVal('rad');
@@ -276,14 +276,11 @@
       if (playStop2++ % 2 === 0) {
         vid1.play();
 
-
-        //        let t = this.id;
-        //        $(`#${t}`).putClass("foo red pink linethrough");
-
-      } else {
-
-        vid1.pause();
+        return;
       }
+
+      vid1.pause();
+
 
     });
 
