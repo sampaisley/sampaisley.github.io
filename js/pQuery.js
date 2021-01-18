@@ -231,6 +231,23 @@ function $(selector, indx) {
       return this;
 
     },
+    
+    
+     play() {
+
+      el.forEach(function (item) {
+        item.play();
+      });
+      return this;
+    },
+    
+    pause() {
+
+      el.forEach(function (item) {
+        item.pause();
+      });
+      return this;
+    },
 
 
 //    each(func) {

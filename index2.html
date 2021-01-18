@@ -139,6 +139,52 @@
 
     </div>
 
+
+
+    <div class="row mt-2 border-top">
+      <div id="" class="column col-md-4 mt-4">
+
+        <video width="400" id="vid1" preload="auto" poster="img/room1.1.jpg">
+
+          <source src="vid/room/room1.1.mp4" type="video/mp4">
+
+          Sorry, your browser doesn't support embedded videos..
+        </video>
+
+      </div>
+
+      <div id="" class="column col-md-4 mt-4">
+
+        <video width="400" id="vid2" preload="auto" poster="img/room2.2.jpg">
+
+          <source src="vid/room/room2.2.mp4" type="video/mp4">
+
+          Sorry, your browser doesn't support embedded videos..
+        </video>
+
+      </div>
+
+      <div id="" class="column col-md-4 mt-4">
+
+        <video width="400" id="vid3" preload="auto" poster="img/room3.3.jpg">
+
+          <source src="vid/room/room3.3.mp4" type="video/mp4">
+
+          Sorry, your browser doesn't support embedded videos..
+        </video>
+
+      </div>
+
+
+
+    </div>
+    
+    
+    
+     <div class="row mt-2 border-top">
+     <h3 id="fook" role="button">Fookin Stop</h3>
+    </div>
+
   </div>
 
   <script src="js/pQuery.js"></script>
@@ -168,7 +214,7 @@
       q = 0;
     })
     let playStop = 0;
-    let vid1 = document.getElementById("vidPie");
+    let vidPie = document.getElementById("vidPie");
 
     //$(".rad").each(function(el){
     //  console.log(el);
@@ -218,7 +264,7 @@
 
     $("#clear").on('click', function(e) {
       $("#theForm").reset();
-      console.log('theForm');
+      setVidSrc();
       e.preventDefault();
 
     })
@@ -259,7 +305,7 @@
 
       $('#nowShowing').text($().radioVal('rad'));
 
-      if (!vid1.paused) {
+      if (!vidPie.paused) {
         resetControles();
       }
       setVidSrc();
@@ -274,12 +320,12 @@
 
       controls.togClass("pause");
       if (playStop2++ % 2 === 0) {
-        vid1.play();
+        vidPie.play();
 
         return;
       }
 
-      vid1.pause();
+      vidPie.pause();
 
 
     });
@@ -292,8 +338,44 @@
       controls.takeClass("underline green");
     });
     //$('#me').on('click',function(){
-    //  console.log(vid1.paused);
+    //  console.log(vidPie.paused);
     //})
+
+
+    ///////////////////////////////////////////////////////////////////////
+    let vid1 = $("#vid1");
+    let vid2 = $("#vid2");
+    let vid3 = $("#vid3");
+    
+    function pauseVids(){
+      vid1.pause();
+      vid2.pause();
+      vid3.pause();
+    }
+    vid1.on("click", function() {
+      pauseVids();
+      this.play();
+    }).on("ended", function() {
+      vid2.play();
+    });
+
+   vid2.on("click", function() {
+     pauseVids();
+      this.play();
+    }).on("ended", function() {
+      vid3.play();
+    });
+
+  vid3.on("click", function() {
+    pauseVids();
+      this.play();
+    }).on("ended", function() {
+      vid1.play();
+    });
+    
+    $("#fook").on("click", function() {
+      pauseVids();
+    })
 
   </script>
 </body>
