@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="">
+  <style>
+    .container{
+ 
+         max-width: 500px;
+      margin-left: calc(50vw - 250px);
+      margin-top: 30vh;
+   
+    }
+    
+    
+    #outer{
+      width: 100%;
+      height: 30px;
+      border-top: 3px solid #050505;
+      margin-top: 1em;
+      
+    }
+    
+    
+    #slide{
+      position: relative;
+      left: 1em;
+      margin-left: -1em;
+      margin-top: -1.3em;
+      font-size: 1em;
+      width: 2.5em;
+      height: 2.5em;
+      font-weight: bold;
+      cursor: pointer;
+      background-image: url('img/record-circle.svg');
+
+    }
+    
+    #vid1{
+      width: 100%;
+    }
+    
+    #info_pos{
+      position: relative;
+      float: right;
+    }
+  </style>
+  <title>vidRag</title>
+</head>
+
+<body>
+
+  <div class="container">
+  <video id="vid1" src="vid/room4.mp4"></video>
+  <div id="outer">
+    <div id="slide"></div>
+  </div>
+<span id="info_length"></span>
+ <span id="info_pos">0</span>
+  </div>
+  <script src="js/pQuery.js"></script>
+<script src="js/vidrag.js"></script>
+</body>
+
+</html>
