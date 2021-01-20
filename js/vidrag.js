@@ -58,5 +58,15 @@ function move(e) {
  
 }
 
-
+outer.addEventListener('touchmove', function (e) {
+        
+  
+   var changedTouch = event.changedTouches[0];
+  var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+  let xPercent = (changedTouch.clientX - rect.x ) * 100 / rect.width;
+  console.log('elem', xPercent);
+  slide.style.left = `${changedTouch.clientX - rect.x}px`;
+   vid1.currentTime = xPercent * (vidLength / 100);
+  
+     });
 //$("#slide").on("mousedown", move);
