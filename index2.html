@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/bootstrap.452.min.css">
 
-  <title>sampaisley</title>
+  <title>INDEX 2</title>
   <style>
     .foo {
       padding-left: 1em;
@@ -63,7 +63,7 @@
     }
 
     .play::after {
-      content: "PLAY";
+      content: url('img/play.svg');
     }
 
     .pause {
@@ -71,10 +71,13 @@
     }
 
     .pause::after {
-      content: "PAUSE";
+      content: url('img/pause.svg');
     }
-    
-    #vid1, #vid2, #vid3, #vidPie{
+
+    #vid1,
+    #vid2,
+    #vid3,
+    #vidPie {
       width: 100%;
     }
 
@@ -103,10 +106,10 @@
         <hr>
         <p id="proto" class="lef-4" role="button">reset</p>
         <hr>
-         <div class="ml-md-3 mr-md-3">
-                   <img id="me" src="img/3.webp" alt="" class="w-100 ">
+        <div class="ml-md-3 mr-md-3">
+          <img id="me" src="img/3.webp" alt="" class="w-100 ">
 
-         </div>
+        </div>
 
 
 
@@ -125,10 +128,11 @@
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
-          <input type="text" id="inp" value="putPut">
-          <input type="radio" name="rad" class="rad" value="room1.1" checked> <input type="radio" name="rad" class="rad" value="room2.2"> <input type="radio" name="rad" class="rad" value="room3.3">
+          <input type="text" id="inp" value="putPut" class="form-control">
+          <input type="radio" name="rad" class="rad" value="room1" checked> <input type="radio" name="rad" class="rad" value="room2"> <input type="radio" name="rad" class="rad" value="room3">
           <input type="checkbox" id="check1">
-          <button class="ml-1 my-3" id="clear">CLEAR</button>
+          <button class="ml-1 my-3 btn btn-primary" id="clear">CLEAR</button>
+          <input type="range" id="slide" min="0"  value="0" step="0.1" class="custom-range">
 
         </form>
         <h3 id="controls" role="button" class=" play"></h3>
@@ -139,7 +143,7 @@
           Sorry, your browser doesn't support embedded videos..
         </video>
 
-        <h1 id="nowShowing">Zoo</h1>
+        <span id="nowShowing"></span><span id="fwd"> ->></span>
       </div>
 
 
@@ -150,20 +154,9 @@
     <div class="row mt-2 border-top">
       <div id="" class="column col-md-4 mt-4">
 
-        <video id="vid1" preload="auto" poster="img/room1.1.jpg">
+        <video id="vid1" preload="auto" poster="img/posters/room1.jpg">
 
-          <source src="vid/room/room1.1.mp4" type="video/mp4">
-
-          Sorry, your browser doesn't support embedded videos..
-        </video>
-
-      </div>
-
-      <div id="" class="column col-md-4 mt-4">
-
-        <video id="vid2" preload="auto" poster="img/room2.2.jpg">
-
-          <source src="vid/room/room2.2.mp4" type="video/mp4">
+          <source src="vid/room1.mp4" type="video/mp4">
 
           Sorry, your browser doesn't support embedded videos..
         </video>
@@ -172,9 +165,20 @@
 
       <div id="" class="column col-md-4 mt-4">
 
-        <video id="vid3" preload="auto" poster="img/room3.3.jpg">
+        <video id="vid2" preload="auto" poster="img/posters/room2.jpg">
 
-          <source src="vid/room/room3.3.mp4" type="video/mp4">
+          <source src="vid/room2.mp4" type="video/mp4">
+
+          Sorry, your browser doesn't support embedded videos..
+        </video>
+
+      </div>
+
+      <div id="" class="column col-md-4 mt-4">
+
+        <video id="vid3" preload="auto" poster="img/posters/room3.jpg">
+
+          <source src="vid/room3.mp4" type="video/mp4">
 
           Sorry, your browser doesn't support embedded videos..
         </video>
@@ -184,11 +188,11 @@
 
 
     </div>
-    
-    
-    
-     <div class="row mt-2 border-top">
-     <h3 id="fook" role="button">Fookin Stop</h3>
+
+
+
+    <div class="row mt-2 border-top">
+      <h3 id="fook" role="button">Fookin Stop</h3>
     </div>
 
   </div>
@@ -196,6 +200,59 @@
   <script src="js/pQuery.js"></script>
   <script>
     "use strict";
+
+    function setSlider() {
+      let inc;
+      let vid11 = document.querySelector("#vidPie");
+      
+      $('#slide').val(-20);
+    
+      
+       vid11.addEventListener('loadedmetadata', function() {
+          $('#slide').attribute("max", Math.floor(vid11.duration));
+        
+         inc = vid11.duration / 10;
+          
+//        var duration = vid11.duration;
+//       console.log("Duration is " + duration.toFixed(2) + " seconds.")
+      });
+
+     
+
+
+      $("#fwd").on("click", function() {
+        if (vid11.currentTime < vid11.duration)
+
+        vid11.currentTime += inc;
+        $('#slide').val(vid11.currentTime);
+
+      });
+      
+      
+      
+
+      $("#vidPie").on("timeupdate", function() {
+
+        $('#slide').val(vid11.currentTime);
+
+      });
+      
+      
+      
+      
+
+      $('#slide').on("change", function() {
+
+        vid11.currentTime = this.value;
+      });
+      
+      
+      
+    }
+
+    setSlider();
+
+    //////////////////////////////////////////////////////////////////
     let q = 0;
     $('.lef-1').on("click", function() {
       $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
@@ -220,7 +277,7 @@
       q = 0;
     })
     let playStop = 0;
-    let vidPie = document.getElementById("vidPie");
+    let vidPie = $("#vidPie");
 
     //$(".rad").each(function(el){
     //  console.log(el);
@@ -270,6 +327,10 @@
 
     $("#clear").on('click', function(e) {
       $("#theForm").reset();
+
+      if (!vidPie.paused()) {
+        resetControles();
+      }
       setVidSrc();
       e.preventDefault();
 
@@ -293,8 +354,9 @@
 
       let rv = $().radioVal('rad');
 
-      $('#vidPie').attribute('src', `vid/room/${rv}.mp4`).attribute("poster", `img/${rv}.jpg`);
+      $('#vidPie').attribute('src', `vid/${rv}.mp4`).attribute("poster", `img/posters/${rv}.jpg`);
 
+       
     }
 
     function resetControles() {
@@ -311,10 +373,12 @@
 
       $('#nowShowing').text($().radioVal('rad'));
 
-      if (!vidPie.paused) {
+      if (!vidPie.paused()) {
         resetControles();
       }
       setVidSrc();
+      setSlider();
+
       //  
 
     });
@@ -337,50 +401,49 @@
     });
 
     controls.on("mouseover", function() {
-      controls.putClass("underline green");
+      controls.putClass(" green");
 
     });
     controls.on("mouseout", function() {
-      controls.takeClass("underline green");
+      controls.takeClass(" green");
     });
-    //$('#me').on('click',function(){
-    //  console.log(vidPie.paused);
-    //})
 
 
     ///////////////////////////////////////////////////////////////////////
+
+
     let vid1 = $("#vid1");
     let vid2 = $("#vid2");
     let vid3 = $("#vid3");
-    
-    function pauseVids(){
+
+
+    function pauseVids() {
       vid1.pause();
       vid2.pause();
       vid3.pause();
     }
-    vid1.on("click", function() {
-      pauseVids();
-      this.play();
-    }).on("ended", function() {
-      vid2.play();
-    });
 
-   vid2.on("click", function() {
-     pauseVids();
-      this.play();
-    }).on("ended", function() {
-      vid3.play();
-    });
+    function playVid(vid, nxt) {
 
-  vid3.on("click", function() {
-    pauseVids();
-      this.play();
-    }).on("ended", function() {
-      vid1.play();
-    });
-    
-    $("#fook").on("click", function() {
-      pauseVids();
+      vid.on("click", function() {
+        pauseVids();
+        this.play();
+
+      }).on("ended", function() {
+        nxt.play();
+      });
+    }
+
+    playVid(vid1, vid2);
+    playVid(vid2, vid3);
+    playVid(vid3, vid1);
+
+
+    $("#fook").on("click", pauseVids);
+
+
+    $('#me').on('click', function() {
+      console.log(vidPie.paused());
     })
 
   </script>

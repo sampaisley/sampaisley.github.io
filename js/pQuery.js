@@ -241,12 +241,24 @@ function $(selector, indx) {
       return this;
     },
     
+    
+    
+    
     pause() {
 
       el.forEach(function (item) {
         item.pause();
       });
       return this;
+    },
+    
+    paused() {
+      let paused = '';
+      el.forEach(function (item) {
+       paused = item.paused;
+        
+      });
+      return paused;
     },
 
 
