@@ -210,6 +210,7 @@
       
        vid11.addEventListener('loadedmetadata', function() {
           $('#slide').attribute("max", Math.floor(vid11.duration));
+         console.log('max');
         
          inc = vid11.duration / 10;
           
@@ -342,7 +343,7 @@
     }
 
 
-    for (let i = 0; i <= 2;) {
+    for (let i = 1; i <= 3;) {
 
       preloadImage(`img/room${i++}.jpg`);
 

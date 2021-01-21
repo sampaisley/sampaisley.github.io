@@ -1,29 +1,39 @@
 "use strict";
-let slide = document.getElementById("slide");
-let outer = document.getElementById("outer");
+
+let slider = document.getElementById("slider");
+let slideTrack = document.getElementById("slideTrack");
 let vid1 = document.getElementById("vid1");
-let divW = outer.offsetWidth ;
+
 let vidLength;
-let rect = outer.getBoundingClientRect();
-console.log('rect', rect.x);
+let rect = slideTrack.getBoundingClientRect();
 
 
 
-vid1.addEventListener('loadedmetadata', function (a) {
+ setTimeout(waitForVid, 1);
+function waitForVid(){
+   $("#info_length").text(vid1.duration.toFixed(2));
+    vidLength = Math.round(vid1.duration);
+}
 
 
-  vidLength = Math.round(vid1.duration);
-  $("#info_length").text(vid1.duration.toFixed(2));
- 
+//vid1.addEventListener('loadeddata', function () {
+//
+//  if (vid1.readyState >= 2) {
+//   
+//    $("#info_length").text(vid1.duration.toFixed(2));
+//    vidLength = Math.round(vid1.duration);
+//  }
+//
+//});
 
-});
 
 
 
-slide.onmousedown = function () {
+
+slider.onmousedown = function () {
 
 
-  outer.addEventListener('mousemove',
+  slideTrack.addEventListener('mousemove',
     move,
     false
   );
@@ -32,41 +42,44 @@ slide.onmousedown = function () {
 
 window.onmouseup = function () {
 
-  outer.removeEventListener('mousemove',
+  slideTrack.removeEventListener('mousemove',
     move,
     false
   );
 
 
 };
-const fin = divW + rect.x;
- 
+const fin = rect.right;
+
 function move(e) {
 
   if (e.clientX < fin && e.clientX > rect.x)
-    slide.style.left = `${e.clientX - rect.x}px`;
- 
+    slider.style.left = `${e.clientX - rect.x}px`;
 
- let xPercent = (e.clientX - rect.x ) * 100 / rect.width;
 
- 
- 
-   vid1.currentTime = xPercent * (vidLength / 100);
- 
-   $("#info_pos").text(vid1.currentTime.toFixed(2));
- 
- 
+  let xPercent = (e.clientX - rect.x) * 100 / rect.width;
+
+
+
+
+  vid1.currentTime = xPercent * (vidLength / 100);
+
+  $("#info_pos").text(vid1.currentTime.toFixed(2));
+
+
 }
 
-outer.addEventListener('touchmove', function (e) {
-        
-  
-   var changedTouch = event.changedTouches[0];
-  var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
-  let xPercent = (changedTouch.clientX - rect.x ) * 100 / rect.width;
-  console.log('elem', xPercent);
-  slide.style.left = `${changedTouch.clientX - rect.x}px`;
-   vid1.currentTime = xPercent * (vidLength / 100);
-  
-     });
-//$("#slide").on("mousedown", move);
+slideTrack.addEventListener('touchmove', function (e) {
+
+
+  let changedTouch = event.changedTouches[0];
+  let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+  let xPercent = (changedTouch.clientX - rect.x) * 100 / rect.width;
+
+  if (changedTouch.clientX < fin && changedTouch.clientX > rect.x)
+
+    slider.style.left = `${changedTouch.clientX - rect.x}px`;
+  vid1.currentTime = xPercent * (vidLength / 100);
+  $("#info_pos").text(vid1.currentTime.toFixed(2));
+
+});

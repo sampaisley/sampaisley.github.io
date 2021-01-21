@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="css/bootstrap.452.min.css">
+  <link rel="stylesheet" href="css/vidRag.css">
   <style>
+    
+/*
     .container{
  
          max-width: 200px;
-/*
+
       margin-left: calc(50vw - 100px);
       margin-top: 30vh;
-*/
+
    
     }
     
     
-    #outer{
+    #slideTrack{
       width: 100%;
       height: 30px;
       border-top: 3px solid #050505;
@@ -27,9 +30,9 @@
     }
     
     
-    #slide{
+    #slider{
       position: relative;
-      left: 1em;
+     
       margin-left: -1em;
       margin-top: -1.3em;
       font-size: 1em;
@@ -49,6 +52,7 @@
       position: relative;
       float: right;
     }
+*/
   </style>
   <title>vidRag</title>
 </head>
@@ -56,13 +60,20 @@
 <body>
 
   <div class="container">
-  <video id="vid1" src="vid/room4.mp4"></video>
-  <div id="outer">
-    <div id="slide"></div>
+  <video id="vid1" >
+    <source src="vid/room2.mp4">
+    
+  </video>
+   </div>
+   <div class="container">
+  <div id="slideTrack">
+    <div id="slider"></div>
   </div>
 <span id="info_length"></span>
  <span id="info_pos">0</span>
-  </div>
+ 
+ </div>
+ 
   <script src="js/pQuery.js"></script>
 <script src="js/vidrag.js"></script>
 </body>
