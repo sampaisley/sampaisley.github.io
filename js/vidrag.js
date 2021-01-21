@@ -89,19 +89,19 @@ slideTrack.addEventListener('touchmove', function (e) {
 });
 
 
-//window.onresize = function () {
-//
-//  rect = slideTrack.getBoundingClientRect();
-//  fin = rect.right;
-//  slider.style.left = `${(rect.width / 100) * xPercent}px`;
-//
-//};
-window.addEventListener('orientationchange', function() {
-    // After orientationchange, add a one-time resize event
-    let afterOrientationChange = function() {
-        rect = slideTrack.getBoundingClientRect();
-        fin = rect.right; slider.style.left = `${(rect.width / 100) * xPercent}px`;
-        window.removeEventListener('resize', afterOrientationChange);
-    };
-    window.addEventListener('resize', afterOrientationChange);
-});
+window.onresize = function () {
+
+  rect = slideTrack.getBoundingClientRect();
+  fin = rect.right;
+  slider.style.left = `${(rect.width / 100) * xPercent}px`;
+
+};
+//window.addEventListener('orientationchange', function() {
+//    // After orientationchange, add a one-time resize event
+//    let afterOrientationChange = function() {
+//        rect = slideTrack.getBoundingClientRect();
+//        fin = rect.right; slider.style.left = `${(rect.width / 100) * xPercent}px`;
+//        window.removeEventListener('resize', afterOrientationChange);
+//    };
+//    window.addEventListener('resize', afterOrientationChange);
+//});
