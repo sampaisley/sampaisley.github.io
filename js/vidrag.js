@@ -89,13 +89,13 @@ slideTrack.addEventListener('touchmove', function (e) {
 });
 
 
-window.onresize = function () {
-
-  rect = slideTrack.getBoundingClientRect();
-  fin = rect.right;
-  slider.style.left = `${(rect.width / 100) * xPercent}px`;
-
-};
+//window.onresize = function () {
+//
+//  rect = slideTrack.getBoundingClientRect();
+//  fin = rect.right;
+//  slider.style.left = `${(rect.width / 100) * xPercent}px`;
+//
+//};
 //window.addEventListener('orientationchange', function() {
 //    // After orientationchange, add a one-time resize event
 //    let afterOrientationChange = function() {
@@ -105,3 +105,23 @@ window.onresize = function () {
 //    };
 //    window.addEventListener('resize', afterOrientationChange);
 //});
+
+window.addEventListener('resize', function () {
+    someThingChanged('resize');
+});
+
+window.addEventListener("orientationchange", function() {
+    someThingChanged('orientation');
+});
+function resize(){
+  rect = slideTrack.getBoundingClientRect();
+  fin = rect.right;
+  slider.style.left = `${(rect.width / 100) * xPercent}px`;
+}
+function someThingChanged(value) {
+    if (value == 'resize') {
+       resize();
+    } else if (value == 'orientation') {
+        resize();
+    }
+}
