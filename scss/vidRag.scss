@@ -4,7 +4,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	max-width: 60vh;
+	max-width: 70vh;
 	padding: 10px;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -14,20 +14,23 @@
 
 	@media (max-width: 600px) {
 		max-width: 100%;
-      background-color: rgba(244, 164, 12, 0.15);
+     // background-color: rgba(244, 57, 12, 0.15);
 	}
 
 	@media (min-width: 768px) {	
 			width: 750px;
 		  margin-top: 1.5em;
+     // background-color: orange;
 	}
 
 	@media (min-width: 992px) {
 			width: 970px;
+     // background-color: greenyellow;
 	}
 
 	@media (min-width: 1200px) {
 			width: 1170px;
+     // background-color: grey;
 	}
 }
 
