@@ -12,7 +12,7 @@
   @media (max-width: 600px) {
     .container {
       max-width: 100%;
-      background-color: antiquewhite; } }
+      background-color: rgba(12, 244, 244, 0.15); } }
   @media (min-width: 768px) {
     .container {
       width: 750px;

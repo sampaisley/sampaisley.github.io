@@ -5,21 +5,23 @@ let slideTrack = document.getElementById("slideTrack");
 let vid1 = document.getElementById("vid1");
 
 let vidLength;
+let xPercent;
 let rect = slideTrack.getBoundingClientRect();
 
 
 
- setTimeout(waitForVid, 1);
-function waitForVid(){
-   $("#info_length").text(vid1.duration.toFixed(2));
-    vidLength = Math.round(vid1.duration);
+setTimeout(waitForVid, 1);
+
+function waitForVid() {
+  $("#info_length").text(vid1.duration.toFixed(2));
+  vidLength = Math.round(vid1.duration);
 }
 
 
 vid1.addEventListener('loadeddata', function () {
 
   if (vid1.readyState >= 2) {
-   
+
     $("#info_length").text(vid1.duration.toFixed(2));
     vidLength = Math.round(vid1.duration);
   }
@@ -27,8 +29,6 @@ vid1.addEventListener('loadeddata', function () {
 });
 
 
-
-console.log('31');
 
 
 slider.onmousedown = function () {
@@ -50,7 +50,7 @@ window.onmouseup = function () {
 
 
 };
-const fin = rect.right;
+let fin = rect.right;
 
 function move(e) {
 
@@ -58,7 +58,8 @@ function move(e) {
     slider.style.left = `${e.clientX - rect.x}px`;
 
 
-  let xPercent = (e.clientX - rect.x) * 100 / rect.width;
+  xPercent = (e.clientX - rect.x) * 100 / rect.width;
+
 
 
 
@@ -72,15 +73,35 @@ function move(e) {
 
 slideTrack.addEventListener('touchmove', function (e) {
 
-
   let changedTouch = event.changedTouches[0];
   let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
-  let xPercent = (changedTouch.clientX - rect.x) * 100 / rect.width;
+  xPercent = (changedTouch.clientX - rect.x) * 100 / rect.width;
+
 
   if (changedTouch.clientX < fin && changedTouch.clientX > rect.x)
 
     slider.style.left = `${changedTouch.clientX - rect.x}px`;
+
   vid1.currentTime = xPercent * (vidLength / 100);
   $("#info_pos").text(vid1.currentTime.toFixed(2));
 
+
+});
+
+
+//window.onresize = function () {
+//
+//  rect = slideTrack.getBoundingClientRect();
+//  fin = rect.right;
+//  slider.style.left = `${(rect.width / 100) * xPercent}px`;
+//
+//};
+window.addEventListener('orientationchange', function() {
+    // After orientationchange, add a one-time resize event
+    let afterOrientationChange = function() {
+        rect = slideTrack.getBoundingClientRect();
+        fin = rect.right; slider.style.left = `${(rect.width / 100) * xPercent}px`;
+        window.removeEventListener('resize', afterOrientationChange);
+    };
+    window.addEventListener('resize', afterOrientationChange);
 });
