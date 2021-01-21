@@ -16,18 +16,19 @@ function waitForVid(){
 }
 
 
-//vid1.addEventListener('loadeddata', function () {
-//
-//  if (vid1.readyState >= 2) {
-//   
-//    $("#info_length").text(vid1.duration.toFixed(2));
-//    vidLength = Math.round(vid1.duration);
-//  }
-//
-//});
+vid1.addEventListener('loadeddata', function () {
+
+  if (vid1.readyState >= 2) {
+   
+    $("#info_length").text(vid1.duration.toFixed(2));
+    vidLength = Math.round(vid1.duration);
+  }
+
+});
 
 
 
+console.log('31');
 
 
 slider.onmousedown = function () {
