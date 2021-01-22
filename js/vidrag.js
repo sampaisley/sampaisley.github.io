@@ -84,7 +84,7 @@ function handleStart(){
 }
 function handleEnd(){
   slideTrack.classList.remove("op-1");
-  alert('remove -> ' + slideTrack.classList.contains('op-1'));
+ 
 }
 
 
