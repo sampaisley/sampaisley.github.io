@@ -11,6 +11,7 @@ let xPercent;
 let rect = slideTrack.getBoundingClientRect();
 let inc;
 
+document.getElementById('topInfo').innerHTML= screen.width + " - " + screen.height;
 
 setTimeout(waitForVid, 1);
 
