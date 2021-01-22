@@ -16,21 +16,23 @@ document.getElementById('topInfo').innerHTML= screen.width + " - " + screen.heig
 setTimeout(waitForVid, 1);
 
 function waitForVid() {
-  $("#info_length").text(vid1.duration.toFixed(2));
-  vidLength = Math.round(vid1.duration);
+ afterVidLoad();
 }
 
-
+// belt & braces
 vid1.addEventListener('loadeddata', function () {
 
   if (vid1.readyState >= 2) {
-    inc = vid1.duration;
-    $("#info_length").text(vid1.duration.toFixed(2));
-    vidLength = Math.round(vid1.duration);
+    
+   afterVidLoad();
   }
 
 });
-
+function afterVidLoad(){
+  inc = vid1.duration;
+   $("#info_length").text(vid1.duration.toFixed());
+    vidLength = Math.round(vid1.duration);
+}
 
 
 
@@ -67,7 +69,7 @@ function move(e) {
 
   vid1.currentTime = xPercent * (vidLength / 100);
 
-  $("#info_pos").text(vid1.currentTime.toFixed(2));
+  $("#info_pos").text(vid1.currentTime.toFixed());
 
 
 }
@@ -97,7 +99,7 @@ slideTrack.classList.add("op-1");
     slider.style.left = `${changedTouch.clientX - rect.x}px`;
 
   vid1.currentTime = xPercent * (vidLength / 100);
-  $("#info_pos").text(vid1.currentTime.toFixed(2));
+  $("#info_pos").text(vid1.currentTime.toFixed());
 
 
 });
@@ -159,7 +161,7 @@ $('#vid1').on('ended', function () {
 
 $("#vid1").on("timeupdate", function () {
 
-  $("#info_pos").text(vid1.currentTime.toFixed(2));
+  $("#info_pos").text(vid1.currentTime.toFixed());
   slider.style.left = `${Math.floor((vid1.currentTime / vidLength) * 100)}%`;
   //  slider.style.left =`${inc}px`;
   console.log('slider.style.left', inc);
