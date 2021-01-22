@@ -80,15 +80,17 @@ slideTrack.addEventListener("touchstart", handleStart, false);
 slideTrack.addEventListener("touchend", handleEnd, false);
 function handleStart(){
   slideTrack.classList.add("op-1");
+  console.log('add');
 }
 function handleEnd(){
   slideTrack.classList.remove("op-1");
+  console.log('remove' + slideTrack.classList.contains('op-1'));
 }
 
 
 
 slideTrack.addEventListener('touchmove', function (e) {
-slideTrack.classList.add("op-1");
+
   let changedTouch = event.changedTouches[0];
   let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
   xPercent = (changedTouch.clientX - rect.x) * 100 / rect.width;
