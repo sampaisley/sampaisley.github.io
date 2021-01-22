@@ -16,6 +16,13 @@
   
     max-width: 100%;
   }
+   @media (max-height: 410px) {
+     background-color: aquamarine;
+     max-width: 60%;
+  }
+//    max-width: 100%;
+//    // background-color: rgba(244, 57, 12, 0.15);
+//  }
 //  @media (max-width: 600px) {
 //    max-width: 100%;
 //    // background-color: rgba(244, 57, 12, 0.15);

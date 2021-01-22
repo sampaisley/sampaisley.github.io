@@ -13,6 +13,10 @@
   @media (orientation: portrait) {
     .container {
       max-width: 100%; } }
+  @media (max-height: 410px) {
+    .container {
+      background-color: aquamarine;
+      max-width: 60%; } }
 
 #topInfo {
   position: absolute;
