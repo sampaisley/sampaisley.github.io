@@ -4,8 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 70%;
-  max-height: 100vh;
+  max-width: 50%;
+ 
   padding: 10px;
   padding-right: 10px;
   padding-left: 10px;
@@ -17,7 +17,7 @@
     max-width: 100%;
   }
    @media (max-height: 410px) {
-     background-color: aquamarine;
+    // background-color: aquamarine;
      max-width: 60%;
   }
 //    max-width: 100%;
@@ -50,8 +50,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: red;
-  background-color: greenyellow;
+  color: #f5ff00;
+  background-color: #0e0f0e;
 }
 
 #vid1 {
@@ -74,10 +74,9 @@
     opacity: 1;
   }
   
-//   @media (max-width: 768) {
-//     margin-top: 0em;
-//  
-//  }
+@media (max-height: 410px) {
+  margin-top: -1.3em;
+  }
   
   @media (max-width: 600px) {
     width: 76%;
@@ -125,9 +124,7 @@
 
 #playPause{
   display: inline;
- // outline: 1px solid orange;
-  //margin-top: -2em;
-//   @media (max-width: 768px) {
-//     margin-top: 0em;
-//  }
+@media (max-height: 410px) {
+     margin-top: -1.5em;
+  }
 }

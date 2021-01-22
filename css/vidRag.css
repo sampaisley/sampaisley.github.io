@@ -3,8 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 70%;
-  max-height: 100vh;
+  max-width: 50%;
   padding: 10px;
   padding-right: 10px;
   padding-left: 10px;
@@ -15,15 +14,14 @@
       max-width: 100%; } }
   @media (max-height: 410px) {
     .container {
-      background-color: aquamarine;
       max-width: 60%; } }
 
 #topInfo {
   position: absolute;
   top: 0;
   left: 0;
-  color: red;
-  background-color: greenyellow; }
+  color: #f5ff00;
+  background-color: #0e0f0e; }
 
 #vid1 {
   width: 100%; }
@@ -39,6 +37,9 @@
   transition: opacity 0.5s; }
   #slideTrack:hover {
     opacity: 1; }
+  @media (max-height: 410px) {
+    #slideTrack {
+      margin-top: -1.3em; } }
   @media (max-width: 600px) {
     #slideTrack {
       width: 76%;
@@ -72,5 +73,8 @@
 
 #playPause {
   display: inline; }
+  @media (max-height: 410px) {
+    #playPause {
+      margin-top: -1.5em; } }
 
 /*# sourceMappingURL=vidRag.css.map */
