@@ -80,11 +80,11 @@ slideTrack.addEventListener("touchstart", handleStart, false);
 slideTrack.addEventListener("touchend", handleEnd, false);
 function handleStart(){
   slideTrack.classList.add("op-1");
-  console.log('add');
+ 
 }
 function handleEnd(){
   slideTrack.classList.remove("op-1");
-  console.log('remove' + slideTrack.classList.contains('op-1'));
+  alert('remove -> ' + slideTrack.classList.contains('op-1'));
 }
 
 
