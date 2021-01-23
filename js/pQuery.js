@@ -112,6 +112,32 @@ function $(selector, indx) {
       return el[0].getAttribute(att);
 
     },
+    
+    
+    
+    style(str,val) {
+     
+      if (val) {
+        
+        el.forEach(function (item) {
+          item.style.cssText = item.style.cssText +`${str}:${val}`;
+         
+        });
+        return this;
+      }
+      
+ 
+     // this.str = str;
+      let compStyles = window.getComputedStyle(el[0]);
+      let returnStyle = compStyles.getPropertyValue(str);
+     
+     
+      return returnStyle;
+
+    },
+    
+    
+
 
 
 
@@ -260,6 +286,27 @@ function $(selector, indx) {
       });
       return paused;
     },
+    
+    
+    readyState() {
+      return el[0].readyState;
+    },
+    
+    
+    duration() {
+      return el[0].duration;
+    },
+    
+    currentTime(n) {
+     if(n){
+     el[0].currentTime = n;
+     }
+      return el[0].currentTime;
+    },
+    
+    getRect() {
+      return el[0].getBoundingClientRect();
+    },
 
 
 //    each(func) {
@@ -283,6 +330,8 @@ function $(selector, indx) {
     hasClass(cl) {
       return el[0].classList.contains(cl);
     },
+    
+    
 
 
     fuckOff() {
@@ -375,6 +424,19 @@ function $(selector, indx) {
       
       return this;
     },
+    
+    
+    off(event, callback) {
+      
+      el.forEach(function (item) {
+        item.removeEventListener(event, callback, false);
+        
+       
+      });
+      
+      return this;
+    },
+
 
 
 

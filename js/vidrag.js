@@ -1,58 +1,60 @@
 "use strict";
 
-let slider = document.getElementById("slider");
-let sliderWidth = slider.getBoundingClientRect().width / 2;
+let slider = $("#slider");
+let sliderWidth = slider.getRect().width / 2;
 let info_pos = $("#info_pos");
 
-let slideTrack = document.getElementById("slideTrack");
-let vid1 = document.getElementById("vid1");
+let slideTrack = $("#slideTrack");
+let vid1 = $("#vid1");
 
 let vidLength;
 let xPercent = 0;
-let rect = slideTrack.getBoundingClientRect();
+let rect = slideTrack.getRect();
 let fin = rect.right;
-let inc;
+
+
+
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
 setTimeout(waitForVid, 1);
 
 function waitForVid() {
- afterVidLoad();
+  afterVidLoad();
 }
 
 // belt & braces
-vid1.addEventListener('loadeddata', function () {
+
+vid1.on('loadeddata', function () {
+
 
   if (vid1.readyState >= 2) {
-    
-   afterVidLoad();
+
+    afterVidLoad();
   }
 
 });
-function afterVidLoad(){
-  inc = vid1.duration;
-   $("#info_length").text(vid1.duration.toFixed());
-    vidLength = Math.round(vid1.duration);
+
+function afterVidLoad() {
+
+
+  $("#info_length").text(vid1.duration().toFixed(1));
+  vidLength = Math.round(vid1.duration());
+
+
 }
 
 
 
-slider.onmousedown = function () {
+slider.on("mousedown", function () {
 
-  slideTrack.addEventListener('mousemove',
-    move,
-    false
-  );
-};
+  slideTrack.on('mousemove', move);
+});
 
 
 window.onmouseup = function () {
 
-  slideTrack.removeEventListener('mousemove',
-    move,
-    false
-  );
+  slideTrack.off('mousemove', move);
 
 
 };
@@ -61,88 +63,79 @@ window.onmouseup = function () {
 
 
 function move(e) {
-  
+
+
   xPercent = Math.round((e.clientX - rect.x) * 100 / rect.width);
-  
-  if (xPercent >= 0 && xPercent <= 100){
 
- slider.style.left = `${xPercent}%`;
+  if (xPercent >= 0 && xPercent <= 100) {
 
-  vid1.currentTime = xPercent * (vidLength / 100);
+    slider.style("left", `${xPercent}%`);
 
-  info_pos.text(vid1.currentTime.toFixed());
+
+    vid1.currentTime(xPercent * (vidLength / 100));
+
+    info_pos.text(vid1.currentTime().toFixed(1));
   }
 
 
 }
 
-slideTrack.addEventListener("click", move);
+slideTrack.on("click", move);
 
-slideTrack.addEventListener("touchstart", handleStart, false);
+slideTrack.on("touchstart", handleStart);
 window.addEventListener("touchend", handleEnd, false);
-function handleStart(){
-  slideTrack.classList.add("op-1");
- 
-}
-function handleEnd(){
-  slideTrack.classList.remove("op-1");
- 
+
+function handleStart() {
+  slideTrack.putClass("op-1");
+
 }
 
+function handleEnd() {
+  slideTrack.takeClass("op-1");
+
+}
 
 
-slideTrack.addEventListener('touchmove', function (e) {
+
+slideTrack.on('touchmove', function (e) {
 
   let changedTouch = event.changedTouches[0];
   let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
   xPercent = Math.round((changedTouch.clientX - rect.x) * 100 / rect.width);
 
   if (xPercent >= 0 && xPercent <= 100) {
-    
-     slider.style.left = `${xPercent}%`;
-     vid1.currentTime = xPercent * (vidLength / 100);
-     info_pos.text(vid1.currentTime.toFixed());
+
+    slider.style("left", `${xPercent}%`);
+    vid1.currentTime(xPercent * (vidLength / 100));
+    info_pos.text(vid1.currentTime().toFixed(1));
   }
 
-   
+
 
 
 });
 
 
-//window.onresize = function () {
-//
-//  rect = slideTrack.getBoundingClientRect();
-//  fin = rect.right;
-//  slider.style.left = `${(rect.width / 100) * xPercent}px`;
-//
-//};
 
 window.addEventListener('orientationchange', function () {
   // After orientationchange, add a one-time resize event
   let afterOrientationChange = function () {
-    rect = slideTrack.getBoundingClientRect();
+    rect = slideTrack.getRect();
     fin = Math.round(rect.right);
 
-
-
-    let posUpdate = Math.round((rect.width / 100) * xPercent);
 
     if (xPercent > 100) {
       xPercent = 100;
 
     }
 
-    slider.style.left = `${xPercent}%`;
+    slider.style("left", ` ${xPercent}%`);
 
-
-
-    // setTimeout(resize, 500);
-
-    window.removeEventListener('resize', afterOrientationChange);
+     window.removeEventListener('resize', afterOrientationChange);
   };
   window.addEventListener('resize', afterOrientationChange);
 });
+
 
 
 
@@ -160,16 +153,16 @@ function resetControles() {
 }
 
 
-$('#vid1').on('ended', function () {
+vid1.on('ended', function () {
   resetControles();
 });
 
-$("#vid1").on("timeupdate", function () {
+vid1.on("timeupdate", function () {
 
-  info_pos.text(vid1.currentTime.toFixed());
-  slider.style.left = `${Math.floor((vid1.currentTime / vidLength) * 100)}%`;
-  //  slider.style.left =`${inc}px`;
- 
+  info_pos.text(vid1.currentTime().toFixed(1));
+  slider.style("left", `${Math.floor((vid1.currentTime() / vidLength) * 100)}%`);
+
+
 
 });
 
@@ -187,30 +180,3 @@ playPause.on("click", function () {
 
 
 });
-
-//window.addEventListener('resize', function () {
-//    someThingChanged('resize');
-//});
-//
-//window.addEventListener("orientationchange", function() {
-//    someThingChanged('orientation');
-//});
-//function resize(){
-//  rect = slideTrack.getBoundingClientRect();
-//  fin = rect.right;
-//  slider.style.left = `${(rect.width / 100) * xPercent}px`;
-//   console.log('slider --> ', slider.style.left );
-//  if(1==1){
-//        
-//      // slider.style.left > fin - rect.x;
-//   
-//      }
-//  
-//}
-//function someThingChanged(value) {
-//    if (value == 'resize') {
-//       resize();
-//    } else if (value == 'orientation') {
-//        resize();
-//    }
-//}
