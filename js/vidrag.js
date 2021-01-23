@@ -7,11 +7,11 @@ let slideTrack = document.getElementById("slideTrack");
 let vid1 = document.getElementById("vid1");
 
 let vidLength;
-let xPercent;
+let xPercent = 0;
 let rect = slideTrack.getBoundingClientRect();
 let inc;
 
-document.getElementById('topInfo').innerHTML= screen.width + " - " + screen.height;
+//document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
 setTimeout(waitForVid, 1);
 
@@ -60,16 +60,17 @@ window.onmouseup = function () {
 let fin = rect.right;
 
 function move(e) {
-
-  if (e.clientX < fin - sliderWidth && e.clientX > rect.x + sliderWidth)
+  
+  xPercent = Math.round((e.clientX - rect.x) * 100 / rect.width);
+  
+  if (xPercent >= 0 && xPercent <= 100){
 
     slider.style.left = `${e.clientX - rect.x}px`;
-
-  xPercent = (e.clientX - rect.x) * 100 / rect.width;
 
   vid1.currentTime = xPercent * (vidLength / 100);
 
   $("#info_pos").text(vid1.currentTime.toFixed());
+  }
 
 
 }
@@ -93,15 +94,16 @@ slideTrack.addEventListener('touchmove', function (e) {
 
   let changedTouch = event.changedTouches[0];
   let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
-  xPercent = (changedTouch.clientX - rect.x) * 100 / rect.width;
+  xPercent = Math.round((changedTouch.clientX - rect.x) * 100 / rect.width);
 
+  if (xPercent >= 0 && xPercent <= 100) {
+     slider.style.left = `${changedTouch.clientX - rect.x}px`;
 
-  if (changedTouch.clientX < fin - sliderWidth && changedTouch.clientX > rect.x)
+     vid1.currentTime = xPercent * (vidLength / 100);
+     $("#info_pos").text(vid1.currentTime.toFixed());
+  }
 
-    slider.style.left = `${changedTouch.clientX - rect.x}px`;
-
-  vid1.currentTime = xPercent * (vidLength / 100);
-  $("#info_pos").text(vid1.currentTime.toFixed());
+   
 
 
 });
@@ -125,12 +127,12 @@ window.addEventListener('orientationchange', function () {
 
     let posUpdate = Math.round((rect.width / 100) * xPercent);
 
-    if (posUpdate > (fin - sliderWidth)) {
-      posUpdate = fin - sliderWidth;
+    if (xPercent > 100) {
+      xPercent = 100;
 
     }
 
-    slider.style.left = `${posUpdate}px`;
+    slider.style.left = `${xPercent}%`;
 
 
 
