@@ -2,6 +2,7 @@
 
 let slider = document.getElementById("slider");
 let sliderWidth = slider.getBoundingClientRect().width / 2;
+let info_pos = $("#info_pos");
 
 let slideTrack = document.getElementById("slideTrack");
 let vid1 = document.getElementById("vid1");
@@ -9,6 +10,7 @@ let vid1 = document.getElementById("vid1");
 let vidLength;
 let xPercent = 0;
 let rect = slideTrack.getBoundingClientRect();
+let fin = rect.right;
 let inc;
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
@@ -38,7 +40,6 @@ function afterVidLoad(){
 
 slider.onmousedown = function () {
 
-
   slideTrack.addEventListener('mousemove',
     move,
     false
@@ -57,7 +58,7 @@ window.onmouseup = function () {
 };
 
 
-let fin = rect.right;
+
 
 function move(e) {
   
@@ -65,11 +66,11 @@ function move(e) {
   
   if (xPercent >= 0 && xPercent <= 100){
 
-    slider.style.left = `${e.clientX - rect.x}px`;
+ slider.style.left = `${xPercent}%`;
 
   vid1.currentTime = xPercent * (vidLength / 100);
 
-  $("#info_pos").text(vid1.currentTime.toFixed());
+  info_pos.text(vid1.currentTime.toFixed());
   }
 
 
@@ -78,7 +79,7 @@ function move(e) {
 slideTrack.addEventListener("click", move);
 
 slideTrack.addEventListener("touchstart", handleStart, false);
-slideTrack.addEventListener("touchend", handleEnd, false);
+window.addEventListener("touchend", handleEnd, false);
 function handleStart(){
   slideTrack.classList.add("op-1");
  
@@ -97,10 +98,10 @@ slideTrack.addEventListener('touchmove', function (e) {
   xPercent = Math.round((changedTouch.clientX - rect.x) * 100 / rect.width);
 
   if (xPercent >= 0 && xPercent <= 100) {
-     slider.style.left = `${changedTouch.clientX - rect.x}px`;
-
+    
+     slider.style.left = `${xPercent}%`;
      vid1.currentTime = xPercent * (vidLength / 100);
-     $("#info_pos").text(vid1.currentTime.toFixed());
+     info_pos.text(vid1.currentTime.toFixed());
   }
 
    
@@ -165,10 +166,10 @@ $('#vid1').on('ended', function () {
 
 $("#vid1").on("timeupdate", function () {
 
-  $("#info_pos").text(vid1.currentTime.toFixed());
+  info_pos.text(vid1.currentTime.toFixed());
   slider.style.left = `${Math.floor((vid1.currentTime / vidLength) * 100)}%`;
   //  slider.style.left =`${inc}px`;
-  console.log('slider.style.left', inc);
+ 
 
 });
 
