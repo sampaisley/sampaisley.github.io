@@ -4,6 +4,9 @@ let slider = $("#slider");
 let sliderWidth = slider.getRect().width / 2;
 let info_pos = $("#info_pos");
 
+let playStop2 = 0;
+let playPause = $("#playPause");
+
 let slideTrack = $("#slideTrack");
 let vid1 = $("#vid1");
 
@@ -52,7 +55,8 @@ slider.on("mousedown", function () {
 
 
 window.onmouseup = function () {
-
+  
+  handleEnd();
   slideTrack.off('mousemove', move);
 
 
@@ -63,8 +67,9 @@ window.onmouseup = function () {
 
 function move(e) {
 
-document.getElementById('topInfo').innerHTML= 'click ' + xPercent;
+
   xPercent = Math.round((e.clientX - rect.x) * 100 / rect.width);
+  document.getElementById('topInfo').innerHTML= 'X -> ' + xPercent;
 
   if (xPercent >= 0 && xPercent <= 100) {
 
@@ -142,8 +147,7 @@ window.addEventListener('orientationchange', function () {
 
 
 
-let playStop2 = 0;
-let playPause = $("#playPause");
+
 
 function resetControles() {
 
