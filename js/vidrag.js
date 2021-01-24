@@ -53,10 +53,15 @@ slider.on("mousedown", function () {
   slideTrack.on('mousemove', move);
 });
 
-
-window.onmouseup = function () {
+slider.on("mouseup", function () {
+// document.getElementById('topInfo').innerHTML= 'up ' + xPercent;
   
-  handleEnd();
+},true);
+window.onmouseup = function (e) {
+  document.getElementById('topInfo').innerHTML= 'up ' + e.clientX;
+   slideTrack.takeClass("op-1");
+  
+ 
   slideTrack.off('mousemove', move);
 
 
@@ -69,7 +74,7 @@ function move(e) {
 
 
   xPercent = Math.round((e.clientX - rect.x) * 100 / rect.width);
-  document.getElementById('topInfo').innerHTML= 'X -> ' + xPercent;
+ 
 
   if (xPercent >= 0 && xPercent <= 100) {
 
@@ -96,9 +101,7 @@ function handleStart() {
 
 function handleEnd() {
   slideTrack.takeClass("op-1");
-
 }
-
 
 
 slider.on('touchmove', function (e) {
