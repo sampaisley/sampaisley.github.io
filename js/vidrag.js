@@ -97,11 +97,12 @@ function handleEnd() {
 
 
 
-slideTrack.on('touchmove', function (e) {
+slider.on('touchmove', function (e) {
 
   let changedTouch = event.changedTouches[0];
   let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
   xPercent = Math.round((changedTouch.clientX - rect.x) * 100 / rect.width);
+  
 
   if (xPercent >= 0 && xPercent <= 100) {
 
@@ -160,7 +161,8 @@ vid1.on('ended', function () {
 vid1.on("timeupdate", function () {
 
   info_pos.text(vid1.currentTime().toFixed(1));
-  slider.style("left", `${Math.floor((vid1.currentTime() / vidLength) * 100)}%`);
+  xPercent = Math.floor((vid1.currentTime() / vidLength) * 100);
+  slider.style("left", ` ${xPercent}%`);
 
 
 
