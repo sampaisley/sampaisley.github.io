@@ -112,31 +112,43 @@ function $(selector, indx) {
       return el[0].getAttribute(att);
 
     },
-    
-    
-    
-    style(str,val) {
-     
+
+
+
+    style(str, val) {
+
       if (val) {
-        
+
         el.forEach(function (item) {
-          item.style.cssText = item.style.cssText +`${str}:${val}`;
-         
+          item.style.cssText = item.style.cssText + `${str}:${val}`;
+
         });
         return this;
       }
-      
- 
-     // this.str = str;
+
+
+      // this.str = str;
       let compStyles = window.getComputedStyle(el[0]);
       let returnStyle = compStyles.getPropertyValue(str);
-     
-     
+
+
       return returnStyle;
 
     },
-    
-    
+
+    css(propertyObject) {
+      el.forEach(function (item) {
+
+        for (let property in propertyObject) {
+          item.style[property] = propertyObject[property];
+        }
+
+
+      });
+      return this;
+    },
+
+
 
 
 
@@ -257,19 +269,19 @@ function $(selector, indx) {
       return this;
 
     },
-    
-    
-     play() {
+
+
+    play() {
 
       el.forEach(function (item) {
         item.play();
       });
       return this;
     },
-    
-    
-    
-    
+
+
+
+
     pause() {
 
       el.forEach(function (item) {
@@ -277,45 +289,45 @@ function $(selector, indx) {
       });
       return this;
     },
-    
+
     paused() {
       let paused = '';
       el.forEach(function (item) {
-       paused = item.paused;
-        
+        paused = item.paused;
+
       });
       return paused;
     },
-    
-    
+
+
     readyState() {
       return el[0].readyState;
     },
-    
-    
+
+
     duration() {
       return el[0].duration;
     },
-    
+
     currentTime(n) {
-     if(n){
-     el[0].currentTime = n;
-     }
+      if (n) {
+        el[0].currentTime = n;
+      }
       return el[0].currentTime;
     },
-    
+
     getRect() {
       return el[0].getBoundingClientRect();
     },
 
 
-//    each(func) {
-//
-//      el.forEach(function (item) {
-//        func(item);
-//      });
-//      return this;
-//    },
+    //    each(func) {
+    //
+    //      el.forEach(function (item) {
+    //        func(item);
+    //      });
+    //      return this;
+    //    },
 
 
 
@@ -330,8 +342,8 @@ function $(selector, indx) {
     hasClass(cl) {
       return el[0].classList.contains(cl);
     },
-    
-    
+
+
 
 
     fuckOff() {
@@ -415,25 +427,25 @@ function $(selector, indx) {
 
 
     on(event, callback) {
-      
+
       el.forEach(function (item) {
         item.addEventListener(event, callback, false);
-        
-       
+
+
       });
-      
+
       return this;
     },
-    
-    
+
+
     off(event, callback) {
-      
+
       el.forEach(function (item) {
         item.removeEventListener(event, callback, false);
-        
-       
+
+
       });
-      
+
       return this;
     },
 

@@ -14,7 +14,6 @@ let fin = rect.right;
 
 
 
-
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
 setTimeout(waitForVid, 1);
@@ -64,7 +63,7 @@ window.onmouseup = function () {
 
 function move(e) {
 
-
+document.getElementById('topInfo').innerHTML= 'click ' + xPercent;
   xPercent = Math.round((e.clientX - rect.x) * 100 / rect.width);
 
   if (xPercent >= 0 && xPercent <= 100) {
