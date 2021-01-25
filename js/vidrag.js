@@ -26,7 +26,7 @@ function waitForVid() {
   afterVidLoad();
   
 }
-
+setTimeout(afterVidLoad,500);
 // belt & braces
 
 vid1.on('loadeddata', function () {
@@ -43,7 +43,8 @@ vid1.on('loadeddata', function () {
 function afterVidLoad() {
 
   $("#info_length").text(vid1.duration().toFixed(1));
-
+  console.log('vid1.duration()', vid1.duration());
+document.getElementById('topInfo').innerHTML= 'vid ' + (++x);
   vidLength = Math.round(vid1.duration());
 
 
