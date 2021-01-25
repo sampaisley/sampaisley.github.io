@@ -1,18 +1,19 @@
 "use strict";
 
-let slider = $("#slider");
-let sliderWidth = slider.getRect().width / 2;
+let seekBar = $("#seekBar");
+
 let info_pos = $("#info_pos");
 
 let playStop2 = 0;
 let playPause = $("#playPause");
 
-let slideTrack = $("#slideTrack");
+
+
 let vid1 = $("#vid1");
 
 let vidLength;
 let xPercent = 0;
-let rect = slideTrack.getRect();
+let rect = seekBar.getRect();
 let fin = rect.right;
 
 
@@ -24,7 +25,6 @@ let x=0;
 function waitForVid() {
   afterVidLoad();
   
-  console.log('  ', x++  );
 }
 
 // belt & braces
@@ -51,24 +51,24 @@ function afterVidLoad() {
 
 
 
-slider.on("mousedown", function () {
+seekBar.on("mousedown", function () {
 
-  slideTrack.on('mousemove', move);
+  seekBar.on('mousemove', move);
 });
 
-slider.on("mouseup", function () {
+seekBar.on("mouseup", function () {
 // document.getElementById('topInfo').innerHTML= 'up ' + xPercent;
   
 },true);
-window.addEventListener('mouseup', function (e) {
-  document.getElementById('topInfo').innerHTML= 'up ' + e.clientX;
- slideTrack.takeClass("op-1");
-  
- 
-  slideTrack.off('mousemove', move);
-
-
-});
+//window.addEventListener('mouseup', function (e) {
+// 
+// slideTrack.takeClass("op-1");
+//  
+// 
+//  slideTrack.off('mousemove', move);
+//
+//
+//});
 
 
 
@@ -81,7 +81,8 @@ function move(e) {
 
   if (xPercent >= 0 && xPercent <= 100) {
 
-    slider.style("left", `${xPercent}%`);
+     seekBar.css({ "background-size": ` ${xPercent}% 20px`});
+    console.log('xPercent', xPercent);
 
 
     vid1.currentTime(xPercent * (vidLength / 100));
@@ -92,22 +93,23 @@ function move(e) {
 
 }
 
-slideTrack.on("click", move);
 
-slideTrack.on("touchstart", handleStart);
-window.addEventListener("touchend", handleEnd, false);
+seekBar.on("click", move);
 
-function handleStart() {
-  slideTrack.putClass("op-1");
+//seekBar.on("touchstart", handleStart);
+//window.addEventListener("touchend", handleEnd, false);
+//
+//function handleStart() {
+//  slideTrack.putClass("op-1");
+//
+//}
+//
+//function handleEnd() {
+// slideTrack.takeClass("op-1");
+//}
 
-}
 
-function handleEnd() {
- slideTrack.takeClass("op-1");
-}
-
-
-slider.on('touchmove', function (e) {
+seekBar.on('touchmove', function (e) {
 
   let changedTouch = event.changedTouches[0];
   let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
@@ -116,7 +118,7 @@ slider.on('touchmove', function (e) {
 
   if (xPercent >= 0 && xPercent <= 100) {
 
-    slider.style("left", `${xPercent}%`);
+    seekBar.css({ "background-size": ` ${xPercent}% 20px`});
     vid1.currentTime(xPercent * (vidLength / 100));
     info_pos.text(vid1.currentTime().toFixed(1));
   }
@@ -131,7 +133,7 @@ slider.on('touchmove', function (e) {
 window.addEventListener('orientationchange', function () {
   // After orientationchange, add a one-time resize event
   let afterOrientationChange = function () {
-    rect = slideTrack.getRect();
+    rect = seekBar.getRect();
     fin = Math.round(rect.right);
 
 
@@ -139,8 +141,8 @@ window.addEventListener('orientationchange', function () {
       xPercent = 100;
 
     }
-
-    slider.style("left", ` ${xPercent}%`);
+ seekBar.css({ "background-size": ` ${xPercent}% 20px`});
+   
 
      window.removeEventListener('resize', afterOrientationChange);
   };
@@ -170,8 +172,10 @@ vid1.on('ended', function () {
 vid1.on("timeupdate", function () {
 
   info_pos.text(vid1.currentTime().toFixed(1));
-  xPercent = Math.floor((vid1.currentTime() / vidLength) * 100);
-  slider.style("left", ` ${xPercent}%`);
+  xPercent = Math.ceil((vid1.currentTime() / vidLength) * 100);
+ 
+  seekBar.css({ "background-size": ` ${xPercent}% 20px`});
+ 
 
 
 
