@@ -15,15 +15,15 @@ let xPercent = 0;
 let rect = slideTrack.getRect();
 let fin = rect.right;
 
-
+let vidAttempts=0;
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
-setTimeout(waitForVid, 1);
+//setTimeout(waitForVid, 1);
 
-function waitForVid() {
-  afterVidLoad();
-}
+//function waitForVid() {
+//  afterVidLoad();
+//}
 
 // belt & braces
 
@@ -33,18 +33,22 @@ vid1.on('loadeddata', function () {
   if (vid1.readyState >= 2) {
 
     afterVidLoad();
+  }else{
+    setTimeout(afterVidLoad, 1);
   }
 
 });
 
 function afterVidLoad() {
 
-
+vidAttempts++;
   $("#info_length").text(vid1.duration().toFixed(1));
   vidLength = Math.round(vid1.duration());
+   document.getElementById('topInfo').innerHTML= 'vidLoad ' + vidAttempts;
 
 
 }
+
 
 
 
@@ -57,15 +61,15 @@ slider.on("mouseup", function () {
 // document.getElementById('topInfo').innerHTML= 'up ' + xPercent;
   
 },true);
-window.onmouseup = function (e) {
-  document.getElementById('topInfo').innerHTML= 'up ' + e.clientX;
-   slideTrack.takeClass("op-1");
+window.addEventListener('mouseup', function (e) {
+ 
+ slideTrack.takeClass("op-1");
   
  
   slideTrack.off('mousemove', move);
 
 
-};
+});
 
 
 
@@ -100,7 +104,7 @@ function handleStart() {
 }
 
 function handleEnd() {
-  slideTrack.takeClass("op-1");
+ slideTrack.takeClass("op-1");
 }
 
 
