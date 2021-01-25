@@ -15,40 +15,39 @@ let xPercent = 0;
 let rect = slideTrack.getRect();
 let fin = rect.right;
 
-let vidAttempts=0;
+
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
-//setTimeout(waitForVid, 1);
+let x=0;
 
-//function waitForVid() {
-//  afterVidLoad();
-//}
+function waitForVid() {
+  afterVidLoad();
+  
+  console.log('  ', x++  );
+}
 
 // belt & braces
 
 vid1.on('loadeddata', function () {
+  console.log(vid1.readyState());
 
 
-  if (vid1.readyState >= 2) {
+  if (vid1.readyState() >= 2) {
 
     afterVidLoad();
-  }else{
-    setTimeout(afterVidLoad, 1);
   }
 
 });
 
 function afterVidLoad() {
 
-vidAttempts++;
   $("#info_length").text(vid1.duration().toFixed(1));
+
   vidLength = Math.round(vid1.duration());
-   document.getElementById('topInfo').innerHTML= 'vidLoad ' + vidAttempts;
 
 
 }
-
 
 
 
@@ -62,7 +61,7 @@ slider.on("mouseup", function () {
   
 },true);
 window.addEventListener('mouseup', function (e) {
- 
+  document.getElementById('topInfo').innerHTML= 'up ' + e.clientX;
  slideTrack.takeClass("op-1");
   
  
