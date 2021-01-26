@@ -20,18 +20,13 @@ let fin = rect.right;
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
-let x=0;
+let x = '';
 
-function waitForVid() {
-  afterVidLoad();
-  
-}
-setTimeout(afterVidLoad,500);
+
+setTimeout(afterVidLoad, 500);
 // belt & braces
 
 vid1.on('loadeddata', function () {
-  console.log(vid1.readyState());
-
 
   if (vid1.readyState() >= 2) {
 
@@ -41,10 +36,9 @@ vid1.on('loadeddata', function () {
 });
 
 function afterVidLoad() {
-
+x += " - " + vid1.readyState();
   $("#info_length").text(vid1.duration().toFixed(1));
-  console.log('vid1.duration()', vid1.duration());
-document.getElementById('topInfo').innerHTML= 'vid ' + (++x);
+  document.getElementById('topInfo').innerHTML = ' vid '+ x;
   vidLength = Math.round(vid1.duration());
 
 
@@ -54,22 +48,24 @@ document.getElementById('topInfo').innerHTML= 'vid ' + (++x);
 
 seekBar.on("mousedown", function () {
 
-  seekBar.on('mousemove', move);
+  seekBar.on('mousemove', move).putClass('dragCurser');
+
+
+
+
 });
 
 seekBar.on("mouseup", function () {
-// document.getElementById('topInfo').innerHTML= 'up ' + xPercent;
-  
-},true);
-//window.addEventListener('mouseup', function (e) {
-// 
-// slideTrack.takeClass("op-1");
-//  
-// 
-//  slideTrack.off('mousemove', move);
-//
-//
-//});
+  // document.getElementById('topInfo').innerHTML= 'up ' + xPercent;
+
+}, true);
+window.addEventListener('mouseup', function (e) {
+
+
+  seekBar.off('mousemove', move).takeClass('dragCurser');
+
+
+});
 
 
 
@@ -78,13 +74,13 @@ function move(e) {
 
 
   xPercent = Math.round((e.clientX - rect.x) * 100 / rect.width);
- 
+
 
   if (xPercent >= 0 && xPercent <= 100) {
 
-     seekBar.css({ "background-size": ` ${xPercent}% 20px`});
-    console.log('xPercent', xPercent);
-
+    seekBar.css({
+      "background-size": ` ${xPercent}% 20px`
+    });
 
     vid1.currentTime(xPercent * (vidLength / 100));
 
@@ -115,11 +111,13 @@ seekBar.on('touchmove', function (e) {
   let changedTouch = event.changedTouches[0];
   let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
   xPercent = Math.round((changedTouch.clientX - rect.x) * 100 / rect.width);
-  
+
 
   if (xPercent >= 0 && xPercent <= 100) {
 
-    seekBar.css({ "background-size": ` ${xPercent}% 20px`});
+    seekBar.css({
+      "background-size": ` ${xPercent}% 20px`
+    });
     vid1.currentTime(xPercent * (vidLength / 100));
     info_pos.text(vid1.currentTime().toFixed(1));
   }
@@ -142,10 +140,12 @@ window.addEventListener('orientationchange', function () {
       xPercent = 100;
 
     }
- seekBar.css({ "background-size": ` ${xPercent}% 20px`});
-   
+    seekBar.css({
+      "background-size": ` ${xPercent}% 20px`
+    });
 
-     window.removeEventListener('resize', afterOrientationChange);
+
+    window.removeEventListener('resize', afterOrientationChange);
   };
   window.addEventListener('resize', afterOrientationChange);
 });
@@ -174,9 +174,11 @@ vid1.on("timeupdate", function () {
 
   info_pos.text(vid1.currentTime().toFixed(1));
   xPercent = Math.ceil((vid1.currentTime() / vidLength) * 100);
- 
-  seekBar.css({ "background-size": ` ${xPercent}% 20px`});
- 
+
+  seekBar.css({
+    "background-size": ` ${xPercent}% 20px`
+  });
+
 
 
 

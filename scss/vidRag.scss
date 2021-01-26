@@ -74,25 +74,29 @@
 
 
 #playPause{
-  background-color: #e68f19;
+ 
   width: 20px;
   height: 20px;
- background-image: url('../img/play1.svg');
+ background-image: url('../img/play1.1.svg');
 background-size: 20px 20px;
+  cursor: pointer;
    
   
 }
 .pause::after {
-      content: url('../img/pause1.svg');
+      content: url('../img/pause1.1.svg');
     }
 #seekBar{
-  width: calc(100% - 30px);
+  width: calc(100% - 25px);
+  opacity: .9;
   height: 20px;
   background-color: #f2f2f2;
    background-image: url('../img/bg1.png');
   background-repeat: no-repeat;
   background-size: 0px 20px;
   
-  
+  &.dragCurser{
+    cursor: ew-resize;
+  }
 }
 

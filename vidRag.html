@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/fav.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/bootstrap.452.min.css">
-  <link rel="stylesheet" href="css/vidRag.css?v=11111">
+  <link rel="stylesheet" href="css/vidRag.css?v=3">
 
   <title>vidRag</title>
 </head>
@@ -15,8 +15,8 @@
 <body>
   <p id="topInfo"></p>
   <div class="container">
-    <video id="vid1" poster="img/posters/room5.jpg">
-      <source src="vid/room5.mp4"><!--    <--------------------------------------- src-->
+    <video id="vid1" poster="img/posters/room5.jpg" preload="metadata">
+      <source src="vid/room11.mp4" type="video/mp4"><!--    <--------------------------------------- src-->
 
     </video>
   </div>
@@ -26,14 +26,14 @@
 
   <div class="container">
 
-    <span id="playPause"></span>
+    <span id="playPause" class=""></span>
     <span id="seekBar"></span>
     <hr class="w-100 bg-light">
     <span id="info_length" class="info"></span>
     <span id="info_pos" class="info">0</span>
   </div>
   <script src="js/pQuery.js"></script>
-  <script src="js/vidrag.js?v=11111"></script>
+  <script src="js/vidrag.js?v=3"></script>
 </body>
 
 </html>
