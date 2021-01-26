@@ -5,98 +5,107 @@
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 50%;
- 
+
   padding: 10px;
- 
+
   margin-right: auto;
   margin-left: auto;
 
-@media (orientation: portrait) {
-  
+  @media (orientation: portrait) {
+
     max-width: 100%;
   }
-   @media (max-height: 410px) {
+
+  @media (max-height: 410px) {
     // background-color: aquamarine;
-     max-width: 60%;
+    max-width: 60%;
   }
-//    max-width: 100%;
-//    // background-color: rgba(244, 57, 12, 0.15);
-//  }
-//  @media (max-width: 600px) {
-//    max-width: 100%;
-//    // background-color: rgba(244, 57, 12, 0.15);
-//  }
-//
-//  @media (min-width: 768px) {
-//    width: 750px;
-//    margin-top: 1.5em;
-//    // background-color: orange;
-//  }
-//
-//  @media (min-width: 992px) {
-//    width: 970px;
-//    // background-color: greenyellow;
-//  }
-//
-//  @media (min-width: 1200px) {
-//    width: 1170px;
-//    // background-color: grey;
-//  }
+
+  //    max-width: 100%;
+  //    // background-color: rgba(244, 57, 12, 0.15);
+  //  }
+  //  @media (max-width: 600px) {
+  //    max-width: 100%;
+  //    // background-color: rgba(244, 57, 12, 0.15);
+  //  }
+  //
+  //  @media (min-width: 768px) {
+  //    width: 750px;
+  //    margin-top: 1.5em;
+  //    // background-color: orange;
+  //  }
+  //
+  //  @media (min-width: 992px) {
+  //    width: 970px;
+  //    // background-color: greenyellow;
+  //  }
+  //
+  //  @media (min-width: 1200px) {
+  //    width: 1170px;
+  //    // background-color: grey;
+  //  }
 }
 
-#topInfo{
+#topInfo {
   position: absolute;
   top: 0;
   left: 0;
   color: #f5ff00;
   background-color: #0e0f0e;
- // display: none;
+  // display: none;
 }
 
-.info{
+.info {
   color: #d1d1d1;
   font-family: monospace;
   margin-top: -20px;
-//  outline: 1px solid pink;
+  //  outline: 1px solid pink;
 }
+
 #vid1 {
   width: 100%;
 
-  
+
 }
 
 
-.op-1{
-  opacity: 1!important;
+.op-1 {
+  opacity: 1 !important;
 }
 
 
 
 
-#playPause{
- 
+#playPause {
+
   width: 20px;
   height: 20px;
- background-image: url('../img/play1.1.svg');
-background-size: 20px 20px;
+  background-image: url('../img/play1.1.svg');
+  background-size: 20px 20px;
   cursor: pointer;
-   
+  &:hover{
+//outline: 1px solid #bbb; 
+  }
+
+
+}
+
+.pause::after {
+  content: url('../img/pause1.2.svg');
   
 }
-.pause::after {
-      content: url('../img/pause1.1.svg');
-    }
-#seekBar{
+
+#seekBar {
   width: calc(100% - 25px);
   opacity: .9;
   height: 20px;
   background-color: #f2f2f2;
-   background-image: url('../img/bg1.png');
+  background-image: url('../img/bg1.png');
   background-repeat: no-repeat;
   background-size: 0px 20px;
-  
-  &.dragCurser{
+  transition: all 0.5s;
+
+  &.dragCurser {
     cursor: ew-resize;
   }
 }
-
