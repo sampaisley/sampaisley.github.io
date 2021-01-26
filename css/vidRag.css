@@ -51,7 +51,7 @@
   background-image: url("../img/play1.1.svg"); }
 
 #seekBar {
-  width: calc(100% - 25px);
+  width: calc(100% - 50px);
   opacity: .9;
   height: 20px;
   background-color: #f2f2f2;
@@ -66,5 +66,13 @@
   z-index: 200; }
   #seekBar.dragCurser {
     cursor: ew-resize; }
+
+#full {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  cursor: pointer; }
+  #full:hover {
+    outline: 1px solid rgba(187, 187, 187, 0.53); }
 
 /*# sourceMappingURL=vidRag.css.map */
