@@ -16,7 +16,8 @@ let xPercent = 0;
 let rect = seekBar.getRect();
 let fin = rect.right;
 
-
+let st = document.getElementById('stySheet');
+console.log('st', st.lastModified);
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
@@ -160,7 +161,7 @@ window.addEventListener('orientationchange', function () {
 
 function resetControles() {
 
-  playPause.togClass("pause");
+  playPause.togClass("play");
   playStop2++;
 
 }
@@ -187,7 +188,7 @@ vid1.on("timeupdate", function () {
 
 playPause.on("click", function () {
 
-  playPause.togClass("pause");
+  playPause.togClass("play");
   if (playStop2++ % 2 === 0) {
     vid1.play();
 
@@ -198,3 +199,5 @@ playPause.on("click", function () {
 
 
 });
+
+

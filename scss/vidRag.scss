@@ -52,14 +52,21 @@
   left: 0;
   color: #f5ff00;
   background-color: #0e0f0e;
+
   // display: none;
 }
 
 .info {
   color: #d1d1d1;
-  font-family: monospace;
-  margin-top: -20px;
+  
+  z-index: 1;
   //  outline: 1px solid pink;
+}
+
+#info_pos {
+  position: relative;
+  float: right;
+  margin-top: 0;
 }
 
 #vid1 {
@@ -80,19 +87,24 @@
 
   width: 20px;
   height: 20px;
-  background-image: url('../img/play1.1.svg');
   background-size: 20px 20px;
   cursor: pointer;
-  &:hover{
-//outline: 1px solid #bbb; 
+
+  &:hover {
+    outline: 1px solid rgba(187, 187, 187, 0.53);
   }
 
 
 }
 
-.pause::after {
-  content: url('../img/pause1.2.svg');
-  
+.pause {
+  background-image: url('../img/pause1.2.svg');
+
+}
+
+.play {
+  background-image: url('../img/play1.1.svg');
+
 }
 
 #seekBar {
@@ -104,6 +116,13 @@
   background-repeat: no-repeat;
   background-size: 0px 20px;
   transition: all 0.5s;
+  
+  font-family: monospace;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  
+  line-height: 1.3em;
+  z-index: 200;
 
   &.dragCurser {
     cursor: ew-resize;
