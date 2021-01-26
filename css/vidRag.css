@@ -68,6 +68,7 @@
     cursor: ew-resize; }
 
 #full {
+  background-image: url("../img/full1.svg");
   width: 20px;
   height: 20px;
   background-size: 20px 20px;

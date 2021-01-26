@@ -37,9 +37,9 @@ vid1.on('loadeddata', function () {
 });
 
 function afterVidLoad() {
-x += " - " + vid1.readyState();
+  x += " - " + vid1.readyState();
   $("#info_length").text(vid1.duration().toFixed(1));
-  document.getElementById('topInfo').innerHTML = ' vid '+ x;
+  document.getElementById('topInfo').innerHTML = ' vid ' + x;
   vidLength = Math.round(vid1.duration());
 
 
@@ -199,17 +199,43 @@ playPause.on("click", function () {
 
 
 });
+
+////////// FULL SCREEN \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 let v = document.getElementById('vid1');
-$("#full").on("click", function(){
-           fullScreen(v) ;  
-              })
-function fullScreen(elem){
+$("#full").on("click", function () {
+  vid1.attribute();
+  fullScreen(v);
+});
+
+function fullScreen(elem) {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
     elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
     elem.msRequestFullscreen();
   }
 }
+vid1.on("click", function () {
+  if (
+    document.fullscreenElement || /* Standard syntax */
+    document.webkitFullscreenElement || /* Safari and Opera syntax */
+    document.msFullscreenElement /* IE11 syntax */
+  )
+    closeFullscreen();
+});
 
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    /* IE11 */
+    document.msExitFullscreen();
+  }
+}
