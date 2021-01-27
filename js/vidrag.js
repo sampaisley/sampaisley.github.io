@@ -16,8 +16,7 @@ let xPercent = 0;
 let rect = seekBar.getRect();
 let fin = rect.right;
 
-let st = document.getElementById('stySheet');
-console.log('st', st.lastModified);
+
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
@@ -202,13 +201,14 @@ playPause.on("click", function () {
 
 ////////// FULL SCREEN \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-let v = document.getElementById('vid1');
+
 $("#full").on("click", function () {
-  vid1.attribute();
-  fullScreen(v);
+ 
+  fullScreen(document.getElementById('vid1'));
 });
 
 function fullScreen(elem) {
+  
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) {
@@ -218,7 +218,10 @@ function fullScreen(elem) {
     /* IE11 */
     elem.msRequestFullscreen();
   }
+  
 }
+
+
 vid1.on("click", function () {
   if (
     document.fullscreenElement || /* Standard syntax */
@@ -228,7 +231,9 @@ vid1.on("click", function () {
     closeFullscreen();
 });
 
+
 function closeFullscreen() {
+  
   if (document.exitFullscreen) {
     document.exitFullscreen();
   } else if (document.webkitExitFullscreen) {
@@ -238,4 +243,5 @@ function closeFullscreen() {
     /* IE11 */
     document.msExitFullscreen();
   }
+  
 }

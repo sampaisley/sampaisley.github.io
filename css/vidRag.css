@@ -1,19 +1,4 @@
 @import url(../css/bootstrap-reboot.min.css);
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 50%;
-  padding: 10px;
-  margin-right: auto;
-  margin-left: auto; }
-  @media (orientation: portrait) {
-    .container {
-      max-width: 100%; } }
-  @media (max-height: 410px) {
-    .container {
-      max-width: 60%; } }
-
 #topInfo {
   position: absolute;
   top: 0;
@@ -23,6 +8,8 @@
 
 .info {
   color: #d1d1d1;
+  margin-top: 2.7em;
+  display: inline;
   z-index: 1; }
 
 #info_pos {
@@ -30,50 +17,41 @@
   float: right;
   margin-top: 0; }
 
-#vid1 {
-  width: 100%; }
-
 .op-1 {
   opacity: 1 !important; }
 
 #playPause {
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.5s; }
   #playPause:hover {
-    outline: 1px solid rgba(187, 187, 187, 0.53); }
+    filter: brightness(110%); }
 
 .pause {
-  background-image: url("../img/pause1.2.svg"); }
+  background-color: rgba(222, 63, 63, 0.73); }
 
 .play {
-  background-image: url("../img/play1.1.svg"); }
+  background-color: #0ad08d; }
 
 #seekBar {
-  width: calc(100% - 50px);
   opacity: .9;
   height: 20px;
   background-color: #f2f2f2;
   background-image: url("../img/bg1.png");
   background-repeat: no-repeat;
   background-size: 0px 20px;
-  transition: all 0.5s;
+  transition: background-size 0.5s;
   font-family: monospace;
   padding-left: 0.4em;
   padding-right: 0.4em;
-  line-height: 1.3em;
   z-index: 200; }
   #seekBar.dragCurser {
     cursor: ew-resize; }
 
 #full {
-  background-image: url("../img/full1.svg");
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-  cursor: pointer; }
+  background-color: rgba(157, 113, 34, 0.51);
+  cursor: pointer;
+  transition: all 0.5s; }
   #full:hover {
-    outline: 1px solid rgba(187, 187, 187, 0.53); }
+    filter: brightness(110%); }
 
 /*# sourceMappingURL=vidRag.css.map */

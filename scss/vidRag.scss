@@ -1,50 +1,9 @@
 @import'../css/bootstrap-reboot.min.css';
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 50%;
-
-  padding: 10px;
-
-  margin-right: auto;
-  margin-left: auto;
-
-  @media (orientation: portrait) {
-
-    max-width: 100%;
-  }
-
-  @media (max-height: 410px) {
-    // background-color: aquamarine;
-    max-width: 60%;
-  }
-
-  //    max-width: 100%;
-  //    // background-color: rgba(244, 57, 12, 0.15);
-  //  }
-  //  @media (max-width: 600px) {
-  //    max-width: 100%;
-  //    // background-color: rgba(244, 57, 12, 0.15);
-  //  }
-  //
-  //  @media (min-width: 768px) {
-  //    width: 750px;
-  //    margin-top: 1.5em;
-  //    // background-color: orange;
-  //  }
-  //
-  //  @media (min-width: 992px) {
-  //    width: 970px;
-  //    // background-color: greenyellow;
-  //  }
-  //
-  //  @media (min-width: 1200px) {
-  //    width: 1170px;
-  //    // background-color: grey;
-  //  }
-}
+//.outline{
+//  outline: 1px dotted green;
+//  opacity: .75;
+//}
 
 #topInfo {
   position: absolute;
@@ -58,7 +17,10 @@
 
 .info {
   color: #d1d1d1;
-  
+ 
+  margin-top: 2.7em;
+  display: inline;
+
   z-index: 1;
   //  outline: 1px solid pink;
 }
@@ -69,74 +31,66 @@
   margin-top: 0;
 }
 
-#vid1 {
-  width: 100%;
-
-
-}
-
 
 .op-1 {
   opacity: 1 !important;
 }
 
-
-
-
 #playPause {
-
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
+ 
   cursor: pointer;
-
+ transition: all 0.5s;
   &:hover {
-    outline: 1px solid rgba(187, 187, 187, 0.53);
+   filter: brightness(110%);
   }
-
 
 }
 
 .pause {
-  background-image: url('../img/pause1.2.svg');
+ // background-image: url('../img/pause1.2.svg');
+ background-color: rgba(222, 63, 63, 0.73)
 
 }
 
 .play {
-  background-image: url('../img/play1.1.svg');
+ // background-image: url('../img/play1.1.svg');
+  background-color: #0ad08d;
 
 }
 
 #seekBar {
-  width: calc(100% - 50px);
+  //display: inline-block;
+ // width: calc(100% - 50px);
+ 
   opacity: .9;
   height: 20px;
   background-color: #f2f2f2;
-  background-image: url('../img/bg1.png');
+  background-image: url("../img/bg1.png");
   background-repeat: no-repeat;
   background-size: 0px 20px;
-  transition: all 0.5s;
   
+  transition: background-size 0.5s;
+
   font-family: monospace;
   padding-left: 0.4em;
   padding-right: 0.4em;
-  
-  line-height: 1.3em;
+
+ 
   z-index: 200;
 
   &.dragCurser {
     cursor: ew-resize;
   }
 }
-#full {
- background-image: url('../img/full1.svg');
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-  cursor: pointer;
 
-  &:hover {
-    outline: 1px solid rgba(187, 187, 187, 0.53);
+#full {
+ 
+  background-color: rgba(157, 113, 34, 0.51);
+//  background-size: 20px 20px;
+  cursor: pointer;
+ transition: all 0.5s;
+ &:hover {
+   filter: brightness(110%);
   }
 
 

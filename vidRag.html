@@ -8,33 +8,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/bootstrap.452.min.css">
   <link id="stySheet" rel="stylesheet" href="css/vidRag.css?v=221">
-  
+
 
   <title>vidRag</title>
 </head>
 
 <body>
-  <p id="topInfo"></p>
-  <div class="container">
-    <video id="vid1" poster="img/posters/room5.jpg" preload="metadata">
-      <source src="vid/room5.mp4" type="video/mp4"><!--    <--------------------------------------- src-->
-
-    </video>
-  </div>
-
-
+    <p id="topInfo"></p>
 
   <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
 
-    <span id="playPause" class="pause play"></span>
-    <span id="seekBar"><span id="info_length" class="info"></span><span id="info_pos" class="info">0</span></span>
-     <span id="full" class=""></span>
-    <hr class="w-100 bg-light">
-   
-    
-    <hr class="w-100 bg-light">
+        <video id="vid1" class="w-100 " poster="img/posters/room5.jpg" preload="metadata">
+          <source src="vid/room5.mp4" type="video/mp4">
+        </video>
 
+<!--
+        <p id="playPause" class="pause play "></p>
+        <p id="seekBar">
+          <span id="info_length" class="info "></span>
+          <span id="info_pos" class="info"></span>
+        </p>
+        <p id="full" class=""></p>
+-->
+      </div>
+
+    </div>
     
+    
+     <div class="row  ml-1 mr-1">
+       <div id="playPause" class="col-1 col-md-1 offset-md-3  pause play"></div>
+       <div id="seekBar" class="col col-md-4  ">
+         <span id="info_length" class="info "></span>
+          <span id="info_pos" class="info"></span>
+       </div>
+       <div id="full" class="col-1 col-md-1" title="Full Screen"></div>
+      
+       
+       
+    </div>
+
   </div>
   <script src="js/pQuery.js"></script>
   <script src="js/vidrag.js?v=221"></script>
