@@ -30,13 +30,14 @@ vid1.on('loadeddata', function () {
 
   if (vid1.readyState() >= 2) {
 
-    afterVidLoad();
+    afterVidLoad('dataload ');
   }
 
 });
 
-function afterVidLoad() {
-  x += " - " + vid1.readyState();
+function afterVidLoad(n="time ") {
+  
+  x += n + " - " + vid1.readyState() + ' ';
   $("#info_length").text(vid1.duration().toFixed(1));
   document.getElementById('topInfo').innerHTML = ' vid ' + x;
   vidLength = Math.round(vid1.duration());
