@@ -16,7 +16,7 @@ let xPercent = 0;
 let rect = seekBar.getRect();
 let fin = rect.right;
 
-
+let seekBg = 1.5;
 
 //document.getElementById('topInfo').innerHTML= 'touch ' + xPercent;
 
@@ -80,7 +80,7 @@ function move(e) {
   if (xPercent >= 0 && xPercent <= 100) {
 
     seekBar.css({
-      "background-size": ` ${xPercent}% 20px`
+      "background-size": ` ${xPercent}% ${seekBg}em`
     });
 
     vid1.currentTime(xPercent * (vidLength / 100));
@@ -117,7 +117,7 @@ seekBar.on('touchmove', function (e) {
   if (xPercent >= 0 && xPercent <= 100) {
 
     seekBar.css({
-      "background-size": ` ${xPercent}% 20px`
+      "background-size": ` ${xPercent}% ${seekBg}em`
     });
     vid1.currentTime(xPercent * (vidLength / 100));
     info_pos.text(vid1.currentTime().toFixed(1));
@@ -142,7 +142,7 @@ window.addEventListener('orientationchange', function () {
 
     }
     seekBar.css({
-      "background-size": ` ${xPercent}% 20px`
+      "background-size": ` ${xPercent}% ${seekBg}em`
     });
 
 
@@ -177,7 +177,7 @@ vid1.on("timeupdate", function () {
   xPercent = Math.ceil((vid1.currentTime() / vidLength) * 100);
 
   seekBar.css({
-    "background-size": ` ${xPercent}% 20px`
+    "background-size": ` ${xPercent}% ${seekBg}em`
   });
 
 

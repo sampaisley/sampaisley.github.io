@@ -1,4 +1,7 @@
 @import url(../css/bootstrap-reboot.min.css);
+body {
+  font-size: 16px; }
+
 #topInfo {
   position: absolute;
   top: 0;
@@ -8,8 +11,8 @@
 
 .info {
   color: #d1d1d1;
-  margin-top: 2.7em;
-  display: inline;
+  margin: !important;
+  padding: !important;
   z-index: 1; }
 
 #info_pos {
@@ -33,13 +36,25 @@
 .play {
   background-color: #0ad08d; }
 
+#playPause {
+  min-height: 1.5em;
+  min-width: 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s; }
+  @media (hover: hover) {
+    #playPause:hover {
+      filter: brightness(110%); } }
+
 #seekBar {
-  opacity: .9;
-  height: 20px;
+  min-height: 1.5em;
+  background-color: #8c9696;
+  width: calc(100% - 3em);
+  display: inline-block;
   background-color: #f2f2f2;
   background-image: url("../img/bg1.png");
   background-repeat: no-repeat;
-  background-size: 0px 20px;
+  background-size: 0px 1.5em;
   transition: background-size 0.5s;
   font-family: monospace;
   padding-left: 0.4em;
@@ -50,6 +65,11 @@
       cursor: ew-resize; } }
 
 #full {
+  position: relative;
+  float: right;
+  min-height: 1.5em;
+  min-width: 1.5em;
+  display: inline-block;
   background-color: rgba(157, 113, 34, 0.51);
   cursor: pointer;
   transition: all 0.5s; }

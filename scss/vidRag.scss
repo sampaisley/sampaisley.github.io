@@ -4,7 +4,9 @@
 //  outline: 1px dotted green;
 //  opacity: .75;
 //}
-
+body{
+  font-size: 16px;
+}
 
 #topInfo {
   position: absolute;
@@ -18,10 +20,11 @@
 
 .info {
   color: #d1d1d1;
+  margin: !important;
+  padding: !important;
 
-  margin-top: 2.7em;
-  display: inline;
-
+//  margin-top: 2.7em;
+//  display: inline;
   z-index: 1;
   //  outline: 1px solid pink;
 }
@@ -61,16 +64,34 @@
 
 }
 
-#seekBar {
-  //display: inline-block;
-  // width: calc(100% - 50px);
 
-  opacity: .9;
-  height: 20px;
+
+$buts : 1.5em;
+
+#playPause {
+  min-height: $buts;
+
+  min-width: $buts;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  @media (hover: hover) {
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+}
+
+#seekBar {
+  min-height: $buts;
+  background-color: #8c9696;
+  width: calc(100% - #{$buts * 2});
+  display: inline-block;
   background-color: #f2f2f2;
   background-image: url("../img/bg1.png");
   background-repeat: no-repeat;
-  background-size: 0px 20px;
+  background-size: 0px $buts;
 
   transition: background-size 0.5s;
 
@@ -90,9 +111,13 @@
 }
 
 #full {
-
+  position: relative;
+  float: right;
+  min-height: $buts;
+  min-width: $buts;
+  display: inline-block;
   background-color: rgba(157, 113, 34, 0.51);
-  //  background-size: 20px 20px;
+
   cursor: pointer;
   transition: all 0.5s;
 
@@ -100,7 +125,6 @@
     &:hover {
       filter: brightness(110%);
     }
+
   }
-
-
 }
