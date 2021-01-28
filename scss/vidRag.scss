@@ -6,6 +6,7 @@
 //}
 body{
   font-size: 16px;
+  background-color: #c7cbce;
 }
 
 #topInfo {
@@ -15,7 +16,7 @@ body{
   color: #f5ff00;
   background-color: #0e0f0e;
 
-  // display: none;
+   display: none;
 }
 
 .info {
@@ -60,7 +61,7 @@ body{
 
 .play {
   // background-image: url('../img/play1.1.svg');
-  background-color: #0ad08d;
+  background-color: #3ba581;
 
 }
 
@@ -88,7 +89,7 @@ $buts : 1.5em;
   background-color: #8c9696;
   width: calc(100% - #{$buts * 2});
   display: inline-block;
-  background-color: #f2f2f2;
+  background-color: #c8d0d6;
   background-image: url("../img/bg1.png");
   background-repeat: no-repeat;
   background-size: 0px $buts;
