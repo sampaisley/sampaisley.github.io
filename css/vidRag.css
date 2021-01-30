@@ -12,9 +12,7 @@ body {
   display: none; }
 
 .info {
-  color: #d1d1d1;
-  margin: !important;
-  padding: !important;
+  color: #9a8c8c;
   z-index: 1; }
 
 #info_pos {
