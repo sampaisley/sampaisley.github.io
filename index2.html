@@ -9,6 +9,21 @@
 
   <title>INDEX 2</title>
   <style>
+    @font-face {
+      font-family: 'gill';
+      src: url('type/font-gill-sans.eot');
+      /* IE9 Compat Modes */
+      src: url('type/font-gill-sans.woff') format('woff'),
+        /* Super Modern Browsers */
+        url('type/font-gill-sans.ttf') format('truetype')
+    }
+    .gill{
+      font-family: "gill";
+    }
+    .bloo{
+      color: #74CDF0;
+    }
+
     .foo {
       padding-left: 1em;
     }
@@ -44,7 +59,10 @@
     }
 
     .big {
-      font-size: 120%;
+      font-size: 200%;
+    }
+    .huge{
+      font-size: 900%;
     }
 
     #play {
@@ -110,6 +128,7 @@
           <img id="me" src="img/3.webp" alt="" class="w-100 ">
 
         </div>
+        <h1 class="gill huge bloo">GOSH gosh</h1>
 
 
 
@@ -120,7 +139,7 @@
       <div id="right-col" class="column col-md-6  border-left ">
 
         <form action="" id="theForm">
-          <p class="foo one big pink">p .foo .one .pink .big</p>
+          <p class="foo one big pink gill">p .foo .one .pink .big .gill</p>
           <p id="foo" class="foo one pink">p .foo .one .pink</p>
           <p class="foo pink">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
@@ -132,7 +151,7 @@
           <input type="radio" name="rad" class="rad" value="room1" checked> <input type="radio" name="rad" class="rad" value="room2"> <input type="radio" name="rad" class="rad" value="room3">
           <input type="checkbox" id="check1">
           <button class="ml-1 my-3 btn btn-primary" id="clear">CLEAR</button>
-          <input type="range" id="slide" min="0"  value="0" step="0.1" class="custom-range">
+          <input type="range" id="slide" min="0" value="0" step="0.1" class="custom-range">
 
         </form>
         <h3 id="controls" role="button" class=" play"></h3>
@@ -192,7 +211,7 @@
 
 
     <div class="row mt-2 border-top">
-      <h3 id="fook" role="button">Fookin Stop</h3>
+      <h1 id="fook" class="gill bloo" role="button">Fooking Stop </h1>
     </div>
 
   </div>
@@ -204,51 +223,51 @@
     function setSlider() {
       let inc;
       let vid11 = document.querySelector("#vidPie");
-      
+
       $('#slide').val(-20);
-    
-      
-       vid11.addEventListener('loadedmetadata', function() {
-          $('#slide').attribute("max", Math.floor(vid11.duration));
-         console.log('max');
-        
-         inc = vid11.duration / 10;
-          
-//        var duration = vid11.duration;
-//       console.log("Duration is " + duration.toFixed(2) + " seconds.")
+
+
+      vid11.addEventListener('loadedmetadata', function() {
+        $('#slide').attribute("max", Math.floor(vid11.duration));
+        console.log('max');
+
+        inc = vid11.duration / 10;
+
+        //        var duration = vid11.duration;
+        //       console.log("Duration is " + duration.toFixed(2) + " seconds.")
       });
 
-     
+
 
 
       $("#fwd").on("click", function() {
         if (vid11.currentTime < vid11.duration)
 
-        vid11.currentTime += inc;
+          vid11.currentTime += inc;
         $('#slide').val(vid11.currentTime);
 
       });
-      
-      
-      
+
+
+
 
       $("#vidPie").on("timeupdate", function() {
 
         $('#slide').val(vid11.currentTime);
 
       });
-      
-      
-      
-      
+
+
+
+
 
       $('#slide').on("change", function() {
 
         vid11.currentTime = this.value;
       });
-      
-      
-      
+
+
+
     }
 
     setSlider();
@@ -357,7 +376,7 @@
 
       $('#vidPie').attribute('src', `vid/${rv}.mp4`).attribute("poster", `img/posters/${rv}.jpg`);
 
-       
+
     }
 
     function resetControles() {

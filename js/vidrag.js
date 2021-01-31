@@ -207,7 +207,7 @@ vid1.on("timeupdate", function () {
 
 
   mins = Math.floor(vid1.currentTime() / 60);
-  secs = (vid1.currentTime() % 60).toFixed();
+  secs = (vid1.currentTime() % 60).toFixed(1);
   info_pos.text(mins + ' : ' + secs);
 
 
