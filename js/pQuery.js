@@ -71,6 +71,8 @@ function $(selector, indx) {
 
 
 
+
+
     takeClass(cl) {
       if (cl && !cl.trim()) return this;
 
@@ -93,7 +95,10 @@ function $(selector, indx) {
 
 
       for (let j = 0; j < el.length; j++) {
-        el[j].classList.toggle(cl[j]);
+        for (let k = 0; k < cl.length; k++) {
+          el[j].classList.toggle(cl[k]);
+        }
+
       }
 
       return this;
