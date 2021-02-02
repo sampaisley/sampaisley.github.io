@@ -231,7 +231,7 @@
 
 
     <div class="row mt-2 border-top">
-      <h1 id="fook" class="gill bloo w-100" role="button">Fooking Stop </h1>
+      <h1 id="fook" class="gill bloo w-100" role="button">~~~~~~~~~~</h1>
        
         <h1 class="gill huge bloo blk-bg mt-1 p-4 text-center w-100">GOSH *gosh*</h1>
       
@@ -458,6 +458,7 @@
     let vid1 = $("#vid1");
     let vid2 = $("#vid2");
     let vid3 = $("#vid3");
+    let fook = $("#fook");
 
 
     function pauseVids() {
@@ -473,6 +474,7 @@
         this.play();
 
       }).on("ended", function() {
+        fook.text("Fookin' Stop");
         nxt.play();
       });
     }
@@ -482,7 +484,10 @@
     playVid(vid3, vid1);
 
 
-    $("#fook").on("click", pauseVids);
+    fook.on("click",function() {
+      pauseVids();
+      fook.text("~~~~~~~~~~")
+     });
 
 
     $('#me').on('click', function() {
