@@ -118,7 +118,19 @@
       border: 10px solid #181D33;
       border-radius: 5px;
     }
-
+    .linx{
+      cursor: default;
+    }
+    .linx a{
+      color: inherit;
+      cursor: default;
+    }
+    .linx a:hover, .linx a:active, .linx a:visited{
+      text-decoration: none;
+      outline: none;
+      cursor: default;
+    }
+  
   </style>
 </head>
 
@@ -233,7 +245,7 @@
     <div class="row mt-2 border-top">
       <h1 id="fook" class="gill bloo w-100" role="button">~~~~~~~~~~</h1>
        
-        <h1 class="gill huge bloo blk-bg mt-1 p-4 text-center w-100">GOSH *gosh*</h1>
+        <h1 class="linx gill huge bloo blk-bg mt-1 p-4 text-center w-100">GOSH <a target="_blank" href="https://sampaisley.com/">*</a>gosh<a target="_blank" href="http://217.199.187.62/sampaisley.com/">*</a></h1>
       
     </div>
 
@@ -252,7 +264,7 @@
 
       vid11.addEventListener('loadedmetadata', function() {
         $('#slide').attribute("max", Math.floor(vid11.duration));
-        console.log('max');
+        
 
         inc = vid11.duration / 10;
 

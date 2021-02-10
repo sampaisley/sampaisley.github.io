@@ -267,9 +267,21 @@ function $(selector, indx) {
 
 
     reset() {
-
+      if (el[0].nodeName !== "FORM") return;
       el.forEach(function (item) {
+
         item.reset();
+      });
+      return this;
+
+    },
+    
+    
+    submit() {
+      if (el[0].nodeName !== "FORM") return;
+      el.forEach(function (item) {
+
+        item.submit();
       });
       return this;
 
