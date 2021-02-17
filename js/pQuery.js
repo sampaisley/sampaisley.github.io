@@ -440,6 +440,22 @@ function $(selector, indx) {
       return this;
 
     },
+    
+    
+     clic( callback) {
+
+      el.forEach(function (item) {
+        item.addEventListener("click", callback, false);
+
+
+      });
+
+      return this;
+    },
+
+    
+    
+    
 
 
 

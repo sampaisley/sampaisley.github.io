@@ -144,7 +144,7 @@
         <p class="lef-2" role="button"><code>$('.foo').eq(0).takeClass('pink big').eq(4,3).putClass('bg-yell')</code></p>
         <hr>
         <p class="lef-3" role="button"><code>
-            $('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
+            $('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').clic( function() {
 
             $('.foo').eq(1).togClass(' pink linethrough ml-3');
             $('#inp').val(`click = ${q++} hoho`);
@@ -179,7 +179,7 @@
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
-          <input type="text" id="inp" value="putPut" class="form-control">
+          <input type="date" id="inp" value="" class="form-control">
           <input type="radio" name="rad" class="rad" value="room1" checked> <input type="radio" name="rad" class="rad" value="room2"> <input type="radio" name="rad" class="rad" value="room3">
           <input type="checkbox" id="check1">
           <button class="ml-1 my-3 btn btn-primary" id="clear">CLEAR</button>
@@ -275,7 +275,7 @@
 
 
 
-      $("#fwd").on("click", function() {
+      $("#fwd").clic(function() {
         if (vid11.currentTime < vid11.duration)
 
           vid11.currentTime += inc;
@@ -309,15 +309,15 @@
 
     //////////////////////////////////////////////////////////////////
     let q = 0;
-    $('.lef-1').on("click", function() {
+    $('.lef-1').clic(function() {
       $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
     })
 
-    $('.lef-2').on("click", function() {
+    $('.lef-2').clic(function() {
       $('.foo').eq(0).takeClass('pink big').eq(4, 3).putClass('bg-yell');
     })
 
-    $('.lef-3').on("click", function() {
+    $('.lef-3').clic(function() {
       $('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
 
         $('.foo').eq(1).togClass(' pink linethrough ml-3');
@@ -326,7 +326,7 @@
       })
     })
     let divTxt = $('#right-col').text();
-    $('.lef-4').on('click', function() {
+    $('.lef-4').clic( function() {
       $('#right-col').text(divTxt);
       $('#inp').val('putPut');
       q = 0;
@@ -343,7 +343,7 @@
 
 
 
-    $('#vidPie').on('click', function() {
+    $('#vidPie').clic(function() {
 
 
 
@@ -380,7 +380,7 @@
     });
 
 
-    $("#clear").on('click', function(e) {
+    $("#clear").clic( function(e) {
       $("#theForm").reset();
 
       if (!vidPie.paused()) {
@@ -481,7 +481,7 @@
 
     function playVid(vid, nxt) {
 
-      vid.on("click", function() {
+      vid.clic( function() {
         pauseVids();
         this.play();
 
@@ -496,13 +496,13 @@
     playVid(vid3, vid1);
 
 
-    fook.on("click",function() {
+    fook.clic(function() {
       pauseVids();
       fook.text("~~~~~~~~~~")
      });
 
 
-    $('#me').on('click', function() {
+    $('#me').clic( function() {
       console.log(vidPie.paused());
     })
 
