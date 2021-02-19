@@ -275,8 +275,8 @@ function $(selector, indx) {
       return this;
 
     },
-    
-    
+
+
     submit() {
       if (el[0].nodeName !== "FORM") return;
       el.forEach(function (item) {
@@ -440,9 +440,9 @@ function $(selector, indx) {
       return this;
 
     },
-    
-    
-     clic( callback) {
+
+
+    clic(callback) {
 
       el.forEach(function (item) {
         item.addEventListener("click", callback, false);
@@ -453,9 +453,9 @@ function $(selector, indx) {
       return this;
     },
 
-    
-    
-    
+
+
+
 
 
 
@@ -481,6 +481,21 @@ function $(selector, indx) {
 
       return this;
     },
+
+
+    window(event, callback) {
+
+
+      window.addEventListener(event, callback, false);
+
+
+      return this;
+    },
+
+
+
+
+
 
 
 

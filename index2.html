@@ -194,7 +194,7 @@
           Sorry, your browser doesn't support embedded videos..
         </video>
 
-        <span id="nowShowing"></span><span id="fwd"> ->></span>
+        <span id="nowShowing"></span><span role="button" id="fwd"> ->></span>
       </div>
 
 
@@ -254,41 +254,49 @@
   <script src="js/pQuery.js"></script>
   <script>
     "use strict";
-
-    function setSlider() {
+    
       let inc;
-      let vid11 = document.querySelector("#vidPie");
+      let vid11 = $("#vidPie");
+      let curentTime;
+    
+    
+    function setSlider() {
+     
 
       $('#slide').val(-20);
 
 
-      vid11.addEventListener('loadedmetadata', function() {
-        $('#slide').attribute("max", Math.floor(vid11.duration));
+      vid11.on('loadedmetadata', function() {
+        
+        $('#slide').attribute("max", Math.floor(vid11.duration()));
         
 
-        inc = vid11.duration / 10;
+        inc = vid11.duration() / 10;
 
-        //        var duration = vid11.duration;
-        //       console.log("Duration is " + duration.toFixed(2) + " seconds.")
       });
 
 
 
 
       $("#fwd").clic(function() {
-        if (vid11.currentTime < vid11.duration)
+         curentTime= vid11.currentTime();
+        
+        if (curentTime< vid11.duration()){
+         
+          vid11.currentTime(curentTime+ inc);
+       
+        $('#slide').val(curentTime+ inc);
+        }
 
-          vid11.currentTime += inc;
-        $('#slide').val(vid11.currentTime);
 
       });
 
 
 
 
-      $("#vidPie").on("timeupdate", function() {
+      vid11.on("timeupdate", function() {
 
-        $('#slide').val(vid11.currentTime);
+        $('#slide').val(vid11.currentTime());
 
       });
 
@@ -298,7 +306,7 @@
 
       $('#slide').on("change", function() {
 
-        vid11.currentTime = this.value;
+        vid11.currentTime(this.value);
       });
 
 
@@ -332,18 +340,16 @@
       q = 0;
     })
     let playStop = 0;
-    let vidPie = $("#vidPie");
+   
 
-    //$(".rad").each(function(el){
-    //  console.log(el);
-    //})
-    $('#vidPie').on('ended', function() {
+  
+    vid11.on('ended', function() {
       resetControles();
     });
 
 
 
-    $('#vidPie').clic(function() {
+    vid11.clic(function() {
 
 
 
@@ -383,7 +389,7 @@
     $("#clear").clic( function(e) {
       $("#theForm").reset();
 
-      if (!vidPie.paused()) {
+      if (!vid11.paused()) {
         resetControles();
       }
       setVidSrc();
@@ -409,7 +415,7 @@
 
       let rv = $().radioVal('rad');
 
-      $('#vidPie').attribute('src', `vid/${rv}.mp4`).attribute("poster", `img/posters/${rv}.jpg`);
+      vid11.attribute('src', `vid/${rv}.mp4`).attribute("poster", `img/posters/${rv}.jpg`);
 
 
     }
@@ -428,7 +434,7 @@
 
       $('#nowShowing').text($().radioVal('rad'));
 
-      if (!vidPie.paused()) {
+      if (!vid11.paused()) {
         resetControles();
       }
       setVidSrc();
@@ -445,12 +451,12 @@
 
       controls.togClass("pause");
       if (playStop2++ % 2 === 0) {
-        vidPie.play();
+        vid11.play();
 
         return;
       }
 
-      vidPie.pause();
+      vid11.pause();
 
 
     });
@@ -503,8 +509,16 @@
 
 
     $('#me').clic( function() {
-      console.log(vidPie.paused());
-    })
+     
+    });
+
+//  $().window("click", function(){
+//    console.log('click ' );
+//   
+//   
+//  }); 
+    
+
 
   </script>
 </body>
