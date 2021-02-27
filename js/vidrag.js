@@ -17,8 +17,8 @@ let mins = 0;
 let secs = 0;
 let xPercent = 0;
 let rect = seekBar.getRect();
-let infoRect = $("#info").getRect();
-console.log('infoRect', infoRect.bottom + " " + screen.height);
+let infoRect = $("#vid").getRect();
+
 let fin = rect.right;
 
 let seekBg = 1.5;
@@ -50,7 +50,7 @@ function afterVidLoad(n = "time ") {
 
   x += n + " - " + vid1.readyState() + ' ';
   $("#info_length").text(vid1.duration().toFixed(1));
-  document.getElementById('topInfo').innerHTML = ' vid ' + x;
+ // document.getElementById('topInfo').innerHTML = ' vid ' + x;
   vidLength = Math.round(vid1.duration());
 
   if (vidLength > 60) {
@@ -112,17 +112,6 @@ function move(e) {
 
 seekBar.on("click", move);
 
-//seekBar.on("touchstart", handleStart);
-//window.addEventListener("touchend", handleEnd, false);
-//
-//function handleStart() {
-//  slideTrack.putClass("op-1");
-//
-//}
-//
-//function handleEnd() {
-// slideTrack.takeClass("op-1");
-//}
 
 
 seekBar.on('touchmove', function (e) {
@@ -146,35 +135,32 @@ seekBar.on('touchmove', function (e) {
 
 });
 
+//let mql = window.matchMedia('(orientation:portrait)');
+//
+//mql.addEventListener("change",OrientChange);
 
+$().window("resize", OrientChange);
 
-window.addEventListener('orientationchange', function () {
-  // After orientationchange, add a one-time resize event
-  let afterOrientationChange = function () {
+ 
+  function OrientChange() {
+    console.log('OrientChange');
     rect = seekBar.getRect();
     fin = Math.round(rect.right);
 
-
-    if (xPercent > 100) {
-      xPercent = 100;
-
-    }
+//
+//    if (xPercent > 100) {
+//      xPercent = 100;
+//
+//    }
     seekBar.css({
       "background-size": ` ${xPercent}% ${seekBg}em`
     });
 
 
-    if (infoRect.bottom > screen.height) {
-      $("#info").putClass('d-none');
-    } else {
-      $("#info").takeClass('d-none');
-    }
 
+  }
+ 
 
-    window.removeEventListener('resize', afterOrientationChange);
-  };
-  window.addEventListener('resize', afterOrientationChange);
-});
 
 
 
@@ -186,7 +172,7 @@ window.addEventListener('orientationchange', function () {
 
 function resetControles() {
 
-  playPause.togClass("play");
+  playPause.text("Play");
   playStop2++;
 
 }
@@ -221,13 +207,14 @@ vid1.on("timeupdate", function () {
 
 playPause.on("click", function () {
 
-  playPause.togClass("play");
+//  playPause.togClass("play");
   if (playStop2++ % 2 === 0) {
     vid1.play();
+    playPause.text("Pause");
 
     return;
   }
-
+  playPause.text("Play");
   vid1.pause();
 
 

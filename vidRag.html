@@ -6,45 +6,36 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/fav.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.452.min.css">
-  <link id="stySheet" rel="stylesheet" href="css/vidRag.css?v=0.987">
-
-
-  <title>vidRag</title>
+  <link id="stySheet" rel="stylesheet" href="css/vidRag2.css?v=0.987">
+  <title>vidrag**</title>
 </head>
 
 <body>
-  <p id="topInfo"></p>
 
-  <div class="container">
-    <div class="row mt-5 no-gutters">
-      <div class="col-md-6 offset-md-3 outline">
+  <div id="wrapper">
 
-        <video id="vid1" class="w-100" poster="img/posters/combo3.jpg" preload="metadata">
-          <source src="vid/combo3.mp4" type="video/mp4">
-        </video>
+    <div id="vid">
 
-      </div>
+      <video id="vid1" poster="img/posters/combo3.jpg" preload="metadata">
+
+        <source src="vid/combo3.mp4" type="video/mp4">
+
+      </video>
 
     </div>
 
+    <div id="playPause" class="controlls">Play</div>
+    <div id="seekBar"></div>
+    <div id="full" title="Full Screen" class="controlls">Full</div>
 
-     <div class="row no-gutters">
-       <div class="col-md-6 offset-md-3 outline">
-         
-           <span id="playPause" class="pause play"></span><span id="seekBar"></span><span id="full" title="Full Screen"></span> 
-         
-       </div>
-       
-       <div id="info" class="col-md-6 offset-md-3 outline">
-         
-           <span id="info_length" class="info text-monospace">0</span><span id="info_pos" class="info text-monospace">0</span>
-         
-       </div>
-    </div>
-    
+
+<div id="info">
+    <sapn id="info_length" class="info text-monospace">0</sapn>
+    <sapn id="info_pos" class="info text-monospace">0</sapn>
+</div>
 
   </div>
+
   <script src="js/pQuery.js"></script>
   <script src="js/vidrag.js?v=0.987"></script>
 </body>

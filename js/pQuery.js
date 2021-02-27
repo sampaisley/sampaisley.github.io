@@ -120,27 +120,34 @@ function $(selector, indx) {
 
 
 
-    style(str, val) {
+    //    style(str, val) {
+    //
+    //      if (val) {
+    //
+    //        el.forEach(function (item) {
+    //          item.style.cssText = item.style.cssText + `${str}:${val}`;
+    //
+    //        });
+    //        return this;
+    //      }
+    //
+    //
+    //      // this.str = str;
+    //      let compStyles = window.getComputedStyle(el[0]);
+    //      let returnStyle = compStyles.getPropertyValue(str);
+    //
+    //
+    //      return returnStyle;
+    //
+    //    },
 
-      if (val) {
-
-        el.forEach(function (item) {
-          item.style.cssText = item.style.cssText + `${str}:${val}`;
-
-        });
-        return this;
-      }
 
 
-      // this.str = str;
-      let compStyles = window.getComputedStyle(el[0]);
-      let returnStyle = compStyles.getPropertyValue(str);
+    /* //////////////// CSS USEAGE \\\\\\\\\\\\\\\\\\\\\\
 
+     .css({"margin-left":"200px", "font-size":"4em"})
 
-      return returnStyle;
-
-    },
-
+    ///////////////////////////////////////////////////// */
     css(propertyObject) {
       el.forEach(function (item) {
 
@@ -151,6 +158,25 @@ function $(selector, indx) {
 
       });
       return this;
+    },
+
+
+
+
+
+    style(st, va) {
+
+      if (va) {
+
+        el.forEach(function (item) {
+          item.style.setProperty(st, va);
+
+        });
+        return this;
+      }
+
+      return el[0].style.getPropertyValue(st);
+
     },
 
 
@@ -482,7 +508,19 @@ function $(selector, indx) {
       return this;
     },
 
+     
+    
+    
+    
+    
+    
+  /*  //////////////// WINDOW USEAGE \\\\\\\\\\\\\\\\\\\\\\
 
+      $().window("click", function(){ 
+          console.log('click ' );
+       }
+
+    /////////////////////////////////////////////////////  */
     window(event, callback) {
 
 
