@@ -7,25 +7,36 @@ body {
 #wrapper {
 
   display: grid;
-  max-width: 1500px;
+  max-width: 175vh;
   text-align: center;
   margin: 00 auto;
   padding: 1em;
   grid-gap: 1em;
   grid-template-columns: 8vw 1fr 8vw;
   grid-template-areas:
-    " . vid . "
+    " info_length vid info_pos "
     "playPause seekBar full"
-    ". info .";
+   ;
 }
 
 @media("orientation" : "portrait") {
   #wrapper {
-    grid-template-columns: 18vw 1fr 18vw;
+    grid-template-columns: 18vw 1fr 1fr 18vw;
     grid-template-areas:
-      " vid vid vid "
-      " seekBar seekBar seekBar"
-      "playPause info full";
+      " vid vid vid vid "
+      " seekBar seekBar seekBar seekBar"
+      "playPause info_length  info_pos full";
+    
+  }
+  
+  #info_length {
+    text-align: left;
+   
+  }
+  
+  #info_pos {
+    text-align: right;
+    
   }
 }
 
@@ -50,15 +61,21 @@ body {
 }
 
 #info {
-  grid-area: info;
+ // grid-area: info;
 }
 
 #info_length {
-  float: left;
+ // float: left;
+  grid-area: info_length;
+  align-self:flex-end;
+   color: #bac0c6;
 }
 
 #info_pos {
-  float: right;
+  //float: right;
+  grid-area: info_pos;
+  align-self:flex-end;
+   color: #bac0c6;
 }
 
 .controlls{
