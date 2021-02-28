@@ -27,7 +27,7 @@ body {
   justify-content: center; }
 
 #vid1 {
-  width: 100%; }
+  max-width: 100%; }
 
 #playPause {
   grid-area: playPause; }
