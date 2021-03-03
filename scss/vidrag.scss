@@ -19,7 +19,7 @@ body {
    ;
 }
 
-@media("orientation" : "portrait") {
+@media(orientation : "portrait") {
   #wrapper {
     grid-template-columns: 18vw 1fr 1fr 18vw;
     grid-template-areas:
@@ -60,9 +60,7 @@ body {
   grid-area: full;
 }
 
-#info {
- // grid-area: info;
-}
+
 
 #info_length {
  // float: left;
