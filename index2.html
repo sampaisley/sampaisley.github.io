@@ -257,277 +257,305 @@
         <h1 class="linx gill huge bloo blk-bg mt-1 p-4 text-center w-100">GOSH <a target="_blank" href="http://sampaisley.com/">*</a>gösh<a target="_blank" href="http://217.199.187.62/sampaisley.com/">*</a></h1>
       
     </div>
-
+<input type="date" id="dat">
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
   </div>
 
   <script src="js/pQuery.js"></script>
   <script>
     "use strict";
-    
+
       let inc;
       let vid11 = $("#vidPie");
       let curentTime;
-    
-    
-    function setSlider() {
-     
-
-      $('#slide').val(-20);
 
 
-      vid11.on('loadedmetadata', function() {
-        
-        $('#slide').attribute("max", Math.floor(vid11.duration()));
-        
+      function setSlider() {
 
-        inc = vid11.duration() / 10;
 
+        $('#slide').val(-20);
+
+
+        vid11.on('loadedmetadata', function () {
+
+          $('#slide').attribute("max", Math.floor(vid11.duration()));
+
+
+          inc = vid11.duration() / 10;
+
+        });
+
+
+
+
+        $("#fwd").clic(function () {
+          curentTime = vid11.currentTime();
+
+          if (curentTime < vid11.duration()) {
+
+            vid11.currentTime(curentTime + inc);
+
+            $('#slide').val(curentTime + inc);
+          }
+
+
+        });
+
+
+
+
+        vid11.on("timeupdate", function () {
+
+          $('#slide').val(vid11.currentTime());
+
+        });
+
+
+
+
+
+        $('#slide').on("change", function () {
+
+          vid11.currentTime(this.value);
+        });
+
+
+
+      }
+
+      setSlider();
+
+      //////////////////////////////////////////////////////////////////
+      let q = 0;
+      $('.lef-1').clic(function () {
+        $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
+      })
+
+      $('.lef-2').clic(function () {
+        $('.foo').eq(0).takeClass('pink big').eq(4, 3).putClass('bg-yell');
+      })
+
+      $('.lef-3').clic(function () {
+        $('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function () {
+
+          $('.foo').eq(1).togClass(' pink linethrough ml-3');
+          $('#inp').val(`click = ${q++} hoho`);
+
+        })
+      })
+      let divTxt = $('#right-col').text();
+      $('.lef-4').clic(function () {
+        $('#right-col').text(divTxt);
+        $('#inp').val('putPut');
+        q = 0;
+      })
+      let playStop = 0;
+
+
+
+      vid11.on('ended', function () {
+        resetControles();
       });
 
 
 
+      vid11.clic(function () {
 
-      $("#fwd").clic(function() {
-         curentTime= vid11.currentTime();
-        
-        if (curentTime< vid11.duration()){
-         
-          vid11.currentTime(curentTime+ inc);
-       
-        $('#slide').val(curentTime+ inc);
+
+
+        let rv = $().radioVal('rad');
+
+
+
+
+        let ri = $().radioIndex('rad');
+
+        $('.foo').eq(7).text(rv).eq(6).text(ri).eq(5).text(rv + ' booo ' + ri);
+        // $('.foo', 5).text(rv + ' booo ' + ri);
+
+        // $('.rad').isChecked(false).eq(1).isChecked(true);
+
+        if (!$("#check1").isChecked()) {
+          console.log("nooooo");
+        } else {
+          console.log("si!");
+        }
+
+        if (playStop++ % 2 === 0) {
+
+
+          $("#me").fade(500, 0);
+
+        } else {
+
+          $("#me").fadeUp(600);
+
         }
 
 
       });
 
 
+      $("#clear").clic(function (e) {
+        $("#theForm").reset();
 
-
-      vid11.on("timeupdate", function() {
-
-        $('#slide').val(vid11.currentTime());
-
-      });
-
-
-
-
-
-      $('#slide').on("change", function() {
-
-        vid11.currentTime(this.value);
-      });
-
-
-
-    }
-
-    setSlider();
-
-    //////////////////////////////////////////////////////////////////
-    let q = 0;
-    $('.lef-1').clic(function() {
-      $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
-    })
-
-    $('.lef-2').clic(function() {
-      $('.foo').eq(0).takeClass('pink big').eq(4, 3).putClass('bg-yell');
-    })
-
-    $('.lef-3').clic(function() {
-      $('.one').putClass('ml-3').eq(0).attribute('role', 'button').text('click me').putClass('underline').on("click", function() {
-
-        $('.foo').eq(1).togClass(' pink linethrough ml-3');
-        $('#inp').val(`click = ${q++} hoho`);
+        if (!vid11.paused()) {
+          resetControles();
+        }
+        setVidSrc();
+        e.preventDefault();
 
       })
-    })
-    let divTxt = $('#right-col').text();
-    $('.lef-4').clic( function() {
-      $('#right-col').text(divTxt);
-      $('#inp').val('putPut');
-      q = 0;
-    })
-    let playStop = 0;
-   
 
-  
-    vid11.on('ended', function() {
-      resetControles();
-    });
-
-
-
-    vid11.clic(function() {
-
-
-
-      let rv = $().radioVal('rad');
-
-
-
-
-      let ri = $().radioIndex('rad');
-
-      $('.foo').eq(7).text(rv).eq(6).text(ri).eq(5).text(rv + ' booo ' + ri);
-      // $('.foo', 5).text(rv + ' booo ' + ri);
-
-      // $('.rad').isChecked(false).eq(1).isChecked(true);
-
-      if (!$("#check1").isChecked()) {
-        console.log("nooooo");
-      } else {
-        console.log("si!");
+      function preloadImage(url) {
+        let img = new Image();
+        img.src = url;
       }
 
-      if (playStop++ % 2 === 0) {
 
+      for (let i = 1; i <= 3;) {
 
-        $("#me").fade(500, 0);
-
-      } else {
-
-        $("#me").fadeUp(600);
+        preloadImage(`img/room${i++}.jpg`);
 
       }
 
 
-    });
+
+      function setVidSrc() {
+
+        let rv = $().radioVal('rad');
+
+        vid11.attribute('src', `vid/${rv}.mp4`).attribute("poster", `img/posters/${rv}.jpg`);
 
 
-    $("#clear").clic( function(e) {
-      $("#theForm").reset();
-
-      if (!vid11.paused()) {
-        resetControles();
       }
+
+      function resetControles() {
+
+        controls.togClass("pause");
+        playStop2++;
+
+      }
+
       setVidSrc();
-      e.preventDefault();
-
-    })
-
-    function preloadImage(url) {
-      let img = new Image();
-      img.src = url;
-    }
-
-
-    for (let i = 1; i <= 3;) {
-
-      preloadImage(`img/room${i++}.jpg`);
-
-    }
-
-
-
-    function setVidSrc() {
-
-      let rv = $().radioVal('rad');
-
-      vid11.attribute('src', `vid/${rv}.mp4`).attribute("poster", `img/posters/${rv}.jpg`);
-
-
-    }
-
-    function resetControles() {
-
-      controls.togClass("pause");
-      playStop2++;
-
-    }
-
-    setVidSrc();
-    $('#nowShowing').text($().radioVal('rad'));
-
-    $(".rad").on("click", function() {
-
       $('#nowShowing').text($().radioVal('rad'));
 
-      if (!vid11.paused()) {
-        resetControles();
-      }
-      setVidSrc();
-      setSlider();
+      $(".rad").on("click", function () {
 
-      //  
+        $('#nowShowing').text($().radioVal('rad'));
 
-    });
+        if (!vid11.paused()) {
+          resetControles();
+        }
+        setVidSrc();
+        setSlider();
 
-    let playStop2 = 0;
-    let controls = $("#controls");
+        //  
 
-    controls.on("click", function() {
-
-      controls.togClass("pause");
-      if (playStop2++ % 2 === 0) {
-        vid11.play();
-
-        return;
-      }
-
-      vid11.pause();
-
-
-    });
-
-    controls.on("mouseover", function() {
-      controls.putClass(" green");
-
-    });
-    controls.on("mouseout", function() {
-      controls.takeClass(" green");
-    });
-
-
-    ///////////////////////////////////////////////////////////////////////
-
-
-    let vid1 = $("#vid1");
-    let vid2 = $("#vid2");
-    let vid3 = $("#vid3");
-    let fook = $("#fook");
-
-
-    function pauseVids() {
-      vid1.pause();
-      vid2.pause();
-      vid3.pause();
-    }
-
-    function playVid(vid, nxt) {
-
-      vid.clic( function() {
-        pauseVids();
-        this.play();
-
-      }).on("ended", function() {
-        fook.text("Fookin' Stop");
-        nxt.play();
       });
-    }
 
-    playVid(vid1, vid2);
-    playVid(vid2, vid3);
-    playVid(vid3, vid1);
+      let playStop2 = 0;
+      let controls = $("#controls");
+
+      controls.on("click", function () {
+
+        controls.togClass("pause");
+        if (playStop2++ % 2 === 0) {
+          vid11.play();
+
+          return;
+        }
+
+        vid11.pause();
 
 
-    fook.clic(function() {
-      pauseVids();
-      fook.text("~~~~~~~~~~")
-     });
+      });
+
+      controls.on("mouseover", function () {
+        controls.putClass(" green");
+
+      });
+      controls.on("mouseout", function () {
+        controls.takeClass(" green");
+      });
 
 
-    $('#me').clic( function() {
-     
-    });
+      ///////////////////////////////////////////////////////////////////////
+
+
+      let vid1 = $("#vid1");
+      let vid2 = $("#vid2");
+      let vid3 = $("#vid3");
+      let fook = $("#fook");
+
+
+      function pauseVids() {
+        vid1.pause();
+        vid2.pause();
+        vid3.pause();
+      }
+
+      function playVid(vid, nxt) {
+
+        vid.clic(function () {
+          pauseVids();
+          this.play();
+
+        }).on("ended", function () {
+          fook.text("Fookin' Stop");
+          nxt.play();
+        });
+      }
+
+      playVid(vid1, vid2);
+      playVid(vid2, vid3);
+      playVid(vid3, vid1);
+
+
+      fook.clic(function () {
+        pauseVids();
+        fook.text("~~~~~~~~~~")
+      });
+
+
+      $('#me').clic(function () {
+
+      });
 
 //  $().window("click", function(){ 
 //    console.log('click ' );
 //   
 //   
 //  }); 
-    
 
+/* function getAge(dateString) {
+  let today = new Date();
+  let birthDate = new Date(dateString);
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+
+  let m = today.getMonth() - birthDate.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+}
+let dat ;
+$().window("click", function(event) {
+  dat = $('#dat').val();
+  if (getAge(dat) > 17 || getAge(dat) < 13) {
+      console.log(`${dat} is no good`);
+    }else{
+      console.log(`${dat} jolly good`);
+    };
+})
+ */
+    
 
   </script>
 </body>
