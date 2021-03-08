@@ -63,7 +63,6 @@ window.onmouseup = function () {
 
 
 
-
 function move(e) {
   
   xPercent = Math.round((e.clientX - rect.x) * 100 / rect.width);

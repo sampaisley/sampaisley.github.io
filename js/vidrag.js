@@ -100,6 +100,7 @@ function move(e) {
     seekBar.css({
       "background-size": ` ${xPercent}% ${seekBg}em`
     });
+    console.log('%c  xPercent:', 'color: #0e93e0;background: #aaefe5;', xPercent);
 
     vid1.currentTime(xPercent * (vidLength / 100));
 
@@ -183,6 +184,7 @@ vid1.on('ended', function () {
 });
 
 vid1.on("timeupdate", function () {
+  
 
   //   info_pos.text(vid1.currentTime().toFixed());
   xPercent = Math.ceil((vid1.currentTime() / vidLength) * 100);

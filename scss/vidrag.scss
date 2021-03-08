@@ -93,14 +93,14 @@ $buts:1.5em;
   // width: calc(100% - #{$buts * 2});
   display: inline-block;
   background-color: #c8d0d6;
-  background-image: url("../img/bg1.png");
+  background-image: url("../../img/bg1.png ");
   background-repeat: no-repeat;
   background-size: 0px $buts;
 
   transition: background-size 0.5s;
 
 
-  z-index: 200;
+  z-index: 201;
 
   @media (hover: hover) {
 
