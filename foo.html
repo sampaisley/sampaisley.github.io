@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delete</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Playfair+Display:wght@600&display=swap');
+      *{
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+      }
+      .wrap {
+        background-color: #253242;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-rows: 33vh 33vh 33vh;
+        grid-template-areas:
+          "a b c"
+          "d e f"
+          "h i j";
+      }
+      .p25 {
+        padding: 0.25rem;
+      }
+
+      #hola {
+        background-color: rgb(240, 151, 151);
+        color: deepskyblue;
+        padding-top: 1em;
+        padding-right: 1em;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 2.4rem;
+        grid-area: c;
+      }
+
+      #and {
+        grid-area: e;
+        background-color: hsl(199, 72%, 67%);
+        color: #253242;
+        font-family: 'Playfair Display', serif;
+        font-size: 7rem;
+        padding-top: 3rem;
+      }
+
+      #adios {
+        grid-area: h;
+        background-color: #b1eea2;
+        color: lightsalmon;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 2rem;
+        padding-left: 1em;
+        padding-bottom: 1em;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1 id="hola" class="p25">hOLå</h1>
+
+      <h3 id="and" class="p25">&amp;</h3>
+
+      <h2 id="adios" >AdIoS</h2>
+
+    </div>
+  </body>
+</html>

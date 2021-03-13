@@ -265,7 +265,7 @@
 <hr>
   </div>
 
-  <script src="js/pQuery.js"></script>
+  <script src="js/min/pQuery.min.js"></script>
   <script>
     "use strict";
 
@@ -532,7 +532,7 @@
 //   
 //  }); 
 
-/* function getAge(dateString) {
+function getAge(dateString) {
   let today = new Date();
   let birthDate = new Date(dateString);
 
@@ -545,16 +545,22 @@
   }
   return age;
 }
+
+function ageBetween(dat, a, b) {
+  if (getAge(dat) > a && getAge(dat) < b) {
+    return true;
+  }
+}
 let dat ;
 $().window("click", function(event) {
   dat = $('#dat').val();
-  if (getAge(dat) > 17 || getAge(dat) < 13) {
-      console.log(`${dat} is no good`);
+  if (ageBetween(dat, 12 , 18)){
+      console.log(`${dat} is jolly good`);
     }else{
-      console.log(`${dat} jolly good`);
+      console.log(`${dat} wrong age`);
     };
 })
- */
+
     
 
   </script>

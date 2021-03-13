@@ -365,7 +365,7 @@ function $(selector, indx) {
 
 
     //    each(func) {
-    //
+    ////
     //      el.forEach(function (item) {
     //        func(item);
     //      });

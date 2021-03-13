@@ -100,7 +100,6 @@ function move(e) {
     seekBar.css({
       "background-size": ` ${xPercent}% ${seekBg}em`
     });
-    console.log('%c  xPercent:', 'color: #0e93e0;background: #aaefe5;', xPercent);
 
     vid1.currentTime(xPercent * (vidLength / 100));
 
@@ -144,7 +143,6 @@ $().window("resize", OrientChange);
 
  
   function OrientChange() {
-    console.log('OrientChange');
     rect = seekBar.getRect();
     fin = Math.round(rect.right);
 
