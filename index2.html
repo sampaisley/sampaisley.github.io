@@ -185,7 +185,7 @@
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
           <input type="text" id="inp" value="value" class="form-control">
-          <input type="radio" name="rad" class="rad" value="room1" checked> <input type="radio" name="rad" class="rad" value="room2"> <input type="radio" name="rad" class="rad" value="room3">
+          <input id="rad0" type="radio" name="rad" class="rad" value="room1" checked> <input id="rad1" type="radio" name="rad" class="rad" value="room2"> <input id="rad2" type="radio" name="rad" class="rad" value="room3">
           <input type="checkbox" id="check1">
           <button class="ml-1 my-3 btn btn-primary" id="clear">CLEAR</button>
           <input type="range" id="slide" min="0" value="0" step="0.1" class="custom-range">
@@ -253,7 +253,8 @@
         <h1 class="linx gill huge bloo blk-bg mt-1 p-4 text-center w-100">GOSH <a target="_blank" href="http://sampaisley.com/">*</a>gösh<a target="_blank" href="http://217.199.187.62/sampaisley.com/">*</a></h1>
       
     </div>
-<input type="date" id="dat">
+<input type="date" id="dat" value="2013-01-08">
+
 <hr>
 <hr>
 <hr>
@@ -261,7 +262,7 @@
 <hr>
   </div>
 
-  <script src="js/min/pQuery.min.js"></script>
+  <script src="js/min/pQuery.min.js?v=34"></script>
   <script>
     "use strict";
 
@@ -328,7 +329,7 @@
       //////////////////////////////////////////////////////////////////
       let q = 0;
       $('.lef-1').clic(function () {
-        $('.foo').eq(2, 2).text('New Text').eq(3).putClass('underline green');
+        $('.foo').eq(2, 3).text('New Text').eq(3).putClass('underline green');
       })
 
       $('.lef-2').clic(function () {
@@ -368,7 +369,7 @@
 
 
 
-        let ri = $().radioIndex('rad');
+        let ri = $().getRadioIndex('rad');
 
         $('.foo').eq(7).text(rv).eq(6).text(ri).eq(5).text(rv + ' booo ' + ri);
         // $('.foo', 5).text(rv + ' booo ' + ri);
@@ -557,8 +558,12 @@ $().window("click", function(event) {
     };
 })
 
+   let ip = document.getElementById("inp");
+    console.log('ip', ip.getAttribute("type"));
     
-
+    $().setRadioIndex('rad', 0);
+  
+    
   </script>
 </body>
 

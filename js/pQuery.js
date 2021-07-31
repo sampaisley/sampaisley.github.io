@@ -228,7 +228,7 @@ function $(selector, indx) {
 
 
 
-    radioIndex(name) {
+    getRadioIndex(name) {
 
 
       let val = 'no index';
@@ -241,6 +241,20 @@ function $(selector, indx) {
       });
       return val;
     },
+    
+    
+     setRadioIndex(name, n) {
+
+      document.getElementsByName(name).forEach((item, index) => {
+        if (item.getAttribute("type") != 'radio') return;
+
+        if (index == n)
+          item.checked = true;
+
+      });
+      return this;
+    },
+
 
 
 
@@ -380,7 +394,9 @@ function $(selector, indx) {
       el[0].scrollIntoView(bool);
       return this;
     },
-
+    
+    
+    
 
     hasClass(cl) {
       return el[0].classList.contains(cl);
@@ -520,7 +536,7 @@ function $(selector, indx) {
           console.log('click ' );
        }
 
-    /////////////////////////////////////////////////////  */
+    ///////////////////////////////////////////////////////  */
     window(event, callback) {
 
 
