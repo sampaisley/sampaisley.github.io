@@ -550,12 +550,14 @@ function ageBetween(dat, a, b) {
 }
 let dat ;//////////////////////////////////////////////////////////
 $().window("click", function(event) {
+  console.log('%c  event:', 'color: #0e93e0;background: #aaefe5;', event);
   dat = $('#dat').val();
   if (ageBetween(dat, 12 , 18)){
       console.log(`${dat} is jolly good`);
     }else{
       console.log(`${dat} wrong age`);
     };
+    
 })
 
    let ip = document.getElementById("inp");

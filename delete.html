@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+    <style>
+      #contexMenu {
+        margin-left: 20vw;
+        border: 2px solid pink;
+        display: inline-block;
+        
+      }
+      #contexMenu ul {
+        list-style-type: none;
+        margin: 0;
+        padding:.1rem .5rem;
+        color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function Menu(list, links) {
+        this.list = list;
+        let div = document.createElement("div");
+        div.id = "contexMenu";
+        div.innerHTML = `<ul>`;
+
+        for (let i = 0; i < list.length; i++) {
+          div.innerHTML += `<ul><li id="${links[i]}">${list[i]}</li></ul>`;
+        }
+
+        div.innerHTML += `</ul>`;
+
+        document.body.append(div);
+
+        div.onclick = function (e) {
+          if (e.target.id != "#") {
+            window.location = e.target.id;
+          }
+        };
+      }
+
+      let cont = new Menu(
+        ["vid", "index", "Index2"],
+        ["vidRag.html", "index.html", "index2.html"]
+      );
+    </script>
+  </body>
+</html>

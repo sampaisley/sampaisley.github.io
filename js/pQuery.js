@@ -295,6 +295,11 @@ function $(selector, indx) {
       return this;
     },
 
+    select() {
+      el[0].select();
+      return this;
+    },
+
 
     blur() {
 
