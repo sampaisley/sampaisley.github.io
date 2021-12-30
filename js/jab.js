@@ -58,7 +58,7 @@ target.onclick = function(){
 };
 
 
-target.ondragstart = function() { // pervents image dragging
+target.ondragstart = jabber.ondragstart = function() { // pervents image dragging
     return false;
   };
 
