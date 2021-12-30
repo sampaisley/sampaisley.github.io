@@ -1,10 +1,15 @@
 "use strict";
 
 let jabber = document.getElementById("jabber");
-let jw = jabber.width;
+
 let container = document.getElementById("container");
 let score = document.getElementById("score");
-let sound = new Audio("aaggh.mp3");
+let sound1 = new Audio("aaggh.mp3");
+let sound2 = new Audio("aaggh2.mp3");
+let sound3 = new Audio("aaggh3.mp3");
+
+
+let sounds = [ sound3, sound2, sound1];
 
 function makeNewPosition() {
   let containerVspace = container.offsetHeight - target.offsetHeight,
@@ -52,7 +57,8 @@ container.appendChild(target);
 ////////////////////
 let hits = 1;
 target.onclick = function () {
-    sound.play();
+  sounds[hits-1].play();
+    
   score.innerHTML = hits;
   score.classList.add("show");
   setTimeout(function () {
@@ -78,7 +84,7 @@ target.ondragstart = jabber.ondragstart = function () {
 /////////////////////////////////
 
 container.onmousemove = function (e) {
-  jabber.style.left = e.x - jw + "px";
+  jabber.style.left = e.x - 100 + "px";
   jabber.style.top = e.y + "px";
 };
 
@@ -90,6 +96,6 @@ container.ontouchmove = function (event) {
   var changedTouch = event.changedTouches[0];
   //  var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
 
-  jabber.style.left = changedTouch.clientX - jw + "px";
+  jabber.style.left = changedTouch.clientX - 100 + "px";
   jabber.style.top = changedTouch.clientY + "px";
 };
