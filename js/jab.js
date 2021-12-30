@@ -71,3 +71,19 @@ target.ondragstart = jabber.ondragstart = function() { // pervents image draggin
     jabber.style.left = e.x -jw + "px";
     jabber.style.top = e.y  + "px";
   };
+
+
+
+  ///////////// TOUCH   \\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+      
+
+  container.ontouchmove = function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    var changedTouch = event.changedTouches[0];
+  //  var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+   
+    jabber.style.left = changedTouch.clientX -jw + "px";
+    jabber.style.top = changedTouch.clientY  + "px";
+  };
