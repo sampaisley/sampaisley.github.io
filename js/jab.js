@@ -87,3 +87,5 @@ target.ondragstart = jabber.ondragstart = function() { // pervents image draggin
     jabber.style.left = changedTouch.clientX -jw + "px";
     jabber.style.top = changedTouch.clientY  + "px";
   };
+
+  alert("foo");
