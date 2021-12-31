@@ -83,19 +83,18 @@ container.onmousemove = function (e) {
   jabber.style.top = e.y + "px";
 };
 
-
-let hits = 1;
+let hits = 0;
 function hit(){
-    if(hits >3)return;
-    sounds[hits-1].play();
+    if(hits >2)return;
+    sounds[hits].play();
     
-  score.innerHTML = hits;
+  score.innerHTML = ++hits;
   score.classList.add("show");
   setTimeout(function () {
     score.classList.remove("show");
   }, 500);
 
-  if (hits++ >= 3) {
+  if (hits >= 3) {
    
     jabber.remove();
     target.classList.add("fadeArm");
