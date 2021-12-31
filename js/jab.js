@@ -8,6 +8,7 @@ let info = document.getElementById("info");
 let sound1 = new Audio("aaggh.mp3");
 let sound2 = new Audio("aaggh2.mp3");
 let sound3 = new Audio("aaggh3.mp3");
+let startSound = new Audio("startSound.mp3");
 
 
 let sounds = [sound2, sound3, sound1];
@@ -83,7 +84,7 @@ container.onmousemove = function (e) {
   jabber.style.left = e.x - 100 + "px";
   jabber.style.top = e.y + "px";
 };
-console.log('86---');
+console.log('87---');
 let hits = 0;
 function hit(){
 
@@ -128,42 +129,42 @@ container.addEventListener("click", function(e){
 });
 
 ///////////// TOUCH   \\\\\\\\\\\\\\\\\\\\\\\\\
-
+let once = 0;
 if (isMob) {
-    target.ontouchstart = function () {
-     hit();
-    };
- 
+    container.addEventListener("ontouchstart", function(){
+       if(once == 0){
+           startSound.play();
+       }
+    });
+  target.ontouchstart = function () {
+    hit();
+  };
 
-container.ontouchmove = container.ontouchstart = function (event) {
-  event.preventDefault();
-  event.stopPropagation();
-  var changedTouch = event.changedTouches[0];
-  //  var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+  container.ontouchmove = container.ontouchstart = function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    var changedTouch = event.changedTouches[0];
+    //  var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
 
-  jabber.style.left = changedTouch.clientX - 100 + "px";
-  jabber.style.top = changedTouch.clientY + "px";
-};
+    jabber.style.left = changedTouch.clientX - 100 + "px";
+    jabber.style.top = changedTouch.clientY + "px";
+  };
 
-container.addEventListener('touchend' ,function(event) {
-event.preventDefault();
+  container.addEventListener("touchend", function (event) {
+    event.preventDefault();
     event.stopPropagation();
     let changedTouch = event.changedTouches[0];
-    let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
-   
-    
-    if(elem.id == 'target'){
-        //hit();
-    }else if(elem.id == 'happy'){
-        location.reload();
+    let elem = document.elementFromPoint(
+      changedTouch.clientX,
+      changedTouch.clientY
+    );
+
+    if (elem.id == "target") {
+      //hit();
+    } else if (elem.id == "happy") {
+      location.reload();
     }
-    
-
-});
-
-
-
-
- }
+  });
+}
 
  
