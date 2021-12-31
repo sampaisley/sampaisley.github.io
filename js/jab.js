@@ -98,7 +98,7 @@ function hit(){
 
 ///////////// TOUCH   \\\\\\\\\\\\\\\\\\\\\\\\\
 
-container.ontouchmove = function (event) {
+container.ontouchmove = container.ontouchstart = function (event) {
   event.preventDefault();
   event.stopPropagation();
   var changedTouch = event.changedTouches[0];
@@ -108,14 +108,18 @@ container.ontouchmove = function (event) {
   jabber.style.top = changedTouch.clientY + "px";
 };
 
-container.ontouchend = function (event) {
+container.addEventListener('touchend' ,function(event) {
 event.preventDefault();
     event.stopPropagation();
-    var changedTouch = event.changedTouches[0];
-    var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+    let changedTouch = event.changedTouches[0];
+    let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+    console.log('%c elem:', 'color: #0e93e0;background: #aaefe5;', elem);
+    
     if(elem.id == 'target'){
         hit();
     }
     
 
-};
+});
+
+alert("foo");
