@@ -113,18 +113,21 @@ event.preventDefault();
     event.stopPropagation();
     let changedTouch = event.changedTouches[0];
     let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
-    console.log('%c elem:', 'color: #0e93e0;background: #aaefe5;', elem);
+   
     
     if(elem.id == 'target'){
         hit();
+    }else if(elem.id == 'happy'){
+        location.reload();
     }
     
 
 });
 
-window.addEventListener("click", function(e){
+container.addEventListener("click", function(e){
     if(e.target.id == "happy"){
         location.reload();
     }
 });
+
 
