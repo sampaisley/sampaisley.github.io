@@ -141,7 +141,7 @@ event.preventDefault();
    
     
     if(elem.id == 'target'){
-        hit();
+        //hit();
     }else if(elem.id == 'happy'){
         location.reload();
     }
@@ -153,3 +153,5 @@ event.preventDefault();
 
 
  }
+
+ 
