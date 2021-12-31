@@ -55,7 +55,7 @@ target.src = "../img/arm2.png";
 container.appendChild(target);
 
 ////////////////////
-let hits = 1;
+
 target.onclick = function () {
   hit();
 };
@@ -73,7 +73,7 @@ container.onmousemove = function (e) {
 };
 
 
-
+let hits = 1;
 function hit(){
     sounds[hits-1].play();
     
@@ -83,7 +83,7 @@ function hit(){
     score.classList.remove("show");
   }, 500);
 
-  if (hits++ >= 1) {
+  if (hits++ >= 3) {
    
     jabber.remove();
     setTimeout(function () {
