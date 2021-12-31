@@ -57,23 +57,7 @@ container.appendChild(target);
 ////////////////////
 let hits = 1;
 target.onclick = function () {
-  sounds[hits-1].play();
-    
-  score.innerHTML = hits;
-  score.classList.add("show");
-  setTimeout(function () {
-    score.classList.remove("show");
-  }, 500);
-
-  if (hits++ >= 3) {
-    target.remove();
-    jabber.remove();
-    setTimeout(function () {
-      container.classList.add("default");
-      container.classList.add("happy");
-      container.innerHTML = "<h1>Happy New Year</h1>";
-    }, 1000);
-  }
+  hit();
 };
 
 target.ondragstart = jabber.ondragstart = function () {
@@ -88,6 +72,29 @@ container.onmousemove = function (e) {
   jabber.style.top = e.y + "px";
 };
 
+
+
+function hit(){
+    sounds[hits-1].play();
+    
+  score.innerHTML = hits;
+  score.classList.add("show");
+  setTimeout(function () {
+    score.classList.remove("show");
+  }, 500);
+
+  if (hits++ >= 1) {
+   
+    jabber.remove();
+    setTimeout(function () {
+      container.classList.add("default"); 
+      target.remove();
+      container.classList.add("happy");
+      container.innerHTML = "<h1>Happy New Year</h1>";
+    }, 1500);
+  }
+}
+
 ///////////// TOUCH   \\\\\\\\\\\\\\\\\\\\\\\\\
 
 container.ontouchmove = function (event) {
@@ -98,4 +105,16 @@ container.ontouchmove = function (event) {
 
   jabber.style.left = changedTouch.clientX - 100 + "px";
   jabber.style.top = changedTouch.clientY + "px";
+};
+
+container.ontouchend = function (event) {
+event.preventDefault();
+    event.stopPropagation();
+    var changedTouch = event.changedTouches[0];
+    var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+    if(elem.id == 'target'){
+        hit();
+    }
+    
+
 };
