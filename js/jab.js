@@ -118,7 +118,7 @@ container.addEventListener("click", function(e){
 
 if (isMob) {
     target.ontouchstart = function () {
-     // hit();
+     hit();
     };
  
 
