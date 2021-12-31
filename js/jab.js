@@ -87,6 +87,8 @@ let hits = 0;
 function hit(){
     if(hits >2)return;
     sounds[hits].play();
+    sounds[hits].play();
+    
     
   score.innerHTML = ++hits;
   score.classList.add("show");
