@@ -86,4 +86,9 @@ h1{
     @media (orientation: portrait) {
         padding-top: 20vh !important;
     }
+
+    @media only screen and (max-height: 730px) {
+        padding-top: 11vh !important;
+        font-size: 7.5vw;
+      }
 }
