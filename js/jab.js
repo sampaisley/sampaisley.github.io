@@ -10,7 +10,7 @@ let sound2 = new Audio("aaggh2.mp3");
 let sound3 = new Audio("aaggh3.mp3");
 
 
-let sounds = [sound2, sound3, sound1, sound1];
+let sounds = [sound2, sound3, sound1];
 
 function makeNewPosition() {
   let containerVspace = container.offsetHeight - target.offsetHeight,
@@ -83,11 +83,21 @@ container.onmousemove = function (e) {
   jabber.style.left = e.x - 100 + "px";
   jabber.style.top = e.y + "px";
 };
-
+console.log('86---');
 let hits = 0;
 function hit(){
-    if(hits >2)return;
-    sounds[hits].play();
+
+    if (hits > 2) return;
+    // sounds[hits].play();
+
+
+    if (hits == 0) {
+      sound3.play();
+    } else if (hits == 1) {
+      sound2.play();
+    } else if (hits == 2) {
+      sound1.play();
+    }
    
     
     
