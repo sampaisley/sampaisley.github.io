@@ -83,7 +83,7 @@ function hit(){
     score.classList.remove("show");
   }, 500);
 
-  if (hits++ >= 1) {
+  if (hits++ >= 3) {
    
     jabber.remove();
     target.classList.add("fadeArm");
