@@ -86,6 +86,7 @@ container.onmousemove = function (e) {
 
 let hits = 1;
 function hit(){
+    if(hits >3)return;
     sounds[hits-1].play();
     
   score.innerHTML = hits;
