@@ -86,6 +86,7 @@ function hit(){
   if (hits++ >= 3) {
    
     jabber.remove();
+    target.classList.add("fadeArm");
     setTimeout(function () {
       container.classList.add("default"); 
       target.remove();
