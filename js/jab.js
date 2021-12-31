@@ -10,7 +10,7 @@ let sound2 = new Audio("aaggh2.mp3");
 let sound3 = new Audio("aaggh3.mp3");
 
 
-let sounds = [sound2, sound3, sound1];
+let sounds = [sound2, sound3, sound1, sound1];
 
 function makeNewPosition() {
   let containerVspace = container.offsetHeight - target.offsetHeight,
