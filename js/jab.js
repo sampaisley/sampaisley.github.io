@@ -55,10 +55,21 @@ target.src = "../img/arm2.png";
 container.appendChild(target);
 
 ////////////////////
+function isMob() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // true for mobile device
+        return true;
+    } else {
+        // false for not mobile device
+        return false;
+    }
+}
 
-target.onclick = target.ontouchstart = function () {
-  hit();
-};
+if (!isMob) {
+  target.onclick = function () {
+    hit();
+  };
+}
 
 target.ondragstart = jabber.ondragstart = function () {
   // pervents image dragging
@@ -97,6 +108,12 @@ function hit(){
 }
 
 ///////////// TOUCH   \\\\\\\\\\\\\\\\\\\\\\\\\
+
+if (isMob) {
+    target.ontouchstart = function () {
+      hit();
+    };
+  }
 
 container.ontouchmove = container.ontouchstart = function (event) {
   event.preventDefault();
