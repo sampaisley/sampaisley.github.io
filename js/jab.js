@@ -91,7 +91,7 @@ function hit(){
       container.classList.add("default"); 
       target.remove();
       container.classList.add("happy");
-      container.innerHTML = "<h1>Happy New Year</h1>";
+      container.innerHTML = "<h1 id='happy'>Happy New Year</h1>";
     }, 1500);
   }
 }
@@ -121,3 +121,10 @@ event.preventDefault();
     
 
 });
+
+window.addEventListener("click", function(e){
+    if(e.target.id == "happy"){
+        location.reload();
+    }
+});
+
