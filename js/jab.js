@@ -4,12 +4,13 @@ let jabber = document.getElementById("jabber");
 
 let container = document.getElementById("container");
 let score = document.getElementById("score");
+let info = document.getElementById("info");
 let sound1 = new Audio("aaggh.mp3");
 let sound2 = new Audio("aaggh2.mp3");
 let sound3 = new Audio("aaggh3.mp3");
 
 
-let sounds = [ sound3, sound2, sound1];
+let sounds = [sound2, sound3, sound1];
 
 function makeNewPosition() {
   let containerVspace = container.offsetHeight - target.offsetHeight,
@@ -87,7 +88,7 @@ let hits = 0;
 function hit(){
     if(hits >2)return;
     sounds[hits].play();
-    sounds[hits].play();
+   
     
     
   score.innerHTML = ++hits;
