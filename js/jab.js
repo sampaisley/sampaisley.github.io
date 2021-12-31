@@ -59,13 +59,13 @@ function isMob() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // true for mobile device
         return true;
-    } else {
+    }
         // false for not mobile device
         return false;
-    }
+   
 }
-
-if (!isMob) {
+if (!isMob()) {
+  
   target.onclick = function () {
     hit();
   };
@@ -107,13 +107,20 @@ function hit(){
   }
 }
 
+
+container.addEventListener("click", function(e){
+    if(e.target.id == "happy"){
+        location.reload();
+    }
+});
+
 ///////////// TOUCH   \\\\\\\\\\\\\\\\\\\\\\\\\
 
 if (isMob) {
     target.ontouchstart = function () {
-      hit();
+     // hit();
     };
-  }
+ 
 
 container.ontouchmove = container.ontouchstart = function (event) {
   event.preventDefault();
@@ -141,10 +148,7 @@ event.preventDefault();
 
 });
 
-container.addEventListener("click", function(e){
-    if(e.target.id == "happy"){
-        location.reload();
-    }
-});
 
 
+
+ }
