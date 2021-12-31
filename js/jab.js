@@ -84,7 +84,6 @@ container.onmousemove = function (e) {
   jabber.style.left = e.x - 100 + "px";
   jabber.style.top = e.y + "px";
 };
-console.log('87---');
 let hits = 0;
 function hit(){
 
@@ -134,6 +133,7 @@ if (isMob) {
     container.addEventListener("ontouchstart", function(){
        if(once == 0){
            startSound.play();
+           once++;
        }
     });
   target.ontouchstart = function () {
