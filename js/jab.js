@@ -56,7 +56,7 @@ container.appendChild(target);
 
 ////////////////////
 
-target.onclick = function () {
+target.onclick = target.ontouchstart = function () {
   hit();
 };
 
