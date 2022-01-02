@@ -1,14 +1,19 @@
 "use strict";
 
+
+
+
 let jabber = document.getElementById("jabber");
 
 let container = document.getElementById("container");
 let score = document.getElementById("score");
-let info = document.getElementById("info");
+
 let sound1 = new Audio("aaggh.mp3");
 let sound2 = new Audio("aaggh2.mp3");
 let sound3 = new Audio("aaggh3.mp3");
-let startSound = new Audio("startSound.mp3");
+let start = new Audio("start.mp3");
+
+
 
 
 let sounds = [sound2, sound3, sound1];
@@ -88,16 +93,17 @@ let hits = 0;
 function hit(){
 
     if (hits > 2) return;
-    // sounds[hits].play();
+     sounds[hits].play();
+     
 
 
-    if (hits == 0) {
+    /* if (hits == 0) {
       sound3.play();
     } else if (hits == 1) {
       sound2.play();
     } else if (hits == 2) {
       sound1.play();
-    }
+    } */
    
     
     
@@ -127,22 +133,26 @@ container.addEventListener("click", function(e){
     }
 });
 
+
 ///////////// TOUCH   \\\\\\\\\\\\\\\\\\\\\\\\\
+if(isMob()){
 let once = 0;
-if (isMob) {
-    container.addEventListener("ontouchstart", function(){
-       if(once == 0){
-           startSound.play();
-           once++;
-       }
-    });
+
   target.ontouchstart = function () {
-    hit();
+      if(once == 0){
+    start.play();       // to get around this : play() failed because the user didn't interact with the document first
+   setTimeout(hit,200);
+   once++;
+      }else{
+          hit();
+      }
+   
   };
 
   container.ontouchmove = container.ontouchstart = function (event) {
     event.preventDefault();
     event.stopPropagation();
+    
     var changedTouch = event.changedTouches[0];
     //  var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
 
