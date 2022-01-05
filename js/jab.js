@@ -18,11 +18,11 @@ let start = new Audio("start.mp3");
 
 let sounds = [sound2, sound3, sound1];
 
-function makeNewPosition() {
-  let containerVspace = container.offsetHeight - target.offsetHeight,
-    containerHspace = container.offsetWidth - target.offsetWidth,
-    newX = Math.floor(Math.random() * containerVspace),
-    newY = Math.floor(Math.random() * containerHspace);
+function makeNewPosition(c) {
+  let vSpace = c.offsetHeight - target.offsetHeight;
+  let Hspace = c.offsetWidth - target.offsetWidth;
+  let newX = Math.floor(Math.random() * vSpace);
+  let newY = Math.floor(Math.random() * Hspace);
   return [newX, newY];
 }
 
@@ -36,7 +36,7 @@ function velocity(prev, next) {
 }
 
 function floatArm() {
-  let newPos = makeNewPosition();
+  let newPos = makeNewPosition(container);
   let oldTop = target.offsetTop;
   let oldLeft = target.offsetLeft;
   target.animate(
@@ -46,6 +46,7 @@ function floatArm() {
     ],
     {
       duration: velocity([oldTop, oldLeft], newPos),
+      easing:"ease-in-out",
       fill: "forwards",
     }
   ).onfinish = function () {
@@ -105,7 +106,7 @@ function hit(){
       sound1.play();
     } */
    
-    
+    floatArm();
     
   score.innerHTML = ++hits;
   score.classList.add("show");
@@ -141,6 +142,7 @@ let once = 0;
   target.ontouchstart = function () {
       if(once == 0){
     start.play();       // to get around this : play() failed because the user didn't interact with the document first
+    
    setTimeout(hit,200);
    once++;
       }else{
