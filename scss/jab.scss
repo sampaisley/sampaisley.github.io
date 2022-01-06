@@ -7,7 +7,9 @@ html {
   -ms-user-select: none !important;
   user-select: none !important;
 
-  -webkit-transform: translateZ(0);
+  //-webkit-transform: translateZ(0);
+ // will-change: transform;
+
 }
 #container {
   height: 100vh;
@@ -19,7 +21,9 @@ html {
 }
 #target {
   position: absolute;
-  -webkit-transform: translateZ(0);
+  //-webkit-transform: translateZ(0);
+  will-change: transform;
+
   filter: drop-shadow(-12px 12px 7px rgb(117, 111, 111));
   transition: all 2.5s;
   opacity: 1;
@@ -33,7 +37,9 @@ html {
 
 #jabber {
   position: absolute;
-  -webkit-transform: translateZ(0);
+  //-webkit-transform: translateZ(0);
+  will-change: transform;
+
   left: -300px;
   filter: drop-shadow(-12px 12px 7px rgb(117, 111, 111));
 

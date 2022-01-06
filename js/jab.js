@@ -18,11 +18,11 @@ let start = new Audio("start.mp3");
 
 let sounds = [sound2, sound3, sound1];
 
-function makeNewPosition(c) {
-  let vSpace = c.offsetHeight - target.offsetHeight;
-  let Hspace = c.offsetWidth - target.offsetWidth;
-  let newX = Math.floor(Math.random() * vSpace);
-  let newY = Math.floor(Math.random() * Hspace);
+function makeNewPosition(c, t) {
+  let vSpace = c.clientHeight  - t.offsetHeight;
+  let Hspace = c.clientWidth  - t.offsetWidth;
+  let newX = Math.floor(Math.random() * vSpace)+ c.offsetTop;
+  let newY = Math.floor(Math.random() * Hspace)+ c.offsetLeft;
   return [newX, newY];
 }
 
@@ -36,7 +36,7 @@ function velocity(prev, next) {
 }
 
 function floatArm() {
-  let newPos = makeNewPosition(container);
+  let newPos = makeNewPosition(container, target);
   let oldTop = target.offsetTop;
   let oldLeft = target.offsetLeft;
   target.animate(
@@ -179,4 +179,3 @@ let once = 0;
   });
 }
 
- 
