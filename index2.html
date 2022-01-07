@@ -640,26 +640,26 @@ console.timeEnd("answer time", " bar");
   }
   doPlaceholder();
 
-inp.on("focus",function(){
-  clearInterval(timer);
-  timer = null;
-  inp.attribute("placeholder",' ')
-   cont = 0;
-   contDown =1;
-   pl = '';
-   tog = 0;
-});
+  inp.on("focus", function () {
+    clearInterval(timer);
+    timer = null;
+    inp.attribute("placeholder", ' ');
+    plArr = Array.from("Hello World");
+    cont = 0;
+    contDown = 1;
+    pl = '';
+    tog = 0;
+  });
 
-inp.on("blur",function(){
- 
-  if( !inp.val())
-  {doPlaceholder();}
-});
+  inp.on("blur", function () {
 
-inp.on("change",function(){
- 
- if (!inp.val()) { doPlaceholder(); }
-});
+    if (!inp.val()) { doPlaceholder(); }
+  });
+
+  inp.on("change", function () {
+
+    if (!inp.val()) { doPlaceholder(); }
+  });
 
  
 
