@@ -629,21 +629,25 @@ console.timeEnd("answer time", " bar");
       contDown = 1;
       pl='';
      
-      tog++ %2 ==0 ?  plArr = Array.from("Hello World Again") :  plArr = Array.from("Hello World");
+      tog++ %2 ==0 ?  plArr = Array.from("Hello World Again!") :  plArr = Array.from("Hello World");
       
     }
 
     //
 
    }
- }, 100);
+ }, 160);
   }
   doPlaceholder();
 
 inp.on("focus",function(){
   clearInterval(timer);
+  timer = null;
   inp.attribute("placeholder",' ')
-  pl='';
+   cont = 0;
+   contDown =1;
+   pl = '';
+   tog = 0;
 });
 
 inp.on("blur",function(){
