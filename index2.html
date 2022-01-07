@@ -132,7 +132,14 @@
       cursor: default;
     }
     
+    ::-webkit-input-placeholder { /* Edge */
+  color: red!important;
+}
 
+
+::placeholder {
+  color: rgba(236, 13, 13, 0.37)!important;
+}
   
   </style>
 </head>
@@ -184,7 +191,7 @@
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
           <p class="foo pink ">p .foo .pink</p>
-          <input type="text" id="inp" value="value" class="form-control">
+          <input type="text" id="inp" value="" class="form-control inp">
           <input id="rad0" type="radio" name="rad" class="rad" value="room1" checked> <input id="rad1" type="radio" name="rad" class="rad" value="room2"> <input id="rad2" type="radio" name="rad" class="rad" value="room3">
           <input type="checkbox" id="check1">
           <button class="ml-1 my-3 btn btn-primary" id="clear">CLEAR</button>
@@ -250,7 +257,7 @@
     <div class="row mt-2 border-top">
       <h1 id="fook" class="gill bloo w-100" role="button">~~~~~~~~~~</h1>
        
-        <h1 class="linx gill huge bloo blk-bg mt-1 p-4 text-center w-100">GOSH <a target="_blank" href="http://sampaisley.com/">*</a>gösh<a target="_blank" href="http://217.199.187.62/sampaisley.com/">*</a></h1>
+        <h1 class="linx gill huge bloo blk-bg mt-1 p-4 text-center w-100">GOSH <a target="_blank" href="http://sampaisley.com/">*</a>gösh<a target="_blank" href="http://sampaisley.com/">*</a></h1>
       
     </div>
 <input type="date" id="dat" value="2013-01-08">
@@ -400,6 +407,8 @@
 
       $("#clear").clic(function (e) {
         $("#theForm").reset();
+        if (!inp.val()) { doPlaceholder(); }
+        
 
         if (!vid11.paused()) {
           resetControles();
@@ -551,12 +560,12 @@ function ageBetween(dat, a, b) {
 }
 let dat ;//////////////////////////////////////////////////////////
 $().window("click", function(event) {
-  console.log('%c  event:', 'color: #0e93e0;background: #aaefe5;', event);
+ // console.log('%c  event:', 'color: #0e93e0;background: #aaefe5;', event);
   dat = $('#dat').val();
   if (ageBetween(dat, 12 , 18)){
       console.log(`${dat} is jolly good`);
     }else{
-      console.log(`${dat} wrong age`);
+      // console.log(`${dat} wrong age`);
     };
     
 })
@@ -590,10 +599,63 @@ console.timeEnd("answer time", " bar");
 
     */
     //console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 19px; line-height:2em; border: 2px solid red");
+  let inp = $("#inp");
+  let plArr = Array.from("Hello World");
+ 
+  let cont = 0;
+  let contDown =1;
+  let pl = '';
+  let timer;
+  let tog = 0;
   
 
+  function doPlaceholder(){
+    clearInterval(timer);
+    timer = setInterval(function () {
+   
+   if (cont < plArr.length) {
+     
+     pl += plArr[cont++]
+     inp.attribute("placeholder", pl);
 
+   } else {
+     
+     inp.attribute("placeholder", pl.slice(0, pl.length - ++contDown));
+     
+    if(contDown==plArr.length){
+      
+     inp.attribute("placeholder",' ');
+      cont = 0;
+      contDown = 1;
+      pl='';
+     
+      tog++ %2 ==0 ?  plArr = Array.from("Hello World Again") :  plArr = Array.from("Hello World");
+      
+    }
 
+    //
+
+   }
+ }, 100);
+  }
+  doPlaceholder();
+
+inp.on("focus",function(){
+  clearInterval(timer);
+  inp.attribute("placeholder",' ')
+  pl='';
+});
+
+inp.on("blur",function(){
+ 
+  if( !inp.val())
+  {doPlaceholder();}
+});
+
+inp.on("change",function(){
+ 
+ if (!inp.val()) { doPlaceholder(); }
+});
 
  
 
