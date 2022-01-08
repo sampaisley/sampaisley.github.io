@@ -600,7 +600,9 @@ console.timeEnd("answer time", " bar");
     */
     //console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 19px; line-height:2em; border: 2px solid red");
   let inp = $("#inp");
-  let plArr = Array.from("Hello World");
+  let plceHolders = ["Hello World.","Blar & Foo.", "Fish And Chips."];
+  let plrCount = 0;// plceHolders.length;
+  let plArr = Array.from(plceHolders[0]);//Array.from("Hello World");
  
   let cont = 0;
   let contDown =1;
@@ -615,12 +617,17 @@ console.timeEnd("answer time", " bar");
    
    if (cont < plArr.length) {
      
-     pl += plArr[cont++]
+     pl += plArr[cont++];
+     if(plArr[cont]==' '){pl += plArr[cont++];}
      inp.attribute("placeholder", pl);
 
    } else {
      
-     inp.attribute("placeholder", pl.slice(0, pl.length - ++contDown));
+    let pld = pl.slice(0, pl.length - ++contDown);
+    if(pld.endsWith(' ')){
+      pld = pl.slice(0, pl.length - ++contDown);
+    }
+     inp.attribute("placeholder", pld);
      
     if(contDown==plArr.length){
       
@@ -629,7 +636,9 @@ console.timeEnd("answer time", " bar");
       contDown = 1;
       pl='';
      
-      tog++ %2 ==0 ?  plArr = Array.from("Hello World Again!") :  plArr = Array.from("Hello World");
+     // tog++ %2 ==0 ?  plArr = Array.from("Hello World Again!") :  plArr = Array.from("Hello World");
+     if(++plrCount>=plceHolders.length)plrCount = 0;
+     plArr = Array.from(plceHolders[plrCount]);
       
     }
 
