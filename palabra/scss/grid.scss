@@ -31,12 +31,15 @@ body {
   margin-left: 2px;
   margin-right: 2px;
   grid-template-columns: repeat(5, minmax(20px, 60px));
+  @media only screen and (max-height: 520px) {
+    grid-template-columns: repeat(5, minmax(20px, 40px));
+  }
   column-gap: 5px;
   row-gap: 5px;
   grid-row: auto;
   justify-content: center;
 
-  @media only screen and (max-height: 540px) {
+  @media only screen and (max-height: 610px) {
     margin-top: 3px;
   }
 
@@ -61,6 +64,10 @@ body {
     font-size: 150%;
 
    }
+
+   @media only screen and (max-height: 520px) {
+  font-size: 120%;
+  }
   
 
   background-color: white;
