@@ -7,7 +7,6 @@ Storage.prototype.setObj = function(key, obj) {
   };
   
   //build the boxes
-
 let topRow=['q','w','e','r','t','y','u','i','o','p'];  
 let midRow=['a','s','d','f','g','h','j','k','l']; 
 let lowRow=['Enter','z','x','c','v','b','n','m','Backspace']; 
@@ -61,7 +60,14 @@ let box = 0;
 let start = 0;
 let end = start + 5;
 let boxes = document.querySelectorAll(".box");
-let keys= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+//let keys= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+
+const keys = (() => {
+  
+  const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
+  return caps.concat(caps.map(letter => letter.toLowerCase()));
+})();//https://gist.github.com/bendc/1e6af8f2d8027f2965da
 
 
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
@@ -106,7 +112,7 @@ window.onkeydown =  (e) =>{
  */
 
 function makeWord(l){
-   
+       //l = l.toLowerCase();
     if (keys.indexOf(l) != -1 && box < end) {
         if(box>29 || lettersCorect>=wordLength)return;
         
@@ -117,17 +123,18 @@ function makeWord(l){
          boxes[box].classList.add('darkBorder');
          boxes[box++].innerHTML = l;
      
-         inputWord.push(l) ;
+         inputWord.push(l.toLowerCase()) ;
       
     }
  
   if (l == "Backspace" && box > start) {
-      
+    
 
       inputWord.pop();
     
       
         boxes[--box].innerHTML = "";
+        
         boxes[box].classList.remove('darkBorder');
     
     
@@ -142,7 +149,7 @@ function enterPressed(z){
     alert('Word too short');
     return;
   }
-  if(!isInWordList() && inputWord.length && inputWord.length < wordLength){
+  if(!isInWordList() && inputWord.length && inputWord.length == wordLength){
     alert("Not in word list.");
     return;}
     if (z == "Enter" && box % wordLength == 0 && box <= boxes.length && enterKeyWorks) {
