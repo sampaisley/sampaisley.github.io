@@ -8,6 +8,8 @@
 		  "dragula":true,
 		  "console":true,
 		  "alert"  :true,
-		  "$"      :true
-	  } 
+		  "$"      :true,
+		  "require":true,
+		  "wordList":true,
+		  "Ta":true	  } 
 }

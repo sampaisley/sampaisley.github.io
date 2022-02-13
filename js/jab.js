@@ -14,8 +14,6 @@ let sound3 = new Audio("aaggh3.mp3");
 let start = new Audio("start.mp3");
 
 
-
-
 let sounds = [sound2, sound3, sound1];
 
 function makeNewPosition(c, t) {
@@ -95,7 +93,7 @@ function hit(){
 
     if (hits > 2) return;
      sounds[hits].play();
-     
+    
 
 
     /* if (hits == 0) {

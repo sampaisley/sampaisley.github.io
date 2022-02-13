@@ -18,9 +18,37 @@
         padding:.1rem .5rem;
         color: lightcoral;
       }
+
+      /* /////////////////////////////////// */
+      #ball{
+        box-sizing: border-box;
+        position: absolute;
+        left: 0px;
+        top:0px;
+        width: 40px;
+        height: 40px;
+        cursor: crosshair;
+        background-color: rgb(230, 81, 18);
+        border: 0px;
+       border-radius: 50%; 
+       transition: all .2s;
+       
+      
+        will-change: transform;
+       
+      }
+      .d-none{
+        background-color: rgb(255, 255, 255)!important;
+        cursor: default!important;
+      }
+
+     
     </style>
   </head>
   <body>
+    <div id="ball" class="d-none"></div>
+  
+
     <script>
       function Menu(list, links) {
         this.list = list;
@@ -47,6 +75,57 @@
         ["vid", "index", "Index2"],
         ["vidRag.html", "index.html", "index2.html"]
       );
+
+
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      function velocity(prev, next) {
+  let x = Math.abs(prev[1] - next[1]);
+  let y = Math.abs(prev[0] - next[0]);
+  let larger = x > y ? x : y;
+  let speedModifier = 0.6;
+  let speed = Math.ceil(larger / speedModifier);
+  return speed;
+}
+
+
+
+
+
+  let ball = document.getElementById("ball");
+
+  let halfBall = ball.clientWidth / 2;
+
+  let ballx = ball.clientWidth;
+  let bally = ball.clientHeight;
+
+  window.addEventListener("click", function (e) {
+    let cx = e.clientX - halfBall;
+   
+    let cy = e.clientY - halfBall; 
+    if(cx !== ballx && cy !== bally)
+      ball.classList.remove("d-none");
+      
+     ball.animate([
+      { transform: 'translate(' + ballx + 'px, ' + bally + 'px)' },
+      { transform: 'translate(' + cx + 'px, ' + cy + 'px)' }
+    ], {
+      duration: velocity([bally, ballx], [cy, cx]),
+      easing: "ease-out",
+      fill: "forwards",
+      
+    }).onfinish = function () {
+      ball.style.transform = 'translate(' + cx + 'px, ' + cy + 'px)';
+      ballx = cx;
+      bally = cy;
+      setTimeout(()=> ball.classList.add("d-none"),250);
+    }; 
+
+
+  })
+       
+
+  
     </script>
   </body>
 </html>
