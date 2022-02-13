@@ -137,12 +137,12 @@ function makeWord(l){
 
 function enterPressed(z){
  if(rowPad >25)return;
-  if(inputWord.length < wordLength){
+  if(inputWord.length && inputWord.length < wordLength){
     
     alert('Word too short');
     return;
   }
-  if(!isInWordList()){
+  if(!isInWordList() && inputWord.length && inputWord.length < wordLength){
     alert("Not in word list.");
     return;}
     if (z == "Enter" && box % wordLength == 0 && box <= boxes.length && enterKeyWorks) {
@@ -202,8 +202,15 @@ function checkWord(){
 
   //faild
   if(lettersCorect <wordLength-1 && box >boxes.length-1){
+
+    score.level = 0 ;
+     score.gamesPlayed++;
+    localStorage.setObj("storeScore", score);
+    let s = localStorage.getObj("storeScore");
        
-    setTimeout(() => alert('Never mind dear, the word is ' + theWord.join('').toUpperCase()), 1000); //move out of loop
+    setTimeout(() => alert(`Never mind dear, the word is ' ${theWord.join('').toUpperCase()}
+    You scored: ${s.level}
+    games played: ${s.gamesPlayed}`), 1000); 
 }
 
 }
