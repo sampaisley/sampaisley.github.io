@@ -15,6 +15,11 @@ let container = document.getElementById("container");
 for (let i = 0; i < 30; i++) {
   container.innerHTML += '<div class="box">&nbsp;</div>';
 }
+const alertzDiv = document.createElement("div");
+alertzDiv.id='alert';
+alertzDiv.classList.add('alert');
+alertzDiv.classList.add('d-none');
+
 
 const kboardTop = document.createElement("div");
 kboardTop.id="kBoardTop";
@@ -55,6 +60,7 @@ for (let i = 0; i < 10; i++) {
  container.after(kboardTop);
  kboardTop.after(kboardMid);
  kboardMid.after(kboardLow);
+ kboardLow.after(alertzDiv);
 
 let box = 0;
 let start = 0;
@@ -96,7 +102,7 @@ let score = localStorage.getObj('storeScore') || { gamesPlayed: 0, level: 0 };
             
 
 window.onkeydown =  (e) =>{
- 
+  
   if(e.key == "Enter"){
   enterPressed(e.key);
   }
@@ -146,11 +152,11 @@ function enterPressed(z){
  if(rowPad >25)return;
   if(inputWord.length && inputWord.length < wordLength){
     
-    alert('Word too short');
+    alertz('Word too short', 1200);
     return;
   }
   if(!isInWordList() && inputWord.length && inputWord.length == wordLength){
-    alert("Not in word list.");
+    alertz("Not in word list.", 1200);
     return;}
     if (z == "Enter" && box % wordLength == 0 && box <= boxes.length && enterKeyWorks) {
      
@@ -215,7 +221,7 @@ function checkWord(){
     localStorage.setObj("storeScore", score);
     let s = localStorage.getObj("storeScore");
        
-    setTimeout(() => alert(`Never mind dear, the word is ' ${theWord.join('').toUpperCase()}
+    setTimeout(() => alertz(`Never mind dear, the word is ' ${theWord.join('').toUpperCase()}
     You scored: ${s.level}
     games played: ${s.gamesPlayed}`), 1000); 
 }
@@ -250,7 +256,7 @@ function winner(){
         score.level = rowPad + wordLength ;
         localStorage.setObj("storeScore", score);
         let s = localStorage.getObj("storeScore");
-        alert(`Well done dear,
+        alertz(`Well done dear,
                games played: ${s.gamesPlayed},
                Score: ${s.level}`);
         return;
@@ -287,22 +293,43 @@ for(let i=0;i< pads.length;i++){
 
 
 let letter;
-window.addEventListener('click', (e) =>{
-    if(e.target.hasAttribute('data-l'))
-   letter = e.target.getAttribute('data-l');
-   
+window.addEventListener("click", (e) => {
+  if (e.target.hasAttribute("data-l")) {
+    letter = e.target.getAttribute("data-l");
+    makeWord(letter);
+  }
 
-   if(letter == "Enter"){
-       enterPressed(letter);
-   }
-   
-
-   makeWord(letter);
-     
-       
-
+  if (letter == "Enter") {
+    enterPressed(letter);
+  }
 });
 
 
+////////////////////////////////////////////////////////////////////////////////////////
 
+
+function alertz(tx,duration){
+
+  alertzDiv.classList.remove('d-none');
+  alertzDiv.innerHTML=`<h1 class="alert">${tx}</h1>`;
+
+
+  if(duration)
+  setTimeout(closeAlertz,duration);
+}
+
+
+
+window.addEventListener('click',function(e){
+  if(e.target.classList.contains("alert")){
+    
+  closeAlertz();
+
+  }
+} );
+
+function closeAlertz(){
+  alertzDiv.classList.add('d-none');
+  alertzDiv.innerHTML=``;
+}
 
