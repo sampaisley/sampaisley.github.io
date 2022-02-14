@@ -343,10 +343,7 @@ window.addEventListener('click',function(e){
 
 function closeAlertz() {
   aalert.fade(50, false, function() {
-    aalert.putClass('d-none').text('')
+    aalert.putClass('d-none').text('');
   });
 }
 
-alertz(`Never mind dear, the word is ${theWord.join('').toUpperCase()}
-    You scored: 44
-    games played:44`); 
