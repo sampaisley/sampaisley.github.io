@@ -311,6 +311,7 @@ window.addEventListener("click", (e) => {
 function alertz(tx,duration){
 
   alertzDiv.classList.remove('d-none');
+  $('#alert').fadeUp(50, function closeAlertz(){console.log('foo');});
   alertzDiv.innerHTML=`<h1 class="alert">${tx}</h1>`;
 
 
@@ -328,8 +329,10 @@ window.addEventListener('click',function(e){
   }
 } );
 
-function closeAlertz(){
-  alertzDiv.classList.add('d-none');
-  alertzDiv.innerHTML=``;
+function closeAlertz() {
+  $("#alert").fade(50, false, function closeAlertz() {
+    alertzDiv.classList.add("d-none");
+    alertzDiv.innerHTML = ``;
+  });
 }
 
