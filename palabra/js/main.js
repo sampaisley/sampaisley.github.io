@@ -221,7 +221,7 @@ function checkWord(){
     localStorage.setObj("storeScore", score);
     let s = localStorage.getObj("storeScore");
        
-    setTimeout(() => alertz(`Never mind dear, the word is ' ${theWord.join('').toUpperCase()}
+    setTimeout(() => alertz(`Never mind dear, the word is ${theWord.join('').toUpperCase()}
     You scored: ${s.level}
     games played: ${s.gamesPlayed}`), 1000); 
 }
@@ -295,25 +295,37 @@ for(let i=0;i< pads.length;i++){
 let letter;
 window.addEventListener("click", (e) => {
   if (e.target.hasAttribute("data-l")) {
+   
     letter = e.target.getAttribute("data-l");
     makeWord(letter);
   }
 
   if (letter == "Enter") {
+    
     enterPressed(letter);
   }
+
+  letter=null;
 });
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
+let aalert = $("#alert");
 
 function alertz(tx,duration){
 
-  alertzDiv.classList.remove('d-none');
-  $('#alert').fadeUp(50, function closeAlertz(){console.log('foo');});
-  alertzDiv.innerHTML=`<h1 class="alert">${tx}</h1>`;
+  //alertzDiv.classList.remove('d-none');
+  aalert.takeClass("d-none").fadeUp(100).text(`<h1 class="alert">${tx}</h1>`);
+  
 
+  // set alert position center
+  let l = $(".alert").eq(1).getRect().height;
+  let forGoodMeasure = 20;
+  let wh = (window.innerHeight/2) - (l/2) - forGoodMeasure;
+  
+  $(".alert").eq(1).css({'margin-top':`${wh}px`});
+ 
 
   if(duration)
   setTimeout(closeAlertz,duration);
@@ -330,9 +342,11 @@ window.addEventListener('click',function(e){
 } );
 
 function closeAlertz() {
-  $("#alert").fade(50, false, function closeAlertz() {
-    alertzDiv.classList.add("d-none");
-    alertzDiv.innerHTML = ``;
+  aalert.fade(50, false, function() {
+    aalert.putClass('d-none').text('')
   });
 }
 
+alertz(`Never mind dear, the word is ${theWord.join('').toUpperCase()}
+    You scored: 44
+    games played:44`); 
