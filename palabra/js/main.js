@@ -415,3 +415,6 @@ for(let i = 1; i<= 6;i++){
 
 //   alertz(`Well done dear.<br>
 //  Games played : ${s.gamesPlayed}<br>Level : ${s.level}<br>Streak : ${s.streak}<br>Max Streak : ${s.maxStreak}<br>${levelDis}`);//
+$('#clear').clic(function(){
+  localStorage.removeItem('storeScore');
+})
