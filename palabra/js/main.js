@@ -412,9 +412,12 @@ for(let i = 1; i<= 6;i++){
 } */
 
 
-
+console.log(4156);
 //   alertz(`Well done dear.<br>
 //  Games played : ${s.gamesPlayed}<br>Level : ${s.level}<br>Streak : ${s.streak}<br>Max Streak : ${s.maxStreak}<br>${levelDis}`);//
-$('#clear').clic(function(){
-  localStorage.removeItem('storeScore');
-})
+
+
+/* $('.box').eq(29).css({"outline":"1px solid red"}).on("dblclick",function(){
+localStorage.removeItem('storeScore');
+  console.log('eemmmmee');
+}); */
