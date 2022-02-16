@@ -78,8 +78,8 @@ const keys = (() => {
 
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 const firstDate = new Date(' Feb 06 2022').setHours(0,0,0,0);
-const secondDate = new Date().setHours(0,0,0,0);
-const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+const today = new Date().setHours(0,0,0,0);
+const diffDays = Math.round(Math.abs((firstDate - today) / oneDay));
 
 let theWord = Array.from(wordList[diffDays]);
 //let theWord = Array.from('focal');
@@ -96,7 +96,14 @@ let greenKeys=[];
 let blackKeys=[];
 let orangeKeys = [];
 
-let score = localStorage.getObj('storeScore') || { gamesPlayed: 0, level: 0 };
+let score = localStorage.getObj("storeScore") || {
+  gamesPlayed: 0,
+  level: 0,
+  pastLevels: [],
+  lastPlayed: null,
+  streak:1,
+  maxStreak:1
+};
 
 
             
@@ -170,62 +177,45 @@ function enterPressed(z){
 }
 
 
-function checkWord(){
- 
-  //if(! isInWordList())return;
-  
+function checkWord() {
 
-   
   copy = Array.from(theWord);
-  
-  
 
   inputWord.forEach((item, index, array) => {
 
     if (inputWord[index] == theWord[index]) {
-
-        greenKeys.push(inputWord[index]);
+      greenKeys.push(inputWord[index]);
 
       boxes[index + rowPad].classList.add("green");
       copy[index] = null;
       inputWord[index] = "*";
 
+      if (lettersCorect++ == wordLength - 1) {
 
-      if (lettersCorect++ == wordLength-1) {
         winner();
-      } 
 
-      
-
-
-
+      }
     } else {
+
       boxes[index + rowPad].classList.add("black");
       blackKeys.push(inputWord[index]);
       lettersCorect = 0;
+
     }
   });
 
   orange();
-  inputWord.length= 0;
-  rowPad+=5;
+  inputWord.length = 0;
+  rowPad += 5;
 
   setKeyCoulors();
 
+  //failed
+  if (lettersCorect < wordLength - 1 && box > boxes.length - 1) {
 
-  //faild
-  if(lettersCorect <wordLength-1 && box >boxes.length-1){
+    failed();
 
-    score.level = 0 ;
-     score.gamesPlayed++;
-    localStorage.setObj("storeScore", score);
-    let s = localStorage.getObj("storeScore");
-       
-    setTimeout(() => alertz(`Never mind dear, the word is ${theWord.join('').toUpperCase()}
-    You scored: ${s.level}
-    games played: ${s.gamesPlayed}`), 1000); 
-}
-
+  }
 }
 
 function orange() {
@@ -251,15 +241,62 @@ function isInWordList(){
       return true;
 }
 
-function winner(){
-     score.gamesPlayed++;
-        score.level = rowPad + wordLength ;
-        localStorage.setObj("storeScore", score);
-        let s = localStorage.getObj("storeScore");
-        alertz(`Well done dear,
-               games played: ${s.gamesPlayed},
-               Score: ${s.level}`);
-        return;
+
+function winner() {
+  let lastGame = score.lastPlayed;
+  if (Math.round(Math.abs((lastGame - today) / oneDay)) == 1) {
+    score.streak++;
+    if (score.streak >= score.maxStreak) {
+      score.maxStreak = score.streak;
+    }
+  } else {
+    score.streak = 1;
+  }
+  score.gamesPlayed++;
+  score.level = rowPad / wordLength + 1;
+  score.pastLevels.push(score.level);
+  score.lastPlayed = new Date().setHours(0,0,0,0);
+  localStorage.setObj("storeScore", score);
+  let s = localStorage.getObj("storeScore");
+
+  
+ 
+  alertz(`Well done dear!<br>
+ Games played: ${s.gamesPlayed}<br>Level: ${s.level}<br>Streak: ${s.streak}<br>Max Streak: ${s.maxStreak}<br> Level Distribution:<br>${getLevelDis(s.pastLevels)}`);
+  return;
+}
+
+function getLevelDis(l) {
+  let levelDis = "";
+  let count = function (n) {
+    return l.filter((x) => x == n).length; //https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array
+  };
+
+  for (let i = 1; i <= 6; i++) {
+    levelDis += `<span class="levs lv-${count(i)}">level ${i} --> ${count(i)}</span><br>`;
+  }
+
+  return levelDis;
+}
+
+
+function failed() {
+
+  score.level = 0;
+  score.pastLevels.push(score.level);
+  score.lastPlayed = new Date().setHours(0, 0, 0, 0);
+  score.gamesPlayed++;
+  localStorage.setObj("storeScore", score);
+  let s = localStorage.getObj("storeScore");
+
+  setTimeout(
+    () =>
+      alertz(`Never mind dear, the word is ${theWord.join("").toUpperCase()}
+    Level: ${s.level}
+    games played: ${s.gamesPlayed}`),
+    1000
+  );
+
 }
 
 
@@ -316,7 +353,7 @@ let aalert = $("#alert");
 function alertz(tx,duration){
 
   //alertzDiv.classList.remove('d-none');
-  aalert.takeClass("d-none").fadeUp(100).text(`<h1 class="alert">${tx}</h1>`);
+  aalert.takeClass("d-none").fadeUp(100).text('<p class="alert">'+tx + '</p>');
   
 
   // set alert position center
@@ -347,3 +384,34 @@ function closeAlertz() {
   });
 }
 
+
+/* let d1  = new Date().setHours(0,0,0,0);
+let d2  = new Date(2022, 1, 13).setHours(0,0,0,0);// month is zero indexed
+
+let dd  = Math.round(Math.abs((d1 - d2) / oneDay));
+
+console.log(dd); */
+
+ 
+let s = localStorage.getObj("storeScore");
+alertz(`Well done dear.<br>
+ Games played: ${s.gamesPlayed}<br>Level: ${s.level}<br>Streak: ${s.streak}<br>Max Streak: ${s.maxStreak}<br> Level Distribution:<br>${getLevelDis(s.pastLevels)}`);
+
+/* let levelDis = '';
+let count = function(n){
+  return s.pastLevels.filter(x => x ==n).length;//https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array
+};
+
+
+ 
+for(let i = 1; i<= 6;i++){
+  
+ 
+  levelDis +=`<span>${i} -- ${count(i)}</span><br>`;
+  
+} */
+
+
+
+//   alertz(`Well done dear.<br>
+//  Games played : ${s.gamesPlayed}<br>Level : ${s.level}<br>Streak : ${s.streak}<br>Max Streak : ${s.maxStreak}<br>${levelDis}`);//

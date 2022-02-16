@@ -28,8 +28,8 @@ body {
   display: grid;
   margin-top: 15vh;
   margin-bottom: 4vh;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
   grid-template-columns: repeat(5, minmax(20px, 60px));
   @media only screen and (max-height: 520px) {
     grid-template-columns: repeat(5, minmax(20px, 40px));
@@ -98,7 +98,7 @@ body {
   display: grid;
   column-gap: 5px;
   row-gap: 2px;
-  margin: 0 3px;
+  margin: 0 5px;
 
   @media only screen and (max-width: 300px) {
     column-gap: 4px;
@@ -185,64 +185,48 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  opacity: 0;
-  background-color: rgba(132, 198, 230, 0.836);
+  opacity: 1;
+  // background-color: rgba(132, 197, 230, 0.014);
   position: fixed;
   z-index: 90000000000;
 
-  h1 {
+  p {
     text-align: center;
-
+    opacity: 1;
     color: var(--white);
-    background-color: var(--black);
+    background-color: rgb(79, 167, 218);
+    color: rgb(247, 247, 247);
+    font-size: 1.25rem;
     width: 200px;
     padding: 1rem;
     margin: 0 auto;
-    
+    padding-bottom: 1.3rem;
+    text-align:left ;
     border-radius: 3px;
   }
 
-  /* div {
-    position: fixed;
-    background-color: cornflowerblue;
-    border: 6px solid darken(rgb(84, 125, 201),2);
+  span{
+    color: var(--yellow);
+    background-color: darken(rgb(79, 167, 218),5);
     
-    border-radius: 6px;
-    width: 300px;
-    // min-height: 200px;
-    top: calc(40vh - 150px);
-    left: calc(50vw - 150px);
-    @media screen and (max-width: 330px) {
-      
-      width: 90%;
-      left: 5%;
+    display: block;
+   
+    padding: 3px;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: -15px;
+    &:nth-of-type(1){
+ 
+      margin-top: 15px!important;
     }
-    color: cornsilk;
-    padding: 0.6rem;
-    font-size: 1.5rem;
-    line-height: 1.2;
-    p {
-      margin-bottom: 3.7rem;
-    }
-
-    span {
-      color: cornflowerblue;
-      position: absolute;
-      bottom: 17px;
-      right: 17px;
-      background-color: cornsilk;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 0.4rem;
-      border-radius: 4px;
-      cursor: pointer;
-      &:hover {
-        color: darken(cornflowerblue, 10);
-      }
-    }
-  } */
+    
+  }
+  
 }
-
+/*  span.lv-4{
+   color: antiquewhite!important;
+ } */
 .d-none {
-  display: none !important;
+  display: none ;
 }
+
