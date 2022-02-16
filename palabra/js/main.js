@@ -393,9 +393,9 @@ let dd  = Math.round(Math.abs((d1 - d2) / oneDay));
 console.log(dd); */
 
  
-let s = localStorage.getObj("storeScore");
+/* let s = localStorage.getObj("storeScore");
 alertz(`Well done dear.<br>
- Games played: ${s.gamesPlayed}<br>Level: ${s.level}<br>Streak: ${s.streak}<br>Max Streak: ${s.maxStreak}<br> Level Distribution:<br>${getLevelDis(s.pastLevels)}`);
+ Games played: ${s.gamesPlayed}<br>Level: ${s.level}<br>Streak: ${s.streak}<br>Max Streak: ${s.maxStreak}<br> Level Distribution:<br>${getLevelDis(s.pastLevels)}`); */
 
 /* let levelDis = '';
 let count = function(n){
