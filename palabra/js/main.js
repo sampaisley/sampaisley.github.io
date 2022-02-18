@@ -6,8 +6,9 @@ Storage.prototype.setObj = function(key, obj) {
     return JSON.parse(this.getItem(key));
   };
   
-  //build the boxes
-let topRow=['q','w','e','r','t','y','u','i','o','p'];  
+  //build the boxes & keyboard
+(function makeTheThing(){
+  let topRow=['q','w','e','r','t','y','u','i','o','p'];  
 let midRow=['a','s','d','f','g','h','j','k','l']; 
 let lowRow=['Enter','z','x','c','v','b','n','m','Backspace']; 
 
@@ -62,11 +63,11 @@ for (let i = 0; i < 10; i++) {
  kboardMid.after(kboardLow);
  kboardLow.after(alertzDiv);
 
+})();
 let box = 0;
 let start = 0;
 let end = start + 5;
 let boxes = document.querySelectorAll(".box");
-//let keys= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 
 const keys = (() => {
@@ -86,15 +87,24 @@ let theWord = Array.from(wordList[diffDays]);
 let copy = Array.from(theWord);
 let wordLength = 5;
 let inputWord =[];
+let triedWords = localStorage.getObj("triedWords") || [];
 let rowPad = 0;
 //let row=0;
 let lettersCorect=0;
 let enterKeyWorks = false;
+let savedClasses = localStorage.getObj('savedClasses') || [];
+
 
 
 let greenKeys=[];
 let blackKeys=[];
 let orangeKeys = [];
+
+let greenBoxes=[];
+let blackBoxes=[];
+let orangeBoxes = [];
+
+
 
 let score = localStorage.getObj("storeScore") || {
   gamesPlayed: 0,
@@ -102,13 +112,14 @@ let score = localStorage.getObj("storeScore") || {
   pastLevels: [],
   lastPlayed: null,
   streak:1,
-  maxStreak:1
+  maxStreak:1,
+  gameOver:false
 };
 
 
-            
 
 window.onkeydown =  (e) =>{
+  if(score.gameOver == 1)return;
   
   if(e.key == "Enter"){
   enterPressed(e.key);
@@ -171,27 +182,38 @@ function enterPressed(z){
 
         start += 5;
         end += 5;
+
         checkWord();
+        
 
     }
 }
-
 
 function checkWord() {
 
   copy = Array.from(theWord);
 
+  triedWords.push(Array.from(inputWord));
+  localStorage.setObj("triedWords", triedWords);
+  
+  
+
+
   inputWord.forEach((item, index, array) => {
 
     if (inputWord[index] == theWord[index]) {
       greenKeys.push(inputWord[index]);
+      savedClasses[index + rowPad]="green";
+      localStorage.setObj("savedClasses", savedClasses);
+      localStorage.setObj("greenKeys", greenKeys);
 
       boxes[index + rowPad].classList.add("green");
       copy[index] = null;
       inputWord[index] = "*";
 
       if (lettersCorect++ == wordLength - 1) {
-
+        
+       
         winner();
 
       }
@@ -199,6 +221,9 @@ function checkWord() {
 
       boxes[index + rowPad].classList.add("black");
       blackKeys.push(inputWord[index]);
+      savedClasses[index + rowPad]="black";
+      localStorage.setObj("savedClasses", savedClasses);
+      localStorage.setObj("blakKeys", blackKeys);
       lettersCorect = 0;
 
     }
@@ -225,7 +250,10 @@ function orange() {
   
     if (n != -1) {
       boxes[i + rowPad].classList.add("yellow");
+      savedClasses[i + rowPad]="yellow";
+      localStorage.setObj("savedClasses", savedClasses);
       orangeKeys.push(inputWord[i]);
+      localStorage.setObj("orangeKeys", orangeKeys);
       copy[n] = "]";
     }
   }
@@ -243,6 +271,7 @@ function isInWordList(){
 
 
 function winner() {
+  score.gameOver = 1;
   let lastGame = score.lastPlayed;
   if (Math.round(Math.abs((lastGame - today) / oneDay)) == 1) {
     score.streak++;
@@ -282,6 +311,8 @@ function getLevelDis(l) {
 
 function failed() {
 
+  score.gameOver = 1;
+
   score.level = 0;
   score.pastLevels.push(score.level);
   score.lastPlayed = new Date().setHours(0, 0, 0, 0);
@@ -310,6 +341,7 @@ function setKeyCoulors(){
 for(let i=0;i< pads.length;i++){
 
     if(blackKeys.includes(pads[i].getAttribute('data-l'))){
+      
         
         pads[i].classList.add('blackKey');
 
@@ -331,6 +363,7 @@ for(let i=0;i< pads.length;i++){
 
 let letter;
 window.addEventListener("click", (e) => {
+  if(score.gameOver == 1)return;
   if (e.target.hasAttribute("data-l")) {
    
     letter = e.target.getAttribute("data-l");
@@ -385,12 +418,119 @@ function closeAlertz() {
 }
 
 
+let boxClasses = [];
+
+
+/////////////////////////////////////////////////////  game over set colors
+
+
+if (score.lastPlayed < today) {
+  score.gameOver = 0;
+  localStorage.setObj("storeScore", score);
+} else {
+
+  history();
+}
+
+function history() {
+
+
+   // keys  \\\\\\\
+
+  let bk = localStorage.getObj("blakKeys");
+  let gk = localStorage.getObj("greenKeys");
+  let ok = localStorage.getObj("orangeKeys");
+
+  for (let i = 0; i < pads.length; i++) {
+
+    if (bk && bk.indexOf(pads[i].getAttribute("data-l")) != -1) {
+      pads[i].classList.add("blackKey");
+
+    }
+    if (gk && gk.indexOf(pads[i].getAttribute("data-l")) != -1) {
+      pads[i].classList.add("greenKey");
+
+    }
+
+    if (ok && ok.indexOf(pads[i].getAttribute("data-l")) != -1) {
+      pads[i].classList.add("orangeKey");
+
+    }
+
+  }
+
+  // boxes \\\\\\\\\\\\\\\\\\
+  let tries = localStorage.getObj("triedWords") || [];
+  let classes = localStorage.getObj('savedClasses') || [];
+  
+  let r= 0;
+  let bxCount = 0;
+  for (let i = 0; i < boxes.length; i) {
+    if( r >= tries.length)break;
+  
+   
+    boxes[bxCount++].innerHTML = tries[r][i++];
+    if(i%wordLength==0 ){
+      
+      r++;
+      
+      i=0;
+     
+    }
+  }
+
+  for(let  j=0; j<boxes.length; j++){
+     boxes[j].classList.add(classes[j]);
+  }
+}
+
+
+window.onload = function(){
+  if(localStorage.getObj("storeScore").lastPlayed != today){
+  
+     triedWords=[];
+     savedClasses=[];
+    
+    localStorage.setObj("triedWords",null);
+    localStorage.setObj("savedClasses",null);
+    localStorage.setObj("blakKeys", null);
+    localStorage.setObj("greenKeys", null);
+    localStorage.setObj("orangeKeys", null);
+    
+  }else{
+   
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* let d1  = new Date().setHours(0,0,0,0);
 let d2  = new Date(2022, 1, 13).setHours(0,0,0,0);// month is zero indexed
 
 let dd  = Math.round(Math.abs((d1 - d2) / oneDay));
 
-console.log(dd); */
+
 
  
 /* let s = localStorage.getObj("storeScore");
@@ -412,12 +552,12 @@ for(let i = 1; i<= 6;i++){
 } */
 
 
-console.log(4156);
+
 //   alertz(`Well done dear.<br>
 //  Games played : ${s.gamesPlayed}<br>Level : ${s.level}<br>Streak : ${s.streak}<br>Max Streak : ${s.maxStreak}<br>${levelDis}`);//
 
 
-/* $('.box').eq(29).css({"outline":"1px solid red"}).on("dblclick",function(){
-localStorage.removeItem('storeScore');
-  console.log('eemmmmee');
-}); */
+$('.box').eq(29).css({"outline":"1px solid red"}).on("dblclick",function(){
+localStorage.clear();
+console.log('storage cleared.');
+});
