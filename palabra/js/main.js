@@ -6,6 +6,17 @@ Storage.prototype.setObj = function(key, obj) {
     return JSON.parse(this.getItem(key));
   };
   
+
+
+  
+
+
+  
+  
+
+
+
+
   //build the boxes & keyboard
 (function makeTheThing(){
   let topRow=['q','w','e','r','t','y','u','i','o','p'];  
@@ -64,11 +75,8 @@ for (let i = 0; i < 10; i++) {
  kboardLow.after(alertzDiv);
 
 })();
-let box = 0;
-let start = 0;
-let end = start + 5;
-let boxes = document.querySelectorAll(".box");
 
+let boxes = document.querySelectorAll(".box");
 
 const keys = (() => {
   
@@ -88,11 +96,14 @@ let copy = Array.from(theWord);
 let wordLength = 5;
 let inputWord =[];
 let triedWords = localStorage.getObj("triedWords") || [];
-let rowPad = 0;
+
+
 //let row=0;
 let lettersCorect=0;
 let enterKeyWorks = false;
 let savedClasses = localStorage.getObj('savedClasses') || [];
+
+let pads = document.querySelectorAll('.pad');
 
 
 
@@ -110,15 +121,44 @@ let score = localStorage.getObj("storeScore") || {
   gamesPlayed: 0,
   level: 0,
   pastLevels: [],
-  lastPlayed: null,
+  lastPlayed: today,
   streak:1,
   maxStreak:1,
   gameOver:false
 };
 
+if(score.lastPlayed != today){
+    
+    
+  
+  triedWords=[];
+  savedClasses=[];
+ 
+ localStorage.setObj("triedWords",null);
+ localStorage.setObj("savedClasses",null);
+ localStorage.setObj("blakKeys", null);
+ localStorage.setObj("greenKeys", null);
+ localStorage.setObj("orangeKeys", null);
+ localStorage.removeItem("box");
+ localStorage.removeItem("start");
+ localStorage.removeItem("end");
+ localStorage.removeItem("rowPad");console.log(localStorage.getItem("rowPad"), ' <=====');
+ 
+ 
+}else{
+ history();
+}
+
+let box= parseInt(localStorage.getItem("box")) || 0;
+let start = parseInt(localStorage.getItem("start")) || 0;
+let end = parseInt(localStorage.getItem("end")) || start + 5;
+let rowPad = parseInt(localStorage.getItem("rowPad")) || 0;
+
+
 
 
 window.onkeydown =  (e) =>{
+  
   if(score.gameOver == 1)return;
   
   if(e.key == "Enter"){
@@ -135,17 +175,18 @@ window.onkeydown =  (e) =>{
 };
  */
 
-function makeWord(l){
+function makeWord(l){ console.log(box < end);
        //l = l.toLowerCase();
     if (keys.indexOf(l) != -1 && box < end) {
         if(box>29 || lettersCorect>=wordLength)return;
-        
+       
 
         if(box%wordLength==0){enterKeyWorks=true;}
        
        
          boxes[box].classList.add('darkBorder');
          boxes[box++].innerHTML = l;
+         localStorage.setItem("box", box);
      
          inputWord.push(l.toLowerCase()) ;
       
@@ -158,6 +199,7 @@ function makeWord(l){
     
       
         boxes[--box].innerHTML = "";
+        localStorage.setItem("box", box);
         
         boxes[box].classList.remove('darkBorder');
     
@@ -181,7 +223,9 @@ function enterPressed(z){
         enterKeyWorks = !enterKeyWorks;
 
         start += 5;
+        localStorage.setItem("start", start);
         end += 5;
+        localStorage.setItem("end", end);
 
         checkWord();
         
@@ -232,6 +276,8 @@ function checkWord() {
   orange();
   inputWord.length = 0;
   rowPad += 5;
+  localStorage.setItem("rowPad",rowPad);
+  localStorage.setObj("storeScore", score);
 
   setKeyCoulors();
 
@@ -336,7 +382,7 @@ function failed() {
 
 
 
-let pads = document.querySelectorAll('.pad');
+
 function setKeyCoulors(){
 for(let i=0;i< pads.length;i++){
 
@@ -465,7 +511,7 @@ function history() {
   
   let r= 0;
   let bxCount = 0;
-  for (let i = 0; i < boxes.length; i) {
+  for (let i = 0; i < boxes.length; ) {
     if( r >= tries.length)break;
   
    
@@ -485,22 +531,7 @@ function history() {
 }
 
 
-window.onload = function(){
-  if(localStorage.getObj("storeScore").lastPlayed != today){
-  
-     triedWords=[];
-     savedClasses=[];
-    
-    localStorage.setObj("triedWords",null);
-    localStorage.setObj("savedClasses",null);
-    localStorage.setObj("blakKeys", null);
-    localStorage.setObj("greenKeys", null);
-    localStorage.setObj("orangeKeys", null);
-    
-  }else{
-   
-  }
-};
+
 
 
 
