@@ -158,11 +158,9 @@ if(score.lastPlayed != today){
 }
 
 let box= parseInt(localStorage.getItem("box")) || 0;
-console.log('%c box:', 'color: #0e93e0;background: #aaefe5;', box);
 let start = parseInt(localStorage.getItem("start")) || 0;
 let end = parseInt(localStorage.getItem("end")) || start + 5;
 let rowPad = parseInt(localStorage.getItem("rowPad")) || 0;
-console.log('%c rowPad:', 'color: #0e93e0;background: #aaefe5;', rowPad);
 
 // reset box on page reload.  ie:  command + R pressed , adding 1 to box
 if(box > 0 && box+1%wordLength !=0){
@@ -190,7 +188,7 @@ window.onkeydown =  (e) =>{
 };
  */
 
-function makeWord(l){ console.log(box < end);
+function makeWord(l){
        //l = l.toLowerCase();
     if (keys.indexOf(l) != -1 && box < end) {
         if(box>29 || lettersCorect>=wordLength)return;
@@ -603,7 +601,9 @@ for(let i = 1; i<= 6;i++){
 //  Games played : ${s.gamesPlayed}<br>Level : ${s.level}<br>Streak : ${s.streak}<br>Max Streak : ${s.maxStreak}<br>${levelDis}`);//
 
 
-$('.box').eq(29).css({"outline":"1px solid red"}).on("dblclick",function(){
+$('.box').eq(29).css({"outline":"1px solid red","cursor":"pointer"}).on("dblclick",function(){
 localStorage.clear();
 console.log('storage cleared.');
 });
+
+///// foo
