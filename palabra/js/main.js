@@ -1,17 +1,15 @@
 "use strict";
+
+
+
+
+
 Storage.prototype.setObj = function(key, obj) {
     return this.setItem(key, JSON.stringify(obj));
   };
   Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key));
   };
-  
-
-
-  
-
-
-  
   
 
 
@@ -86,7 +84,7 @@ const keys = (() => {
 
 
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-const firstDate = new Date(' Feb 06 2022').setHours(0,0,0,0);
+const firstDate = new Date(' Feb 19 2022').setHours(0,0,0,0);
 const today = new Date().setHours(0,0,0,0);
 const diffDays = Math.round(Math.abs((firstDate - today) / oneDay));
 
@@ -111,10 +109,20 @@ let greenKeys=[];
 let blackKeys=[];
 let orangeKeys = [];
 
-let greenBoxes=[];
-let blackBoxes=[];
-let orangeBoxes = [];
+/* let thisGame ={
+  greenKeys:[],
+  blackKeys:[],
+  orangeKeys:[],
+  triedWords:[],
+  savedClasses:[],
+  box:0,
+  rowPad:0,
+  start:0,
+  end(){
+    return this.start + wordLength;
+  }
 
+}; */
 
 
 let score = localStorage.getObj("storeScore") || {
@@ -142,7 +150,7 @@ if(score.lastPlayed != today){
  localStorage.removeItem("box");
  localStorage.removeItem("start");
  localStorage.removeItem("end");
- localStorage.removeItem("rowPad");console.log(localStorage.getItem("rowPad"), ' <=====');
+ localStorage.removeItem("rowPad");
  
  
 }else{
@@ -150,11 +158,18 @@ if(score.lastPlayed != today){
 }
 
 let box= parseInt(localStorage.getItem("box")) || 0;
+console.log('%c box:', 'color: #0e93e0;background: #aaefe5;', box);
 let start = parseInt(localStorage.getItem("start")) || 0;
 let end = parseInt(localStorage.getItem("end")) || start + 5;
 let rowPad = parseInt(localStorage.getItem("rowPad")) || 0;
+console.log('%c rowPad:', 'color: #0e93e0;background: #aaefe5;', rowPad);
 
-
+// reset box on page reload.  ie:  command + R pressed , adding 1 to box
+if(box > 0 && box+1%wordLength !=0){
+  box -= box%rowPad;
+ 
+  
+}
 
 
 window.onkeydown =  (e) =>{
