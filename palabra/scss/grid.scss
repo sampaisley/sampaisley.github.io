@@ -105,17 +105,18 @@ body {
   }
 }
 #kBoardTop {
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, minmax(20px 33px));
 
   /* outline: 1px solid rgb(71, 230, 50); */
 }
 
 #kBoardMid {
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(10, minmax(20px 33px));
+  margin: 0 22px;
 }
 
 #kBoardLow {
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(11, minmax(20px 33px));
 }
 
 #enter {
@@ -133,7 +134,7 @@ body {
   cursor: pointer;
 
   text-align: center;
-  padding: 0.6rem 0.4rem;
+  padding: 1rem 0.4rem;
   background-color: var(--lightGray);
   font-size: 1rem;
   font-weight: 400;
@@ -191,7 +192,7 @@ body {
   z-index: 90000000000;
 
   p {
-    text-align: center;
+   
     opacity: 1;
     color: var(--white);
     background-color: rgb(79, 167, 218);
@@ -201,7 +202,7 @@ body {
     padding: 1rem;
     margin: 0 auto;
     padding-bottom: 1.3rem;
-    text-align:left ;
+    text-align:center ;
     border-radius: 3px;
   }
 
@@ -223,6 +224,7 @@ body {
   }
   
 }
+
 /*  span.lv-4{
    color: antiquewhite!important;
  } */

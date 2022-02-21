@@ -88,6 +88,7 @@ const firstDate = new Date(' Feb 19 2022').setHours(0,0,0,0);
 const today = new Date().setHours(0,0,0,0);
 const diffDays = Math.round(Math.abs((firstDate - today) / oneDay));
 
+
 let theWord = Array.from(wordList[diffDays]);
 //let theWord = Array.from('focal');
 let copy = Array.from(theWord);
@@ -331,11 +332,12 @@ function isInWordList(){
       return true;
 }
 
-
-function winner() {
+function winner() { 
+  
   score.gameOver = 1;
-  let lastGame = score.lastPlayed;
+  let lastGame = score.lastPlayed;console.log('%c Math.round(Math.abs((lastGame - today) / oneDay)):', 'color: #0e93e0;background: #aaefe5;', Math.round(Math.abs((lastGame - today) / oneDay)));
   if (Math.round(Math.abs((lastGame - today) / oneDay)) == 1) {
+    
     score.streak++;
     if (score.streak >= score.maxStreak) {
       score.maxStreak = score.streak;
@@ -346,8 +348,11 @@ function winner() {
   score.gamesPlayed++;
   score.level = rowPad / wordLength + 1;
   score.pastLevels.push(score.level);
-  
+  score.lastPlayed = new Date().setHours(0,0,0,0);
+  localStorage.setObj("storeScore", score);
   let s = localStorage.getObj("storeScore");
+
+  
 
   
  
