@@ -289,8 +289,11 @@ function checkWord() {
   orange();
   inputWord.length = 0;
   rowPad += 5;
+  score.lastPlayed = new Date().setHours(0,0,0,0);
+  
   localStorage.setItem("rowPad",rowPad);
   localStorage.setObj("storeScore", score);
+
 
   setKeyCoulors();
 
@@ -343,8 +346,7 @@ function winner() {
   score.gamesPlayed++;
   score.level = rowPad / wordLength + 1;
   score.pastLevels.push(score.level);
-  score.lastPlayed = new Date().setHours(0,0,0,0);
-  localStorage.setObj("storeScore", score);
+  
   let s = localStorage.getObj("storeScore");
 
   
@@ -601,7 +603,7 @@ for(let i = 1; i<= 6;i++){
 //  Games played : ${s.gamesPlayed}<br>Level : ${s.level}<br>Streak : ${s.streak}<br>Max Streak : ${s.maxStreak}<br>${levelDis}`);//
 
 
-$('.box').eq(29).css({"outline":"1px solid red","cursor":"pointer"}).on("dblclick",function(){
+$('.box').eq(29).css({"outline":"1px solid green","cursor":"pointer"}).on("dblclick",function(){
 localStorage.clear();
 console.log('storage cleared.');
 });
