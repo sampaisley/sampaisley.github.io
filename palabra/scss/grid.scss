@@ -111,7 +111,7 @@ body {
 }
 
 #kBoardMid {
-  grid-template-columns: repeat(10, minmax(20px 33px));
+  grid-template-columns: repeat(9, minmax(20px 33px));
   margin: 0 22px;
 }
 
@@ -127,6 +127,10 @@ body {
 }
 #back {
   grid-column: 10/12;
+  @media only screen and (min-width: 490px) {
+  padding-left: 20px;
+  padding-right: 20px;
+  }
 }
 
 .pad,
