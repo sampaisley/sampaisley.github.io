@@ -92,7 +92,7 @@ body {
   background-color: var(--yellow);
 }
 #kbord{
-  // outline: 2px solid pink;
+   outline: 2px solid pink;
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -104,7 +104,7 @@ body {
   column-gap: 5px;
   row-gap: 2px;
  
-  font-family: monospace;
+  //font-family: monospace;
 margin: 0 auto;
   @media only screen and (max-width: 300px) {
     column-gap: 4px;
@@ -135,10 +135,10 @@ align-self: center;
 }
 #back {
   grid-column: 10/12;
-  @media only screen and (min-width: 490px) {
+ /*  @media only screen and (min-width: 490px) {
   padding-left: 20px;
   padding-right: 20px;
-  }
+  } */
 }
 
 .pad,
@@ -146,10 +146,13 @@ align-self: center;
   cursor: pointer;
 
   text-align: center;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0.75rem;
   background-color: var(--lightGray);
   font-size: 1rem;
   font-weight: 400;
+  @media only screen and (max-width: 405px) {
+    padding: 1rem 0.7rem;
+    }
 
   @media only screen and (max-width: 300px) {
     font-size: 0.8rem;
