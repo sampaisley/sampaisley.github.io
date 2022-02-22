@@ -91,32 +91,40 @@ body {
   border: 1px solid var(--yellow);
   background-color: var(--yellow);
 }
-
+#kbord{
+  // outline: 2px solid pink;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+}
 #kBoardTop,
 #kBoardMid,
 #kBoardLow {
   display: grid;
   column-gap: 5px;
   row-gap: 2px;
-  margin: 0 5px;
-
+ 
+  font-family: monospace;
+margin: 0 auto;
   @media only screen and (max-width: 300px) {
     column-gap: 4px;
   }
 }
 #kBoardTop {
-  grid-template-columns: repeat(10, minmax(20px 33px));
+  grid-template-columns: repeat(10, minmax(min-content, min-content));
+align-self: center;
 
   /* outline: 1px solid rgb(71, 230, 50); */
 }
 
 #kBoardMid {
-  grid-template-columns: repeat(9, minmax(20px 33px));
-  margin: 0 22px;
+  grid-template-columns: repeat(9,minmax(min-content, min-content));
+ 
 }
 
 #kBoardLow {
-  grid-template-columns: repeat(11, minmax(20px 33px));
+  grid-template-columns: repeat(11, minmax(min-content, min-content));
+  
 }
 
 #enter {
@@ -138,7 +146,7 @@ body {
   cursor: pointer;
 
   text-align: center;
-  padding: 1rem 0.4rem;
+  padding: 1rem 0.5rem;
   background-color: var(--lightGray);
   font-size: 1rem;
   font-weight: 400;

@@ -30,7 +30,8 @@ alertzDiv.id='alert';
 alertzDiv.classList.add('alert');
 alertzDiv.classList.add('d-none');
 
-
+const kboard = document.createElement("div");
+kboard.id="kbord";
 const kboardTop = document.createElement("div");
 kboardTop.id="kBoardTop";
 
@@ -67,7 +68,8 @@ for (let i = 0; i < 10; i++) {
   kboardLow.innerHTML += '</div>';
 
 
- container.after(kboardTop);
+ container.after(kboard);
+ kboard.append(kboardTop);
  kboardTop.after(kboardMid);
  kboardMid.after(kboardLow);
  kboardLow.after(alertzDiv);
