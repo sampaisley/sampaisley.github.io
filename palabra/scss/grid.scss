@@ -91,38 +91,38 @@ body {
   border: 1px solid var(--yellow);
   background-color: var(--yellow);
 }
-#kbord{
-  // outline: 2px solid pink;
+#kbord {
+  outline: 2px solid pink;
   margin: 0 auto;
   text-align: center;
   display: grid;
- height: 100px;
- grid-template-rows: 60px 60px 60px;
- row-gap: 5px;
-
+  height: 180px;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 5px;
+  overflow: hidden;
 }
 #kBoardTop,
 #kBoardMid,
 #kBoardLow {
   display: grid;
   column-gap: 5px;
- // row-gap: 2px;
- 
+  // row-gap: 2px;
+
   //font-family: monospace;
-margin: 0 auto;
+  margin: 0 auto;
   @media only screen and (max-width: 300px) {
     column-gap: 4px;
   }
 }
 #kBoardTop {
   grid-template-columns: repeat(10, minmax(min-content, min-content));
-align-self: center;
+  align-self: center;
 
   //outline: 1px solid rgb(71, 230, 50);
 }
 
 #kBoardMid {
-  grid-template-columns: repeat(9,minmax(min-content, min-content));
+  grid-template-columns: repeat(9, minmax(min-content, min-content));
   //outline: 2px solid rgb(85, 212, 27);
 }
 
@@ -139,7 +139,7 @@ align-self: center;
 }
 #back {
   grid-column: 10/12;
- /*  @media only screen and (min-width: 490px) {
+  /*  @media only screen and (min-width: 490px) {
   padding-left: 20px;
   padding-right: 20px;
   } */
@@ -157,7 +157,7 @@ align-self: center;
   @media only screen and (max-width: 410px) {
     padding: 1rem 0.6rem;
     font-size: 0.9rem;
-    }
+  }
 
   @media only screen and (max-width: 300px) {
     font-size: 0.8rem;
@@ -192,7 +192,7 @@ align-self: center;
 }
 
 .orangeKey {
-  background-color: var(--yellow)!important;
+  background-color: var(--yellow) !important;
   color: var(--white);
 }
 .blackKey {
@@ -213,7 +213,6 @@ align-self: center;
   z-index: 90000000000;
 
   p {
-   
     opacity: 1;
     color: var(--white);
     background-color: rgb(79, 167, 218);
@@ -223,33 +222,29 @@ align-self: center;
     padding: 1rem;
     margin: 0 auto;
     padding-bottom: 1.3rem;
-    text-align:center ;
+    text-align: center;
     border-radius: 3px;
   }
 
-  span{
+  span {
     color: var(--yellow);
-    background-color: darken(rgb(79, 167, 218),5);
-    
+    background-color: darken(rgb(79, 167, 218), 5);
+
     display: block;
-   
+
     padding: 3px;
     font-size: 1rem;
     margin: 0;
     margin-bottom: -15px;
-    &:nth-of-type(1){
- 
-      margin-top: 15px!important;
+    &:nth-of-type(1) {
+      margin-top: 15px !important;
     }
-    
   }
-  
 }
 
 /*  span.lv-4{
    color: antiquewhite!important;
  } */
 .d-none {
-  display: none ;
+  display: none;
 }
-
