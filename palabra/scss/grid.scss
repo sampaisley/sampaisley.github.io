@@ -96,13 +96,17 @@ body {
   margin: 0 auto;
   text-align: center;
   display: grid;
+ height: 100px;
+ grid-template-rows: 60px 60px 60px;
+ row-gap: 5px;
+
 }
 #kBoardTop,
 #kBoardMid,
 #kBoardLow {
   display: grid;
   column-gap: 5px;
-  row-gap: 2px;
+ // row-gap: 2px;
  
   //font-family: monospace;
 margin: 0 auto;
@@ -114,17 +118,17 @@ margin: 0 auto;
   grid-template-columns: repeat(10, minmax(min-content, min-content));
 align-self: center;
 
-  /* outline: 1px solid rgb(71, 230, 50); */
+  //outline: 1px solid rgb(71, 230, 50);
 }
 
 #kBoardMid {
   grid-template-columns: repeat(9,minmax(min-content, min-content));
- 
+  //outline: 2px solid rgb(85, 212, 27);
 }
 
 #kBoardLow {
   grid-template-columns: repeat(11, minmax(min-content, min-content));
-  
+  //outline: 2px solid rgb(187, 129, 235);
 }
 
 #enter {
@@ -160,7 +164,8 @@ align-self: center;
   }
 
   text-transform: uppercase;
-  color: var(--black);
+  //color: var(--black);
+  color: #65aa5e;
   border-radius: 3px;
 
   &:active {
