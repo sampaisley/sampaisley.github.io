@@ -610,9 +610,9 @@ for(let i = 1; i<= 6;i++){
 //  Games played : ${s.gamesPlayed}<br>Level : ${s.level}<br>Streak : ${s.streak}<br>Max Streak : ${s.maxStreak}<br>${levelDis}`);//
 
 
-$('.box').eq(29).css({"outline":"1px solid green","cursor":"pointer"}).on("dblclick",function(){
+$('.box').eq(29).css({"cursor":"pointer"}).on("dblclick",function(){
 localStorage.clear();
-console.log('storage cleared.');
+alertz('storage cleared.');
 });
 
-///// foo
+///// foo   "outline":"1px solid green",
