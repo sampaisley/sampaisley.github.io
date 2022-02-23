@@ -60,7 +60,7 @@ for (let i = 0; i < 10; i++) {
       if(i==0){
         kboardLow.innerHTML += `<div id='enter' data-l='${lowRow[i]}' class="padLong low">${lowRow[i]}</div>`;
       }else if(i==8){
-        kboardLow.innerHTML += `<div id='back' data-l='${lowRow[i]}' class="padLong low"><img id="backIcon" src="svg/back.svg" /></div>`;
+        kboardLow.innerHTML += `<div id='back' data-l='${lowRow[i]}' class="padLong low"><img id="backIcon"  data-l='${lowRow[i]}' src="svg/back.svg" /></div>`;
       }else
     kboardLow.innerHTML += `<div data-l='${lowRow[i]}' class="pad low">${lowRow[i]}</div>`;
   }
@@ -191,9 +191,10 @@ window.onkeydown =  (e) =>{
 };
  */
 
-function makeWord(l){
+function makeWord(l){console.log('%c l:', 'color: #0e93e0;background: #aaefe5;', l);
        //l = l.toLowerCase();
     if (keys.indexOf(l) != -1 && box < end) {
+      
         if(box>29 || lettersCorect>=wordLength)return;
        
 
