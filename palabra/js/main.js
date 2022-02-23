@@ -60,7 +60,7 @@ for (let i = 0; i < 10; i++) {
       if(i==0){
         kboardLow.innerHTML += `<div id='enter' data-l='${lowRow[i]}' class="padLong low">${lowRow[i]}</div>`;
       }else if(i==8){
-        kboardLow.innerHTML += `<div id='back' data-l='${lowRow[i]}' class="padLong low"><---</div>`;
+        kboardLow.innerHTML += `<div id='back' data-l='${lowRow[i]}' class="padLong low"><img id="backIcon" src="svg/back.svg" /></div>`;
       }else
     kboardLow.innerHTML += `<div data-l='${lowRow[i]}' class="pad low">${lowRow[i]}</div>`;
   }

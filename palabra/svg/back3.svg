@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #575454;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #575454;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>Artboard 1</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path class="cls-1" d="M24,1a1,1,0,0,1,1,1V12a1,1,0,0,1-1,1H6.46L1.32,7,6.46,1H24m0-1H6L0,7l6,7H24a1.95,1.95,0,0,0,2-2V2A2,2,0,0,0,25.43.57,2,2,0,0,0,24,0Z"/>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <line class="cls-2" x1="10.76" y1="11.24" x2="19.24" y2="2.76"/>
+    <line class="cls-2" x1="19.6" y1="10.86" x2="10.4" y2="3.14"/>
+  </g>
+</svg>
