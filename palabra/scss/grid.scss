@@ -93,14 +93,14 @@ body {
   background-color: var(--yellow);
 }
 #kbord {
-  //outline: 2px solid pink;
+  outline: 2px solid pink;
   margin: 0 auto;
   text-align: center;
   display: grid;
-  height: 180px;
+ // height: 180px;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 5px;
-  overflow: hidden;
+  //  overflow: hidden;
 }
 #kBoardTop,
 #kBoardMid,
@@ -118,17 +118,20 @@ body {
 #kBoardTop {
   grid-template-columns: repeat(10, minmax(min-content, min-content));
   align-self: center;
+  grid-row: 1;
 
   //outline: 1px solid rgb(71, 230, 50);
 }
 
 #kBoardMid {
   grid-template-columns: repeat(9, minmax(min-content, min-content));
+  grid-row: 2;
   //outline: 2px solid rgb(85, 212, 27);
 }
 
 #kBoardLow {
   grid-template-columns: repeat(11, minmax(min-content, 1fr));
+  grid-row: 3;
   //outline: 2px solid rgb(187, 129, 235);
 }
 
@@ -151,12 +154,12 @@ body {
   cursor: pointer;
 
   text-align: center;
-  padding: 1rem 0.75rem;
+  padding: 0.85rem 0.75rem;
   background-color: var(--lightGray);
   font-size: 1rem;
   font-weight: 400;
   @media only screen and (max-width: 410px) {
-    padding: 1rem 0.6rem;
+    padding: 0.85rem 0.6rem;
     font-size: 0.9rem;
   }
 
@@ -174,18 +177,11 @@ body {
     color: aliceblue;
   }
 }
-
-.top {
-  grid-row-start: 1;
+.pad:nth-child(2){ // force the bastards into rows
+  grid-column: 1/2;
+  //outline: 2px solid pink;
 }
 
-.mid {
-  grid-row-start: 2;
-}
-
-.low {
-  grid-row-start: 3;
-}
 
 .greenKey {
   background-color: var(--green) !important;
