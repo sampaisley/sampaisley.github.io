@@ -92,7 +92,7 @@ body {
   background-color: var(--yellow);
 }
 #kbord {
-  outline: 2px solid pink;
+  //outline: 2px solid pink;
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -127,7 +127,7 @@ body {
 }
 
 #kBoardLow {
-  grid-template-columns: repeat(11, minmax(min-content, min-content));
+  grid-template-columns: repeat(11, minmax(min-content, 1fr));
   //outline: 2px solid rgb(187, 129, 235);
 }
 
@@ -164,8 +164,8 @@ body {
   }
 
   text-transform: uppercase;
-  //color: var(--black);
-  color: #65aa5e;
+ color: var(--black);
+  // color: #65aa5e;
   border-radius: 3px;
 
   &:active {
