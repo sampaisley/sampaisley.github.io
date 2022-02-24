@@ -191,7 +191,7 @@ window.onkeydown =  (e) =>{
 };
  */
 
-function makeWord(l){console.log('%c l:', 'color: #0e93e0;background: #aaefe5;', l);
+function makeWord(l){
        //l = l.toLowerCase();
     if (keys.indexOf(l) != -1 && box < end) {
       
@@ -338,7 +338,7 @@ function isInWordList(){
 function winner() { 
   
   score.gameOver = 1;
-  let lastGame = score.lastPlayed;console.log('%c Math.round(Math.abs((lastGame - today) / oneDay)):', 'color: #0e93e0;background: #aaefe5;', Math.round(Math.abs((lastGame - today) / oneDay)));
+  let lastGame = score.lastPlayed;
   if (Math.round(Math.abs((lastGame - today) / oneDay)) == 1) {
     
     score.streak++;
