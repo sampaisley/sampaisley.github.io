@@ -165,8 +165,14 @@ body {
   margin-left: -5px;
 }
 
-#enterIcon{
- margin-bottom: 4px;
+#enterIcon{margin-bottom: 4px;
+  @media only screen and (max-width: 350px) {
+ margin-bottom: 0;
+ margin-left: -5px;
+ //outline: 1px solid pink;
+ width: 150%;
+
+  }
 }
 
 .pad,
