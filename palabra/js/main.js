@@ -58,7 +58,7 @@ for (let i = 0; i < 10; i++) {
   kboardLow.innerHTML += '<div id="lowRow">';
   for (let i = 0; i < 9; i++) {
       if(i==0){
-        kboardLow.innerHTML += `<div id='enter' data-l='${lowRow[i]}' class="padLong low"><img id="enterIcon"  data-l='${lowRow[i]}' src="svg/enter.svg" /></div>`;
+        kboardLow.innerHTML += `<div id='enter' data-l='${lowRow[i]}' class="padLong low"><img id="enterIcon"  data-l='${lowRow[i]}' src="svg/ent.svg" /></div>`;
       }else if(i==8){
         kboardLow.innerHTML += `<div id='back' data-l='${lowRow[i]}' class="padLong low"><img id="backIcon"  data-l='${lowRow[i]}' src="svg/back.svg" /></div>`;
       }else
