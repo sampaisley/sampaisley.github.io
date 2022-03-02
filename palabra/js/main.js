@@ -99,6 +99,8 @@ let inputWord =[];
 let triedWords = localStorage.getObj("triedWords") || [];
 
 
+//$("#list").text(wordList[diffDays]); // show the word on  screen
+
 //let row=0;
 let lettersCorect=0;
 let enterKeyWorks = false;
@@ -245,6 +247,8 @@ function enterPressed(z){
         localStorage.setItem("end", end);
 
         checkWord();
+
+       
         
 
     }
@@ -273,7 +277,7 @@ function checkWord() {
       inputWord[index] = "*";
 
       if (lettersCorect++ == wordLength - 1) {
-        
+       
        
         winner();
 
@@ -293,7 +297,7 @@ function checkWord() {
   orange();
   inputWord.length = 0;
   rowPad += 5;
-  score.lastPlayed = new Date().setHours(0,0,0,0);
+ 
   
   localStorage.setItem("rowPad",rowPad);
   localStorage.setObj("storeScore", score);
@@ -326,7 +330,6 @@ function orange() {
 
 }
 
-
 function isInWordList(){
   let inpw = inputWord.join("");
       if (!wordList.includes(inpw) && !Ta.includes(inpw)) {
@@ -335,23 +338,46 @@ function isInWordList(){
       return true;
 }
 
-function winner() { 
-  
+
+function winner() {
+
   score.gameOver = 1;
-  let lastGame = score.lastPlayed;
-  if (Math.round(Math.abs((lastGame - today) / oneDay)) == 1) {
+  
+  if (localStorage.getObj("storeScore") !== null) {
+
+    let lastPl = new Date(localStorage.getObj("storeScore").lastPlayed).setHours(0, 0, 0, 0);// month is zero indexed
+    let dd = Math.round(Math.abs((today - lastPl) / oneDay));
+    if(dd ===1){
+      score.streak++;
+    
+
+      if (score.streak >= score.maxStreak) {
+        
+        score.maxStreak = score.streak;
+      }
+
+    }else{
+      score.streak=1;
+    }
+  
+  }
+  /* if () {
+    
+    
+    
+    
     
     score.streak++;
+   
     if (score.streak >= score.maxStreak) {
       score.maxStreak = score.streak;
     }
-  } else {
-    score.streak = 1;
-  }
+  }  */
   score.gamesPlayed++;
   score.level = rowPad / wordLength + 1;
   score.pastLevels.push(score.level);
   score.lastPlayed = new Date().setHours(0,0,0,0);
+  
   localStorage.setObj("storeScore", score);
   let s = localStorage.getObj("storeScore");
 
@@ -392,8 +418,8 @@ function failed() {
   setTimeout(
     () =>
       alertz(`Never mind dear, the word is ${theWord.join("").toUpperCase()}
-    Level: ${s.level}
-    games played: ${s.gamesPlayed}`),
+      <br>
+      Games played: ${s.gamesPlayed}<br>Level: ${s.level}<br>Max Streak: ${s.maxStreak}<br> Level Distribution:<br>${getLevelDis(s.pastLevels)}`),
     1000
   );
 
@@ -578,13 +604,7 @@ function history() {
 
 
 
-
-/* let d1  = new Date().setHours(0,0,0,0);
-let d2  = new Date(2022, 1, 13).setHours(0,0,0,0);// month is zero indexed
-
-let dd  = Math.round(Math.abs((d1 - d2) / oneDay));
-
-
+/*
 
  
 /* let s = localStorage.getObj("storeScore");
@@ -617,3 +637,6 @@ alertz('storage cleared.');
 });
 
 ///// foo   "outline":"1px solid green",
+
+
+

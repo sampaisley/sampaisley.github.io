@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  
+  <p id="list"> </p>
     <div id="container">
     </div>
 
@@ -19,7 +19,12 @@
     <script src="js/wordList.js"></script>
     <script src="../js/min/pQuery.min.js"></script>
   <!--    <script src="js/main.js?v=0909888"></script> >-->
-   <script>document.write("<script type='text/javascript' src='js/main.js?v=" + Date.now() + "'><\/script>");</script
+  
+   <script>
+       let script=document.createElement('script');
+       script.src = `js/main.js?v=Date.now()`;
+       document.body.append(script);
+   </script>
 </body>
 
 </html>

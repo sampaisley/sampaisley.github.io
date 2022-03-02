@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+
+<body>
+    <p id="play">Play</p>
+    <script>
+        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+        const firstDate = new Date(' Feb 19 2022').setHours(0, 0, 0, 0);
+        const today = new Date().setHours(0, 0, 0, 0);
+        const diffDays = Math.round(Math.abs((firstDate - today) / oneDay));
+
+        let diff = localStorage.getItem("diff") || diffDays;
+        
+        
+        
+
+        play.onclick=() => {
+            diff = diffDays;
+            localStorage.setItem('diff',diff);
+        }
+        console.log('%c localStorage.getItem(diff):', 'color: #0e93e0;background: #aaefe5;', localStorage.getItem("diff"));
+        console.log('%c diffDays:', 'color: #0e93e0;background: #aaefe5;', diffDays);
+    </script>
+</body>
+
+</html>
