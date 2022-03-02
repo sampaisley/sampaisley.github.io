@@ -99,7 +99,7 @@ let inputWord =[];
 let triedWords = localStorage.getObj("triedWords") || [];
 
 
-//$("#list").text(wordList[diffDays]); // show the word on  screen
+$("#list").text(wordList[diffDays]); // show the word on  screen
 
 //let row=0;
 let lettersCorect=0;
@@ -114,20 +114,6 @@ let greenKeys=[];
 let blackKeys=[];
 let orangeKeys = [];
 
-/* let thisGame ={
-  greenKeys:[],
-  blackKeys:[],
-  orangeKeys:[],
-  triedWords:[],
-  savedClasses:[],
-  box:0,
-  rowPad:0,
-  start:0,
-  end(){
-    return this.start + wordLength;
-  }
-
-}; */
 
 
 let score = localStorage.getObj("storeScore") || {
@@ -135,31 +121,30 @@ let score = localStorage.getObj("storeScore") || {
   level: 0,
   pastLevels: [],
   lastPlayed: today,
-  streak:1,
-  maxStreak:1,
-  gameOver:false
+  streak: 1,
+  maxStreak: 1,
+  gameOver: false
 };
 
-if(score.lastPlayed != today){
-    
-    
-  
-  triedWords=[];
-  savedClasses=[];
- 
- localStorage.setObj("triedWords",null);
- localStorage.setObj("savedClasses",null);
- localStorage.setObj("blakKeys", null);
- localStorage.setObj("greenKeys", null);
- localStorage.setObj("orangeKeys", null);
- localStorage.removeItem("box");
- localStorage.removeItem("start");
- localStorage.removeItem("end");
- localStorage.removeItem("rowPad");
- 
- 
-}else{
- history();
+if (score.lastPlayed != today) {
+
+  triedWords = [];
+  savedClasses = [];
+
+  localStorage.setObj("triedWords", null);
+  localStorage.setObj("savedClasses", null);
+  localStorage.setObj("blakKeys", null);
+  localStorage.setObj("greenKeys", null);
+  localStorage.setObj("orangeKeys", null);
+  localStorage.removeItem("box");
+  localStorage.removeItem("start");
+  localStorage.removeItem("end");
+  localStorage.removeItem("rowPad");
+
+} else {
+console.log(145);
+  setClasses();
+
 }
 
 let box= parseInt(localStorage.getItem("box")) || 0;
@@ -266,25 +251,29 @@ function checkWord() {
 
   inputWord.forEach((item, index, array) => {
 
+
+    /// GREEN \\\\\\\\\\\\\\\
     if (inputWord[index] == theWord[index]) {
+
       greenKeys.push(inputWord[index]);
       savedClasses[index + rowPad]="green";
       localStorage.setObj("savedClasses", savedClasses);
       localStorage.setObj("greenKeys", greenKeys);
 
-      boxes[index + rowPad].classList.add("green");
+     // boxes[index + rowPad].classList.add("green");
       copy[index] = null;
       inputWord[index] = "*";
 
       if (lettersCorect++ == wordLength - 1) {
        
-       
         winner();
 
       }
-    } else {
 
-      boxes[index + rowPad].classList.add("black");
+    } else {
+       
+      //// BLACK  \\\\\\\\\\\\\\\\\\\\\\
+      //boxes[index + rowPad].classList.add("black");
       blackKeys.push(inputWord[index]);
       savedClasses[index + rowPad]="black";
       localStorage.setObj("savedClasses", savedClasses);
@@ -300,6 +289,7 @@ function checkWord() {
  
   
   localStorage.setItem("rowPad",rowPad);
+  score.lastPlayed = new Date().setHours(0,0,0,0);
   localStorage.setObj("storeScore", score);
 
 
@@ -311,6 +301,7 @@ function checkWord() {
     failed();
 
   }
+  setClasses();
 }
 
 function orange() {
@@ -319,7 +310,7 @@ function orange() {
     let n = copy.indexOf(inputWord[i]);
   
     if (n != -1) {
-      boxes[i + rowPad].classList.add("yellow");
+      //boxes[i + rowPad].classList.add("yellow");
       savedClasses[i + rowPad]="yellow";
       localStorage.setObj("savedClasses", savedClasses);
       orangeKeys.push(inputWord[i]);
@@ -376,7 +367,7 @@ function winner() {
   score.gamesPlayed++;
   score.level = rowPad / wordLength + 1;
   score.pastLevels.push(score.level);
-  score.lastPlayed = new Date().setHours(0,0,0,0);
+  // score.lastPlayed = new Date().setHours(0,0,0,0);
   
   localStorage.setObj("storeScore", score);
   let s = localStorage.getObj("storeScore");
@@ -513,21 +504,23 @@ function closeAlertz() {
 }
 
 
-let boxClasses = [];
+
 
 
 /////////////////////////////////////////////////////  game over set colors
 
 
 if (score.lastPlayed < today) {
+  
+  
   score.gameOver = 0;
   localStorage.setObj("storeScore", score);
 } else {
 
-  history();
+  setClasses();
 }
 
-function history() {
+function setClasses() {
 
 
    // keys  \\\\\\\
