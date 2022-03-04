@@ -91,15 +91,15 @@ const today = new Date().setHours(0,0,0,0);
 const diffDays = Math.round(Math.abs((firstDate - today) / oneDay));
 
 
-let theWord = Array.from(wordList[diffDays]);
-//let theWord = Array.from('focal');
+//let theWord = Array.from(wordList[diffDays]);
+let theWord = Array.from('model');
 let copy = Array.from(theWord);
 let wordLength = 5;
 let inputWord =[];
 let triedWords = localStorage.getObj("triedWords") || [];
 
 
-$("#list").text(wordList[diffDays]); // show the word on  screen
+$("#list").text('model'); // show the word on  screen
 
 //let row=0;
 let lettersCorect=0;
@@ -142,7 +142,7 @@ if (score.lastPlayed != today) {
   localStorage.removeItem("rowPad");
 
 } else {
-console.log(145);
+
   setClasses();
 
 }
@@ -434,13 +434,11 @@ for(let i=0;i< pads.length;i++){
     }
 
     if(orangeKeys.includes(pads[i].getAttribute('data-l'))){
-        pads[i].classList.remove('blackKey');
+      
         pads[i].classList.add('orangeKey');
 
     } if(greenKeys.includes(pads[i].getAttribute('data-l'))){
         
-        pads[i].classList.remove('blackKey');
-        pads[i].classList.remove('orangeKey');
         pads[i].classList.add('greenKey');
     }
 }
@@ -519,7 +517,7 @@ if (score.lastPlayed < today) {
 
   setClasses();
 }
-
+console.log('520====');
 function setClasses() {
 
 
@@ -532,16 +530,22 @@ function setClasses() {
   for (let i = 0; i < pads.length; i++) {
 
     if (bk && bk.indexOf(pads[i].getAttribute("data-l")) != -1) {
+      if(!pads[i].classList.contains("greenKey")){
       pads[i].classList.add("blackKey");
+      }
 
     }
-    if (gk && gk.indexOf(pads[i].getAttribute("data-l")) != -1) {
-      pads[i].classList.add("greenKey");
-
-    }
+   
 
     if (ok && ok.indexOf(pads[i].getAttribute("data-l")) != -1) {
+      if(!pads[i].classList.contains("greenKey")){
       pads[i].classList.add("orangeKey");
+      }
+
+    }
+
+    if (gk && gk.indexOf(pads[i].getAttribute("data-l")) != -1) {
+      pads[i].classList.add("greenKey");
 
     }
 
