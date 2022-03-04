@@ -91,15 +91,15 @@ const today = new Date().setHours(0,0,0,0);
 const diffDays = Math.round(Math.abs((firstDate - today) / oneDay));
 
 
-//let theWord = Array.from(wordList[diffDays]);
-let theWord = Array.from('model');
+let theWord = Array.from(wordList[diffDays]);
+//let theWord = Array.from('model');
 let copy = Array.from(theWord);
 let wordLength = 5;
 let inputWord =[];
 let triedWords = localStorage.getObj("triedWords") || [];
 
 
-$("#list").text('model'); // show the word on  screen
+$("#list").text(wordList[diffDays]); // show the word on  screen
 
 //let row=0;
 let lettersCorect=0;
@@ -517,7 +517,6 @@ if (score.lastPlayed < today) {
 
   setClasses();
 }
-console.log('520====');
 function setClasses() {
 
 
