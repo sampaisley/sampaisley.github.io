@@ -149,7 +149,7 @@ if (score.lastPlayed != today) {
 
 let box= parseInt(localStorage.getItem("box")) || 0;
 let start = parseInt(localStorage.getItem("start")) || 0;
-let end = parseInt(localStorage.getItem("end")) || start + 5;
+let end = parseInt(localStorage.getItem("end")) || start + wordLength;
 let rowPad = parseInt(localStorage.getItem("rowPad")) || 0;
 
 // reset box on page reload.  ie:  command + R pressed , adding 1 to box
@@ -286,6 +286,7 @@ function checkWord() {
   orange();
   inputWord.length = 0;
   rowPad += 5;
+  lettersCorect = 0;
  
   
   localStorage.setItem("rowPad",rowPad);
