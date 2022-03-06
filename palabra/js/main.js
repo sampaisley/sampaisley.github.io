@@ -286,7 +286,7 @@ function checkWord() {
   orange();
   inputWord.length = 0;
   rowPad += 5;
-  lettersCorect = 0;
+  
  
   
   localStorage.setItem("rowPad",rowPad);
@@ -300,7 +300,7 @@ function checkWord() {
   if (lettersCorect < wordLength - 1 && box > boxes.length - 1) {
 
     failed();
-
+lettersCorect = 0;
   }
   setClasses();
 }
@@ -353,18 +353,7 @@ function winner() {
     }
   
   }
-  /* if () {
-    
-    
-    
-    
-    
-    score.streak++;
-   
-    if (score.streak >= score.maxStreak) {
-      score.maxStreak = score.streak;
-    }
-  }  */
+ 
   score.gamesPlayed++;
   score.level = rowPad / wordLength + 1;
   score.pastLevels.push(score.level);
