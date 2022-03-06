@@ -300,7 +300,7 @@ function checkWord() {
   if (lettersCorect < wordLength - 1 && box > boxes.length - 1) {
 
     failed();
-lettersCorect = 0;
+    lettersCorect = 0;
   }
   setClasses();
 }
