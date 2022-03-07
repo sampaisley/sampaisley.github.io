@@ -253,7 +253,7 @@ function checkWord() {
 
 
     /// GREEN \\\\\\\\\\\\\\\
-    if (inputWord[index] == theWord[index]) {
+    if (item == theWord[index]) {
 
       greenKeys.push(inputWord[index]);
       savedClasses[index + rowPad]="green";
