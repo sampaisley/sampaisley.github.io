@@ -22,8 +22,9 @@ let midRow=['a','s','d','f','g','h','j','k','l'];
 let lowRow=['Enter','z','x','c','v','b','n','m','Backspace']; 
 
 let container = document.getElementById("container");
+
 for (let i = 0; i < 30; i++) {
-  container.innerHTML += '<div class="box">&nbsp;</div>';
+  container.innerHTML += `<div class="box box${i}">&nbsp;</div>`;
 }
 const alertzDiv = document.createElement("div");
 alertzDiv.id='alert';
@@ -224,7 +225,7 @@ function enterPressed(z){
     alertz("Not in word list.", 1200);
     shake();
     return;}
-    if (z == "Enter" && box % wordLength == 0 && box <= boxes.length && enterKeyWorks) {
+    if (z == "Enter" && box % wordLength == 0 && box <= boxes.length && enterKeyWorks && inputWord.length) {
      
         enterKeyWorks = !enterKeyWorks;
 
@@ -631,9 +632,10 @@ alertz('storage cleared.');
 function shake() {
 
   let beoff = () => $(".box").eq(start, inputWord.length).takeClass("shake");
+  
 
   $(".box").eq(start, inputWord.length).putClass("shake");
 
   setTimeout(beoff, 550);
-  
+
 }
