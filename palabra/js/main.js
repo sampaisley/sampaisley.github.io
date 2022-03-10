@@ -217,10 +217,12 @@ function enterPressed(z){
   if(inputWord.length && inputWord.length < wordLength){
     
     alertz('Word too short', 1200);
+    shake();
     return;
   }
   if(!isInWordList() && inputWord.length && inputWord.length == wordLength){
     alertz("Not in word list.", 1200);
+    shake();
     return;}
     if (z == "Enter" && box % wordLength == 0 && box <= boxes.length && enterKeyWorks) {
      
@@ -626,3 +628,12 @@ alertz('storage cleared.');
 
 
 
+function shake() {
+
+  let beoff = () => $(".box").eq(start, inputWord.length).takeClass("shake");
+
+  $(".box").eq(start, inputWord.length).putClass("shake");
+
+  setTimeout(beoff, 550);
+  
+}
