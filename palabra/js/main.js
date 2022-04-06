@@ -629,7 +629,10 @@ alertz('storage cleared.');
 
 
 
-function shake() {
+ function shake() {
+
+
+
 
   let beoff = () => $(".box").eq(start, inputWord.length).takeClass("shake");
   
@@ -638,4 +641,4 @@ function shake() {
 
   setTimeout(beoff, 550);
 
-}
+} 
