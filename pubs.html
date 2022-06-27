@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>pubs</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 99vh;
+			width: 100vw;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+	let pubs = L.layerGroup();
+
+	let freeTrade = L.marker([54.971008, -1.587217]).bindPopup('Free Trade.').addTo(pubs);
+	let crownP = L.marker([54.969354, -1.608778]).bindPopup('Crown Posada.').addTo(pubs);
+	let splitChimp = L.marker([54.968977, -1.611853]).bindPopup('Split Chimp.').addTo(pubs);
+	
+
+	let mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
+	let mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+ 
+	let streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+
+	let osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	});
+
+	let map = L.map('map', {
+		center: [54.969039, -1.610944],
+		zoom: 13,
+		//layers: [osm, pubs],
+        layers: [osm, ]
+	});
+
+	let baseLayers = {
+		'OpenStreetMap': osm,
+		'Streets': streets
+	};
+
+	let overlays = {
+		'pubs': pubs
+	};
+
+	//let layerControl = L.control.layers(baseLayers, overlays,{position:'bottomright'}).addTo(map);
+    let layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+	// let crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.');
+	// let rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
+
+	// let parks = L.layerGroup([crownHill, rubyHill]);
+
+	let satellite = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+	layerControl.addBaseLayer(satellite, 'Satellite');
+	//layerControl.addOverlay(parks, 'Parks');
+
+
+
+</script>
+
+
+
+</body>
+</html>
