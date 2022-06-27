@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<title>pubs</title>
-	
+
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		crossorigin=""></script>
 
 	<style>
-		html, body {
+		html,
+		body {
 			height: 100%;
 			margin: 0;
 		}
+
 		.leaflet-container {
 			height: 99vh;
 			width: 100vw;
@@ -24,63 +31,81 @@
 		}
 	</style>
 
-	
+
 </head>
+
 <body>
 
-<div id='map'></div>
+	<div id='map'></div>
 
-<script>
-	let pubs = L.layerGroup();
+	<script>
+		let pubs = L.layerGroup();
 
-	let freeTrade = L.marker([54.971008, -1.587217]).bindPopup('Free Trade.').addTo(pubs);
-	let crownP = L.marker([54.969354, -1.608778]).bindPopup('Crown Posada.').addTo(pubs);
-	let splitChimp = L.marker([54.968977, -1.611853]).bindPopup('Split Chimp.').addTo(pubs);
-	let dunCow = L.marker([54.906318, -1.388595]).bindPopup('Dun Cow.').addTo(pubs);
+		let freeTrade = L.marker([54.971008, -1.587217]).bindPopup('Free Trade.').addTo(pubs);
+		let crownP = L.marker([54.969354, -1.608778]).bindPopup('Crown Posada.').addTo(pubs);
+		let splitChimp = L.marker([54.968977, -1.611853]).bindPopup('Split Chimp.').addTo(pubs);
+		let dunCow = L.marker([54.906318, -1.388595]).bindPopup('Dun Cow.').addTo(pubs);
+		let StumbleInn = L.marker([54.278519, -0.408686]).bindPopup('Stumble Inn.').addTo(pubs);
+		let NorthRiding = L.marker([54.29011152539761, -0.4057267991301789]).bindPopup('North Riding.').addTo(pubs);
+		let TheAngel = L.marker([53.79822525036175, -1.5427492570575134]).bindPopup('The Angel .').addTo(pubs);
+		let DuckDrake = L.marker([53.79593463516541, -1.5376940525357958]).bindPopup('Duck & Drake.').addTo(pubs);
+		let MarketTavern = L.marker([53.48814157689673, -2.2323788140972045]).bindPopup('Market Tavern.').addTo(pubs);// 
+		let marbleArch = L.marker([54.906318, -1.388595]).bindPopup('Marble Arch.').addTo(pubs);
+		let PortStreet = L.marker([53.48203090835658, -2.2318258606311963]).bindPopup('Port Street Beer House.').addTo(pubs);
+		let BreweryTap = L.marker([53.187143666196455, -2.890218235342554]).bindPopup('Brewery Tap.').addTo(pubs);
+		let QueenHead = L.marker([51.64040912018371, -2.6774561935379144]).bindPopup("Queen's Head.").addTo(pubs);
+	    let TheBell = L.marker([51.38752923390655, -2.359226525055374]).bindPopup('The Bell Inn.').addTo(pubs);
+		let TheWenlock = L.marker([51.53145261723358, -0.09407793234313216]).bindPopup('The Wenlock.').addTo(pubs);
+		let Dolphin = L.marker([50.36721007692768, -4.134814666594325]).bindPopup('Dolphin Hotel.').addTo(pubs);
+		let TheStag = L.marker([54.620306291115064, -2.482967733906754]).bindPopup('The Stag Inn.').addTo(pubs);
+		let Sair = L.marker([53.6252873941616, -1.8503723546309716]).bindPopup('The Sair.').addTo(pubs);
+		let Grove = L.marker([53.644257031603, -1.7892473578219503]).bindPopup('The Grove.').addTo(pubs);
+		let KingsHead = L.marker([53.648757202204294, -1.7841108193442694]).bindPopup('Kings Head.').addTo(pubs);
 	
 
 	let mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
-	let mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
- 
-	let streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+		let mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
-	let osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	});
+		let streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
 
-	let map = L.map('map', {
-		center: [54.969039, -1.610944],
-		zoom: 13,
-		//layers: [osm, pubs],
-        layers: [osm, ]
-	});
+		let osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		});
 
-	let baseLayers = {
-		'OpenStreetMap': osm,
-		'Streets': streets
-	};
+		let map = L.map('map', {
+			center: [52.79379664856534, -1.4532069340255247],
+			zoom: 8,
+			layers: [osm, pubs],
+			// layers: [osm, ]
+		});
 
-	let overlays = {
-		'pubs': pubs
-	};
+		let baseLayers = {
+			'OpenStreetMap': osm,
+			'Streets': streets
+		};
 
-	//let layerControl = L.control.layers(baseLayers, overlays,{position:'bottomright'}).addTo(map);
-    let layerControl = L.control.layers(baseLayers, overlays).addTo(map);
-	// let crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.');
-	// let rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
+		let overlays = {
+			'pubs': pubs
+		};
 
-	// let parks = L.layerGroup([crownHill, rubyHill]);
+		//let layerControl = L.control.layers(baseLayers, overlays,{position:'bottomright'}).addTo(map);
+		let layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+		// let crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.');
+		// let rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
 
-	let satellite = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
-	layerControl.addBaseLayer(satellite, 'Satellite');
+		// let parks = L.layerGroup([crownHill, rubyHill]);
+
+		let satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
+		layerControl.addBaseLayer(satellite, 'Satellite');
 	//layerControl.addOverlay(parks, 'Parks');
 
 
 
-</script>
+	</script>
 
 
 
 </body>
+
 </html>
