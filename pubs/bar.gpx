@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="https://www.cyclestreets.net:443/" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Newcastle Stn Slow</name>
+    <desc>Newcastle Stn Slow</desc>
+    <link href="https://www.cyclestreets.net:443/journey/82372210/"/>
+  </metadata>
+  <rte>
+    <name>Newcastle Stn Slow</name>
+    <desc>Newcastle Stn Slow</desc>
+    <rtept lon="-1.58728" lat="54.97115">
+      <name>Saint Lawrence Road</name>
+    </rtept>
+    <rtept lon="-1.58728" lat="54.97121">
+      <name>Short un-named link</name>
+    </rtept>
+    <rtept lon="-1.58736" lat="54.97154">
+      <name>Short un-named link</name>
+    </rtept>
+    <rtept lon="-1.58736" lat="54.97166">
+      <name>Ford Street</name>
+    </rtept>
+    <rtept lon="-1.58791" lat="54.97245">
+      <name>Back Maling Street</name>
+    </rtept>
+    <rtept lon="-1.58818" lat="54.97145">
+      <name>Maling Street</name>
+    </rtept>
+    <rtept lon="-1.58819" lat="54.97131">
+      <name>Quayside</name>
+    </rtept>
+    <rtept lon="-1.58827" lat="54.97135">
+      <name>NCN 72</name>
+    </rtept>
+    <rtept lon="-1.5886" lat="54.97143">
+      <name>Quayside</name>
+    </rtept>
+    <rtept lon="-1.58899" lat="54.97145">
+      <name>Quayside</name>
+    </rtept>
+    <rtept lon="-1.58991" lat="54.97144">
+      <name>Hadrian's Cycleway</name>
+    </rtept>
+    <rtept lon="-1.58992" lat="54.97093">
+      <name>Hadrian's Cycleway</name>
+    </rtept>
+    <rtept lon="-1.59789" lat="54.9708">
+      <name>Hadrian's Cycleway</name>
+    </rtept>
+    <rtept lon="-1.60556" lat="54.9687">
+      <name>Short dismounted link</name>
+    </rtept>
+    <rtept lon="-1.6056" lat="54.96875">
+      <name>Quayside, B1600</name>
+    </rtept>
+    <rtept lon="-1.60629" lat="54.96855">
+      <name>Lombard Street</name>
+    </rtept>
+    <rtept lon="-1.60686" lat="54.9691">
+      <name>Queen Street</name>
+    </rtept>
+    <rtept lon="-1.60768" lat="54.96927">
+      <name>Queen Street</name>
+    </rtept>
+    <rtept lon="-1.608" lat="54.96922">
+      <name>Side</name>
+    </rtept>
+    <rtept lon="-1.60934" lat="54.96944">
+      <name>Side</name>
+    </rtept>
+    <rtept lon="-1.60949" lat="54.96952">
+      <name>Dean Street</name>
+    </rtept>
+    <rtept lon="-1.61051" lat="54.97086">
+      <name>Grey Street</name>
+    </rtept>
+    <rtept lon="-1.61205" lat="54.97212">
+      <name>High Bridge</name>
+    </rtept>
+    <rtept lon="-1.61254" lat="54.97192">
+      <name>High Bridge</name>
+    </rtept>
+    <rtept lon="-1.61352" lat="54.97101">
+      <name>Bigg Market, B1307</name>
+    </rtept>
+    <rtept lon="-1.61391" lat="54.97113">
+      <name>Pudding Chare</name>
+    </rtept>
+    <rtept lon="-1.61423" lat="54.97035">
+      <name>Rosemary Lane</name>
+    </rtept>
+    <rtept lon="-1.615" lat="54.9704">
+      <name>Saint John Street</name>
+    </rtept>
+    <rtept lon="-1.61585" lat="54.97055">
+      <name>Grainger Street</name>
+    </rtept>
+    <rtept lon="-1.61636" lat="54.96993">
+      <name>Grainger Street</name>
+    </rtept>
+    <rtept lon="-1.61669" lat="54.96929">
+      <name>Neville Street, A186</name>
+    </rtept>
+    <rtept lon="-1.61741" lat="54.96916">
+      <name>Finish</name>
+    </rtept>
+  </rte>
+</gpx>
