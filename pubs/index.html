@@ -110,7 +110,7 @@
 
 	//////////// gpx
 
-	var gpx = 'bar.gpx'; // URL to your GPX file or the GPX itself
+	var gpx = 'NightTrip3.gpx'; // URL to your GPX file or the GPX itself
 new L.GPX(gpx, {async: true}).on('loaded', function(e) {
   map.fitBounds(e.target.getBounds());
 }).addTo(map);
