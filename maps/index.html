@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Trip 3</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		crossorigin=""></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
+	<style>
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+		}
+
+		.leaflet-container {
+			height: 100vh
+		}
+
+		.popupCustom {
+			max-width: 100vw;
+		}
+
+		.popupCustom img {
+			width: 500px;
+			max-width: 80vw;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<div id='map'></div>
+	<script>
+		let markers = L.layerGroup();
+
+		let customOptions =
+		{
+			'maxWidth': '90%',
+			'width': '100%',
+			'className': 'popupCustom'
+		}
+
+		let rainton = L.marker([54.16058041593904, -1.4313129715087927]).bindPopup('Rainton.', customOptions).addTo(markers);
+		let swale = L.marker([54.27004280650982, -1.4679801014901754]).bindPopup('Bridge Swale.', customOptions).addTo(markers);
+		let sunUp = L.marker([53.96455747537074, -1.3800662238166868]).bindPopup('Sun Up.', customOptions).addTo(markers);
+		let leeds = L.marker([53.793694883978716, -1.5348169729559586]).bindPopup('Leeds.', customOptions).addTo(markers);
+		let sea = L.marker([54.97278933926492, -1.3664609948981217]).bindPopup('Sea & Bike.', customOptions).addTo(markers);
+		let ton = L.marker([54.69684458526705, -1.3642166293003526]).bindPopup('100 miles.', customOptions).addTo(markers);
+		let ferry = L.marker([55.00061854832551, -1.4428891541889075]).bindPopup('Ferry.', customOptions).addTo(markers);
+		let pint = L.marker([54.903380054332786, -1.3877503363253643]).bindPopup('Pint.', customOptions).addTo(markers);
+
+
+
+		let mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
+		let mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+		let streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
+
+		let osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		});
+
+		let map = L.map('map', {
+			center: [52.79379664856534, -1.4532069340255247],
+			zoom: 8,
+			layers: [streets, markers],
+			// layers: [osm, ]
+		});
+
+		let baseLayers = {
+			'OpenStreetMap': osm,
+			'Streets': streets
+		};
+
+		let overlays = {
+			'markers': markers
+		};
+
+		//let layerControl = L.control.layers(baseLayers, overlays,{position:'bottomright'}).addTo(map);
+		let layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+		// let crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.');
+		// let rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
+
+		// let parks = L.layerGroup([crownHill, rubyHill]);
+
+		let satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
+		layerControl.addBaseLayer(satellite, 'Satellite');
+		//layerControl.addOverlay(parks, 'Parks');
+
+
+		//////////// gpx
+
+		let gpx = 'NightTrip34.gpx'; // URL to your GPX file or the GPX itself
+		new L.GPX(gpx, {
+			async: true, parseElements: ['track', 'route', 'waypoint'], marker_options: {
+				startIconUrl: 'img/pin-icon-start.png',
+				endIconUrl: 'img/pin-icon-end.png',
+				shadowUrl: 'img/pin-shadow.png'
+			}
+		}).on('loaded', function (e) {
+			map.fitBounds(e.target.getBounds());
+		}).addTo(map);
+
+
+
+		///////////////  image popup
+
+		// specify popup options 
+
+
+
+		let popup = L.popup();
+
+		let rainton_img = '<img src="img/rainton.jpg" />';
+		let swale_img = '<p>Old bridge over the river Swale</p><img src="img/swale.jpg" />';
+		let sunup_img = '<img src="img/sunup.jpg" />';
+		let leeds_img = '<p>Crown Point Bridge @ 03:17</p><img src="img/leeds.jpg" />';
+		let sea_img = '<img src="img/sea.jpg" />';
+		let ferry_img = '<img src="img/ferry.jpg" />';
+		let pint_img = '<img src="img/pintt.jpg" />';
+
+		//rainton.on('click', onMapClick);
+
+
+
+let endIcon;
+
+		rainton.bindPopup(rainton_img);
+		swale.bindPopup(swale_img);
+		sunUp.bindPopup(sunup_img);
+		leeds.bindPopup(leeds_img);
+		sea.bindPopup(sea_img);
+		ferry.bindPopup(ferry_img);
+		pint.bindPopup(pint_img);
+
+		
+	</script>
+
+
+
+</body>
+
+</html>
