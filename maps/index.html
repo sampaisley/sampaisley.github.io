@@ -36,13 +36,26 @@
 			width: 500px;
 			max-width: 80vw;
 		}
+		#loading{
+			z-index: 100000;
+			position: absolute;
+			top: 5vh;
+			left: 5vw;
+			width: 90vw;
+			height: 90vh;
+			background-color: rgba(0, 157, 255, 0.779);
+			text-align: center;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			padding-top: 40vh;
+			color: darksalmon;
+		}
 	</style>
 
 
 </head>
 
 <body>
-
+<div id="loading"><h1>loading route...</h1></div>
 	<div id='map'></div>
 	<script>
 		let markers = L.layerGroup();
@@ -104,17 +117,18 @@
 
 
 		//////////// gpx
-
-		let gpx = 'NightTrip34.gpx'; // URL to your GPX file or the GPX itself
-		new L.GPX(gpx, {
-			async: true, parseElements: ['track', 'route', 'waypoint'], marker_options: {
-				startIconUrl: 'img/pin-icon-start.png',
-				endIconUrl: 'img/pin-icon-end.png',
-				shadowUrl: 'img/pin-shadow.png'
-			}
-		}).on('loaded', function (e) {
-			map.fitBounds(e.target.getBounds());
-		}).addTo(map);
+//'http://sampaisley.github.io/maps/;
+	let gpx = 'NightTrip34.gpx'; // URL to your GPX file or the GPX itself
+	new L.GPX(gpx, {
+		async: true, parseElements: ['track', 'route', 'waypoint'], marker_options: {
+			startIconUrl: 'img/pin-icon-start.png',
+			endIconUrl: 'img/pin-icon-end.png',
+			shadowUrl: 'img/pin-shadow.png'
+		}
+	}).on('loaded', function (e) {
+		map.fitBounds(e.target.getBounds());
+		//loading.remove();
+	}).addTo(map);
 
 
 
