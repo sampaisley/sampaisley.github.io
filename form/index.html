@@ -9,18 +9,23 @@
     <form action="https://api.web3forms.com/submit" method="POST">
 
         <!-- Replace with your Access Key -->
-        <input type="hidden" name="access_key" value=" 74f056db-75fc-4661-8368-141e29bc8d4f">
+        <input type="hidden" name="access_key" value="74f056db-75fc-4661-8368-141e29bc8d4f">
     
         <!-- Form Inputs. Each input must have a name="" attribute -->
+        <label for="name">Name</label>
         <input type="text" name="name" required>
+        <br>
+        <label for="email">Email</label>
         <input type="email" name="email" required>
+        <br>
+        <label for="message">Message</label>
         <textarea name="message" required></textarea>
     
         <!-- Honeypot Spam Protection -->
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
     
         <!-- Custom Confirmation / Success Page -->
-        <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        <input type="hidden" name="redirect" value="https://sampaisley.github.io/form/jollygood.html">
     
         <button type="submit">Submit Form</button>
     
