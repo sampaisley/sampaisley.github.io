@@ -27,16 +27,16 @@
         }
 
         span {
-            padding: .5rem;
+            padding: .5rem 1rem;
             display: inline-block;
             margin-bottom: 5px;
-            color: rgb(231, 243, 8);
+            
         }
 
         .ev {
-            padding: .5rem;
+            
             background-color: rgb(59, 175, 59);
-            color: rgb(231, 243, 8);
+            color: rgb(247, 216, 80);
         }
 
         .od {
@@ -48,7 +48,7 @@
 
         .breakere {
             margin-bottom: 1.6rem;
-            border-bottom: 3px solid rgb(155, 145, 145);
+            border-top: 3px solid rgb(155, 145, 145);
         }
 
         h1 {
@@ -97,7 +97,7 @@
         let i = 0;
         let mnth;
 
-        let modo = "blarrrrr";
+        let modo = "";
 
         let readable;
 
@@ -126,7 +126,7 @@
             } else {
                 modo = "ev";
             }
-            tab.innerHTML += `<span class='${modo}'>` + readable[1] + ' - ' + readable[2] + "</span>";
+            tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>";
 
 
             i = 7;
