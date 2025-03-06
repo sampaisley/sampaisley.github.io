@@ -19,29 +19,36 @@
             margin: 0 auto;
             margin-left: 30%;
             margin-top: 10rem;
+            width: fit-content; 
           
         }
-
         span {
             padding: .5rem;
-           
-            background-color: rgb(59, 175, 59);
             display: inline-block;
             margin-bottom: 5px;
             color: rgb(231, 243, 8);
         }
 
-        span:nth-child(odd) {
-            background-color: rgb(2, 29, 2);
-            color: antiquewhite;
+        .ev {
+            padding: .5rem;
+            background-color: rgb(59, 175, 59);
+            color: rgb(231, 243, 8);
         }
 
+        .od{
+            background-color: darkgray;
+            color: azure;
+        }
+
+      
+
         .breakere{
-           margin-bottom: 1rem;
+           margin-bottom: 1.6rem;
+          border-bottom: 3px solid rgb(155, 145, 145);
         }
 
         h1{
-          color: rgb(9, 169, 237);
+          color: darkgray;
           font-size: 3rem;
         }
 
@@ -83,6 +90,8 @@
         let i = 0;
         let mnth;
 
+        let modo = "blarrrrr";
+
         let readable;
 
         let monthsLeft = (12 - (start.getMonth())) * 5;
@@ -105,8 +114,12 @@
                 tab.innerHTML += `<section class="breakere"></section>`;
             }
 
-
-            tab.innerHTML += "<span>" + readable[1] + ' - ' + readable[2] + "</span>";
+            if(j % 2 == 0){
+                modo = "od";
+            }else{
+                modo="ev";
+            }
+            tab.innerHTML += `<span class='${modo}'>` + readable[1] + ' - ' + readable[2] + "</span>";
 
 
             i = 7;
