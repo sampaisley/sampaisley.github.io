@@ -9,19 +9,21 @@
     <title>BINS</title>
 
     <style>
-
-        body{
+        body {
             background-color: rgb(247, 245, 243);
         }
+
         #tab {
             font-family: monospace;
             font-size: 1.8rem;
-            margin: 0 auto;
-            margin-left: 30%;
-            margin-top: 10rem;
+            /* margin: 0 auto; */
+            /* margin-left: 30%; */
+            margin-top: 7rem;
+            /* outline: 1px solid pink;; */
             width: fit-content; 
-          
+
         }
+
         span {
             padding: .5rem;
             display: inline-block;
@@ -35,24 +37,24 @@
             color: rgb(231, 243, 8);
         }
 
-        .od{
+        .od {
             background-color: darkgray;
             color: azure;
         }
 
-      
 
-        .breakere{
-           margin-bottom: 1.6rem;
-          border-bottom: 3px solid rgb(155, 145, 145);
+
+        .breakere {
+            margin-bottom: 1.6rem;
+            border-bottom: 3px solid rgb(155, 145, 145);
         }
 
-        h1{
-          color: darkgray;
-          font-size: 3rem;
+        h1 {
+            color: darkgray;
+            font-size: 3rem;
         }
 
-        @media (orientation: portrait) {
+        /*        @media (orientation: portrait) {
 
             #tab {
            
@@ -60,26 +62,29 @@
             margin-top: 10rem;
         }
 
-}
+} */
     </style>
 </head>
 
 <body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+
+                <p id="tab">
+
+                </p>
 
 
- 
-    <p id="tab">
-      
-    </p>
-
-
-
+            </div>
+        </div>
+    </div>
 
 
 
 
     <script>
-      
+
         const tab = document.querySelector("#tab");
         tab.innerHTML = " <h1>BINS 2025</h1>";
 
@@ -114,10 +119,10 @@
                 tab.innerHTML += `<section class="breakere"></section>`;
             }
 
-            if(j % 2 == 0){
+            if (j % 2 == 0) {
                 modo = "od";
-            }else{
-                modo="ev";
+            } else {
+                modo = "ev";
             }
             tab.innerHTML += `<span class='${modo}'>` + readable[1] + ' - ' + readable[2] + "</span>";
 
