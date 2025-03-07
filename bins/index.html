@@ -22,7 +22,7 @@
             /* margin-left: 30%; */
             margin-top: 7rem;
             /* outline: 1px solid pink;; */
-            width: fit-content; 
+            width: fit-content;
 
         }
 
@@ -30,11 +30,11 @@
             padding: .5rem 1rem;
             display: inline-block;
             margin-bottom: 5px;
-            
+
         }
 
         .ev {
-            
+
             background-color: rgb(59, 175, 59);
             color: rgb(247, 216, 80);
         }
@@ -90,7 +90,10 @@
         const tab = document.querySelector("#tab");
         tab.innerHTML = " <h1>BINS 2025</h1>";
 
-        let start = new Date();
+        const start = new Date('03/06/2025');
+
+        const now = new Date();
+
         let thisYear = start.getFullYear();
 
 
@@ -111,7 +114,9 @@
 
             mnth = start.getMonth();
 
-            start.setDate(start.getDate() + i);
+            (start.setDate(start.getDate() + i));
+
+
             if (start.getFullYear() != thisYear) break;
             readable = start.toDateString().split(' ');
 
@@ -126,7 +131,8 @@
             } else {
                 modo = "ev";
             }
-            tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>";
+            if (start > now) { tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>"; 
+        }
 
 
             i = 7;
