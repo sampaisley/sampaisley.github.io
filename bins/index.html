@@ -15,14 +15,13 @@
 
         #tab {
             font-family: monospace;
+            position: absolute;
+
             border: 20px solid rgb(241, 238, 235);
             padding: .5rem;
             font-size: 1.8rem;
-            /* margin: 0 auto; */
-            /* margin-left: 30%; */
             margin-top: 7rem;
-            /* outline: 1px solid pink;; */
-            width: fit-content;
+           
 
         }
 
@@ -69,18 +68,14 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-8">
-
-                <p id="tab">
-
-                </p>
 
 
-            </div>
-        </div>
-    </div>
+    <p id="tab">
+
+    </p>
+
+
+
 
 
 
@@ -88,6 +83,7 @@
     <script>
 
         const tab = document.querySelector("#tab");
+
         tab.innerHTML = " <h1>BINS 2025</h1>";
 
         const start = new Date('03/06/2025');
@@ -131,16 +127,26 @@
             } else {
                 modo = "ev";
             }
-            if (start > now) { tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>"; 
+            if (start > now) {
+                tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>";
+            }
+
+
+            i = 7
+
+        } /// end for loop
+
+        function centerDiv() {
+
+            const w = tab.offsetWidth;
+            console.log('%c w:', 'color: #0e93e0;background: #aaefe5;', w);
+            const iw = window.innerWidth;
+            tab.style.left = iw / 2 - w / 2 + "px";
         }
-
-
-            i = 7;
-
+        window.onresize = window.onload = centerDiv;
 
 
 
-        } 
     </script>
 </body>
 
