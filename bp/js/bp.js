@@ -87,7 +87,7 @@ $("#add_record").click(function (e) {
 $(window).click(function (e) {
   e.preventDefault();
   if (e.target.nodeName == "IMG") {
-    //if (window.confirm("Really?")) {
+    if (window.confirm("Really?")) {
     
     sysList.splice([e.target.getAttribute("data-del")], 1);
     diaList.splice([e.target.getAttribute("data-del")], 1);
@@ -102,6 +102,6 @@ $(window).click(function (e) {
       $("#display").html("");
     }
 
-   //}
+   }
   }
 });
