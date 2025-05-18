@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/min/style.min.css?v=333">
     <title>BP</title>
 </head>
 <body>
-    
+    <form action="">
+		<label for="sys">Sys</label>
+		<input name="sys" type="number" maxlength="3"     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="sys">
+
+		<label for="dia">Dia</label>
+		<input name="dia" type="number" maxlength="3"     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="dia">
+
+		<input type="submit" id="add_record" value="Add">
+	</form>
+
+<ul id="display">
+
+</ul>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/bp.js?v=343"></script>
 </body>
 </html>
