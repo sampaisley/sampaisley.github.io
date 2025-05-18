@@ -7,7 +7,8 @@
     <title>BP</title>
 </head>
 <body>
-    <form action="">
+    <form action="" id="form">
+		
 		<label for="sys">Sys</label>
 		<input name="sys" type="number" maxlength="3"     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="sys">
 
@@ -15,6 +16,7 @@
 		<input name="dia" type="number" maxlength="3"     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="dia">
 
 		<input type="submit" id="add_record" value="Add">
+		<!-- <span id="showHide">-</span> -->
 	</form>
 
 <ul id="display">

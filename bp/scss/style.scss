@@ -7,10 +7,22 @@ body {
 
 ul {
   list-style-type: none;
+  text-align: center;
+
 
   li {
     padding-bottom: .3rem;
+   
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px;
   }
+}
+
+li:last-child {
+ color: rgb(12, 109, 207);
+ font-weight: bold;
+ font-size: 1.2rem;
 }
 
 img {
@@ -39,9 +51,27 @@ form {
   cursor: pointer;
 }
 
-h4,
-h4+li {
+h4
+ {
   padding: 0;
   margin: 0;
   color: rgb(12, 109, 207);
+}
+
+#form {
+
+  text-align: center;
+  margin: 2rem;
+}
+
+li.hideable{
+  display: none;
+}
+#showHide{
+  font-size: 2rem;
+  cursor: pointer;
+padding-bottom: 0;
+margin-bottom: 0;
+// outline: 1px solid red;
+  
 }

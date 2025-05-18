@@ -43,7 +43,7 @@ function showData() {
 
     $("#display").html("");
     for (let i = 0; i < counter; i++) {
-      $("#display").append(`<li>${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"></li>`);
+      $("#display").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"></li>`);
       sysTotal += parseInt(sysList[i]);
       
       diaTotal += parseInt(diaList[i]);
@@ -82,7 +82,7 @@ $("#add_record").click(function (e) {
 });
 
 
-
+let mod = 0;
 //  DELETE record \\\\\\\\\\\\\\\\\\\\
 $(window).click(function (e) {
   e.preventDefault();
@@ -104,4 +104,26 @@ $(window).click(function (e) {
 
    }
   }
+
+  
+ /*  if(e.target.id == "showHide"){
+   
+    if(mod%2 == 0){
+      $(".foo").css({"display": "none", "font-size": "100%"});
+      $('#showHide').html('+');
+    }else{
+      $(".foo").css({"display": "block", "font-size": "100%"});
+      $('#showHide').html('-');
+    }
+    mod++;
+   
+    
+  } */
 });
+
+
+
+/* $("#showHide").click(function(){
+   //.css({"display": "block", "font-size": "100%"});
+   $(".hideable").toggleClass('hideable');
+}); */
