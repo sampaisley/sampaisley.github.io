@@ -3,26 +3,27 @@ body {
   padding: 0;
   margin: 0;
   background-color: gainsboro;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+
 }
 
 ul {
   list-style-type: none;
-  text-align: center;
+  max-width: 125px;
 
-
+  //outline: 1px solid pink;
   li {
     padding-bottom: .3rem;
-   
-    text-align: center;
-    margin: 0 auto;
-    max-width: 300px;
+
+    max-width: 350px;
   }
 }
 
 li:last-child {
- color: rgb(12, 109, 207);
- font-weight: bold;
- font-size: 1.2rem;
+  color: rgb(12, 109, 207);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 img {
@@ -33,13 +34,13 @@ img {
 }
 
 input {
-  max-width: 100px;
+  max-width: 80px;
 }
 
-form {
+/* form {
   padding-top: .5rem;
   padding-left: .5rem;
-}
+} */
 
 #add_record {
   background-color: rgb(52, 118, 239);
@@ -51,27 +52,30 @@ form {
   cursor: pointer;
 }
 
-h4
- {
+h4 {
   padding: 0;
   margin: 0;
   color: rgb(12, 109, 207);
 }
 
 #form {
-
-  text-align: center;
-  margin: 2rem;
+  margin-bottom: .75rem;
+  label{
+    color: rgb(12, 109, 207);
+    font-weight: 900;
+  }
+  
 }
 
-li.hideable{
+li.hideable {
   display: none;
 }
-#showHide{
+
+#showHide {
   font-size: 2rem;
   cursor: pointer;
-padding-bottom: 0;
-margin-bottom: 0;
-// outline: 1px solid red;
-  
+  padding-bottom: 0;
+  margin-bottom: 0;
+  // outline: 1px solid red;
+
 }

@@ -48,7 +48,7 @@ function showData() {
       
       diaTotal += parseInt(diaList[i]);
     }
-    $("#display").append(`<h4>Average:</h4><li>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</li>`);
+    $("#display").append(`<hr><h4>Average:</h4><li>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</li>`);
 
     sysTotal = diaTotal = 0;
   }
