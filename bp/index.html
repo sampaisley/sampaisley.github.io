@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="css/min/style.min.css?v=66">
-    <title>BP</title>
+	<link rel="stylesheet" href="css/min/style.min.css?v=77">
+	<title>BP</title>
 </head>
+
 <body>
-    <form action="" id="form">
-		
+	<form action="" id="form">
+
 		<label for="sys">Sys</label>
-		<input name="sys" type="number" maxlength="3"     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="sys">
+		<input name="sys" type="number" maxlength="3"
+			oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+			id="sys">
 
 		<label for="dia">Dia</label>
-		<input name="dia" type="number" maxlength="3"     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="dia">
+		<input name="dia" type="number" maxlength="3"
+			oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+			id="dia">
 
 		<input type="submit" id="add_record" value="Add">
 		<!-- <span id="showHide">-</span> -->
 	</form>
+	
+		
+			<ul id="display">
+				<div id="list">
 
-<ul id="display">
+				</div>
+				<div id="average">
 
-</ul>
+				</div>
 
-    <script src="js/jquery.js"></script>
-	<script src="js/min/bp.min.js?v=66"></script>
+			</ul>
+		
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/min/bp.min.js?v=77"></script>
 </body>
+
 </html>

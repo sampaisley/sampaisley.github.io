@@ -41,14 +41,15 @@ function showData() {
 
   if (counter && counter >0) {
 
-    $("#display").html("");
+    $("#list").html("");
+    $("#average").html("");
     for (let i = 0; i < counter; i++) {
-      $("#display").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"></li>`);
+      $("#list").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"></li>`);
       sysTotal += parseInt(sysList[i]);
       
       diaTotal += parseInt(diaList[i]);
     }
-    $("#display").append(`<hr><h4>Average:</h4><li>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</li>`);
+    $("#average").append(`<h4>Average</h4><li>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</li>`);
 
     sysTotal = diaTotal = 0;
   }
@@ -98,8 +99,9 @@ $(window).click(function (e) {
     counter = localStorage.getObj("sysStore").length;
 
     showData();
-    if(counter==0){
-      $("#display").html("");
+    if(counter==0){ //showData() won't run
+      $("#list").html("");
+      $("#average").html("");
     }
 
    }

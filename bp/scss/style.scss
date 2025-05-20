@@ -10,7 +10,7 @@ body {
 
 ul {
   list-style-type: none;
-  max-width: 125px;
+ /// max-width: 125px;
 
   //outline: 1px solid pink;
   li {
@@ -20,11 +20,11 @@ ul {
   }
 }
 
-li:last-child {
-  color: rgb(12, 109, 207);
-  font-weight: bold;
-  font-size: 1.2rem;
-}
+// li:last-child {
+//   color: rgb(12, 109, 207);
+//   font-weight: bold;
+//   font-size: 1.2rem;
+// }
 
 img {
   align-self: baseline;
@@ -43,19 +43,27 @@ input {
 } */
 
 #add_record {
-  background-color: rgb(52, 118, 239);
+  background-color: rgb(12, 109, 207);
   color: azure;
   outline: none;
-  padding: 3px 6px;
-  border: 2px solid rgb(108, 200, 240);
-  border-radius: 6px;
+  padding: 1px 6px;
+  border: 2px solid rgb(91, 104, 109);
+  border-radius: 3px;
   cursor: pointer;
+  &:hover{
+    border: 2px solid rgb(247, 174, 6);
+  }
+  &:active{
+    background-color: rgb(247, 174, 6);
+    border: 2px solid rgb(108, 200, 240);
+  }
 }
 
 h4 {
   padding: 0;
   margin: 0;
   color: rgb(12, 109, 207);
+  
 }
 
 #form {
@@ -78,4 +86,25 @@ li.hideable {
   margin-bottom: 0;
   // outline: 1px solid red;
 
+}
+
+#display{
+  
+  max-width: 260px;
+}
+#list{
+ float: left;
+  // max-width: 145px;
+}
+
+#average{
+padding-left: .7rem;
+font-size: 1.7rem;
+float: right;
+text-align: center;
+li{
+  color: rgb(17, 62, 108);
+  margin-top: .3rem;
+}
+//outline: 1px solid red;
 }
