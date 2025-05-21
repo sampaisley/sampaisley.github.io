@@ -10,6 +10,7 @@ let diaList;
 let counter;
 let sysTotal = 0;
 let diaTotal = 0;
+let listVisable = true;
 
 
 if (localStorage.getObj("sysStore")) {
@@ -20,10 +21,11 @@ if (localStorage.getObj("sysStore")) {
   counter = [];
 }
 
-if(localStorage.getObj('diaStore') ){
-   diaList =localStorage.getObj('diaStore');}else{
-  diaList=[];
-  }
+if (localStorage.getObj("diaStore")) {
+  diaList = localStorage.getObj("diaStore");
+} else {
+  diaList = [];
+}
 
  
 
@@ -44,7 +46,10 @@ function showData() {
     $("#list").html("");
     $("#average").html("");
     for (let i = 0; i < counter; i++) {
+
+      if(listVisable){
       $("#list").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"></li>`);
+      }
       sysTotal += parseInt(sysList[i]);
       
       diaTotal += parseInt(diaList[i]);
@@ -54,14 +59,17 @@ function showData() {
     sysTotal = diaTotal = 0;
   }
 
+
 }
 
 showData();
-
+console.log(77);
 
 
 $("#add_record").click(function (e) {
-  e.preventDefault();
+
+ e.preventDefault();
+
   if ($("#sys").val().length > 1 && $("#dia").val().length > 1) {
    // $("#display").append(`<li>${$("#sys").val()} - ${$("#dia").val()}</li>`);
 
@@ -86,8 +94,9 @@ $("#add_record").click(function (e) {
 let mod = 0;
 //  DELETE record \\\\\\\\\\\\\\\\\\\\
 $(window).click(function (e) {
-  e.preventDefault();
+  
   if (e.target.nodeName == "IMG") {
+    e.preventDefault();
     if (window.confirm("Really?")) {
     
     sysList.splice([e.target.getAttribute("data-del")], 1);
@@ -108,24 +117,21 @@ $(window).click(function (e) {
   }
 
   
- /*  if(e.target.id == "showHide"){
-   
-    if(mod%2 == 0){
-      $(".foo").css({"display": "none", "font-size": "100%"});
-      $('#showHide').html('+');
-    }else{
-      $(".foo").css({"display": "block", "font-size": "100%"});
-      $('#showHide').html('-');
-    }
-    mod++;
-   
-    
-  } */
+
 });
 
 
 
-/* $("#showHide").click(function(){
-   //.css({"display": "block", "font-size": "100%"});
-   $(".hideable").toggleClass('hideable');
-}); */
+$("#showList").click(function () {
+  if ($("#showList").is(":checked")) {
+    listVisable = false;
+  } else {
+    listVisable = true;
+  }
+ 
+  showData();
+
+  
+});
+
+

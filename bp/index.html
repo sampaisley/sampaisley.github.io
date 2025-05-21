@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="css/min/style.min.css?v=77">
+	<link rel="stylesheet" href="css/min/style.min.css?v=88">
 	<title>BP</title>
 </head>
 
 <body>
 	<form action="" id="form">
-
+		
 		<label for="sys">Sys</label>
 		<input name="sys" type="number" maxlength="3"
 			oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
@@ -23,7 +23,10 @@
 			id="dia">
 
 		<input type="submit" id="add_record" value="Add">
-		<!-- <span id="showHide">-</span> -->
+		
+		<!-- <label for="showList">0</label> -->
+        <input type="checkbox" name="showList" id="showList" value="showHide">
+	
 	</form>
 	
 		
@@ -39,7 +42,7 @@
 		
 	
 	<script src="js/jquery.js"></script>
-	<script src="js/min/bp.min.js?v=77"></script>
+	<script src="js/min/bp.min.js?v=88"></script>
 </body>
 
 </html>
