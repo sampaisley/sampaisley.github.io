@@ -1,5 +1,4 @@
-/* jshint esversion: 8 */
-
+"use strict";
 Storage.prototype.setObj = function (key, obj) {
   return this.setItem(key, JSON.stringify(obj));
 };
@@ -12,8 +11,6 @@ let counter;
 let sysTotal = 0;
 let diaTotal = 0;
 let listVisable = true;
-let startFrom;
-let endAt;
 
 
 if (localStorage.getObj("sysStore")) {
@@ -42,42 +39,22 @@ $("#sys").on("keyup", function () {
 });
 
 
-function showData(startFrom, endAt) {
+function showData() {
 
-  let i = 0;
-
-  if(startFrom){
-    i = startFrom;
-    
-    
-  }
-   
-  if(endAt){
-    counter = endAt+1 ;
-    
-   
-  }
   if (counter && counter >0) {
 
     $("#list").html("");
     $("#average").html("");
-    for (; i < counter; i++) {
-     
+    for (let i = 0; i < counter; i++) {
 
       if(listVisable){
-      $("#list").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"><input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
+      $("#list").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"></li>`);
       }
       sysTotal += parseInt(sysList[i]);
-     
       
       diaTotal += parseInt(diaList[i]);
     }
-   if(endAt>0){
-    $("#average").append(`<h4>Average</h4><li>${parseInt(sysTotal / (endAt - startFrom+1))} - ${parseInt(diaTotal / (endAt - startFrom+1))}</li>`);
-   }else{
     $("#average").append(`<h4>Average</h4><li>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</li>`);
-   }
-    
 
     sysTotal = diaTotal = 0;
   }
@@ -86,7 +63,7 @@ function showData(startFrom, endAt) {
 }
 
 showData();
-
+console.log(77);
 
 
 $("#add_record").click(function (e) {
@@ -154,69 +131,7 @@ $("#showList").click(function () {
  
   showData();
 
-
-
-
   
 });
 
 
-
-
-//let clickedBoxes=[];
-$("#list").on("click",".foo",(function (e) {
-  
-
-  
- 
- let k = document.querySelectorAll('ul input[type="checkbox"]:checked').length;
- 
-
- if (k == 1) {
-   startFrom = parseInt(e.target.getAttribute("data_i"));
- }
-
- if (k == 2) {
-   endAt = parseInt(e.target.getAttribute("data_i"));
-
-   showData(startFrom, endAt);
-
-   $("#average").append("<span class='reset'>Reset<span>");
-   
- } 
-  
-  
-  
-  /* 
-  if (e.target.checked) {
-    clickedBoxes.push(e.target.getAttribute("data_i"));
-
-    //clickedBoxes.sort();
-    //clickedBoxes = clickedBoxes.slice(-2);
-    //  if(clickedBoxes.length>2){
-    //   clickedBoxes.pop();
-    //  }
-    console.log(
-      "%c clickedBoxes:",
-      "color: #0e93e0;background: #aaefe5;",
-      clickedBoxes
-    );
-  } */
-}));
-
-/* 
-window.addEventListener("click", function(e){
-  console.log('%c e:', 'color: #0e93e0;background: #aaefe5;', e);
-
-}); */
-
-reset = () => {
-  startFrom = '';
-  endAt = '';
-  counter = localStorage.getObj("sysStore").length;
-  showData();
-};
-
-$("#average").on("click", function () {
-  reset();
-});
