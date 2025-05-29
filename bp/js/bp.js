@@ -1,5 +1,4 @@
 "use strict";
-
 Storage.prototype.setObj = function (key, obj) {
   return this.setItem(key, JSON.stringify(obj));
 };
@@ -33,9 +32,8 @@ if (localStorage.getObj("diaStore")) {
   diaList = [];
 }
 
-// datList = [];
-// localStorage.setObj('datStore',datList );
 
+// ///////   because datList was an afterthought, it needs to catch up in length, so:
 if (localStorage.getObj("datStore")) {
   datList = localStorage.getObj("datStore");
   datList.length = localStorage.getObj("diaStore").length;
@@ -46,7 +44,7 @@ if (localStorage.getObj("datStore")) {
 }
 
 
-
+ // stop displaying "undefined" when there is no date
 datList.forEach(function(item, index, array) {
  if(item == null){
   datList[index] = "-";
@@ -66,13 +64,12 @@ $("#sys").on("keyup", function () {
 });
 
 
-function closeDialog(e){
-  
-reset();
+function closeDialog(e) {
+  reset();
   dialog.close();
   console.log(73);
- 
- dialog.removeEventListener('mousedown', closeDialog);
+
+  dialog.removeEventListener("mousedown", closeDialog);
 }
 
 
@@ -117,7 +114,7 @@ function showData(startFrom, endAt) {
   }
 
 
-  dialog.showModal();
+   dialog.showModal();
 
    dialog.addEventListener("mousedown", closeDialog);
 
@@ -157,7 +154,7 @@ $("#add_record").click(function (e) {
 });
 
 
-let mod = 0;
+
 //  DELETE record \\\\\\\\\\\\\\\\\\\\
 $(window).click(function (e) {
   
@@ -194,7 +191,7 @@ $(window).click(function (e) {
 
 
 
-////// checkboxes   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////// checkboxes  select \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //let clickedBoxes=[];
 $("#list").on("click",".foo",(function (e) {
   
@@ -219,28 +216,10 @@ $("#list").on("click",".foo",(function (e) {
   
   
   
-  /* 
-  if (e.target.checked) {
-    clickedBoxes.push(e.target.getAttribute("data_i"));
 
-    //clickedBoxes.sort();
-    //clickedBoxes = clickedBoxes.slice(-2);
-    //  if(clickedBoxes.length>2){
-    //   clickedBoxes.pop();
-    //  }
-    console.log(
-      "%c clickedBoxes:",
-      "color: #0e93e0;background: #aaefe5;",
-      clickedBoxes
-    );
-  } */
 }));
 
-/* 
-window.addEventListener("click", function(e){
-  console.log('%c e:', 'color: #0e93e0;background: #aaefe5;', e);
 
-}); */
 
 let reset = () =>{
   startFrom = '';
@@ -249,9 +228,8 @@ let reset = () =>{
   showData();
 };
 
-/* $("dialog").on("click", function () {
-  reset();console.log(252);
-}); */
+
+
 
 
 
