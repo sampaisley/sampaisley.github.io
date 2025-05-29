@@ -97,18 +97,13 @@ li.hideable {
   // max-width: 145px;
 }
 
-#average{
-padding-left: .7rem;
-font-size: 1.7rem;
-float: right;
-text-align: center;
-li{
-  color: rgb(17, 62, 108);
-  margin-top: .3rem;
-}
-//outline: 1px solid red;
-}
-
-#chBox{
-  float: right;
-}
+dialog{
+  width: 70%;
+  height: 70vh;
+  font-size: 1.7rem;
+  text-align: center;
+  background-color: rgba(173, 216, 230, 0.906);
+  border: 3px solid #13a7ebd4;
+  border-radius: 6px;
+  outline: none;
+  }

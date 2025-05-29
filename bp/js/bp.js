@@ -1,4 +1,4 @@
-/* jshint esversion: 8 */
+"use strict";
 
 Storage.prototype.setObj = function (key, obj) {
   return this.setItem(key, JSON.stringify(obj));
@@ -8,12 +8,15 @@ Storage.prototype.getObj = function (key) {
 };
 let sysList;
 let diaList;
+let datList;
 let counter;
 let sysTotal = 0;
 let diaTotal = 0;
-let listVisable = true;
 let startFrom;
 let endAt;
+const today = new Date();
+const dialog = document.querySelector("dialog");
+
 
 
 if (localStorage.getObj("sysStore")) {
@@ -30,7 +33,28 @@ if (localStorage.getObj("diaStore")) {
   diaList = [];
 }
 
- 
+// datList = [];
+// localStorage.setObj('datStore',datList );
+
+if (localStorage.getObj("datStore")) {
+  datList = localStorage.getObj("datStore");
+  datList.length = localStorage.getObj("diaStore").length;
+} else {
+  datList = [];
+  datList.length = diaList.length;
+  
+}
+
+
+
+datList.forEach(function(item, index, array) {
+ if(item == null){
+  datList[index] = "-";
+ }
+    
+});
+
+
 
 $("#sys").val("").focus();
 $("#dia").val("");
@@ -40,6 +64,16 @@ $("#sys").on("keyup", function () {
     $("#dia").focus();
   }
 });
+
+
+function closeDialog(e){
+  
+reset();
+  dialog.close();
+  console.log(73);
+ 
+ dialog.removeEventListener('mousedown', closeDialog);
+}
 
 
 function showData(startFrom, endAt) {
@@ -60,22 +94,22 @@ function showData(startFrom, endAt) {
   if (counter && counter >0) {
 
     $("#list").html("");
-    $("#average").html("");
+    $("dialog").html("");
     for (; i < counter; i++) {
      
 
-      if(listVisable){
-      $("#list").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"><input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
-      }
+     
+      $("#list").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"> ${datList[i]}<input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
+     
       sysTotal += parseInt(sysList[i]);
      
       
       diaTotal += parseInt(diaList[i]);
     }
    if(endAt>0){
-    $("#average").append(`<h4>Average</h4><li>${parseInt(sysTotal / (endAt - startFrom+1))} - ${parseInt(diaTotal / (endAt - startFrom+1))}</li>`);
+    $("dialog").append(`<h4>Average</h4><p>${parseInt(sysTotal / (endAt - startFrom+1))} - ${parseInt(diaTotal / (endAt - startFrom+1))}</p>`);
    }else{
-    $("#average").append(`<h4>Average</h4><li>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</li>`);
+    $("dialog").append(`<h4>Average</h4><p>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</p>`);
    }
     
 
@@ -83,11 +117,16 @@ function showData(startFrom, endAt) {
   }
 
 
+  dialog.showModal();
+
+   dialog.addEventListener("mousedown", closeDialog);
+
 }
 
 showData();
 
 
+///////////////////// Add Record  \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 $("#add_record").click(function (e) {
 
@@ -96,18 +135,22 @@ $("#add_record").click(function (e) {
   if ($("#sys").val().length > 1 && $("#dia").val().length > 1) {
    // $("#display").append(`<li>${$("#sys").val()} - ${$("#dia").val()}</li>`);
 
+   let day = today.getDate();
+   let month = today.getMonth()+1;// zero indexed
+    
+    datList.push([day,month]);
     sysList.push($("#sys").val());
     diaList.push($("#dia").val());
 
     localStorage.setObj('sysStore',sysList );
     localStorage.setObj('diaStore',diaList );
+    localStorage.setObj('datStore',datList );
   
 
     $("#sys").val("").focus();
     $("#dia").val("");
 
     counter = localStorage.getObj("sysStore").length;
-
     showData();
     
   }
@@ -124,16 +167,18 @@ $(window).click(function (e) {
     
     sysList.splice([e.target.getAttribute("data-del")], 1);
     diaList.splice([e.target.getAttribute("data-del")], 1);
+    datList.splice([e.target.getAttribute("data-del")], 1);
 
     localStorage.setObj("sysStore", sysList);
     localStorage.setObj("diaStore", diaList);
+    localStorage.setObj("datStore", datList);
 
     counter = localStorage.getObj("sysStore").length;
 
     showData();
     if(counter==0){ //showData() won't run
       $("#list").html("");
-      $("#average").html("");
+      $("dialog").html("");
     }
 
    }
@@ -145,24 +190,11 @@ $(window).click(function (e) {
 
 
 
-$("#showList").click(function () {
-  if ($("#showList").is(":checked")) {
-    listVisable = false;
-  } else {
-    listVisable = true;
-  }
- 
-  showData();
 
 
 
 
-  
-});
-
-
-
-
+////// checkboxes   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //let clickedBoxes=[];
 $("#list").on("click",".foo",(function (e) {
   
@@ -181,7 +213,7 @@ $("#list").on("click",".foo",(function (e) {
 
    showData(startFrom, endAt);
 
-   $("#average").append("<span class='reset'>Reset<span>");
+   $("dialog").append("<span class='reset'>Reset<span>");
    
  } 
   
@@ -210,13 +242,16 @@ window.addEventListener("click", function(e){
 
 }); */
 
-reset = () => {
+let reset = () =>{
   startFrom = '';
   endAt = '';
-  counter = localStorage.getObj("sysStore").length;
+  counter = sysList.length;
   showData();
 };
 
-$("#average").on("click", function () {
-  reset();
-});
+/* $("dialog").on("click", function () {
+  reset();console.log(252);
+}); */
+
+
+
