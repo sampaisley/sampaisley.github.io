@@ -4,19 +4,20 @@ body {
   margin: 0;
   background-color: gainsboro;
   margin-top: 2rem;
-  margin-left: 1.5rem;
+  
 
 }
-
+#list{
+  margin-left: 2rem;
+}
 ul {
-  list-style-type: none;
- /// max-width: 125px;
-
-  //outline: 1px solid pink;
+  list-style-type:decimal;
+  //outline: 1px solid red;
   li {
     padding-bottom: .3rem;
+ margin-left: 2rem;
 
-    max-width: 350px;
+   // max-width: 350px;
   }
 }
 
@@ -61,12 +62,14 @@ input {
 
 h4 {
   padding: 0;
-  margin: 0;
+  margin: .4rem;
   color: rgb(12, 109, 207);
   
 }
 
 #form {
+margin-left: 2rem;
+  //outline: 1px solid red;
   margin-bottom: .75rem;
   label{
     color: rgb(12, 109, 207);
@@ -98,12 +101,26 @@ li.hideable {
 }
 
 dialog{
-  width: 70%;
-  height: 70vh;
-  font-size: 1.7rem;
-  text-align: center;
-  background-color: rgba(173, 216, 230, 0.906);
-  border: 3px solid #13a7ebd4;
-  border-radius: 6px;
-  outline: none;
-  }
+ 
+width: 70%;
+height: 50vh;
+font-size: 1.7rem;
+text-align: center;
+background-color: rgba(173, 230, 181, 0.906);
+border: 3px solid rgba(12, 110, 207, 0.812);
+border-radius: 6px;
+outline: none;
+ p{
+  color: rgb(183, 226, 249);
+  background-color: rgb(12, 109, 207);
+  padding: .4rem;
+ }
+}
+
+
+.reset{
+  font-size: .85rem;
+  color: coral;
+  cursor: pointer;
+  
+}
