@@ -208,6 +208,10 @@ $("#list").on("click",".foo",(function (e) {
  if (k == 2) {
    endAt = parseInt(e.target.getAttribute("data_i"));
 
+   if (endAt < startFrom){
+    [startFrom, endAt] = [endAt, startFrom];
+  }
+
    showData(startFrom, endAt);
 
    $("dialog").append("<span class='reset'>Reset<span>");
