@@ -14,7 +14,6 @@ let diaTotal = 0;
 let startFrom;
 let endAt;
 const today = new Date();
-const dialog = document.querySelector("dialog");
 
 
 
@@ -64,13 +63,7 @@ $("#sys").on("keyup", function () {
 });
 
 
-function closeDialog(e) {
-  reset();
-  dialog.close();
-  console.log(73);
 
-  dialog.removeEventListener("mousedown", closeDialog);
-}
 
 
 function showData(startFrom, endAt) {
@@ -90,13 +83,14 @@ function showData(startFrom, endAt) {
   }
   if (counter && counter >0) {
 
-    $("#list").html("");
-    $("dialog").html("");
+    $("#display").html("");
+    $("#average").html("");
+    $("#reset").html("");
     for (; i < counter; i++) {
      
 
      
-      $("#list").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"> ${datList[i]}<input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
+      $("#display").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"> ${datList[i]}<input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
      
       sysTotal += parseInt(sysList[i]);
      
@@ -104,9 +98,9 @@ function showData(startFrom, endAt) {
       diaTotal += parseInt(diaList[i]);
     }
    if(endAt>0){
-    $("dialog").append(`<h4>Average</h4><p>${parseInt(sysTotal / (endAt - startFrom+1))} - ${parseInt(diaTotal / (endAt - startFrom+1))}</p>`);
+    $("#average").append(`<h3>Average</h3><p>${parseInt(sysTotal / (endAt - startFrom+1))} - ${parseInt(diaTotal / (endAt - startFrom+1))}</p>`);
    }else{
-    $("dialog").append(`<h4>Average</h4><p>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</p>`);
+    $("#average").append(`<h3>Average</h3><p>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</p>`);
    }
     
 
@@ -114,9 +108,7 @@ function showData(startFrom, endAt) {
   }
 
 
-   dialog.showModal();
 
-   dialog.addEventListener("mousedown", closeDialog);
 
 }
 
@@ -149,6 +141,7 @@ $("#add_record").click(function (e) {
 
     counter = localStorage.getObj("sysStore").length;
     showData();
+   
     
   }
 });
@@ -174,8 +167,9 @@ $(window).click(function (e) {
 
     showData();
     if(counter==0){ //showData() won't run
-      $("#list").html("");
-      $("dialog").html("");
+      $("#display").html("");
+      $("#average").html("");
+      $("#reset").html("");
     }
 
    }
@@ -193,7 +187,7 @@ $(window).click(function (e) {
 
 ////// checkboxes  select \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //let clickedBoxes=[];
-$("#list").on("click",".foo",(function (e) {
+$("#display").on("click",".foo",(function (e) {
   
 
   
@@ -214,7 +208,7 @@ $("#list").on("click",".foo",(function (e) {
 
    showData(startFrom, endAt);
 
-   $("dialog").append("<span class='reset'>Reset<span>");
+   $("#reset").append("<p id='reset'>Reset<p>");
    
  } 
   
@@ -230,10 +224,17 @@ let reset = () =>{
   endAt = '';
   counter = sysList.length;
   showData();
+  $("#sys").focus();
 };
 
+$(window).click(function (e) {
+  if(e.target.id== 'reset'){
+    reset();
+  }
 
+});
 
-
-
+/* $(".reset").click(function(){
+  reset();
+}); */
 

@@ -2,30 +2,33 @@ body {
   font-family: monospace;
   padding: 0;
   margin: 0;
-  background-color: gainsboro;
+  background-color: rgba(220, 220, 220, 0.595);
   margin-top: 2rem;
-  
+  color: rgb(62, 62, 107);
 
 }
-#list{
-  margin-left: 2rem;
+
+#container{
+  margin:  0 auto;
+  text-align: center;
+  max-width: 400px;
+  padding: 10px;
 }
+
 ul {
-  list-style-type:decimal;
+  list-style-type: decimal;
+  text-align: left;
+
   //outline: 1px solid red;
   li {
     padding-bottom: .3rem;
- margin-left: 2rem;
+    margin-left: 2rem;
 
-   // max-width: 350px;
+    // max-width: 350px;
   }
 }
 
-// li:last-child {
-//   color: rgb(12, 109, 207);
-//   font-weight: bold;
-//   font-size: 1.2rem;
-// }
+
 
 img {
   align-self: baseline;
@@ -38,10 +41,7 @@ input {
   max-width: 80px;
 }
 
-/* form {
-  padding-top: .5rem;
-  padding-left: .5rem;
-} */
+
 
 #add_record {
   background-color: rgb(12, 109, 207);
@@ -51,76 +51,52 @@ input {
   border: 2px solid rgb(91, 104, 109);
   border-radius: 3px;
   cursor: pointer;
-  &:hover{
+
+  &:hover {
     border: 2px solid rgb(247, 174, 6);
   }
-  &:active{
+
+  &:active {
     background-color: rgb(247, 174, 6);
     border: 2px solid rgb(108, 200, 240);
   }
 }
 
-h4 {
+h3{
   padding: 0;
   margin: .4rem;
   color: rgb(12, 109, 207);
-  
+  font-size: 1.5rem;
+
 }
 
 #form {
-margin-left: 2rem;
+ 
   //outline: 1px solid red;
   margin-bottom: .75rem;
-  label{
+  text-align: left;
+  label {
     color: rgb(12, 109, 207);
-    font-weight: 900;
+    font-weight: 900; 
   }
-  
-}
-
-li.hideable {
-  display: none;
-}
-
-#showHide {
-  font-size: 2rem;
-  cursor: pointer;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  // outline: 1px solid red;
 
 }
 
-#display{
-  
-  max-width: 260px;
-}
-#list{
- float: left;
-  // max-width: 145px;
-}
+#average{
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
 
-dialog{
- 
-width: 70%;
-height: 50vh;
-font-size: 1.7rem;
-text-align: center;
-background-color: rgba(173, 230, 181, 0.906);
-border: 3px solid rgba(12, 110, 207, 0.812);
-border-radius: 6px;
-outline: none;
- p{
-  color: rgb(183, 226, 249);
-  background-color: rgb(12, 109, 207);
-  padding: .4rem;
- }
+  p{
+    font-size: 1.1rem;
+    padding: .3rem;
+  }
 }
 
-
-.reset{
-  font-size: .85rem;
+#reset {
+  font-size: .95rem;
   color: coral;
   cursor: pointer;
-  
+ padding-bottom: .6rem;
+ padding-top: .2rem;
+
 }
