@@ -90,7 +90,7 @@ function showData(startFrom, endAt) {
      
 
      
-      $("#display").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	&rarr; <img src = "img/delete.svg" data-del="${i}"> ${datList[i]}<input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
+      $("#display").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	:</span><span class="date">  ${datList[i]} <img src = "img/delete.svg" data-del="${i}"> <input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
      
       sysTotal += parseInt(sysList[i]);
      
@@ -127,7 +127,7 @@ $("#add_record").click(function (e) {
    let day = today.getDate();
    let month = today.getMonth()+1;// zero indexed
     
-    datList.push([day,month]);
+    datList.push([day +'/'+month]);
     sysList.push($("#sys").val());
     diaList.push($("#dia").val());
 
@@ -237,4 +237,5 @@ $(window).click(function (e) {
 /* $(".reset").click(function(){
   reset();
 }); */
+
 
