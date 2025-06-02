@@ -1,5 +1,7 @@
 body {
   font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: normal;
   padding: 0;
   margin: 0;
   background-color: rgba(220, 220, 220, 0.595);
@@ -16,12 +18,12 @@ body {
 }
 
 ul {
-  list-style-type: decimal;
+  list-style-type: decimal-leading-zero;
   text-align: left;
 
   //outline: 1px solid red;
   li {
-    padding-bottom: .3rem;
+    padding-bottom: .5rem;
     margin-left: 2rem;
 
     // max-width: 350px;

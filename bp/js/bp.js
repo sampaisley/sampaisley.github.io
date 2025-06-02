@@ -98,7 +98,7 @@ function showData(startFrom, endAt) {
       diaTotal += parseInt(diaList[i]);
     }
    if(endAt>0){
-    $("#average").append(`<h3>Average</h3><p>${parseInt(sysTotal / (endAt - startFrom+1))} - ${parseInt(diaTotal / (endAt - startFrom+1))}</p>`);
+    $("#average").append(`<h3>Average</h3><p>${Math.round(sysTotal / (endAt - startFrom+1))} - ${Math.round(diaTotal / (endAt - startFrom+1))}</p>`);
    }else{
     $("#average").append(`<h3>Average</h3><p>${parseInt(sysTotal / counter)} - ${parseInt(diaTotal / counter)}</p>`);
    }
@@ -124,10 +124,10 @@ $("#add_record").click(function (e) {
   if ($("#sys").val().length > 1 && $("#dia").val().length > 1) {
    // $("#display").append(`<li>${$("#sys").val()} - ${$("#dia").val()}</li>`);
 
-   let day = today.getDate();
-   let month = today.getMonth()+1;// zero indexed
+   
     
-    datList.push([day +'/'+month]);
+    datList.push(date());
+  
     sysList.push($("#sys").val());
     diaList.push($("#dia").val());
 
@@ -239,3 +239,17 @@ $(window).click(function (e) {
 }); */
 
 
+
+
+//https://stackoverflow.com/questions/3605214/javascript-add-leading-zeroes-to-date
+function date(){
+  var MyDate = new Date();
+var MyDateString;
+
+MyDate.setDate(MyDate.getDate());
+
+MyDateString = ('0' + MyDate.getDate()).slice(-2) + '/' + ('0' + (MyDate.getMonth()+1)).slice(-2) ;
+return MyDateString;
+}
+            
+            
