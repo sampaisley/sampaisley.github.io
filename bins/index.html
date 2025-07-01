@@ -73,6 +73,10 @@
             margin-bottom: 1rem;
             border-top: 3px solid rgb(155, 145, 145);
         }
+        .braker:nth-of-type(1){
+            margin-bottom: 1rem;
+            border-top: 3px solid rgba(204, 20, 20, 0);
+        }
 
         h1 {
             color: darkgray;
@@ -132,7 +136,7 @@
 
 
 
-            if (start.getMonth() != mnth) {
+            if (start.getMonth() != mnth && start > now) {
                 tab.innerHTML += `<section class="braker"></section>`;
             }
 
