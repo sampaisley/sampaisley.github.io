@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/fav.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINS</title>
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=PT+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(247, 245, 243);
+            font-size: 1rem;
+        }
+
+        #tab {
+            font-family: "PT Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+
+            position: absolute;
+
+            border: 20px solid rgb(241, 238, 235);
+            padding: .5rem;
+            font-size: 1.2rem;
+            margin-top: 5rem;
+
+
+        }
+
+        @media (orientation: portrait) {
+
+            #tab {
+
+                border: 8px solid rgb(241, 238, 235);
+                margin-top: 2rem;
+            }
+
+        }
+
+
+        @media (width<460px) {
+            #tab {
+
+                border: none;
+            }
+        }
+
+        span {
+            padding: .3rem 0.7rem;
+            display: inline-block;
+            margin-bottom: 5px;
+
+        }
+
+        .od {
+
+            background-color: rgb(59, 175, 59);
+            color: rgb(247, 216, 80);
+        }
+
+        .ev {
+            background-color: rgb(90, 89, 89);
+            color: azure;
+        }
+
+
+
+        .braker {
+            margin-bottom: 1rem;
+            border-top: 3px solid rgb(155, 145, 145);
+        }
+        /* .braker:nth-of-type(1){
+            margin-bottom: 1rem;
+            border-top: 3px solid rgba(204, 20, 20, 0.831);
+        } */
+
+        h1 {
+            color: darkgray;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p id="tab">
+
+    </p>
+
+
+
+
+
+
+
+    <script>
+
+        const tab = document.querySelector("#tab");
+
+        tab.innerHTML = " <h1>BINS 2025</h1>";
+
+        const start = new Date('03/05/2025');
+
+        const now = new Date('06/29/2025');
+
+        let thisYear = start.getFullYear();
+
+
+        let i = 0;
+        let mnth;
+
+        let modo = "";
+
+        let readable;
+
+        let monthsLeft = (12 - (start.getMonth())) * 5;
+
+
+
+
+        for (let j = 0; j < monthsLeft; j++) {
+
+
+            mnth = start.getMonth();
+
+            (start.setDate(start.getDate() + i));
+
+
+            if (start.getFullYear() != thisYear) break;
+            readable = start.toDateString().split(' ');
+
+
+ 
+            if (start.getMonth() != mnth && start > now) {
+               
+               
+                tab.innerHTML += `<section class="braker"></section>`;
+            }
+
+            if (j % 2 == 0) {
+                modo = "od";
+            } else {
+                modo = "ev";
+            }
+            if (start > now) {
+                tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>";
+            }
+
+
+            i = 7
+
+        } /// end for loop
+
+        function centerDiv() {
+
+            const w = tab.offsetWidth;
+
+            const iw = window.innerWidth;
+            tab.style.left = iw / 2 - w / 2 + "px";
+        }
+        window.onresize = window.onload = centerDiv;
+
+
+
+    </script>
+</body>
+
+</html>
