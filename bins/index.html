@@ -92,6 +92,8 @@
 
         const start = new Date('03/05/2025');
 
+         const end = new Date('12/20/2025');
+
         const now = new Date();
 
         let thisYear = start.getFullYear();
@@ -131,7 +133,7 @@
             } else {
                 modo = "ev";
             }
-            if (start > now) { tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>"; 
+            if (start > now && start < end) { tab.innerHTML += `<span class='${modo}'>` + readable[1] + ':' + readable[2] + "</span>"; 
         }
 
 
