@@ -87,11 +87,11 @@
     <script>
 
         const tab = document.querySelector("#tab");
-        tab.innerHTML = " <h1>BINS 2025</h1>";
+        tab.innerHTML = " <h1>BINS 2026</h1>";
 
-        const start = new Date('03/05/2025');
-
-         const end = new Date('12/20/2025');
+        const start = new Date('02/18/2026');
+      
+         const end = new Date('12/20/2026');
 
         const now = new Date();
 
@@ -127,7 +127,7 @@
                 tab.innerHTML += `<section class="breakere"></section>`;
             }
 
-            if (j % 2 != 0) {
+            if (j % 2 == 0) {
                 modo = "od";
             } else {
                 modo = "ev";
