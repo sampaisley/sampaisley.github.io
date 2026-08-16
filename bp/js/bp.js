@@ -90,7 +90,7 @@ function showData(startFrom, endAt) {
      
 
      
-      $("#display").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	:</span><span class="date">  ${datList[i]} <img src = "img/delete.svg" data-del="${i}"> <input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
+      $("#display").append(`<li class="foo">${sysList[i]} - ${diaList[i]}  	:</span><span class="date">  ${datList[i]} <img src = "img/delete.svg" data-del="${parseInt(i)}"> <input type="checkbox" data_i="${i}" name="dat" id=""></li>`);
      
       sysTotal += parseInt(sysList[i]);
      
@@ -147,13 +147,14 @@ $("#add_record").click(function (e) {
 });
 
 
-
+console.log(2323232323233);
 //  DELETE record \\\\\\\\\\\\\\\\\\\\
 $(window).click(function (e) {
   
   if (e.target.nodeName == "IMG") {
+    let numberToDelete =  parseInt(e.target.getAttribute("data-del"));
     e.preventDefault();
-    if (window.confirm("Really?")) {
+    if (window.confirm(`Really delete entry ${numberToDelete + Number(1)} ?`)) {
     
     sysList.splice([e.target.getAttribute("data-del")], 1);
     diaList.splice([e.target.getAttribute("data-del")], 1);
