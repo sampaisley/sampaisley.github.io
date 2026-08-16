@@ -154,7 +154,7 @@ $(window).click(function (e) {
   if (e.target.nodeName == "IMG") {
     let numberToDelete =  parseInt(e.target.getAttribute("data-del"));
     e.preventDefault();
-    if (window.confirm(`Really delete entry ${numberToDelete + Number(1)} ?`)) {
+    if (window.confirm(`Really delete entry ${numberToDelete + Number(1)}?`)) {
     
     sysList.splice([e.target.getAttribute("data-del")], 1);
     diaList.splice([e.target.getAttribute("data-del")], 1);
