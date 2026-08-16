@@ -147,7 +147,7 @@ $("#add_record").click(function (e) {
 });
 
 
-console.log(2323232323233);
+
 //  DELETE record \\\\\\\\\\\\\\\\\\\\
 $(window).click(function (e) {
   
